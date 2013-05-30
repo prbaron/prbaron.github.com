@@ -1,0 +1,79 @@
+@import url(http://fonts.googleapis.com/css?family=Lato|PT+Sans|Kreon);
+@import "bourbon/bourbon",
+        "neat/neat";
+
+$lightGrey : hsl(0, 4%, 95%);
+
+body {
+    background: #fcfcfc;
+    color: darken($lightGrey, 36%);
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+nav,
+h1,
+article,
+footer {
+    @include row();
+}
+
+.container {
+    @include outer-container;
+}
+.grid {
+    @include span-columns(12);
+}
+
+nav {
+
+}
+
+h1, h2, h3, h4 h5, h6 {
+    font-weight: 400;
+}
+
+h1 {
+    font-family: Lato, sans-serif;
+    color: darken($lightGrey, 83%);
+    font-size: 2.5em;
+    line-height: 60px;
+}
+
+h2 {
+    font-family: Kreon, sans-serif;
+    font-size: 1.5em;
+    color: darken($lightGrey, 70%);
+    padding-bottom: 8px;
+    margin: 16px 0;
+    //border-bottom: 1px solid rgba(0,0,0, .05);
+    border-bottom: 1px solid darken($lightGrey, 10%);
+;
+}
+
+h3 {
+    color: darken($lightGrey, 63%);
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25em;
+    margin: 16px 0 20px 0;
+}
+
+h4 {
+    font-size: 1.125em;
+}
+
+article {
+
+}
+
+footer {
+    background: $lightGrey;
+    border-top: 1px solid darken($lightGrey, 10%);
+    color: darken($lightGrey, 23%);
+    margin-top: 60px;
+
+}

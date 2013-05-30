@@ -1,0 +1,5 @@
+name: Pierre Baron
+pygments: true
+permalink: /:title
+google_analytics_id: UA-21369110-4
+exclude : ['sass']
