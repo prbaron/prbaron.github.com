@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Lato|PT+Sans|Kreon);
 @import "bourbon/bourbon",
         "neat/neat";
+        
+@import "fontello";
 
 $lightGrey : hsl(0, 4%, 95%);
 
@@ -74,6 +76,60 @@ footer {
     background: $lightGrey;
     border-top: 1px solid darken($lightGrey, 10%);
     color: darken($lightGrey, 23%);
+    height: 120px;
+    line-height: 120px;
     margin-top: 60px;
+    
+    ul {
+        float: left; 
+        padding-left: 0;
+        li {
+            float: left;
+            list-style: none;
+            margin-right: 1em;
+        }
+    }
+    p {
+        float: right;
+    }
+    a {
+        @include transition(background 0.2s ease-in-out);
 
+        background: rgba(0,0,0, .1);
+        border-radius: 25em;
+        color: darken($lightGrey, 23%);
+        padding: 0.5em;
+        position: relative;
+        &:hover {
+            background: darken($lightGrey, 23%);
+            color: #fff;
+        }
+        
+        &:after {
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            content: '';
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+
+            top: -3px;
+            left: -3px;
+            padding: 3px;
+            box-shadow: 0 0 0 4px darken($lightGrey, 23%);
+            -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+               -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+                    transition: transform 0.2s, opacity 0.2s;
+            @include transform(scale(.8));
+            opacity: 0;
+        }
+    
+        &:hover:after {
+            @include transform(scale(1));
+            opacity: 1;
+        }
+    }
 }
