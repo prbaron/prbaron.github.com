@@ -17,22 +17,74 @@ body {
     padding: 0;
 }
 
-nav,
 h1,
-article,
+section,
 footer {
-    @include row();
+    @include row("table");
 }
 
 .container {
     @include outer-container;
+    max-width: 960px;
 }
+
+.container-full {
+    background: #00a6d4;
+    color: #fff;
+    padding: 20px 0;
+    margin-bottom: 16px;
+
+    .title {
+        @include span-columns(12);
+    }
+}
+
 .grid {
     @include span-columns(12);
 }
 
-nav {
+.logo {
+    background: url(/img/logo.png) center left no-repeat;
+    color: #232d31;
+    display: block;
+    float: left;
+    font-size: 1.5em;
+    font-family: Lato, sans-serif;
+ 
+    height: 64px;    
+    line-height: 64px;
+    margin: 40px 0;
+    padding-left: 74px;
+    
+    &:hover {
+        
+    }
+}
 
+nav {
+    float: right;
+   
+    ul {
+        height: 64px;    
+        line-height: 64px;
+        margin-top: 40px;
+    }
+    li {
+        float: left;
+        list-style: none;
+        margin-right: 10px;
+        a {
+            color: #737373;
+            font-family: Lato, sans-serif;
+            padding: 10px;
+            text-decoration: none;
+            
+            &:hover, &:active {
+                background: #00a6d4;
+                color: #fff;
+            }
+        }
+    }
 }
 
 h1, h2, h3, h4 h5, h6 {
@@ -40,8 +92,7 @@ h1, h2, h3, h4 h5, h6 {
 }
 
 h1 {
-    font-family: Lato, sans-serif;
-    color: darken($lightGrey, 83%);
+    font-family: "Mir Medium", Lato, sans-serif;
     font-size: 2.5em;
     line-height: 60px;
 }
@@ -73,9 +124,8 @@ article {
 }
 
 footer {
-    background: $lightGrey;
-    border-top: 1px solid darken($lightGrey, 10%);
-    color: darken($lightGrey, 23%);
+    background: #31302e;
+    color: #e8e8e8;
     height: 120px;
     line-height: 120px;
     margin-top: 60px;
@@ -97,12 +147,12 @@ footer {
 
         background: rgba(0,0,0, .1);
         border-radius: 25em;
-        color: darken($lightGrey, 23%);
+        color: #e8e8e8;
         padding: 0.5em;
         position: relative;
         &:hover {
             background: darken($lightGrey, 23%);
-            color: #fff;
+            color: #31302e;
         }
         
         &:after {

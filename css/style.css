@@ -71,24 +71,22 @@ body {
   margin: 0;
   padding: 0; }
 
-nav,
 h1,
-article,
+section,
 footer {
   *zoom: 1;
-  display: block; }
-  nav:before, nav:after,
-  h1:before,
-  h1:after,
-  article:before,
-  article:after,
+  display: table;
+  width: 100%;
+  table-layout: fixed; }
+  h1:before, h1:after,
+  section:before,
+  section:after,
   footer:before,
   footer:after {
     content: " ";
     display: table; }
-  nav:after,
   h1:after,
-  article:after,
+  section:after,
   footer:after {
     clear: both; }
 
@@ -96,27 +94,71 @@ footer {
   *zoom: 1;
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  max-width: 960px; }
   .container:before, .container:after {
     content: " ";
     display: table; }
   .container:after {
     clear: both; }
 
+.container-full {
+  background: #00a6d4;
+  color: #fff;
+  padding: 20px 0;
+  margin-bottom: 16px; }
+  .container-full .title {
+    display: table-cell;
+    padding-right: 2.35765%;
+    width: 102.35765%; }
+    .container-full .title:last-child {
+      width: 100%;
+      padding-right: 0; }
+
 .grid {
+  display: table-cell;
+  padding-right: 2.35765%;
+  width: 102.35765%; }
+  .grid:last-child {
+    width: 100%;
+    padding-right: 0; }
+
+.logo {
+  background: url(/img/logo.png) center left no-repeat;
+  color: #232d31;
   display: block;
   float: left;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .grid:last-child {
-    margin-right: 0; }
+  font-size: 1.5em;
+  font-family: Lato, sans-serif;
+  height: 64px;
+  line-height: 64px;
+  margin: 40px 0;
+  padding-left: 74px; }
+
+nav {
+  float: right; }
+  nav ul {
+    height: 64px;
+    line-height: 64px;
+    margin-top: 40px; }
+  nav li {
+    float: left;
+    list-style: none;
+    margin-right: 10px; }
+    nav li a {
+      color: #737373;
+      font-family: Lato, sans-serif;
+      padding: 10px;
+      text-decoration: none; }
+      nav li a:hover, nav li a:active {
+        background: #00a6d4;
+        color: #fff; }
 
 h1, h2, h3, h4 h5, h6 {
   font-weight: 400; }
 
 h1 {
-  font-family: Lato, sans-serif;
-  color: #201d1d;
+  font-family: "Mir Medium", Lato, sans-serif;
   font-size: 2.5em;
   line-height: 60px; }
 
@@ -138,9 +180,8 @@ h4 {
   font-size: 1.125em; }
 
 footer {
-  background: #f3f2f2;
-  border-top: 1px solid #dad7d7;
-  color: #bab5b5;
+  background: #31302e;
+  color: #e8e8e8;
   height: 120px;
   line-height: 120px;
   margin-top: 60px; }
@@ -159,12 +200,12 @@ footer {
     transition: background 0.2s ease-in-out;
     background: rgba(0, 0, 0, 0.1);
     border-radius: 25em;
-    color: #bab5b5;
+    color: #e8e8e8;
     padding: 0.5em;
     position: relative; }
     footer a:hover {
       background: #bab5b5;
-      color: #fff; }
+      color: #31302e; }
     footer a:after {
       pointer-events: none;
       position: absolute;
