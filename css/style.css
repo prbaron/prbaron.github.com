@@ -1372,6 +1372,12 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   src: url("/font/lato_regular.eot?#iefix") format("embedded-opentype"), url("/font/lato_regular.woff") format("woff"), url("/font/lato_regular.ttf") format("truetype");
   font-weight: normal; }
 
+@font-face {
+  font-family: 'Kreon';
+  src: url("/font/kreon_bold.eot");
+  src: url("/font/kreon_bold.eot?#iefix") format("embedded-opentype"), url("/font/kreon_bold.woff") format("woff"), url("/font/kreon_bold.ttf") format("truetype");
+  font-weight: bold; }
+
 body {
   background: #fefefe;
   color: #9b9292;
@@ -1583,7 +1589,7 @@ h2 {
     font-weight: normal; }
 
 h3 {
-  font-family: Kreon, sans-serif;
+  font-family: Kreon, Lato, sans-serif;
   font-size: 1.25em;
   margin: 16px 0 0; }
 

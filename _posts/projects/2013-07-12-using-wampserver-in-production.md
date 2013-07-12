@@ -1,6 +1,6 @@
 ---
 layout  : default
-type    : post
+type    : project
 tagline : "Using WampServer in production"
 date    : 2013-07-12 22:02:18
 ---

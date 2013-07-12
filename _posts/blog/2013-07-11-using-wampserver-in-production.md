@@ -15,15 +15,16 @@ Ok, you want your website to be online so the first important thing to do is to 
 
 Look at these lines :
 
-```
+{% highlight php lineos %}
 <Directory "c:/wamp/apps/phpmyadmin3.4.10.1/">
     Options Indexes FollowSymLinks MultiViews
     AllowOverride all
-        Order Deny,Allow
+    Order Deny,Allow
 	Deny from all
 	Allow from 127.0.0.1
 </Directory>
-```
+{% endhighlight %}
+
 and replace it by these :
 
 ```

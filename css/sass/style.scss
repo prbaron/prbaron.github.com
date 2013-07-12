@@ -23,6 +23,16 @@
          
     font-weight: normal;
 }
+
+@font-face {
+    font-family: 'Kreon';
+    src: url('/font/kreon_bold.eot');
+    src: url('/font/kreon_bold.eot?#iefix') format('embedded-opentype'),
+         url('/font/kreon_bold.woff') format('woff'),
+         url('/font/kreon_bold.ttf') format('truetype');
+         
+    font-weight: bold;
+}
  
 $lightGrey : hsl(0, 4%, 95%);
 
@@ -232,7 +242,7 @@ h2 {
 }
 
 h3 {
-    font-family: Kreon, sans-serif;
+    font-family: Kreon, Lato, sans-serif;
     font-size: 1.25em;
     margin: 16px 0 0 ;
 }
