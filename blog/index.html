@@ -1,7 +1,7 @@
 ---
-layout: default
-title: Your New Jekyll Site
-header: Blog
+layout  : default
+title   : Blog
+tagline : Blog
 ---
 
 {% for post in site.posts %}
@@ -9,7 +9,7 @@ header: Blog
         <div class="post">
             <h2>
                 {{ post.title }}
-                <small>{{ post.date | date:'%d/%M/%Y' }}</small>
+                <small>{{ post.date | date:'%d/%M/%Y' }}</small>
             </h2>
             <div class="entry">
                 <p>{{ post.excerpt }}</p>
@@ -22,26 +22,3 @@ header: Blog
         </div>
     {% endif %}
 {% endfor %}
-
-
-<div id="post-pagination" class="pagination">
-    <ul class="pages">
-        <li class="page">
-            {% if paginator.page == 1 %}
-                <span class="current-page">1</span>
-            {% else %}
-                <a href="/blog/">1</a>
-            {% endif %}
-        </li>
-    
-        {% for count in (2..paginator.total_pages) %}
-            <li class="page">
-                {% if count == paginator.page %}
-                    <span class="current-page">{{ count }}</span>
-                {% else %}
-                    <a href="/page{{ count }}">{{ count }}</a>
-                {% endif %}
-            </li>
-        {% endfor %}
-    </ul>
-</div>

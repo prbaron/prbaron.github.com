@@ -1,25 +1,26 @@
 ---
-layout: default
-title: Your New Jekyll Site
-header: Projects
+layout  : default
+title   : Your New Jekyll Site
+tagline : Projects
 ---
+
+<ul class="projects">
 {% for post in site.posts %}
     {% if post.type contains 'project' %}
-            
-
-    <div class="project">
-        <h2>{{ post.title }}</h2>
-        <div class="thumbnail">
-            <img src="{{ post.thumbnail }}" />
-        </div>
-        <div class="entry">
-           {{ post.excerpt }}
-            <p>
-                <a href="{{ post.url }}" class="btn">
-                    Read the article
-                </a>
-            </p>
-        </div>
-    </div>
+        <li class="project">
+            <h2>{{ post.title }}</h2>
+            <div class="thumbnail">
+                <img src="{{post.thumbnail}}" />
+            </div>
+            <div class="entry">
+               {{ post.excerpt }}
+                <p>
+                    <a href="{{ post.url }}" class="btn">
+                        Read the article
+                    </a>
+                </p>
+            </div>
+        </li>
     {% endif %}
 {% endfor %}
+</ul>

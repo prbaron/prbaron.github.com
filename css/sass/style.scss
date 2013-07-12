@@ -27,27 +27,14 @@ a {
     }
 }
 
-h1,
-section,
 header,
+section,
 footer {
     @include row("table");
 }
 
 .container {
     @include outer-container;
-    max-width: 960px;
-}
-
-.container-full {
-    background: #00a6d4;
-    color: #fff;
-    padding: 20px 0;
-    margin-bottom: 16px;
-
-    .title {
-        @include span-columns(12);
-    }
 }
 
 .grid {
@@ -154,7 +141,16 @@ header {
     }  
 }
 
+.tagline {
+    background: #00a6d4;
+    color: #fff;
+    padding: 20px 0;
+    margin-bottom: 16px;
 
+    .title {
+        @include span-columns(12);
+    }
+}
 
 h1, h2, h3, h4 h5, h6 {
     font-weight: 400;
@@ -196,24 +192,19 @@ h4 {
     font-size: 1.125em;
 }
 
-.project {
-    //@include span-columns(4);
-    
-    
-    @include outer-container;
-    
-    h2 {
-        //@include span-columns(12);
-    }
-    .thumbnail {
+.projects {
+    @include row();
+    padding-left: 0;
+
+    .project {
         @include span-columns(4);
-    }
-    
-    .entry {
-        @include span-columns(8);
+        @include omega(3n);
+        
+        img {
+            @include fill-parent;
+        }
     }
 }
-
 
 
 footer {
