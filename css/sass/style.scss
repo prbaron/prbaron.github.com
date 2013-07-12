@@ -2,8 +2,28 @@
 @import "bourbon/bourbon",
         "neat/neat";
         
-@import "fontello";
+@import "font-awesome.min";
 
+@font-face {
+    font-family: 'Mir-Medium';
+    src: url('/font/mir-medium_regular.eot');
+    src: url('/font/mir-medium_regular.eot?#iefix') format('embedded-opentype'),
+         url('/font/mir-medium_regular.woff') format('woff'),
+         url('/font/mir-medium_regular.ttf') format('truetype');
+         
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/font/lato_regular.eot');
+    src: url('/font/lato_regular.eot?#iefix') format('embedded-opentype'),
+         url('/font/lato_regular.woff') format('woff'),
+         url('/font/lato_regular.ttf') format('truetype');
+         
+    font-weight: normal;
+}
+ 
 $lightGrey : hsl(0, 4%, 95%);
 
 body {
@@ -28,13 +48,16 @@ a {
 }
 
 header,
-section,
-footer {
-    @include row("table");
+section {
+    @include row("block");
 }
 
 .container {
     @include outer-container;
+    
+    @include media(max-width 68em) {
+        padding: 0 1em;
+    }
 }
 
 .grid {
@@ -62,15 +85,28 @@ header {
             background-image: url(/img/logo2.png);
             border-bottom: none;
         }
+        
+        @include media(max-width 520px) {
+            float: none;
+        }
     }
 
     .socials {
         float: right;
         margin-top: 34px;
+       
+        @include media(max-width 520px) {
+            @include row("table");    
+            float: none;
+            margin: 0 0 20px 0;
+            padding-left: 0;
+        }
+        
         li {
             float: left;
             list-style: none;
             margin-right: 1em;
+            text-align: center;
         }
         a {
             @include transition(background 0.2s ease-in-out);
@@ -81,6 +117,8 @@ header {
             display: block;
             padding: 0.5em;
             position: relative;
+            width: 40px;
+            
             &:hover {
                 background: #232d31;
                 border-bottom: none;
@@ -111,21 +149,25 @@ header {
                 @include transform(scale(1));
                 opacity: 1;
             }
+            
         }
     }
 
     nav {
-        @include row("table");    
+        @include row("block");    
         border-top: 1px solid #e1e1e1;
-        margin: 20px 0 30px;
+        
+        clear: both;
 
         ul {
+            @include row("table");
             padding-left: 0;
         }
         li {
             float: left;
             list-style: none;
-            margin-right: 10px;
+            //margin-right: 10px;
+            
             a {
                 color: #767676;
                 font-family: Lato, sans-serif;
@@ -136,7 +178,14 @@ header {
                     background: #00a6d4;
                     color: #fff;
                 }
-            }
+                
+                @include media(max-width 479px) {
+                    font-size: 0.8em;
+                }
+            }    
+        }
+        li:last-of-type {
+            margin-right: 0;
         }
     }  
 }
@@ -157,7 +206,7 @@ h1, h2, h3, h4 h5, h6 {
 }
 
 h1 {
-    font-family: "Mir Medium", Lato, sans-serif;
+    font-family: "Mir-Medium", Lato, sans-serif;
     font-size: 2.5em;
     line-height: 60px;
 }
@@ -203,11 +252,22 @@ h4 {
         img {
             @include fill-parent;
         }
+        
+        @include media(max-width 480px) {
+            @include span-columns(12);
+            @include omega();
+        }        
+        
+        @include media(min-width 481px max-width 768px) {
+            @include span-columns(6);
+            @include omega(2n);
+        }
     }
 }
 
 
 footer {
+    @include row("table");
     border-top: 4px solid #d8d8d8;
     background: #31302e;
     color: #e8e8e8;
