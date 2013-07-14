@@ -39,7 +39,7 @@ $lightGrey : hsl(0, 4%, 95%);
 
 body {
     background: #fefefe;
-    color: darken($lightGrey, 36%);
+    color: darken($lightGrey, 30%);
     font-family: Lato, 'PT Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -220,6 +220,13 @@ h1 {
     font-family: "Mir-Medium", Lato, sans-serif;
     font-size: 2.5em;
     line-height: 60px;
+    
+    small {
+        color: darken($lightGrey, 15%);
+        font-family: Lato, sans-serif;
+        font-size: 0.4em;
+        font-weight: normal;
+    }
 }
 
 h2 {
@@ -243,7 +250,8 @@ h2 {
 }
 
 h3 {
-    font-family: Kreon, Lato, sans-serif;
+    color: darken($lightGrey, 53%);
+    font-family: Kreon, Lato, sans-serif;    
     font-size: 1.25em;
     margin: 16px 0 0 ;
 }
@@ -315,5 +323,21 @@ footer {
         border-bottom: none;
         background: #dadada;
         color: #423e3e;
+    }
+}
+
+.pagination {
+    list-style-type: none;
+    overflow: hidden;
+    padding-left: 0;    
+
+    .prev a {
+        @extend .btn;
+        float: left;
+    }
+    
+    .next a {
+        @extend .btn;
+        float: right;
     }
 }

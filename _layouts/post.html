@@ -20,20 +20,22 @@
 
     <div class="tagline">
         <div class="container">
-            <h1 class="title">{{ page.tagline }}</h1>
+            <h1 class="title">{{ page.tagline }} <small>{{ page.date | date_to_long_string}}</small></h1>
         </div> 
     </div>
     <div class="container">
         <div class="grid">
             {{ content }}
             
-            {% if page.previous %}
-                <a href=" {{ page.previous.url }}" class="btn"><i class="icon-chevron-sign-left"></i> &nbsp;&nbsp; {{ page.previous.tagline }}</a>
-            {% endif %}
-            
-            {% if page.next %}
-                <a href=" {{ page.next.url }}" class="btn">{{ page.next.tagline }} &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i></a>
-            {% endif %} 
+            <ul class="pagination">
+                {% if page.previous %}
+                    <li class="prev"><a href=" {{ page.previous.url }}"><i class="icon-chevron-sign-left"></i> &nbsp;&nbsp; {{ page.previous.tagline }}</a></li>
+                {% endif %}
+                
+                {% if page.next %}
+                    <li class="next"><a href=" {{ page.next.url }}">{{ page.next.tagline }} &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i></a></li>
+                {% endif %} 
+            </ul>
         </div>
     </div>
     

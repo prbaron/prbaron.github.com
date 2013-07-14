@@ -2,7 +2,6 @@
 layout  : post
 type    : post
 tagline : "Using WampServer in production"
-date    : 2013-07-11 22:02:18
 ---
 
 WampServer is an awesome tool and famous in web development world. For those who do not know it, WampServer is a software installing Apache, PHP and MySQL. It is really useful to locally work on your websites. The problem is that it is for development and not for production because it is not secured.
@@ -15,28 +14,24 @@ Ok, you want your website to be online so the first important thing to do is to 
 
 Look at these lines :
 
-{% highlight php lineos %}
-<Directory "c:/wamp/apps/phpmyadmin3.4.10.1/">
-    Options Indexes FollowSymLinks MultiViews
-    AllowOverride all
-    Order Deny,Allow
-	Deny from all
-	Allow from 127.0.0.1
-</Directory>
-{% endhighlight %}
+    <Directory "c:/wamp/apps/phpmyadmin3.4.10.1/">
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride all
+        Order Deny,Allow
+    	Deny from all
+    	Allow from 127.0.0.1
+    </Directory>
 
 and replace it by these :
 
-```
-<Directory "c:/wamp/apps/phpmyadmin3.4.10.1/">
-    Options Indexes FollowSymLinks MultiViews
-    AllowOverride all
+    <Directory "c:/wamp/apps/phpmyadmin3.4.10.1/">
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride all
         Order Allow,Deny
-	Allow from 192
-</Directory>
-```
+    	Allow from 192
+    </Directory>
 
-Ok, now your computer can be accessed to every other on your local network. The problem is that your server can still just be call by local computers. We will open it to the worl at the end of the tutorial.
+Ok, now your computer can be accessed to every other on your local network. The problem is that your server can still just be call by local computers. We will open it to the world at the end of the tutorial.
 
 ### Launch WampServer on computer start
 We will configure Windows to lauch WampServer services on each restart. It is preferably to quit the application before executing the following steps. Now, type services on your search bar in the start Panel of Windows. Search for the wampapache and wampmysql services. Right click and choose **Automatic on launch**. Do the same way for wampmysql service.
@@ -52,19 +47,18 @@ Ok, it's well, we did some good and important things but it is not over, we have
 ### Delete root account
 Access to PhpMyAdmin by typing http://localhost/phpmyadmin. You have to secure the root user because it has no password. You have two solutions : 
 
-  - Edit each root account by creating a password
-  - Create new user for the three clients (localhost, 127.0.0.1, ::1).
+  * Edit each root account by creating a password
+  * Create new user for the three clients (localhost, 127.0.0.1, ::1).
   
 Once you did it, you have to delete your three old root accounts.
 
 ### Set a user and a password
 Well, this step is not to secure your PhpMyAdmin panel but to help you to connect to it. You can set a username and a password (but I do not recommand it) by default on the login screen. To do it, check the config.inc.php file in _/{WampDirectory}/apps/phpmyadmin{version}/_ and check these lines :
 
-```
-$cfg['Servers'][$i]['user']		        = 'root';
-$cfg['Servers'][$i]['password']		    = '';
-$cfg['Servers'][$i]['allowNoPassword']	= true;
-```
+
+    $cfg['Servers'][$i]['user']		        = 'root';
+    $cfg['Servers'][$i]['password']		    = '';
+    $cfg['Servers'][$i]['allowNoPassword']	= true;
 
 You can set your default username and password (also I do not recommand it again!).
  
@@ -75,8 +69,8 @@ Ok, now WampServer is totally secured and will be launched on each start of Wind
 ### I still cannot see my website from the Internet
 We allowed the local computers to check the website, but we have to open the server to the world. The problem here is that your server does not have a public IP to be accessible by everybody. You have to choose between two solutions :
 
-  - Setup a public IP to your computer and enable it on your router
-  - use dyndns to manage the routes form a ynamic IP.
+  * Setup a public IP to your computer and enable it on your router
+  * use dyndns to manage the routes form a ynamic IP.
 
 ## Conclusion
 Ok, I will answer one important question. What to do if I want to create my own server ? Install Linux !!! Linux is the best way to configure and manage a server, it is scaled for and secure. The solution I gave you here is in the case that you do not have the choice of your operating system.
