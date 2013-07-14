@@ -9,7 +9,7 @@ tagline : Blog
         <div class="post">
             <h2>
                 {{ post.title }}
-                <small>{{ post.date | date:'%d/%M/%Y' }}</small>
+                <small>{{ post.date | date_to_long_string }}</small>
             </h2>
             <div class="entry">
                 <p>{{ post.excerpt }}</p>

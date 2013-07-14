@@ -25,7 +25,15 @@
     </div>
     <div class="container">
         <div class="grid">
-           {{ content }}    
+            {{ content }}
+            
+            {% if page.previous %}
+                <a href=" {{ page.previous.url }}" class="btn"><i class="icon-chevron-sign-left"></i> &nbsp;&nbsp; {{ page.previous.tagline }}</a>
+            {% endif %}
+            
+            {% if page.next %}
+                <a href=" {{ page.next.url }}" class="btn">{{ page.next.tagline }} &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i></a>
+            {% endif %} 
         </div>
     </div>
     

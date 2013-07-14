@@ -1,5 +1,5 @@
 ---
-layout  : default
+layout  : post
 type    : post
 tagline : "Old project"
 date    : 2013-07-08 22:02:18

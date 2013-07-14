@@ -1,5 +1,5 @@
 ---
-layout  : default
+layout  : post
 type    : post
 tagline : "Using WampServer in production"
 date    : 2013-07-11 22:02:18

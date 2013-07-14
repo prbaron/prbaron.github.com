@@ -1,5 +1,5 @@
 ---
-layout  : default
+layout  : post
 type    : post
 tagline : "My new project"
 date    : 2013-07-09 22:02:18

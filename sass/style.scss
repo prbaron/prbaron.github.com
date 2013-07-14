@@ -1,8 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Lato|PT+Sans|Kreon);
 @import "bourbon/bourbon",
         "neat/neat";
-        
-@import "font-awesome.min";
+
+@import "font-awesome.min",
+        "prettify";
 
 @font-face {
     font-family: 'Mir-Medium';
@@ -10,7 +11,7 @@
     src: url('/font/mir-medium_regular.eot?#iefix') format('embedded-opentype'),
          url('/font/mir-medium_regular.woff') format('woff'),
          url('/font/mir-medium_regular.ttf') format('truetype');
-         
+
     font-weight: normal;
 }
 
@@ -20,8 +21,8 @@
     src: url('/font/lato_regular.eot?#iefix') format('embedded-opentype'),
          url('/font/lato_regular.woff') format('woff'),
          url('/font/lato_regular.ttf') format('truetype');
-         
-    font-weight: normal;
+
+    font-weight: 400;
 }
 
 @font-face {
@@ -30,10 +31,10 @@
     src: url('/font/kreon_bold.eot?#iefix') format('embedded-opentype'),
          url('/font/kreon_bold.woff') format('woff'),
          url('/font/kreon_bold.ttf') format('truetype');
-         
+
     font-weight: bold;
 }
- 
+
 $lightGrey : hsl(0, 4%, 95%);
 
 body {
@@ -50,7 +51,7 @@ body {
 a {
     color: #00a6d4;
     text-decoration: none;
-    
+
     &:hover,
     &:active {
         border-bottom: 1px solid #00a6d4;
@@ -64,7 +65,7 @@ section {
 
 .container {
     @include outer-container;
-    
+
     @include media(max-width 68em) {
         padding: 0 1em;
     }
@@ -83,19 +84,18 @@ header {
         float: left;
         font-size: 1.5em;
         font-family: Lato, sans-serif;
-     
-        height: 64px;    
+
+        height: 64px;
         line-height: 64px;
         margin: 20px 0;
         padding-left: 74px;
-        -webkit-transition: background-image 0.3s ease-in-out;
-           -moz-transition: background-image 0.3s ease-in-out;
-                transition: background-image 0.3s ease-in-out;
+        @include transition(background-image 0.3s ease-in-out);
+
         &:hover {
             background-image: url(/img/logo2.png);
             border-bottom: none;
         }
-        
+
         @include media(max-width 520px) {
             float: none;
         }
@@ -104,14 +104,14 @@ header {
     .socials {
         float: right;
         margin-top: 34px;
-       
+
         @include media(max-width 520px) {
-            @include row("table");    
+            @include row("table");
             float: none;
             margin: 0 0 20px 0;
             padding-left: 0;
         }
-        
+
         li {
             float: left;
             list-style: none;
@@ -120,7 +120,7 @@ header {
         }
         a {
             @include transition(background 0.2s ease-in-out);
-            
+
             background: #d9d9d9;
             border-radius: 25em;
             color: #fefefe;
@@ -128,12 +128,12 @@ header {
             padding: 0.5em;
             position: relative;
             width: 40px;
-            
+
             &:hover {
                 background: #232d31;
                 border-bottom: none;
             }
-            
+
             &:after {
                 pointer-events: none;
                 position: absolute;
@@ -144,29 +144,29 @@ header {
                 -webkit-box-sizing: content-box;
                    -moz-box-sizing: content-box;
                         box-sizing: content-box;
-    
+
                 top: -3px;
                 left: -3px;
                 padding: 3px;
                 box-shadow: 0 0 0 4px #232d31;
 
-                @include transition(opacity 0.2s, background 0.2s); 
+                @include transition(opacity 0.2s, background 0.2s);
                 @include transform(scale(.8));
                 opacity: 0;
             }
-        
+
             &:hover:after {
                 @include transform(scale(1));
                 opacity: 1;
             }
-            
+
         }
     }
 
     nav {
-        @include row("block");    
+        @include row("block");
         border-top: 1px solid #e1e1e1;
-        
+
         clear: both;
 
         ul {
@@ -177,27 +177,28 @@ header {
             float: left;
             list-style: none;
             //margin-right: 10px;
-            
+
             a {
                 color: #767676;
                 font-family: Lato, sans-serif;
                 padding: 10px;
                 text-decoration: none;
-                
+
                 &:hover, &:active {
                     background: #00a6d4;
+                    border-bottom: none;
                     color: #fff;
                 }
-                
+
                 @include media(max-width 479px) {
                     font-size: 0.8em;
                 }
-            }    
+            }
         }
         li:last-of-type {
             margin-right: 0;
         }
-    }  
+    }
 }
 
 .tagline {
@@ -258,16 +259,16 @@ h4 {
     .project {
         @include span-columns(4);
         @include omega(3n);
-        
+
         img {
             @include fill-parent;
         }
-        
+
         @include media(max-width 480px) {
             @include span-columns(12);
             @include omega();
-        }        
-        
+        }
+
         @include media(min-width 481px max-width 768px) {
             @include span-columns(6);
             @include omega(2n);
@@ -284,20 +285,20 @@ footer {
     height: 60px;
     line-height: 60px;
     margin-top: 60px;
-    
+
     p:first-of-type {
         float: left;
     }
     p:last-of-type {
-    
+
         float: right;
-        
+
         a {
             color: #e8e8e8;
-            
+
             &:hover {
                 border-bottom-color: #e8e8e8;
-            }    
+            }
         }
     }
 }
@@ -307,9 +308,9 @@ footer {
     background: #efefef;
     color: #737373;
     padding: 10px 20px;
-    
+
     text-decoration: none;
-  
+
     &:hover {
         border-bottom: none;
         background: #dadada;
