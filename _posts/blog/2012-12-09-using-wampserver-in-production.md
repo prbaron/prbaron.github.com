@@ -55,7 +55,6 @@ Once you did it, you have to delete your three old root accounts.
 ### Set a user and a password
 Well, this step is not to secure your PhpMyAdmin panel but to help you to connect to it. You can set a username and a password (but I do not recommand it) by default on the login screen. To do it, check the config.inc.php file in _/{WampDirectory}/apps/phpmyadmin{version}/_ and check these lines :
 
-
     $cfg['Servers'][$i]['user']		        = 'root';
     $cfg['Servers'][$i]['password']		    = '';
     $cfg['Servers'][$i]['allowNoPassword']	= true;
