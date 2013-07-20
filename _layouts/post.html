@@ -18,13 +18,10 @@
 <body>
     {% include header.html %}
 
-    <div class="tagline">
-        <div class="container">
-            <h1 class="title">{{ page.tagline }} <small>{{ page.date | date_to_long_string}}</small></h1>
-        </div> 
-    </div>
     <div class="container">
         <div class="grid">
+            <h1 class="title">{{ page.tagline }} <small>{{ page.date | date_to_long_string}}</small></h1>
+            
             {{ content }}
             
             <ul class="pagination">
@@ -42,15 +39,14 @@
                         {% assign prev_post = post %}
                     {% endif %}
                 {% endfor %}
-      
-                {% if prev_post %}
-                    <li class="prev"><a href=" {{ prev_post.url }}"><i class="icon-chevron-sign-left"></i> &nbsp;&nbsp; {{ prev_post.tagline }}</a></li>
-                {% endif %}
                 
                 {% if next_post %}
                     <li class="next"><a href=" {{ next_post.url }}">{{ next_post.tagline }} &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i></a></li>
                 {% endif %} 
-
+                
+                {% if prev_post %}
+                    <li class="prev"><a href=" {{ prev_post.url }}"><i class="icon-chevron-sign-left"></i> &nbsp;&nbsp; {{ prev_post.tagline }}</a></li>
+                {% endif %}
             </ul>
         </div>
     </div>

@@ -1,8 +1,7 @@
 ---
-layout  : post
-type    : post
-tagline : "CakePHP Media plugin v1.1"
+layout   : post
 category : post
+tagline  : "CakePHP Media plugin v1.1"
 ---
 <div class="alert">
     Grafikart a écrit une v2.0 de son plugin, cette version 1.1 n'est plus d'actualité.

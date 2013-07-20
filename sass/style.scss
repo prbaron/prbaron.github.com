@@ -202,13 +202,16 @@ header {
 }
 
 .tagline {
-    background: #00a6d4;
-    color: #fff;
-    padding: 20px 0;
-    margin-bottom: 16px;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    
+    @include media(min-width 481px max-width 768px) {
+        height: 300px;
+    }
 
-    .title {
-        @include span-columns(12);
+    @include media(max-width 480px) {
+        height: 200px;
     }
 }
 
@@ -220,12 +223,18 @@ h1 {
     font-family: "Mir-Medium", Lato, sans-serif;
     font-size: 2.5em;
     line-height: 60px;
+    margin: 0.5em 0 0 0;
     
     small {
         color: darken($lightGrey, 15%);
         font-family: Lato, sans-serif;
         font-size: 0.4em;
         font-weight: normal;
+        
+        @include media(max-width 767px) {
+            display: block;
+            line-height: 24px;
+        }
     }
 }
 
@@ -263,11 +272,15 @@ h4 {
 .projects {
     @include row();
     padding-left: 0;
+    margin: 0;
 
     .project {
         @include span-columns(4);
         @include omega(3n);
 
+        h2 {
+            margin: 16px 0;
+        }
         img {
             @include fill-parent;
         }
@@ -337,19 +350,18 @@ footer {
 
 .btn {
     @include border-top-radius(2px);
-    background: #efefef;
-    color: #737373;
+    background: #00a6d4;
+    color: #fff;
     padding: 10px 20px;
 
     text-decoration: none;
 
     &:hover {
         border-bottom: none;
-        background: #dadada;
-        color: #423e3e;
+        background: darken(#00a6d4, 15%);
     }
     &:active {
-       @include box-shadow(0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.2) inset);
+       @include box-shadow(0 0 0 1px rgba(0,0,0,.3) inset,0 0 6px rgba(0,0,0,.5) inset);
     }
     
 }
@@ -362,10 +374,21 @@ footer {
     .prev a {
         @extend .btn;
         float: left;
+        
+        @include media(max-width 767px) {
+            float: none;
+            display: block;
+        }
     }
     
     .next a {
         @extend .btn;
         float: right;
+        @include media(max-width 767px) {
+            float: none;
+            display: block;
+            margin-bottom: 20px;
+            text-align: right;
+        }
     }
 }

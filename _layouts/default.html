@@ -17,15 +17,12 @@
 </head>
 <body>
     {% include header.html %}
-
-    <div class="tagline">
-        <div class="container">
-            <h1 class="title">{{ page.tagline }}</h1>
-        </div> 
-    </div>
+    
     <div class="container">
         <div class="grid">
-           {{ content }}    
+            <h1 class="title">{{ page.tagline }}</h1>
+            
+            {{ content }} 
         </div>
     </div>
     
