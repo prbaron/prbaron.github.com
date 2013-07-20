@@ -4,21 +4,19 @@ title   : Blog
 tagline : Blog
 ---
 
-{% for post in site.posts %}
-    {% if post.type contains 'post' limit: 10 %}
-        <div class="post">
-            <h2>
-                {{ post.title }}
-                <small>{{ post.date | date_to_long_string }}</small>
-            </h2>
-            <div class="entry">
-                <p>{{ post.excerpt }}</p>
-                <p>
-                    <a href="{{ post.url }}" class="btn">
-                        Lire l'article &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i>
-                    </a>
-                </p>
-            </div>
+{% for post in site.categories.post %}
+    <div class="post">
+        <h2>
+            {{ post.title }}
+            <small>{{ post.date | date_to_long_string }}</small>
+        </h2>
+        <div class="entry">
+            <p>{{ post.excerpt }}</p>
+            <p>
+                <a href="{{ post.url }}" class="btn">
+                    Lire l'article &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i>
+                </a>
+            </p>
         </div>
-    {% endif %}
+    </div>
 {% endfor %}

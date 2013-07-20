@@ -28,17 +28,34 @@
             {{ content }}
             
             <ul class="pagination">
-                {% if page.previous %}
-                    <li class="prev"><a href=" {{ page.previous.url }}"><i class="icon-chevron-sign-left"></i> &nbsp;&nbsp; {{ page.previous.tagline }}</a></li>
+                {% for post in site.categories.post %}
+                    {% if post.url == page.url %}
+                        {% assign post_index0 = forloop.index0 %}
+                        {% assign post_index1 = forloop.index %}
+                    {% endif %}
+                {% endfor %}
+                {% for post in site.categories.post %}
+                    {% if post_index0 == forloop.index %}
+                        {% assign next_post = post %}
+                    {% endif %}
+                    {% if post_index1 == forloop.index0 %}
+                        {% assign prev_post = post %}
+                    {% endif %}
+                {% endfor %}
+      
+                {% if prev_post %}
+                    <li class="prev"><a href=" {{ prev_post.url }}"><i class="icon-chevron-sign-left"></i> &nbsp;&nbsp; {{ prev_post.tagline }}</a></li>
                 {% endif %}
                 
-                {% if page.next %}
-                    <li class="next"><a href=" {{ page.next.url }}">{{ page.next.tagline }} &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i></a></li>
+                {% if next_post %}
+                    <li class="next"><a href=" {{ next_post.url }}">{{ next_post.tagline }} &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i></a></li>
                 {% endif %} 
+
             </ul>
         </div>
     </div>
     
+        
     {% include footer.html %}
     
     {% include analytics.html %}

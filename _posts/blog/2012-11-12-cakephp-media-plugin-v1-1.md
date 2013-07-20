@@ -2,7 +2,11 @@
 layout  : post
 type    : post
 tagline : "CakePHP Media plugin v1.1"
+category : post
 ---
+<div class="alert">
+    Grafikart a écrit une v2.0 de son plugin, cette version 1.1 n'est plus d'actualité.
+</div>
 
 Today I want to share an awesome plugin created by [Grafikart](http://www.grafikart.fr/) called [CakePHP-Media](https://github.com/Grafikart/CakePHP-Media). You can download the v1.1 (improvements listed below) from my fork : [https://github.com/prbaron/CakePHP-Media](https://github.com/prbaron/CakePHP-Media)
 
@@ -16,10 +20,10 @@ The original syntax highlight ckeditor plugin : [http://code.google.com/p/ckedit
 
 Here are the new files you can add into the editor :&nbsp;
 
-  * Image : *.jpg, *.gif, *.png</p>
-  * Video : *.avi, *.mov, *.mkv, *.mp4, *.wmv
-  * Music : *.mp3, *.wma,</p>
-  * Zip : *.rar, *.tar.gr, *.tgz, *.zip
+  * Image : jpg, gif, png
+  * Video : avi, mov, mkv, mp4, wmv
+  * Music : mp3, wma,
+  * Zip : rar, tar.gr, tgz, zip
 
 If you upload images, the behaviour of the plugin does not change. If you upload video or music, you can either choose to embed tag (&lt;video&gt;, &lt;audio&gt;) or to create a link to download the file. Finally, if you upload zip files, you can add a link.
 

@@ -311,6 +311,30 @@ footer {
     }
 }
 
+.alert {
+    background-color: #fcf8e3;
+    border-radius: 2px;
+    color: #c09853;
+    margin-bottom: 20px; 
+    padding: 8px 14px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    
+    &.alert-info {
+        background-color: #d9edf7;
+        color: #3a87ad;
+    }
+
+    &.alert-success {
+        background-color: #dff0d8;
+        color: #468847;
+    }
+    
+    &.alert-error {
+        background-color: #f2dede;
+        color: #b94a48;
+    }
+}
+
 .btn {
     @include border-top-radius(2px);
     background: #efefef;
@@ -324,6 +348,10 @@ footer {
         background: #dadada;
         color: #423e3e;
     }
+    &:active {
+       @include box-shadow(0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.2) inset);
+    }
+    
 }
 
 .pagination {

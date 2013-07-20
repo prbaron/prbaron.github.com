@@ -1719,6 +1719,23 @@ footer {
       footer p:last-of-type a:hover {
         border-bottom-color: #e8e8e8; }
 
+.alert {
+  background-color: #fcf8e3;
+  border-radius: 2px;
+  color: #c09853;
+  margin-bottom: 20px;
+  padding: 8px 14px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
+  .alert.alert-info {
+    background-color: #d9edf7;
+    color: #3a87ad; }
+  .alert.alert-success {
+    background-color: #dff0d8;
+    color: #468847; }
+  .alert.alert-error {
+    background-color: #f2dede;
+    color: #b94a48; }
+
 .btn, .pagination .prev a, .pagination .next a {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -1730,6 +1747,8 @@ footer {
     border-bottom: none;
     background: #dadada;
     color: #423e3e; }
+  .btn:active, .pagination .prev a:active, .pagination .next a:active {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
 
 .pagination {
   list-style-type: none;
