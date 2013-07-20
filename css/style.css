@@ -1604,13 +1604,16 @@ header nav {
 .tagline {
   background-size: cover;
   background-position: center;
-  height: 400px; }
+  height: 400px;
+  -webkit-transition: height 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out; }
   @media screen and (min-width: 481px) and (max-width: 768px) {
     .tagline {
       height: 300px; } }
   @media screen and (max-width: 480px) {
     .tagline {
-      height: 300px; } }
+      height: 200px; } }
 
 h1, h2, h3, h4 h5, h6 {
   font-weight: 400; }
