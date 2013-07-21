@@ -20,7 +20,7 @@
 
     <div class="container">
         <div class="grid">
-            <h1 class="title">{{ page.tagline }} <small>{{ page.date | date_to_long_string}}</small></h1>
+            <h1 class="title">{{ page.tagline }} <small>{{ page.date | date: '%d/%m/%Y'}}</small></h1>
             
             {{ content }}
             

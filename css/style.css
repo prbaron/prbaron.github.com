@@ -1681,6 +1681,9 @@ h4 {
       margin: 16px 0; }
     .projects .project img {
       width: 100%; }
+      @media screen and (max-width: 480px) {
+        .projects .project img {
+          display: none; } }
     @media screen and (max-width: 480px) {
       .projects .project {
         display: block;
@@ -1756,7 +1759,7 @@ footer {
     border-bottom: none;
     background: #006a88; }
   .btn:active, .pagination .prev a:active, .pagination .next a:active {
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3) inset, 0 0 6px rgba(0, 0, 0, 0.5) inset; }
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5) inset, 0 0 6px rgba(0, 0, 0, 0.8) inset; }
 
 .pagination {
   list-style-type: none;
