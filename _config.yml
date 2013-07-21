@@ -1,6 +1,6 @@
 name: Pierre Baron
 pygments: true
-permalink: /blog/:title
+permalink: /:title
 google_analytics_id: UA-21369110-4
 exclude : ['sass']
 markdown: rdiscount

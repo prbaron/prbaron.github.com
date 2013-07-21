@@ -354,6 +354,11 @@ footer {
     }
 }
 
+.unstyled {
+    list-style: none;
+    padding-left: 0;
+}
+
 .btn {
     @include border-top-radius(2px);
     background: $blue;

@@ -1748,6 +1748,10 @@ footer {
     background-color: #f2dede;
     color: #b94a48; }
 
+.unstyled {
+  list-style: none;
+  padding-left: 0; }
+
 .btn, .pagination .prev a, .pagination .next a {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
