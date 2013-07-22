@@ -1589,15 +1589,21 @@ header nav {
     header nav li a {
       color: #767676;
       font-family: Lato, sans-serif;
-      padding: 10px;
+      padding: 17px 10px 19px 10px;
       text-decoration: none; }
       header nav li a:hover, header nav li a:active {
         background: #00a6d4;
+        border-top: 3px solid #00566e;
         border-bottom: none;
         color: #fff; }
       @media screen and (max-width: 479px) {
         header nav li a {
-          font-size: 0.8em; } }
+          font-size: 0.8em;
+          padding: 20px 10px 21px 10px; } }
+    header nav li.active a {
+      color: #00a6d4; }
+      header nav li.active a:hover {
+        color: #00566e; }
   header nav li:last-of-type {
     margin-right: 0; }
 

@@ -1,6 +1,6 @@
 ---
 layout    : work
-category  : work
+category  : works
 tagline   : "Application web contrôlant un automate SAIA"
 thumbnail : 2012/09/01/thumbnail.jpg
 client    : ISEA

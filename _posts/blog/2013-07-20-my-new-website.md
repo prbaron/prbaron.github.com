@@ -1,6 +1,6 @@
 ---
 layout   : post
-category : post
+category : blog
 tagline  : "My new website"
 ---
 

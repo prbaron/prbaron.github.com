@@ -1,6 +1,6 @@
 ---
 layout    : work
-category  : work
+category  : works
 tagline   : "Serveur Java et client iPhone pour domotiser un bâtiment"
 thumbnail : 2012/06/01/thumbnail.jpg
 client    : ISEA
