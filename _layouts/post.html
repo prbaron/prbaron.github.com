@@ -20,18 +20,19 @@
 
     <div class="container">
         <div class="grid">
-            <h1 class="title">{{ page.tagline }} <small>{{ page.date | date: '%d/%m/%Y'}}</small></h1>
+            <h1 class="title">{{ page.tagline }}</h1>
+            <p>{{ page.date | date: '%d/%m/%Y'}} &dash; {% if page.author%} {{ page.author}} {% else %} Pierre Baron {% endif %}</p>
             
             {{ content }}
             
             <ul class="pagination">
-                {% for post in site.categories.post %}
+                {% for post in site.categories.blog %}
                     {% if post.url == page.url %}
                         {% assign post_index0 = forloop.index0 %}
                         {% assign post_index1 = forloop.index %}
                     {% endif %}
                 {% endfor %}
-                {% for post in site.categories.post %}
+                {% for post in site.categories.blog %}
                     {% if post_index0 == forloop.index %}
                         {% assign next_post = post %}
                     {% endif %}
