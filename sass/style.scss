@@ -393,7 +393,7 @@ footer {
         background: darken($blue, 15%);
     }
     &:active {
-       @include box-shadow(0 0 0 1px rgba(0,0,0,.5) inset,0 0 6px rgba(0,0,0,.8) inset);
+       @include box-shadow(0 0 0 1px rgba(0,0,0,.2) inset,0 0 10px rgba(0,0,0,.5) inset);
     }
     
 }

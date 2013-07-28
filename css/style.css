@@ -1774,7 +1774,7 @@ footer {
     border: 1px solid #005a73;
     background: #006a88; }
   .btn:active, .pagination .prev a:active, .pagination .next a:active {
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5) inset, 0 0 6px rgba(0, 0, 0, 0.8) inset; }
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2) inset, 0 0 10px rgba(0, 0, 0, 0.5) inset; }
 
 .pagination {
   list-style-type: none;

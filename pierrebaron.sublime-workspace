@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"tagli",
+				"tagline"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
 				"tex",
 				"text-decoration"
 			],
@@ -14,10 +22,6 @@
 			[
 				"bor",
 				"border-top"
-			],
-			[
-				"mar",
-				"margin-bottom"
 			],
 			[
 				"l",
@@ -156,10 +160,42 @@
 	"buffers":
 	[
 		{
-			"file": "pierrebaron.sublime-project",
+			"file": "_layouts/work.html",
 			"settings":
 			{
-				"buffer_size": 87,
+				"buffer_size": 2772,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/header.html",
+			"settings":
+			{
+				"buffer_size": 1341,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/footer.html",
+			"settings":
+			{
+				"buffer_size": 197,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 2930,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/style.scss",
+			"settings":
+			{
+				"buffer_size": 8944,
 				"line_ending": "Unix"
 			}
 		}
@@ -240,6 +276,13 @@
 	},
 	"file_history":
 	[
+		"/Users/pierrebaron/Sites/prbaron.github.com/sass/_prettify.scss",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2012-11-12-cakephp-media-plugin-v1-1.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_layouts/post.html",
+		"/Users/pierrebaron/Sites/prbaron.github.com/sass/style.scss",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2013-07-20-my-new-website.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2012-12-09-using-wampserver-in-production.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/pierrebaron.sublime-project",
 		"/Users/pierrebaron/Sites/pbaron/blog.html",
 		"/Users/pierrebaron/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/pierrebaron/Sites/pbaron/css/bootstrap.css",
@@ -360,14 +403,7 @@
 		"/C/wamp/www/saia/app/Controller/HeatsController.php",
 		"/C/wamp/www/saia/app/View/Curves/admin_edit.ctp",
 		"/C/wamp/www/saia/app/Controller/IndexController.php",
-		"/C/wamp/www/saia/app/View/Index/admin_index.ctp",
-		"/C/wamp/www/saia/app/Model/AppModel.php",
-		"/C/wamp/www/saia/app/Model/Index.php",
-		"/C/wamp/www/saia/lib/Cake/View/Helper/FormHelper.php",
-		"/C/wamp/www/saia/app/View/Index/index.ctp",
-		"/C/wamp/www/saia/app/View/Lights/index.ctp",
-		"/C/wamp/www/saia/app/View/Layouts/default.ctp",
-		"/C/wamp/www/saia/app/View/Index/admin_edit.ctp"
+		"/C/wamp/www/saia/app/View/Index/admin_index.ctp"
 	],
 	"find":
 	{
@@ -388,6 +424,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"title",
+			"tagl",
 			"content",
 			"$e",
 			"$t",
@@ -513,9 +551,7 @@
 			".0",
 			"MX",
 			"ALARME",
-			".0",
-			"ALARME",
-			": BOOL"
+			".0"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -630,28 +666,138 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "pierrebaron.sublime-project",
+					"file": "_layouts/work.html",
 					"settings":
 					{
-						"buffer_size": 87,
+						"buffer_size": 2772,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								16,
-								16
+								959,
+								959
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_includes/header.html",
+					"settings":
+					{
+						"buffer_size": 1341,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1323,
+								1323
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_includes/footer.html",
+					"settings":
+					{
+						"buffer_size": 197,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 2930,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								54,
+								54
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sass/style.scss",
+					"settings":
+					{
+						"buffer_size": 8944,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								161
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -707,6 +853,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"pr",
+				"sass/_prettify.scss"
+			],
+			[
+				"styl",
+				"sass/style.scss"
+			],
+			[
+				"s",
+				"sass/style.scss"
+			],
 			[
 				"boo",
 				"css/bootstrap.css"
@@ -770,10 +928,6 @@
 			[
 				"style.",
 				"app/webroot/css/style.css"
-			],
-			[
-				"styl",
-				"app/webroot/css/sass/style.scss"
 			],
 			[
 				"twitter.cp",
