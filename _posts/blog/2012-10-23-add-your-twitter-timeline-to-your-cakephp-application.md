@@ -4,7 +4,11 @@ category : blog
 tagline  : Add your Twitter timeline to your CakePHP application
 ---
 
-Twitter just changed its API so I decided to write my own library to display my Twitter feeds on my website. Today, I will share it to you and I will teach you how to use it in your CakePHP website. The first thing you have to do is to [download the class](https://gist.github.com/prbaron/4725934) and to place it in you Lib folder.
+Twitter just changed its API so I decided to write my own library to display my Twitter feeds on my website.
+
+<div class="alert alert-info">I made a gist of the plugin : <a href="https://gist.github.com/prbaron/4725934">https://gist.github.com/prbaron/4725934</a></div>
+
+Today, I will share it to you and I will teach you how to use it in your CakePHP website. The first thing you have to do is to [download the class](https://gist.github.com/prbaron/4725934) and to place it in you Lib folder.
 
 Below is the single public method to find your tweets with all the default options.
 
