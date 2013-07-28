@@ -48,12 +48,15 @@ body {
 }
 
 a {
+    border-bottom: 1px solid $blue;
+
     color: $blue;
     text-decoration: none;
 
     &:hover,
     &:active {
-        border-bottom: 1px solid $blue;
+        border-bottom-color: darken($blue, 15%);
+        color: darken($blue, 15%);
     }
 }
 
@@ -78,6 +81,7 @@ section {
 header {
     .logo {
         background: url(/img/logo.png) center left no-repeat;
+        border-bottom: none;
         color: #232d31;
         display: block;
         float: left;
@@ -121,6 +125,7 @@ header {
             @include transition(background 0.2s ease-in-out);
 
             background: #d9d9d9;
+            border-bottom: none;
             border-radius: 25em;
             color: #fefefe;
             display: block;
@@ -178,6 +183,7 @@ header {
             //margin-right: 10px;
 
             a {
+                border-bottom: none;
                 color: #767676;
                 font-family: Lato, sans-serif;
                 padding: 17px 10px 19px 10px;
@@ -341,10 +347,11 @@ footer {
         float: right;
 
         a {
+            border-bottom: none;
             color: #e8e8e8;
 
             &:hover {
-                border-bottom-color: #e8e8e8;
+                border-bottom: 1px solid #e8e8e8;
             }
         }
     }
@@ -382,18 +389,21 @@ footer {
 .btn {
     border-radius: 2px;
     background: $blue;
-    border: 1px solid darken($blue, 4%);
+    border: 1px solid darken($blue, 5%);
     color: #fff;
     padding: 10px 20px;
 
     text-decoration: none;
 
     &:hover {
-        border: 1px solid darken($blue, 19%);
+        border: 1px solid darken($blue, 20%);
         background: darken($blue, 15%);
+        color: #fff;
+
     }
     &:active {
-       @include box-shadow(0 0 0 1px rgba(0,0,0,.2) inset,0 0 10px rgba(0,0,0,.5) inset);
+        @include box-shadow(0 0 0 1px rgba(0,0,0,.2) inset,0 0 10px rgba(0,0,0,.5) inset);
+        color: #fff;
     }
     
 }
