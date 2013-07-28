@@ -215,6 +215,18 @@ header {
     background-position: center;
     height: 400px;
     
+
+    &.tagline-index {
+        background-image: url(/img/background_index.jpg);
+    }
+
+    &.tagline-works {
+        background-image: url(/img/background_works.jpg);
+    }
+
+    &.tagline-blog {
+        background-image: url(/img/background_blog.jpg);
+    }
     @include transition(height 0.3s ease-in-out);
 
     
@@ -239,7 +251,7 @@ h1 {
     margin: 0.5em 0 0 0;
     
 
-    & + p {
+    & + p.subtitle {
         color: darken($lightGrey, 15%);
         font-family: Lato, sans-serif;
         font-size: 0.8em;
@@ -368,15 +380,16 @@ footer {
 }
 
 .btn {
-    @include border-top-radius(2px);
+    border-radius: 2px;
     background: $blue;
+    border: 1px solid darken($blue, 4%);
     color: #fff;
     padding: 10px 20px;
 
     text-decoration: none;
 
     &:hover {
-        border-bottom: none;
+        border: 1px solid darken($blue, 19%);
         background: darken($blue, 15%);
     }
     &:active {

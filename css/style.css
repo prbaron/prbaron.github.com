@@ -1391,6 +1391,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   -moz-border-radius: 2px;
   border-radius: 2px;
   font-size: 0.9em;
+  overflow: auto;
   padding: 8px;
   /* Specify class=linenums on a pre to get line numbering */ }
   .prettyprint.linenums {
@@ -1614,6 +1615,12 @@ header nav {
   -webkit-transition: height 0.3s ease-in-out;
   -moz-transition: height 0.3s ease-in-out;
   transition: height 0.3s ease-in-out; }
+  .tagline.tagline-index {
+    background-image: url(/img/background_index.jpg); }
+  .tagline.tagline-works {
+    background-image: url(/img/background_works.jpg); }
+  .tagline.tagline-blog {
+    background-image: url(/img/background_blog.jpg); }
   @media screen and (min-width: 481px) and (max-width: 768px) {
     .tagline {
       height: 300px; } }
@@ -1630,7 +1637,7 @@ h1 {
   font-size: 2.5em;
   line-height: 60px;
   margin: 0.5em 0 0 0; }
-  h1 + p {
+  h1 + p.subtitle {
     color: #c9c5c5;
     font-family: Lato, sans-serif;
     font-size: 0.8em;
@@ -1757,14 +1764,14 @@ footer {
   padding-left: 0; }
 
 .btn, .pagination .prev a, .pagination .next a {
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
+  border-radius: 2px;
   background: #00a6d4;
+  border: 1px solid #0096c0;
   color: #fff;
   padding: 10px 20px;
   text-decoration: none; }
   .btn:hover, .pagination .prev a:hover, .pagination .next a:hover {
-    border-bottom: none;
+    border: 1px solid #005a73;
     background: #006a88; }
   .btn:active, .pagination .prev a:active, .pagination .next a:active {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5) inset, 0 0 6px rgba(0, 0, 0, 0.8) inset; }

@@ -21,7 +21,7 @@
     <div class="container">
         <div class="grid">
             <h1 class="title">{{ page.tagline }}</h1>
-            <p>{{ page.date | date: '%d/%m/%Y'}} &dash; {% if page.author%} {{ page.author}} {% else %} Pierre Baron {% endif %}</p>
+            <p class="subtitle">{{ page.date | date: '%d/%m/%Y'}} &dash; {% if page.author%} {{ page.author}} {% else %} Pierre Baron {% endif %}</p>
             
             {{ content }}
             
