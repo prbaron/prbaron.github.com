@@ -6,12 +6,12 @@ image   : blog
 ---
 
 {% for post in site.categories.blog %}
-    <div class="post">
+    <div class="blog">
         <h2>
             {{ post.title }}
             <small>{{ post.date | date: '%d/%m/%Y' }}</small>
         </h2>
-        <div class="entry">
+        <div class="blog-entry">
             <p>{{ post.excerpt }}</p>
             <p>
                 <a href="{{ post.url }}" class="btn">

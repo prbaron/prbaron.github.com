@@ -1479,41 +1479,13 @@ section {
   .grid12:last-child {
     margin-right: 0; }
 
-.grid9 {
+.grid6 {
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 74.41059%;
-  margin-right: 2.35765%; }
-  .grid9:last-child {
+  width: 48.82117%; }
+  .grid6:last-child {
     margin-right: 0; }
-  @media screen and (max-width: 480px) {
-    .grid9 {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 100%; }
-      .grid9:last-child {
-        margin-right: 0; } }
-
-.grid3 {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 23.23176%;
-  float: right;
-  margin-right: 0; }
-  .grid3:last-child {
-    margin-right: 0; }
-  @media screen and (max-width: 480px) {
-    .grid3 {
-      float: none;
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 100%; }
-      .grid3:last-child {
-        margin-right: 0; } }
 
 header .logo {
   background: url(/img/logo.png) center left no-repeat;
@@ -1653,11 +1625,10 @@ h1 {
   margin: 0.5em 0 0 0; }
 
 h2 {
-  border-bottom: 1px solid #a5adb7;
   color: #22272b;
   font-size: 1.5em;
   padding-bottom: 8px;
-  margin: 32px 0 16px; }
+  margin: 16px 0; }
   h2 a {
     color: #131517; }
   h2 small {
@@ -1674,6 +1645,37 @@ h3 {
 
 h4 {
   font-size: 1.125em; }
+
+section {
+  margin-bottom: 60px; }
+  section:last-of-type {
+    margin-bottom: 0; }
+  section .home-icon {
+    text-align: center;
+    -webkit-transition: background 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out; }
+
+.home-back-end .home-icon {
+  background: #a0d468;
+  color: #fefefe;
+  height: 120px;
+  line-height: 120px; }
+.home-back-end:hover .home-icon {
+  background: #8cc152; }
+
+.home-front-end .home-icon {
+  background: #ac92ec;
+  color: #fefefe; }
+.home-front-end:hover .home-icon {
+  background: #967adc; }
+
+.home-mobile .home-icon {
+  background: #4fc1e9;
+  color: #fefefe;
+  line-height: 120px; }
+.home-mobile:hover .home-icon {
+  background: #3bafda; }
 
 .projects {
   *zoom: 1;
@@ -1730,10 +1732,14 @@ h4 {
   text-align: right;
   width: 20px; }
 
-.post {
-  margin-bottom: 60px; }
-  .post:last-of-type {
-    margin-bottom: 0; }
+.blog {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 16px 0; }
+  .blog:first-of-type {
+    padding-top: 0; }
+  .blog:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0; }
 
 .subtitle {
   color: #aab2bd;
@@ -1749,6 +1755,9 @@ h4 {
     padding-left: 0; }
   .subtitle li:last-child {
     border: none; }
+
+.post h2 {
+  margin-top: 32px; }
 
 footer {
   *zoom: 1;
@@ -1802,6 +1811,7 @@ footer {
   background: #4fc1e9;
   border: 1px solid #38b9e6;
   color: #fff;
+  display: inline-block;
   padding: 10px 20px;
   text-decoration: none; }
   .btn:hover, .pagination .prev a:hover, .pagination .next a:hover {
@@ -1818,13 +1828,13 @@ footer {
   padding-left: 0;
   margin: 60px 0 0 0; }
   .pagination .prev a {
-    float: left; }
+    float: right; }
     @media screen and (max-width: 767px) {
       .pagination .prev a {
         float: none;
         display: block; } }
   .pagination .next a {
-    float: right; }
+    float: left; }
     @media screen and (max-width: 767px) {
       .pagination .next a {
         float: none;

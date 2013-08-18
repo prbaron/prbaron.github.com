@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body class="post">
     {% include header.html %}
 
     <div class="container">
@@ -43,13 +43,15 @@
                         {% assign prev_post = post %}
                     {% endif %}
                 {% endfor %}
-                
+  
+
+
                 {% if next_post %}
-                    <li class="next"><a href=" {{ next_post.url }}">{{ next_post.tagline }} &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i></a></li>
+                    <li class="next"><a href=" {{ next_post.url }}"><i class="icon-chevron-sign-left"></i> &nbsp;&nbsp; {{ next_post.tagline }}</a></li>
                 {% endif %} 
                 
                 {% if prev_post %}
-                    <li class="prev"><a href=" {{ prev_post.url }}"><i class="icon-chevron-sign-left"></i> &nbsp;&nbsp; {{ prev_post.tagline }}</a></li>
+                    <li class="prev"><a href=" {{ prev_post.url }}">{{ prev_post.tagline }} &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i></a></li>
                 {% endif %}
             </ul>
         </div>

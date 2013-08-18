@@ -32,6 +32,7 @@
     font-weight: bold;
 }
 
+$white      : #fefefe;
 
 $lightGrey  : #c1c7ce;
 $mediumGrey : #656d78;
@@ -53,7 +54,7 @@ $smartphone : 480px;
 $tablet     : 768px;  
 
 body {
-    background: #fefefe;
+    background: $white;
     color: darken($lightGrey, 10%);
     font-family: Lato, 'PT Sans', sans-serif;
     font-weight: 400;
@@ -92,26 +93,10 @@ section {
 .grid12 {
     @include span-columns(12);
 }
-.grid9 {
-    @include span-columns(9);
-    margin-right: 2.35765%;
 
-    @include media(max-width $smartphone) {
-        @include span-columns(12);
-    }
+.grid6 {
+    @include span-columns(6);
 }
-.grid3 {
-    @include span-columns(3);
-    float: right;
-    margin-right: 0;
-
-    @include media(max-width $smartphone) {
-        float: none;
-        @include span-columns(12);
-    }   
-}
-
-
 
 header {
     .logo {
@@ -170,7 +155,7 @@ header {
 
             &:hover {
                 background: $lightGrey;
-                color: #fefefe;
+                color: $white;
             }
         }
     }
@@ -268,12 +253,12 @@ h1 {
 }
 
 h2 {
-    border-bottom: 1px solid darken($lightGrey, 10%);
+   // border-bottom: 1px solid darken($lightGrey, 10%);
     color: darken($lightGrey, 63%);
 
     font-size: 1.5em;
     padding-bottom: 8px;
-    margin: 32px 0 16px;
+    margin: 16px 0;
 
     a {
         color: darken($lightGrey, 70%);
@@ -296,6 +281,55 @@ h3 {
 
 h4 {
     font-size: 1.125em;
+}
+
+section {
+    margin-bottom: 60px;
+
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    
+    .home-icon {
+        text-align: center;
+        @include transition(background 0.5s ease-in-out);
+    }
+}
+
+.home-back-end{
+    .home-icon {
+        background: $green;
+        color : $white;
+        height: 120px;
+        line-height: 120px;
+    }
+    &:hover .home-icon {
+        background: $darkGreen;
+    }
+}
+
+.home-front-end {
+    .home-icon {
+        background: $violet;
+        color : $white;
+    }
+
+    &:hover .home-icon {
+        background: $darkViolet;
+    }
+}
+
+.home-mobile {
+    .home-icon {
+        background: $blue;
+        color : $white;
+        line-height: 120px;
+    }
+
+    &:hover .home-icon {
+        background: $darkBlue;
+    }
 }
 
 .projects {
@@ -338,11 +372,18 @@ h4 {
     }
 }
 
-.post {
-    margin-bottom: 60px;
+.blog {
+    border-bottom : 1px solid #e1e1e1;
+
+    padding: 16px 0;
+
+    &:first-of-type {
+        padding-top: 0;
+    }
 
     &:last-of-type {
-        margin-bottom: 0;
+        border-bottom: none;
+        padding-bottom: 0;
     }
 }
 
@@ -368,6 +409,12 @@ h4 {
     }
 }
 
+
+.post {
+    h2 {
+        margin-top: 32px;
+    }
+}
 
 footer {
     @include row("table");
@@ -430,6 +477,7 @@ footer {
     background: $blue;
     border: 1px solid darken($blue, 5%);
     color: #fff;
+    display: inline-block;
     padding: 10px 20px;
 
     text-decoration: none;
@@ -455,7 +503,7 @@ footer {
 
     .prev a {
         @extend .btn;
-        float: left;
+        float: right;
         
         @include media(max-width $tablet - 1) {
             float: none;
@@ -465,7 +513,7 @@ footer {
     
     .next a {
         @extend .btn;
-        float: right;
+        float: left;
         @include media(max-width $tablet - 1) {
             float: none;
             display: block;
