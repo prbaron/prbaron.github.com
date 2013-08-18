@@ -19,15 +19,14 @@
     {% include header.html %}
 
     <div class="container">
-        <div class="grid">
+        <div class="grid12">
             <h1 class="title">{{ page.tagline }}</h1>
-
-            <ul class="unstyled">
+            <ul class="unstyled subtitle">
                 <li><i class="icon-building"></i> {{ page.client }}</li>
                 <li><i class="icon-time"></i> {{ page.duration }}</li>
                 <li><i class="icon-bolt"></i> {{ page.skills }}</li>
             </ul>
-            
+                     
             {{ content }}
             
             <ul class="pagination">

@@ -32,13 +32,29 @@
     font-weight: bold;
 }
 
-$lightGrey : hsl(0, 4%, 93%);
 
-$blue: #00a6d4;
+$lightGrey  : #c1c7ce;
+$mediumGrey : #656d78;
+$darkGrey   : #232d31;
+
+$blue       : #4fc1e9;
+$darkBlue   : #3bafda;
+
+$red        : #fc6e51;
+$darkRed    : #e9573f;
+
+$violet     : #ac92ec;
+$darkViolet : #967adc;
+
+$green      : #a0d468;
+$darkGreen  : #8cc152;
+
+$smartphone : 480px;
+$tablet     : 768px;  
 
 body {
     background: #fefefe;
-    color: darken($lightGrey, 30%);
+    color: darken($lightGrey, 10%);
     font-family: Lato, 'PT Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -55,8 +71,8 @@ a {
 
     &:hover,
     &:active {
-        border-bottom-color: darken($blue, 15%);
-        color: darken($blue, 15%);
+        border-bottom-color: $darkBlue;
+        color: darken($blue, 20%);
     }
 }
 
@@ -73,16 +89,35 @@ section {
     }
 }
 
-.grid {
+.grid12 {
     @include span-columns(12);
 }
+.grid9 {
+    @include span-columns(9);
+    margin-right: 2.35765%;
+
+    @include media(max-width $smartphone) {
+        @include span-columns(12);
+    }
+}
+.grid3 {
+    @include span-columns(3);
+    float: right;
+    margin-right: 0;
+
+    @include media(max-width $smartphone) {
+        float: none;
+        @include span-columns(12);
+    }   
+}
+
 
 
 header {
     .logo {
         background: url(/img/logo.png) center left no-repeat;
         border-bottom: none;
-        color: #232d31;
+        color: $darkGrey;
         display: block;
         float: left;
         font-size: 1.5em;
@@ -122,48 +157,21 @@ header {
             text-align: center;
         }
         a {
-            @include transition(background 0.2s ease-in-out);
-
-            background: #d9d9d9;
-            border-bottom: none;
+            border: 3px solid $lightGrey;
             border-radius: 25em;
-            color: #fefefe;
+            color: $lightGrey;
             display: block;
+            height: 40px;
+            line-height: 18px;
             padding: 0.5em;
             position: relative;
             width: 40px;
+                @include transition(background 0.2s);
 
             &:hover {
-                background: #232d31;
-                border-bottom: none;
+                background: $lightGrey;
+                color: #fefefe;
             }
-
-            &:after {
-                pointer-events: none;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                content: '';
-                -webkit-box-sizing: content-box;
-                   -moz-box-sizing: content-box;
-                        box-sizing: content-box;
-
-                top: -3px;
-                left: -3px;
-                padding: 3px;
-                box-shadow: 0 0 0 4px #232d31;
-
-                @include transition(opacity 0.2s, background 0.2s);
-                @include transform(scale(.8));
-                opacity: 0;
-            }
-
-            &:hover:after {
-                @include transform(scale(1));
-                opacity: 1;
-            }
-
         }
     }
 
@@ -184,7 +192,7 @@ header {
 
             a {
                 border-bottom: none;
-                color: #767676;
+                color: $mediumGrey;
                 font-family: Lato, sans-serif;
                 padding: 17px 10px 19px 10px;
                 text-decoration: none;
@@ -196,7 +204,7 @@ header {
                     color: #fff;
                 }
 
-                @include media(max-width 479px) {
+                @include media(max-width $smartphone - 1) {
                     font-size: 0.8em;
                     padding: 20px 10px 21px 10px;
                 }
@@ -225,22 +233,24 @@ header {
     &.tagline-index {
         background-image: url(/img/background_index.jpg);
     }
-
     &.tagline-works {
         background-image: url(/img/background_works.jpg);
     }
-
     &.tagline-blog {
         background-image: url(/img/background_blog.jpg);
     }
+    &.tagline-credits {
+        background-image: url(/img/background_credits.jpg);
+    }
+
     @include transition(height 0.3s ease-in-out);
 
     
-    @include media(min-width 481px max-width 768px) {
+    @include media(min-width $smartphone + 1 max-width $tablet) {
         height: 300px;
     }
 
-    @include media(max-width 480px) {
+    @include media(max-width $smartphone) {
         background: none;
         height: 0;
     }
@@ -255,15 +265,6 @@ h1 {
     font-size: 2.5em;
     line-height: 60px;
     margin: 0.5em 0 0 0;
-    
-
-    & + p.subtitle {
-        color: darken($lightGrey, 15%);
-        font-family: Lato, sans-serif;
-        font-size: 0.8em;
-        margin-top: 0;
-        font-weight: normal;
-    }
 }
 
 h2 {
@@ -287,7 +288,7 @@ h2 {
 }
 
 h3 {
-    color: darken($lightGrey, 53%);
+    color: darken($lightGrey, 33%);
     font-family: Kreon, Lato, sans-serif;    
     font-size: 1.25em;
     margin: 16px 0 0 ;
@@ -312,20 +313,58 @@ h4 {
         img {
             @include fill-parent;
             
-            @include media(max-width 480px) {
+            @include media(max-width $smartphone) {
                 display: none;
             }
         }
 
-        @include media(max-width 480px) {
+        @include media(max-width $smartphone) {
             @include span-columns(12);
             @include omega();
         }
 
-        @include media(min-width 481px max-width 768px) {
+        @include media(min-width $smartphone + 1 max-width $tablet) {
             @include span-columns(6);
             @include omega(2n);
         }
+    }
+}
+
+.project-info {
+    i {
+        display: inline-block;
+        text-align: right;
+        width: 20px;
+    }
+}
+
+.post {
+    margin-bottom: 60px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.subtitle {
+    color: #aab2bd;
+    font-family: Lato, sans-serif;
+    font-size: 0.8em;
+    margin-top: 0;
+    font-weight: normal;
+
+    li {
+        border-right: 1px solid #e1e1e1;        
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    li:first-child {
+        padding-left: 0;
+    }
+
+    li:last-child {
+        border: none;
     }
 }
 
@@ -418,7 +457,7 @@ footer {
         @extend .btn;
         float: left;
         
-        @include media(max-width 767px) {
+        @include media(max-width $tablet - 1) {
             float: none;
             display: block;
         }
@@ -427,7 +466,7 @@ footer {
     .next a {
         @extend .btn;
         float: right;
-        @include media(max-width 767px) {
+        @include media(max-width $tablet - 1) {
             float: none;
             display: block;
             margin-bottom: 20px;
