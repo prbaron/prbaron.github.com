@@ -1479,12 +1479,28 @@ section {
   .grid12:last-child {
     margin-right: 0; }
 
+.grid9 {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 74.41059%; }
+  .grid9:last-child {
+    margin-right: 0; }
+
 .grid6 {
   display: block;
   float: left;
   margin-right: 2.35765%;
   width: 48.82117%; }
   .grid6:last-child {
+    margin-right: 0; }
+
+.grid3 {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .grid3:last-child {
     margin-right: 0; }
 
 header .logo {
@@ -1652,30 +1668,54 @@ section {
     margin-bottom: 0; }
   section .home-icon {
     text-align: center;
-    -webkit-transition: background 0.5s ease-in-out;
-    -moz-transition: background 0.5s ease-in-out;
-    transition: background 0.5s ease-in-out; }
+    vertical-align: middle; }
+  section.home-skill .home-icon {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+  section.home-skill [class^="grid"] {
+    display: table-cell;
+    float: none; }
 
-.home-back-end .home-icon {
-  background: #a0d468;
-  color: #fefefe;
-  height: 120px;
-  line-height: 120px; }
 .home-back-end:hover .home-icon {
-  background: #8cc152; }
+  color: #a0d468; }
 
-.home-front-end .home-icon {
-  background: #ac92ec;
-  color: #fefefe; }
 .home-front-end:hover .home-icon {
-  background: #967adc; }
+  color: #ac92ec; }
 
-.home-mobile .home-icon {
-  background: #4fc1e9;
-  color: #fefefe;
-  line-height: 120px; }
 .home-mobile:hover .home-icon {
-  background: #3bafda; }
+  color: #4fc1e9; }
+
+.skills {
+  *zoom: 1;
+  display: block;
+  padding-left: 0;
+  margin: 0; }
+  .skills:before, .skills:after {
+    content: " ";
+    display: table; }
+  .skills:after {
+    clear: both; }
+  .skills .skill {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .skills .skill:last-child {
+      margin-right: 0; }
+    .skills .skill:nth-child(2n) {
+      margin-right: 0; }
+    .skills .skill:nth-child(2n+1) {
+      clear: left; }
+    @media screen and (max-width: 480px) {
+      .skills .skill {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 100%;
+        margin-right: 0; }
+        .skills .skill:last-child {
+          margin-right: 0; } }
 
 .projects {
   *zoom: 1;
@@ -1705,15 +1745,6 @@ section {
       @media screen and (max-width: 480px) {
         .projects .project img {
           display: none; } }
-    @media screen and (max-width: 480px) {
-      .projects .project {
-        display: block;
-        float: left;
-        margin-right: 2.35765%;
-        width: 100%;
-        margin-right: 0; }
-        .projects .project:last-child {
-          margin-right: 0; } }
     @media screen and (min-width: 481px) and (max-width: 768px) {
       .projects .project {
         display: block;
@@ -1726,6 +1757,15 @@ section {
           margin-right: 0; }
         .projects .project:nth-child(2n+1) {
           clear: left; } }
+    @media screen and (max-width: 480px) {
+      .projects .project {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 100%;
+        margin-right: 0; }
+        .projects .project:last-child {
+          margin-right: 0; } }
 
 .project-info i {
   display: inline-block;

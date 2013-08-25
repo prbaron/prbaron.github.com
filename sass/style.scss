@@ -93,9 +93,14 @@ section {
 .grid12 {
     @include span-columns(12);
 }
-
+.grid9 {
+    @include span-columns(9);
+}
 .grid6 {
     @include span-columns(6);
+}
+.grid3 {
+    @include span-columns(3);
 }
 
 header {
@@ -293,42 +298,52 @@ section {
     
     .home-icon {
         text-align: center;
-        @include transition(background 0.5s ease-in-out);
+        vertical-align: middle;
     }
+
+    &.home-skill {
+        .home-icon {
+            @include transition(all 0.5s ease-in-out);
+        }
+        [class^="grid"] {
+            display: table-cell;
+            float: none;
+        }
+    }
+  
 }
 
-.home-back-end{
-    .home-icon {
-        background: $green;
-        color : $white;
-        height: 120px;
-        line-height: 120px;
-    }
-    &:hover .home-icon {
-        background: $darkGreen;
+.home-back-end {
+    &:hover .home-icon{
+        color: $green;
     }
 }
 
 .home-front-end {
-    .home-icon {
-        background: $violet;
-        color : $white;
-    }
-
-    &:hover .home-icon {
-        background: $darkViolet;
+    &:hover .home-icon{
+        color: $violet;
     }
 }
 
 .home-mobile {
-    .home-icon {
-        background: $blue;
-        color : $white;
-        line-height: 120px;
+    &:hover .home-icon{
+       color: $blue;
     }
+}
 
-    &:hover .home-icon {
-        background: $darkBlue;
+.skills {
+    @include row();
+    padding-left: 0;
+    margin: 0; 
+    
+    .skill {
+        @include span-columns(6);
+        @include omega(2n);
+
+        @include media(max-width $smartphone) {
+            @include span-columns(12);
+            @include omega();
+        }
     }
 }
 
@@ -352,14 +367,14 @@ section {
             }
         }
 
-        @include media(max-width $smartphone) {
-            @include span-columns(12);
-            @include omega();
-        }
-
         @include media(min-width $smartphone + 1 max-width $tablet) {
             @include span-columns(6);
             @include omega(2n);
+        }
+
+        @include media(max-width $smartphone) {
+            @include span-columns(12);
+            @include omega();
         }
     }
 }
