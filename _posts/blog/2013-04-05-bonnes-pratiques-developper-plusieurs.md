@@ -36,7 +36,7 @@ Voici quelques exemples de guidelines venants de gros projets ou de librairies d
 ## Documentez
 ### Commentez
 > "Code Tells You How, Comments Tell You Why"  
-> Jeff Atwood
+> <em>Jeff Atwood</em>
 
 Derrière cette maxime vous devez comprendre que votre code ne suffit pas pour comprendre le projet dans sa totalité. Les commentaires vous permettent d'assimiler du code écrit plusieurs mois avant ou bien écrit par un autre développeur. 
 Vous avez deux types de commentaires : 

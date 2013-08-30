@@ -1,5 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Lato|PT+Sans|Kreon);
-@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400italic);
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1427,6 +1426,12 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
   src: url("/font/kreon_bold.eot?#iefix") format("embedded-opentype"), url("/font/kreon_bold.woff") format("woff"), url("/font/kreon_bold.ttf") format("truetype");
   font-weight: bold; }
 
+@font-face {
+  font-family: 'Droid Serif';
+  src: url("/font/DroidSerif-Italic-webfont.eot");
+  src: url("/font/DroidSerif-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("/font/DroidSerif-Italic-webfont.woff") format("woff"), url("/font/DroidSerif-Italic-webfont.ttf") format("truetype");
+  font-weight: bold; }
+
 body {
   background: #fefefe;
   color: #a5adb7;
@@ -1887,7 +1892,6 @@ footer {
 blockquote {
   border-left: 3px solid #4fc1e9;
   color: #6d7a89;
-  font-size: 1.1em;
   padding-left: 10px;
   margin: 0; }
   blockquote em {
