@@ -26,6 +26,12 @@
                 <li><i class="icon-user"></i> {% if page.author%} {{ page.author}} {% else %} Pierre Baron {% endif %}</li>
             </ul>
             
+            {% if page.note %}
+                <div class="alert">
+                    {{page.note}}
+                </div>
+            {% endif %}
+            
             {{ content }}
             
             <ul class="pagination">

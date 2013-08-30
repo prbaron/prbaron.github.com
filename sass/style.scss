@@ -32,6 +32,15 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: 'Droid Serif';
+    src: url('/font/DroidSerif-Italic-webfont.eot');
+    src: url('/font/DroidSerif-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/DroidSerif-Italic-webfont.woff') format('woff'),
+         url('/font/DroidSerif-Italic-webfont.ttf') format('truetype');
+    font-weight: bold;
+}
+
 $white      : #fefefe;
 
 $lightGrey  : #c1c7ce;
@@ -523,6 +532,7 @@ footer {
         @include media(max-width $tablet - 1) {
             float: none;
             display: block;
+            text-align: right;
         }
     }
     
@@ -533,7 +543,25 @@ footer {
             float: none;
             display: block;
             margin-bottom: 20px;
-            text-align: right;
+            text-align: left;
+        }
+    }
+}
+
+blockquote {
+    border-left: 3px solid $blue;
+    color: darken($lightGrey, 30%);
+    padding-left: 10px;
+    margin: 0;
+
+    em {
+        color: darken($lightGrey, 10%);
+        font-size: 0.8em;
+        font-family: 'Droid Serif', serif;
+
+        &:before {
+            content: "\2014";
+            margin-right: 4px;
         }
     }
 }

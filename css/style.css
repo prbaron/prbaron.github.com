@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Lato|PT+Sans|Kreon);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400italic);
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1872,7 +1873,8 @@ footer {
     @media screen and (max-width: 767px) {
       .pagination .prev a {
         float: none;
-        display: block; } }
+        display: block;
+        text-align: right; } }
   .pagination .next a {
     float: left; }
     @media screen and (max-width: 767px) {
@@ -1880,4 +1882,18 @@ footer {
         float: none;
         display: block;
         margin-bottom: 20px;
-        text-align: right; } }
+        text-align: left; } }
+
+blockquote {
+  border-left: 3px solid #4fc1e9;
+  color: #6d7a89;
+  font-size: 1.1em;
+  padding-left: 10px;
+  margin: 0; }
+  blockquote em {
+    color: #a5adb7;
+    font-size: 0.8em;
+    font-family: 'Droid Serif', serif; }
+    blockquote em:before {
+      content: "\2014";
+      margin-right: 4px; }
