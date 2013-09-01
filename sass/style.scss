@@ -79,11 +79,16 @@ a {
     color: $blue;
     text-decoration: none;
 
+    word-wrap: break-word;
     &:hover,
     &:active {
         border-bottom-color: $darkBlue;
         color: darken($blue, 20%);
     }
+}
+
+img {
+    max-width: 100%;
 }
 
 header,
