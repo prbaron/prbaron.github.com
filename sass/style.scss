@@ -43,7 +43,7 @@
 
 $white      : #fefefe;
 
-$lightGrey  : #c1c7ce;
+$lightGrey  : #7f8b99;
 $mediumGrey : #656d78;
 $darkGrey   : #232d31;
 
@@ -188,6 +188,7 @@ header {
         ul {
             @include row("table");
             padding-left: 0;
+            margin-top: 10px;
         }
         li {
             float: left;
@@ -198,7 +199,7 @@ header {
                 border-bottom: none;
                 color: $mediumGrey;
                 font-family: Lato, sans-serif;
-                padding: 17px 10px 19px 10px;
+	            padding: 10px 16px;
                 text-decoration: none;
 
                 &:hover, &:active {
@@ -260,15 +261,21 @@ header {
     }
 }
 
+p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre {
+	margin-bottom: 16px;
+	margin-top: 0;
+}
 h1, h2, h3, h4 h5, h6 {
     font-weight: 400;
 }
 
 h1 {
+    color: darken($lightGrey, 50%);
+
     font-family: "Mir-Medium", Lato, sans-serif;
     font-size: 2.5em;
-    line-height: 60px;
-    margin: 0.5em 0 0 0;
+	line-height: 1.25em;
+    margin: 6px 0 16px 0;
 }
 
 h2 {
@@ -276,8 +283,7 @@ h2 {
     color: darken($lightGrey, 63%);
 
     font-size: 1.5em;
-    padding-bottom: 8px;
-    margin: 16px 0;
+    margin-bottom: 24px;
 
     a {
         color: darken($lightGrey, 70%);
@@ -295,11 +301,15 @@ h3 {
     color: darken($lightGrey, 33%);
     font-family: Kreon, Lato, sans-serif;    
     font-size: 1.25em;
-    margin: 16px 0 0 ;
+    margin: 0 ;
 }
 
 h4 {
     font-size: 1.125em;
+}
+
+pre {
+	margin-bottom: 27px;
 }
 
 section {
@@ -417,7 +427,7 @@ section {
 }
 
 .subtitle {
-    color: #aab2bd;
+    color: #768291;
     font-family: Lato, sans-serif;
     font-size: 0.8em;
     margin-top: 0;
@@ -453,7 +463,11 @@ footer {
     height: 60px;
     line-height: 60px;
     margin-top: 60px;
-
+    
+    p {
+    	margin-bottom: 0;
+    	line-height: 120px;
+    }
     p:first-of-type {
         float: left;
     }
