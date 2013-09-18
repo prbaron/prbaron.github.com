@@ -64,7 +64,7 @@ $tablet     : 768px;
 
 body {
     background: $white;
-    color: $lightGrey;
+    color: #b4bbc5;
     font-family: Lato, 'PT Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -270,8 +270,8 @@ h1, h2, h3, h4 h5, h6 {
 }
 
 h1 {
-    color: darken($lightGrey, 43%);
-
+    //color: darken($lightGrey, 43%);
+    color : #434a52;
     font-family: "Mir-Medium", Lato, sans-serif;
     font-size: 2.5em;
 	line-height: 1.25em;
@@ -279,9 +279,9 @@ h1 {
 }
 
 h2 {
-   // border-bottom: 1px solid darken($lightGrey, 10%);
-    color: darken($lightGrey, 63%);
-
+    // border-bottom: 1px solid darken($lightGrey, 10%);
+    //color: darken($lightGrey, 63%);
+    color: #404855;
     font-size: 1.5em;
     margin-bottom: 24px;
 
@@ -298,13 +298,15 @@ h2 {
 }
 
 h3 {
-    color: darken($lightGrey, 33%);
+    //color: darken($lightGrey, 33%);
+    color: #464a56;
     font-family: Kreon, Lato, sans-serif;    
     font-size: 1.25em;
     margin: 0 ;
 }
 
 h4 {
+    color: #474e58;
     font-size: 1.125em;
 }
 

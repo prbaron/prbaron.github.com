@@ -1434,7 +1434,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
 
 body {
   background: #fefefe;
-  color: #7f8b99;
+  color: #b4bbc5;
   font-family: Lato, 'PT Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1650,14 +1650,14 @@ h1, h2, h3, h4 h5, h6 {
   font-weight: 400; }
 
 h1 {
-  color: #1b1e22;
+  color: #434a52;
   font-family: "Mir-Medium", Lato, sans-serif;
   font-size: 2.5em;
   line-height: 1.25em;
   margin: 6px 0 16px 0; }
 
 h2 {
-  color: black;
+  color: #404855;
   font-size: 1.5em;
   margin-bottom: 24px; }
   h2 a {
@@ -1669,12 +1669,13 @@ h2 {
     font-weight: normal; }
 
 h3 {
-  color: #32373e;
+  color: #464a56;
   font-family: Kreon, Lato, sans-serif;
   font-size: 1.25em;
   margin: 0; }
 
 h4 {
+  color: #474e58;
   font-size: 1.125em; }
 
 pre {
