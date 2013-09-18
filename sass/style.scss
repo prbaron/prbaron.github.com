@@ -519,12 +519,14 @@ footer {
     border-radius: 2px;
     background: $blue;
     border: 1px solid darken($blue, 5%);
+    @include box-shadow(0em -0.185rem 0em rgba(0, 0, 0, 0.1) inset);
     color: #fff;
     display: inline-block;
     padding: 10px 20px;
 
     text-decoration: none;
-
+    @include transition(opacity 0.25s ease, background-color 0.25s ease, color 0.25s ease, background 0.25s ease, text-shadow 0.25s ease, box-shadow 0.25s ease);
+    
     &:hover {
         border: 1px solid darken($blue, 20%);
         background: darken($blue, 15%);
@@ -532,7 +534,7 @@ footer {
 
     }
     &:active {
-        @include box-shadow(0 0 0 1px rgba(0,0,0,.2) inset,0 0 10px rgba(0,0,0,.5) inset);
+        @include box-shadow(0px 1px 0.2em 0px rgba(0, 0, 0, 0.3) inset);
         color: #fff;
     }
     
