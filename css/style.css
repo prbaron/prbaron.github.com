@@ -1434,7 +1434,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
 
 body {
   background: #fefefe;
-  color: #a5adb7;
+  color: #66727f;
   font-family: Lato, 'PT Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1557,9 +1557,9 @@ header .socials {
     margin-right: 1em;
     text-align: center; }
   header .socials a {
-    border: 3px solid #c1c7ce;
+    border: 3px solid #7f8b99;
     border-radius: 25em;
-    color: #c1c7ce;
+    color: #7f8b99;
     display: block;
     height: 40px;
     line-height: 18px;
@@ -1570,7 +1570,7 @@ header .socials {
     -moz-transition: background 0.2s;
     transition: background 0.2s; }
     header .socials a:hover {
-      background: #c1c7ce;
+      background: #7f8b99;
       color: #fefefe; }
 header nav {
   *zoom: 1;
@@ -1587,7 +1587,8 @@ header nav {
     display: table;
     width: 100%;
     table-layout: fixed;
-    padding-left: 0; }
+    padding-left: 0;
+    margin-top: 10px; }
     header nav ul:before, header nav ul:after {
       content: " ";
       display: table; }
@@ -1600,7 +1601,7 @@ header nav {
       border-bottom: none;
       color: #656d78;
       font-family: Lato, sans-serif;
-      padding: 17px 10px 19px 10px;
+      padding: 10px 16px;
       text-decoration: none; }
       header nav li a:hover, header nav li a:active {
         background: #4fc1e9;
@@ -1641,36 +1642,43 @@ header nav {
       background: none;
       height: 0; } }
 
+p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre {
+  margin-bottom: 16px;
+  margin-top: 0; }
+
 h1, h2, h3, h4 h5, h6 {
   font-weight: 400; }
 
 h1 {
+  color: #0b0c0e;
   font-family: "Mir-Medium", Lato, sans-serif;
   font-size: 2.5em;
-  line-height: 60px;
-  margin: 0.5em 0 0 0; }
+  line-height: 1.25em;
+  margin: 6px 0 16px 0; }
 
 h2 {
-  color: #22272b;
+  color: black;
   font-size: 1.5em;
-  padding-bottom: 8px;
-  margin: 16px 0; }
+  margin-bottom: 24px; }
   h2 a {
-    color: #131517; }
+    color: black; }
   h2 small {
-    color: #7a8796;
+    color: #444c55;
     font-family: Lato, sans-serif;
     font-size: 0.6em;
     font-weight: normal; }
 
 h3 {
-  color: #667281;
+  color: #32373e;
   font-family: Kreon, Lato, sans-serif;
   font-size: 1.25em;
-  margin: 16px 0 0; }
+  margin: 0; }
 
 h4 {
   font-size: 1.125em; }
+
+pre {
+  margin-bottom: 27px; }
 
 section {
   margin-bottom: 60px; }
@@ -1792,7 +1800,7 @@ section {
     padding-bottom: 0; }
 
 .subtitle {
-  color: #aab2bd;
+  color: #768291;
   font-family: Lato, sans-serif;
   font-size: 0.8em;
   margin-top: 0;
@@ -1825,6 +1833,9 @@ footer {
     display: table; }
   footer:after {
     clear: both; }
+  footer p {
+    margin-bottom: 0;
+    line-height: 120px; }
   footer p:first-of-type {
     float: left; }
   footer p:last-of-type {
@@ -1860,16 +1871,20 @@ footer {
   border-radius: 2px;
   background: #4fc1e9;
   border: 1px solid #38b9e6;
+  box-shadow: 0em -0.185rem 0em rgba(0, 0, 0, 0.1) inset;
   color: #fff;
   display: inline-block;
   padding: 10px 20px;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: opacity 0.25s ease, background-color 0.25s ease, color 0.25s ease, background 0.25s ease, text-shadow 0.25s ease, box-shadow 0.25s ease;
+  -moz-transition: opacity 0.25s ease, background-color 0.25s ease, color 0.25s ease, background 0.25s ease, text-shadow 0.25s ease, box-shadow 0.25s ease;
+  transition: opacity 0.25s ease, background-color 0.25s ease, color 0.25s ease, background 0.25s ease, text-shadow 0.25s ease, box-shadow 0.25s ease; }
   .btn:hover, .pagination .prev a:hover, .pagination .next a:hover {
     border: 1px solid #1790bb;
     background: #1aa2d1;
     color: #fff; }
   .btn:active, .pagination .prev a:active, .pagination .next a:active {
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2) inset, 0 0 10px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0px 1px 0.2em 0px rgba(0, 0, 0, 0.3) inset;
     color: #fff; }
 
 .pagination {
@@ -1895,11 +1910,11 @@ footer {
 
 blockquote {
   border-left: 3px solid #4fc1e9;
-  color: #6d7a89;
+  color: #383f47;
   padding-left: 10px;
   margin: 0; }
   blockquote em {
-    color: #a5adb7;
+    color: #66727f;
     font-size: 0.8em;
     font-family: 'Droid Serif', serif; }
     blockquote em:before {
