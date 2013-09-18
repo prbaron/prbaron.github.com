@@ -1557,9 +1557,9 @@ header .socials {
     margin-right: 1em;
     text-align: center; }
   header .socials a {
-    border: 3px solid #7f8b99;
+    border: 3px solid #b4bbc5;
     border-radius: 25em;
-    color: #7f8b99;
+    color: #b4bbc5;
     display: block;
     height: 40px;
     line-height: 18px;
@@ -1570,7 +1570,7 @@ header .socials {
     -moz-transition: background 0.2s;
     transition: background 0.2s; }
     header .socials a:hover {
-      background: #7f8b99;
+      background: #b4bbc5;
       color: #fefefe; }
 header nav {
   *zoom: 1;
@@ -1599,7 +1599,7 @@ header nav {
     list-style: none; }
     header nav li a {
       border-bottom: none;
-      color: #656d78;
+      color: #b4bbc5;
       font-family: Lato, sans-serif;
       padding: 10px 16px;
       text-decoration: none; }
@@ -1661,9 +1661,9 @@ h2 {
   font-size: 1.5em;
   margin-bottom: 24px; }
   h2 a {
-    color: black; }
+    color: #090a0b; }
   h2 small {
-    color: #444c55;
+    color: #6d7a8d;
     font-family: Lato, sans-serif;
     font-size: 0.6em;
     font-weight: normal; }
@@ -1911,11 +1911,11 @@ footer {
 
 blockquote {
   border-left: 3px solid #4fc1e9;
-  color: #383f47;
+  color: #626d7e;
   padding-left: 10px;
   margin: 0; }
   blockquote em {
-    color: #66727f;
+    color: #97a1af;
     font-size: 0.8em;
     font-family: 'Droid Serif', serif; }
     blockquote em:before {

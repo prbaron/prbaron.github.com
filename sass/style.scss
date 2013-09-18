@@ -43,7 +43,7 @@
 
 $white      : #fefefe;
 
-$lightGrey  : #7f8b99;
+$lightGrey  : #b4bbc5;
 $mediumGrey : #656d78;
 $darkGrey   : #232d31;
 
@@ -193,11 +193,10 @@ header {
         li {
             float: left;
             list-style: none;
-            //margin-right: 10px;
 
             a {
                 border-bottom: none;
-                color: $mediumGrey;
+                color: $lightGrey;
                 font-family: Lato, sans-serif;
 	            padding: 10px 16px;
                 text-decoration: none;
