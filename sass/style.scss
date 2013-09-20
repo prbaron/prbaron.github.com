@@ -1,50 +1,17 @@
-@import url(http://fonts.googleapis.com/css?family=Lato|PT+Sans|Kreon);
 @import "bourbon/bourbon",
         "neat/neat";
 
 @import "font-awesome.min",
         "prettify";
 
-@font-face {
-    font-family: 'Mir-Medium';
-    src: url('/font/mir-medium_regular.eot');
-    src: url('/font/mir-medium_regular.eot?#iefix') format('embedded-opentype'),
-         url('/font/mir-medium_regular.woff') format('woff'),
-         url('/font/mir-medium_regular.ttf') format('truetype');
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('/font/lato_regular.eot');
-    src: url('/font/lato_regular.eot?#iefix') format('embedded-opentype'),
-         url('/font/lato_regular.woff') format('woff'),
-         url('/font/lato_regular.ttf') format('truetype');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Kreon';
-    src: url('/font/kreon_bold.eot');
-    src: url('/font/kreon_bold.eot?#iefix') format('embedded-opentype'),
-         url('/font/kreon_bold.woff') format('woff'),
-         url('/font/kreon_bold.ttf') format('truetype');
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: 'Droid Serif';
-    src: url('/font/DroidSerif-Italic-webfont.eot');
-    src: url('/font/DroidSerif-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/font/DroidSerif-Italic-webfont.woff') format('woff'),
-         url('/font/DroidSerif-Italic-webfont.ttf') format('truetype');
-    font-weight: bold;
-}
+@include font-face(Mir-Medium, '/font/mir-medium_regular', normal);
+@include font-face(Lato, '/font/lato_regular', 200);
+@include font-face(Kreon, '/font/kreon_bold', bold);
+@include font-face(Droid Serif, '/font/rDoidSerif-Italic-webfont', bold);
 
 $white      : #fefefe;
 
-$lightGrey  : #b4bbc5;
-$mediumGrey : #656d78;
+$lightGrey  : darken(#b4bbc5, 5%);
 $darkGrey   : #232d31;
 
 $blue       : #4fc1e9;
@@ -64,13 +31,19 @@ $tablet     : 768px;
 
 body {
     background: $white;
-    color: #b4bbc5;
+    color: $lightGrey;
     font-family: Lato, 'PT Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 16px;
     line-height: 1.5em;
     margin: 0;
     padding: 0;
+
+    /*
+    background-size: 1.5em 1.5em;
+    background-position: 0 -8px;
+    background-image: -webkit-linear-gradient(top, #ffffff, #ffffff 98%, #FF0000 100%);
+    */
 }
 
 a {
@@ -126,7 +99,7 @@ header {
         float: left;
         font-size: 1.5em;
         font-family: Lato, sans-serif;
-
+        font-weight: 400;
         height: 64px;
         line-height: 64px;
         margin: 20px 0;
@@ -228,131 +201,82 @@ header {
     }
 }
 
-.tagline {
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    
 
-    &.tagline-index {
-        background-image: url(/img/background_index.jpg);
+.body {
+    margin-top: 10px;
+
+    p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre {
+        margin-bottom: 24px;
+        margin-top: 0;
     }
-    &.tagline-works {
-        background-image: url(/img/background_works.jpg);
-    }
-    &.tagline-blog {
-        background-image: url(/img/background_blog.jpg);
-    }
-    &.tagline-credits {
-        background-image: url(/img/background_credits.jpg);
+    h1, h2, h3, h4 h5, h6 {
+        font-weight: 400;
     }
 
-    @include transition(height 0.3s ease-in-out);
-
-    
-    @include media(min-width $smartphone + 1 max-width $tablet) {
-        height: 300px;
+    h1 {
+        color : #434a52;
+        font-family: "Mir-Medium", Lato, sans-serif;
+        font-size: 2.5em;
+        line-height: 1.25em;
+        margin: 6px 0 12px 0;
     }
 
-    @include media(max-width $smartphone) {
-        background: none;
-        height: 0;
-    }
-}
+    h2 {
+        color: #404855;
+        font-size: 1.5em;
+        margin-bottom: 26px;
 
-p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre {
-	margin-bottom: 16px;
-	margin-top: 0;
-}
-h1, h2, h3, h4 h5, h6 {
-    font-weight: 400;
-}
+        a {
+            color: darken($lightGrey, 70%);
+        }
 
-h1 {
-    //color: darken($lightGrey, 43%);
-    color : #434a52;
-    font-family: "Mir-Medium", Lato, sans-serif;
-    font-size: 2.5em;
-	line-height: 1.25em;
-    margin: 6px 0 16px 0;
-}
-
-h2 {
-    // border-bottom: 1px solid darken($lightGrey, 10%);
-    //color: darken($lightGrey, 63%);
-    color: #404855;
-    font-size: 1.5em;
-    margin-bottom: 24px;
-
-    a {
-        color: darken($lightGrey, 70%);
+        small {
+            color: darken($lightGrey, 25%);
+            font-family: Lato, sans-serif;
+            font-size: 0.6em;
+            font-weight: normal;
+        }
     }
 
-    small {
-        color: darken($lightGrey, 25%);
-        font-family: Lato, sans-serif;
-        font-size: 0.6em;
-        font-weight: normal;
+    h3 {
+        color: #464a56;
+        font-family: Kreon, Lato, sans-serif;    
+        font-size: 1.25em;
+        margin: -3px 0 0 0;
     }
-}
 
-h3 {
-    //color: darken($lightGrey, 33%);
-    color: #464a56;
-    font-family: Kreon, Lato, sans-serif;    
-    font-size: 1.25em;
-    margin: 0 ;
-}
+    h4 {
+        color: #474e58;
+        font-size: 1.125em;
+    }
 
-h4 {
-    color: #474e58;
-    font-size: 1.125em;
-}
+    pre {
+        margin-bottom: 28px;
+    }
 
-pre {
-	margin-bottom: 27px;
+    p + h2,
+    ul + h2,
+    ol + h2 {
+        margin-top: -2px;
+    }
+
+    ul + h3,
+    ol + h3 {
+        margin-top: 2px;
+    }
+    h3 + p,
+    h3 + ul,
+    h3 + ol,
+    h3 + blockquote {
+        margin-top: 2px;
+    }
 }
 
 section {
-    margin-bottom: 60px;
-
+    margin-bottom: 48px;
 
     &:last-of-type {
         margin-bottom: 0;
-    }
-    
-    .home-icon {
-        text-align: center;
-        vertical-align: middle;
-    }
-
-    &.home-skill {
-        .home-icon {
-            @include transition(all 0.5s ease-in-out);
-        }
-        [class^="grid"] {
-            display: table-cell;
-            float: none;
-        }
-    }
-  
-}
-
-.home-back-end {
-    &:hover .home-icon{
-        color: $green;
-    }
-}
-
-.home-front-end {
-    &:hover .home-icon{
-        color: $violet;
-    }
-}
-
-.home-mobile {
-    &:hover .home-icon{
-       color: $blue;
     }
 }
 
@@ -364,12 +288,44 @@ section {
     .skill {
         @include span-columns(6);
         @include omega(2n);
+        margin-bottom: 52px;
+
+        .skill:nth-child(3),
+        .skill:nth-child(4) {
+            margin-bottom: 0;
+        }
 
         @include media(max-width $smartphone) {
             @include span-columns(12);
             @include omega();
+            margin-bottom: 28px;
+        }
+
+        .image {
+            text-align: center;
+        }
+        .image-wrapper {
+            border-radius: 25em;
+            display: inline-block;
+            margin: 24px auto;
+            padding: 24px;
+            width: 118px;
+        }
+        &:nth-child(1) .image-wrapper {
+            background: $red;
+        }
+        &:nth-child(2) .image-wrapper {
+            background: $blue;
+        }
+        &:nth-child(3) .image-wrapper {
+            background: $green;
+        }
+        &:nth-child(4) .image-wrapper {
+            background: $violet;
         }
     }
+
+
 }
 
 .projects {
@@ -378,25 +334,16 @@ section {
     margin: 0;
 
     .project {
-        @include span-columns(4);
-        @include omega(3n);
+        @include span-columns(6);
+        @include omega(2n);
 
-        h2 {
-            margin: 16px 0;
-        }
         img {
             @include fill-parent;
-            
+            margin-bottom: 18px;
             @include media(max-width $smartphone) {
                 display: none;
             }
         }
-
-        @include media(min-width $smartphone + 1 max-width $tablet) {
-            @include span-columns(6);
-            @include omega(2n);
-        }
-
         @include media(max-width $smartphone) {
             @include span-columns(12);
             @include omega();
@@ -449,21 +396,13 @@ section {
     }
 }
 
-
-.post {
-    h2 {
-        margin-top: 32px;
-    }
-}
-
 footer {
     @include row("table");
     border-top: 4px solid #d8d8d8;
     background: #31302e;
     color: #e8e8e8;
     height: 60px;
-    line-height: 60px;
-    margin-top: 60px;
+    margin-top: 48px;
     
     p {
     	margin-bottom: 0;
@@ -491,9 +430,9 @@ footer {
     background-color: #fcf8e3;
     border-radius: 2px;
     color: #c09853;
-    margin-bottom: 20px; 
+    margin-bottom: 30px; 
     padding: 8px 14px;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    text-shadow: 0 1px 0 rgba(#fff, 0.5);
     
     &.alert-info {
         background-color: #d9edf7;
@@ -526,7 +465,13 @@ footer {
     padding: 10px 20px;
 
     text-decoration: none;
-    @include transition(opacity 0.25s ease, background-color 0.25s ease, color 0.25s ease, background 0.25s ease, text-shadow 0.25s ease, box-shadow 0.25s ease);
+    @include transition(
+        opacity 0.25s ease, 
+        background-color 0.25s ease, 
+        color 0.25s ease, 
+        background 0.25s ease, 
+        text-shadow 0.25s ease, 
+        box-shadow 0.25s ease);
     
     &:hover {
         border: 1px solid darken($blue, 20%);
