@@ -8,7 +8,7 @@ Comme vous le savez tous, le développement web mobile peut être un peu fastidi
 
 Il existe des sites permettant de tester votre site sous différentes résolutions ([http://screenqueri.es/](http://screenqueri.es/) en est un exemple parmi tant d'autres) mais il est plus difficile d'analyser le DOM, de tester du code sans mettre des <code>alert()</code> partout. 
 
-Google a répondu à ce problème par un plugin pour Chrome appelé ADB  [ADB](https://chrome.google.com/webstore/detail/adb/dpngiggdglpdnjdoaefidgiigpemgage) pour Android Device Bridge. Les personnes travaillant dans le développement Android le connaissent bien car c'est un des composants installés avec le SDK Android.
+Google a répondu à ce problème par un plugin pour Chrome appelé [ADB](https://chrome.google.com/webstore/detail/adb/dpngiggdglpdnjdoaefidgiigpemgage) pour Android Device Bridge. Les personnes travaillant dans le développement Android le connaissent bien car c'est un des composants installés avec le SDK Android.
 Ce plugin va nous permettre de détecter un appareil Android connecté via USB sur votre ordinateur et ainsi d'utiliser la console de débogage de Google Chrome desktop sur une page affichée depuis Google Chrome Android.
 
 <div class="alert">Attention, il vous faut au minimum la version 28 pour Chrome Desktop et la version 24 pour Chrome Android.</div>

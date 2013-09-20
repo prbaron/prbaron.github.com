@@ -46,7 +46,7 @@ Vous avez deux types de commentaires :
 2. Inlines : les commentaires inlines se placent dans une méthode et expliquent les différentes instructions de celle ci. 
 
 Attention cependant, n'en faites pas trop non plus, si votre code est explicite ce n'est pas la peine d'alourdir la compréhension en rajoutant des commentaires triviaux. L'exemple qui suit est un exemple de ce qu'il ne faut pas réaliser. 
-
+    
     // this function tells me if the value is pair or not
     function isPair($value){
         return $value % 2 == 0;
