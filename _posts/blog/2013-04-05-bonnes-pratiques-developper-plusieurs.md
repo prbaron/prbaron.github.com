@@ -2,6 +2,7 @@
 layout   : post
 category : blog
 tagline  : Les bonnes pratiques pour développer un projet à plusieurs
+keywords : bonnes pratique, développement plusieurs, projet web, projet mobile
 ---
 
 Vous souhaitez réaliser un projet complet et ne savez pas comment vous y prendre ? Vous trouvez qu'il manque un petit quelque chose pour que votre projet devienne incontournable ? Nous allons ici lister les bonnes pratiques, utilisées en entreprise, afin de mener efficacement un projet à son terme.

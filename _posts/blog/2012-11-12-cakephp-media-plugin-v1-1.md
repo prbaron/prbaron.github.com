@@ -3,6 +3,7 @@ layout   : post
 category : blog
 tagline  : CakePHP Media plugin v1.1
 note     : Grafikart updated its own version to 2.0. Mine is no longer updated.
+keywords : cakephp, grafikart media plugin
 ---
 
 
