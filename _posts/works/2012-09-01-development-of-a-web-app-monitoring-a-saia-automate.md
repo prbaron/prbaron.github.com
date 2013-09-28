@@ -1,11 +1,11 @@
 ---
-layout    : work
-category  : works
-tagline   : "Application web contrôlant un automate SAIA"
-thumbnail : 2012/09/01/thumbnail.jpg
-client    : ISEA
-duration  : 6 mois
-skills    : PHP, jQuery, HTML5/ CSS3, Saia
+layout   : work
+category : works
+tagline  : "Application web contrôlant un automate SAIA"
+client   : ISEA
+duration : 6 mois
+skills   : PHP, jQuery, HTML5/ CSS3, Saia
+keywords : ISEA, CakePHP application, application domotique, application SAIA
 ---
 
 Le but de ce projet est d'automatiser un bâtiment utilisant la technologie KNX et pilotée par un automate SAIA. Nous voulons un   accès à distance et envoyer les commandes peut importe où nous nous trouvons. C'est la raison pour laquelle nous avons créé une application web utilisant PHP et jQuery.

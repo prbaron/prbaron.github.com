@@ -116,15 +116,30 @@ header {
         line-height: 64px;
         margin: 20px 0;
         padding-left: 74px;
-        @include transition(background-image 0.3s ease-in-out);
+        position: relative;
+        @include transition(background 0.3s linear);
 
         &:hover {
             background-image: url(/img/logo2.png);
             border-bottom: none;
+
+            &:before {
+                background: transparent;
+            }
         }
 
         @include media(max-width 520px) {
             float: none;
+        }
+        &:before {
+            background: $darkGrey;
+            border-radius : 25em;
+            content: "";
+            height: 64px;
+            left: 0;
+            position: absolute;
+            width: 64px;
+            z-index: -1;
         }
     }
 

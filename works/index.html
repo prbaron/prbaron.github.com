@@ -1,17 +1,14 @@
 ---
-layout  : default
-title   : Your New Jekyll Site
-tagline : Projets
-image   : works
+layout   : default
+title    : Your New Jekyll Site
+tagline  : Projets
+keywords : Pierre Baron, Web developer, Mobile Developer, Java, PHP, jQuery, CakePHP, jQuery
 ---
 
 <ul class="projects">
 {% for post in site.categories.works %}
     <li class="project">
         <h2>{{ post.tagline }}</h2>
-        <div class="thumbnail">
-            <img src="/img/{{post.thumbnail}}" />
-        </div>
         <div class="entry">
            {{ post.excerpt }}
             <p>
