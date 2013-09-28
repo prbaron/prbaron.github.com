@@ -2,7 +2,7 @@
 layout   : work
 category : works
 tagline  : "Serveur Java et client iPhone pour domotiser un bâtiment"
-client   : ISEA
+client   : ESIR
 duration : 4 mois
 skills   : Objective-C, Java
 keywords : ESIR, application mobile, REST, client, serveur
@@ -10,7 +10,7 @@ keywords : ESIR, application mobile, REST, client, serveur
 
 Le but de ce projet est de domotiser le laboratoire domotique de notre école. Nous avons coupé le projet en trois parties :
 
-  1. Produits : les étudiants devaient créer les trames comprises par les divers produits domestiques.
+  1. Produits : les étudiants devaient créer les trames permettant aux divers produits domestiques de communiquer entre eux.
   2. Algorithme : l'algorithme doit pouvoir choisir les meilleurs commandes à effectuer par rapport aux données reçues des clients mobiles et des produits physiques
   3. Clients mobiles : les clients mobiles doivent pouvoir récupérer les états des produits physiques et envoyer les commandes à ces derniers.
   
