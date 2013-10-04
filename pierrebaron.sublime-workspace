@@ -4,100 +4,40 @@
 		"selected_items":
 		[
 			[
-				"break-",
-				"break-word"
-			],
-			[
-				"wrap",
-				"word-wrap"
-			],
-			[
-				"mar",
-				"margin-right"
-			],
-			[
-				"dar",
+				"dark",
 				"darkGrey"
 			],
 			[
-				"fon",
-				"font-size"
+				"gri",
+				"grid12"
 			],
 			[
-				"pa",
-				"padding-left"
+				"grid",
+				"grid9"
 			],
 			[
-				"bl",
-				"blue"
-			],
-			[
-				"le",
-				"left"
-			],
-			[
-				"dark",
-				"darkViolet"
-			],
-			[
-				"last-",
-				"last-of-type"
-			],
-			[
-				"pad",
-				"padding"
-			],
-			[
-				"med",
-				"mediumGrey"
-			],
-			[
-				"inln",
-				"inline-block"
-			],
-			[
-				"ri",
-				"right"
+				"max",
+				"max-width"
 			],
 			[
 				"wi",
 				"width"
 			],
 			[
-				"bo",
-				"border-bottom"
-			],
-			[
-				"border",
-				"border-bottom"
-			],
-			[
-				"bort",
-				"border-bottom-color"
-			],
-			[
-				"tagli",
-				"tagline"
-			],
-			[
-				"tex",
-				"text-decoration"
-			],
-			[
 				"font",
-				"font-family"
+				"font-size"
 			],
 			[
-				"bor",
-				"border-top"
+				"block",
+				"blockquote"
 			],
 			[
-				"l",
-				"line-height"
+				"mar",
+				"margin-top"
 			],
 			[
 				"ma",
-				"margin"
+				"margin-top"
 			],
 			[
 				"preg",
@@ -216,18 +156,26 @@
 	"buffers":
 	[
 		{
-			"file": "index.html",
+			"file": "_posts/works/2012-09-01-development-of-a-web-app-monitoring-a-saia-automate.md",
 			"settings":
 			{
-				"buffer_size": 2855,
+				"buffer_size": 1803,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "sass/style.scss",
+			"file": "_posts/works/2012-06-01-development-of-a-java-server-and-a-iphone-client-to-automate-a-home-automated-building.md",
 			"settings":
 			{
-				"buffer_size": 10583,
+				"buffer_size": 1544,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_posts/blog/2012-11-12-cakephp-media-plugin-v1-1.md",
+			"settings":
+			{
+				"buffer_size": 2585,
 				"line_ending": "Unix"
 			}
 		}
@@ -235,17 +183,9 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 74.0,
+		"height": 49.0,
 		"selected_items":
 		[
-			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
-				"ma",
-				"Set Syntax: Markdown"
-			],
 			[
 				"remve",
 				"Package Control: Remove Package"
@@ -299,7 +239,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 543.0
+		"width": 579.0
 	},
 	"console":
 	{
@@ -316,52 +256,29 @@
 	},
 	"file_history":
 	[
-		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2013-04-05-bonnes-pratiques-developper-plusieurs.md",
-		"/Users/pierrebaron/Sites/prbaron.github.com/credits/index.html",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2012-10-23-add-your-twitter-timeline-to-your-cakephp-application.md",
-		"/Users/pierrebaron/Sites/prbaron.github.com/works/index.html",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2013-04-05-bonnes-pratiques-developper-plusieurs",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2013-08-30-deboguer-android-css-html.md",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_layouts/post.html",
-		"/Users/pierrebaron/Sites/prbaron.github.com/blog/index.html",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2012-11-12-cakephp-media-plugin-v1-1.md",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_layouts/home.html",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_layouts/work.html",
-		"/Users/pierrebaron/Sites/prbaron.github.com/css/style.css",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_layouts/default.html",
-		"/Users/pierrebaron/Sites/prbaron.github.com/sass/style.scss",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2012-10-05-new-website.md",
+		"/Users/pierrebaron/Sites/pierrebaron/config DNS",
+		"/Users/pierrebaron/Sites/prbaron.github.com/CNAME",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/works/2013-09-28-pbckcode.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/works/2013-09-28-pbckcode.js.md",
 		"/Users/pierrebaron/Sites/prbaron.github.com/index.html",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_includes/footer.html",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_includes/header.html",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2012-10-23-add-your-twitter-timeline-to-your-cakephp-application",
-		"/Users/pierrebaron/Sites/prbaron.github.com/sass/_prettify.scss",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2013-07-20-my-new-website.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/sass/style.scss",
 		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2012-12-09-using-wampserver-in-production.md",
-		"/Users/pierrebaron/Sites/prbaron.github.com/pierrebaron.sublime-project",
-		"/Users/pierrebaron/Sites/pbaron/blog.html",
-		"/Users/pierrebaron/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/pierrebaron/Sites/pbaron/css/bootstrap.css",
-		"/Users/pierrebaron/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/Users/pierrebaron/Sites/pbaron/pbaron.sublime-project",
-		"/Users/pierrebaron/Sites/pbaron/css/style.css",
-		"/Users/pierrebaron/Sites/pbaron/config.rb",
-		"/Users/pierrebaron/Sites/pbaron/index.html",
-		"/Users/pierrebaron/Sites/pierrebaron/app/webroot/js/ckeditor-411/plugins/pbckcode/plugin.js",
-		"/Users/pierrebaron/Sites/pierrebaron/app/webroot/js/ckeditor-411/skins/moono/dialog.css",
-		"/Users/pierrebaron/Sites/pierrebaron/app/webroot/js/ckeditor-410/config.js",
-		"/Users/pierrebaron/Sites/pbckcode/demo-prettify.html",
-		"/Users/pierrebaron/Sites/pierrebaron/app/webroot/js/ckeditor/config.js",
-		"/Users/pierrebaron/Sites/pierrebaron/app/View/Posts/show.ctp",
-		"/Users/pierrebaron/Sites/pierrebaron/app/Model/Menu.php",
-		"/Users/pierrebaron/Sites/pierrebaron/app/Model/User.php",
-		"/Users/pierrebaron/Sites/pierrebaron/app/Model/Comment.php",
-		"/Users/pierrebaron/Sites/pierrebaron/app/Model/Post.php",
-		"/Users/pierrebaron/Sites/pierrebaron/app/Plugin/Media/Model/Behavior/MediaBehavior.php",
-		"/Users/pierrebaron/Sites/pierrebaron/app/Model/AppModel.php",
-		"/Users/pierrebaron/Sites/pierrebaron/app/Config/database.php",
-		"/Users/pierrebaron/Sites/pierrebaron/app/webroot/css/sass/style.scss",
-		"/Users/pierrebaron/Sites/pierrebaron/config.rb",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2012-10-05-new-website.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2012-11-12-cakephp-media-plugin-v1-1.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2012-10-23-add-your-twitter-timeline-to-your-cakephp-application.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2013-04-05-bonnes-pratiques-developper-plusieurs.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2013-08-30-deboguer-android-css-html.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/works/2012-09-01-development-of-a-web-app-monitoring-a-saia-automate.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/works/2012-06-01-development-of-a-java-server-and-a-iphone-client-to-automate-a-home-automated-building.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_layouts/work.html",
+		"/Users/pierrebaron/Sites/prbaron.github.com/works/index.html",
+		"/Users/pierrebaron/Sites/prbaron.github.com/credits/index.html",
+		"/Users/pierrebaron/Sites/prbaron.github.com/blog/index.html",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_layouts/post.html",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_layouts/default.html",
+		"/Users/pierrebaron/Sites/prbaron.github.com/js/app.js",
+		"/Users/pierrebaron/Sites/pierrebaron-v1/app/webroot/css/sass/style.scss",
+		"/Users/pierrebaron/Sites/pierrebaron-v1/config.rb",
 		"/Users/Pierre/Sites/pierrebaron/app/webroot/css/style.css",
 		"/Users/Pierre/Sites/pierrebaron/app/webroot/css/admin.css",
 		"/Users/Pierre/Sites/owncloud/config/config.sample.php",
@@ -443,7 +360,30 @@
 		"/Users/Pierre/Sites/saia/app/View/Heats/edit.ctp",
 		"/Users/Pierre/Sites/saia/app/webroot/css/admin.css",
 		"/Users/Pierre/Sites/saia/app/Controller/HeatsController.php",
-		"/Users/Pierre/Sites/saia/app/View/Heats/index.ctp"
+		"/Users/Pierre/Sites/saia/app/View/Heats/index.ctp",
+		"/C/wamp/www/saia/app/View/Settings/admin_index.ctp",
+		"/C/wamp/www/saia/app/View/Heats/admin_index.ctp",
+		"/C/wamp/www/saia/app/Config/Schema/Schema.php",
+		"/C/wamp/www/saia/app/webroot/css/themes/TwitterBootstrap/style.css",
+		"/C/wamp/www/saia/app/Plugin/Install/Config/data/HeatData.php",
+		"/D/Mes Documents/Downloads/heats.php",
+		"/C/Documents and Settings/Administrateur/Bureau/Project Wieckert_20111024_1214/CPU1/html/style.css",
+		"/C/Documents and Settings/Administrateur/Bureau/Project Wieckert_20111024_1214/CPU1/html/script.js",
+		"/C/Documents and Settings/Administrateur/Bureau/Project Wieckert_20111024_1214/CPU1/html/mobile.js",
+		"/C/wamp/www/saia/app/webroot/js/user.js",
+		"/C/wamp/www/saia/app/View/Heats/index.ctp",
+		"/C/wamp/www/saia/app/Model/Heat.php",
+		"/C/wamp/www/saia/app/Controller/HeatsController.php",
+		"/C/wamp/www/saia/app/View/Curves/admin_edit.ctp",
+		"/C/wamp/www/saia/app/Controller/IndexController.php",
+		"/C/wamp/www/saia/app/View/Index/admin_index.ctp",
+		"/C/wamp/www/saia/app/Model/AppModel.php",
+		"/C/wamp/www/saia/app/Model/Index.php",
+		"/C/wamp/www/saia/lib/Cake/View/Helper/FormHelper.php",
+		"/C/wamp/www/saia/app/View/Index/index.ctp",
+		"/C/wamp/www/saia/app/View/Lights/index.ctp",
+		"/C/wamp/www/saia/app/View/Layouts/default.ctp",
+		"/C/wamp/www/saia/app/View/Index/admin_edit.ctp"
 	],
 	"find":
 	{
@@ -464,19 +404,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"{\n",
-			"transition",
-			"post",
-			"#fefefe",
-			"reset",
-			"></",
-			"h2",
-			"#$mediumGrey",
-			"656D78",
-			"media",
-			"#232d31",
-			"title",
-			"tagl",
+			"thumbnail",
+			"adb",
+			"p + h2,\n    ul + h2,\n    ol + h2 {\n        margin-top: -2px;\ndarkGrey",
+			"p + h2,\n    ul + h2,\n    ol + h2 {\n        margin-top: -2px;\nmediumGrey",
 			"content",
 			"$e",
 			"$t",
@@ -591,7 +522,16 @@
 			"AT %MX[1-9]{1,2}.0",
 			"BYTE",
 			"MX3",
-			"REGIME"
+			"REGIME",
+			"BYTE",
+			"MX2",
+			"REGIME",
+			"ALARME",
+			"MX1",
+			".0",
+			"BOOL",
+			".0",
+			"MX"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -599,9 +539,6 @@
 		"regex": false,
 		"replace_history":
 		[
-			"$white",
-			"$mediumGrey",
-			"$darkGrey",
 			"message",
 			"$entry",
 			"$table",
@@ -709,61 +646,82 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
+					"file": "_posts/works/2012-09-01-development-of-a-web-app-monitoring-a-saia-automate.md",
 					"settings":
 					{
-						"buffer_size": 2855,
+						"buffer_size": 1803,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1654,
+								1654
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 67.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "sass/style.scss",
+					"file": "_posts/works/2012-06-01-development-of-a-java-server-and-a-iphone-client-to-automate-a-home-automated-building.md",
 					"settings":
 					{
-						"buffer_size": 10583,
+						"buffer_size": 1544,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								482,
+								482
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 797.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_posts/blog/2012-11-12-cakephp-media-plugin-v1-1.md",
+					"settings":
+					{
+						"buffer_size": 2585,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								200,
+								200
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -817,88 +775,12 @@
 		"selected_items":
 		[
 			[
-				"s",
-				"sass/style.scss"
-			],
-			[
-				"style",
-				"css/style.css"
-			],
-			[
-				"sty",
-				"sass/style.scss"
-			],
-			[
-				"pr",
-				"sass/_prettify.scss"
+				"style.",
+				"app/webroot/css/style.css"
 			],
 			[
 				"styl",
-				"sass/style.scss"
-			],
-			[
-				"boo",
-				"css/bootstrap.css"
-			],
-			[
-				"boot",
-				"css/bootstrap.css"
-			],
-			[
-				"pbckcode.js",
-				"app/webroot/js/ckeditor-411/plugins/pbckcode/dialogs/pbckcode.js"
-			],
-			[
-				"dialog",
-				"app/webroot/js/ckeditor-411/skins/moono/dialog.css"
-			],
-			[
-				"config.js",
-				"app/webroot/js/ckeditor-411/config.js"
-			],
-			[
-				"posts/in",
-				"app/View/Posts/index.ctp"
-			],
-			[
-				"admin_edit",
-				"app/View/Posts/admin_edit.ctp"
-			],
-			[
-				"show",
-				"app/View/Posts/show.ctp"
-			],
-			[
-				"media",
-				"app/Plugin/Media/Model/Behavior/MediaBehavior.php"
-			],
-			[
-				"post",
-				"app/Model/Post.php"
-			],
-			[
-				"comm",
-				"app/Model/Comment.php"
-			],
-			[
-				"user",
-				"app/Model/User.php"
-			],
-			[
-				"menu",
-				"app/Model/Menu.php"
-			],
-			[
-				"appm",
-				"app/Model/AppModel.php"
-			],
-			[
-				"databae",
-				"app/Config/database.php"
-			],
-			[
-				"style.",
-				"app/webroot/css/style.css"
+				"app/webroot/css/sass/style.scss"
 			],
 			[
 				"twitter.cp",
@@ -907,6 +789,10 @@
 			[
 				"dash",
 				"app/View/Users/admin_dashboard.ctp"
+			],
+			[
+				"show",
+				"app/View/Posts/show.ctp"
 			],
 			[
 				"settings/",
@@ -937,12 +823,24 @@
 				"Config/database.php"
 			],
 			[
+				"post",
+				"View/Posts/show.ctp"
+			],
+			[
 				"floor",
 				"Plugin/Install/Config/data/FloorData.php"
 			],
 			[
 				"lightda",
 				"Plugin/Install/Config/data/LightData.php"
+			],
+			[
+				"admin_edit",
+				"View/Floors/admin_edit.ctp"
+			],
+			[
+				"user",
+				"Model/User.php"
 			],
 			[
 				"light",
@@ -998,7 +896,7 @@
 		[
 			[
 				"",
-				"/Users/pierrebaron/Sites/pbckcode/pbckcode.sublime-project"
+				"/C/wamp/www/saia/documentation/documentation.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -1007,6 +905,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 303.0,
+	"side_bar_width": 212.0,
 	"status_bar_visible": true
 }
