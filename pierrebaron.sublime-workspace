@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"bo",
+				"border-bottom"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
 				"dark",
 				"darkGrey"
 			],
@@ -30,14 +58,6 @@
 			[
 				"block",
 				"blockquote"
-			],
-			[
-				"mar",
-				"margin-top"
-			],
-			[
-				"ma",
-				"margin-top"
 			],
 			[
 				"preg",
@@ -70,10 +90,6 @@
 			[
 				"inde",
 				"indexblock_id"
-			],
-			[
-				"di",
-				"display"
 			],
 			[
 				"is_n",
@@ -156,26 +172,42 @@
 	"buffers":
 	[
 		{
-			"file": "_posts/works/2012-09-01-development-of-a-web-app-monitoring-a-saia-automate.md",
+			"file": "sass/style.scss",
 			"settings":
 			{
-				"buffer_size": 1803,
+				"buffer_size": 11344,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_posts/works/2012-06-01-development-of-a-java-server-and-a-iphone-client-to-automate-a-home-automated-building.md",
+			"file": "_layouts/work.html",
 			"settings":
 			{
-				"buffer_size": 1544,
+				"buffer_size": 2435,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_posts/blog/2012-11-12-cakephp-media-plugin-v1-1.md",
+			"file": "_config.yml",
 			"settings":
 			{
-				"buffer_size": 2585,
+				"buffer_size": 295,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "404.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "blog/index.html",
+			"settings":
+			{
+				"buffer_size": 1164,
 				"line_ending": "Unix"
 			}
 		}
@@ -256,26 +288,41 @@
 	},
 	"file_history":
 	[
-		"/Users/pierrebaron/Sites/pierrebaron/config DNS",
+		"/Users/pierrebaron/Sites/prbaron.github.com/index.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/index.html",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_layouts/post.html",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_site/blog/index.html",
+		"/Users/pierrebaron/Sites/prbaron.github.com/works/development-of-a-java-server-and-a-iphone-client-to-automate-a-home-automated-building/index.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/blog/index.html",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_config.yml",
+		"/Users/pierrebaron/Sites/prbaron.github.com/works/development-of-a-web-app-monitoring-a-saia-automate/index.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/works/pbckcode/index.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/2013-08-30-deboguer-android-css-html.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/2013-04-05-bonnes-pratiques-developper-plusieurs.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/2012-12-09-using-wampserver-in-production.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/2012-11-12-cakephp-media-plugin-v1-1.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/2012-10-23-add-your-twitter-timeline-to-your-cakephp-application.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/works/index.html",
+		"/Users/pierrebaron/Sites/prbaron.github.com/works/development-of-a-java-server-and-a-iphone-client-to-automate-a-home-automated-building.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/works/development-of-a-web-app-monitoring-a-saia-automate.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/works/pbckcode.js.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/humans.txt",
 		"/Users/pierrebaron/Sites/prbaron.github.com/CNAME",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_layouts/work.html",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_layouts/default.html",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2012-11-12-cakephp-media-plugin-v1-1.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/works/2012-06-01-development-of-a-java-server-and-a-iphone-client-to-automate-a-home-automated-building.md",
+		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/works/2012-09-01-development-of-a-web-app-monitoring-a-saia-automate.md",
+		"/Users/pierrebaron/Sites/pierrebaron/config DNS",
 		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/works/2013-09-28-pbckcode.md",
 		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/works/2013-09-28-pbckcode.js.md",
-		"/Users/pierrebaron/Sites/prbaron.github.com/index.html",
 		"/Users/pierrebaron/Sites/prbaron.github.com/sass/style.scss",
 		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2012-12-09-using-wampserver-in-production.md",
 		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2012-10-05-new-website.md",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2012-11-12-cakephp-media-plugin-v1-1.md",
 		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2012-10-23-add-your-twitter-timeline-to-your-cakephp-application.md",
 		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2013-04-05-bonnes-pratiques-developper-plusieurs.md",
 		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/blog/2013-08-30-deboguer-android-css-html.md",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/works/2012-09-01-development-of-a-web-app-monitoring-a-saia-automate.md",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_posts/works/2012-06-01-development-of-a-java-server-and-a-iphone-client-to-automate-a-home-automated-building.md",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_layouts/work.html",
-		"/Users/pierrebaron/Sites/prbaron.github.com/works/index.html",
 		"/Users/pierrebaron/Sites/prbaron.github.com/credits/index.html",
-		"/Users/pierrebaron/Sites/prbaron.github.com/blog/index.html",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_layouts/post.html",
-		"/Users/pierrebaron/Sites/prbaron.github.com/_layouts/default.html",
 		"/Users/pierrebaron/Sites/prbaron.github.com/js/app.js",
 		"/Users/pierrebaron/Sites/pierrebaron-v1/app/webroot/css/sass/style.scss",
 		"/Users/pierrebaron/Sites/pierrebaron-v1/config.rb",
@@ -368,22 +415,7 @@
 		"/C/wamp/www/saia/app/Plugin/Install/Config/data/HeatData.php",
 		"/D/Mes Documents/Downloads/heats.php",
 		"/C/Documents and Settings/Administrateur/Bureau/Project Wieckert_20111024_1214/CPU1/html/style.css",
-		"/C/Documents and Settings/Administrateur/Bureau/Project Wieckert_20111024_1214/CPU1/html/script.js",
-		"/C/Documents and Settings/Administrateur/Bureau/Project Wieckert_20111024_1214/CPU1/html/mobile.js",
-		"/C/wamp/www/saia/app/webroot/js/user.js",
-		"/C/wamp/www/saia/app/View/Heats/index.ctp",
-		"/C/wamp/www/saia/app/Model/Heat.php",
-		"/C/wamp/www/saia/app/Controller/HeatsController.php",
-		"/C/wamp/www/saia/app/View/Curves/admin_edit.ctp",
-		"/C/wamp/www/saia/app/Controller/IndexController.php",
-		"/C/wamp/www/saia/app/View/Index/admin_index.ctp",
-		"/C/wamp/www/saia/app/Model/AppModel.php",
-		"/C/wamp/www/saia/app/Model/Index.php",
-		"/C/wamp/www/saia/lib/Cake/View/Helper/FormHelper.php",
-		"/C/wamp/www/saia/app/View/Index/index.ctp",
-		"/C/wamp/www/saia/app/View/Lights/index.ctp",
-		"/C/wamp/www/saia/app/View/Layouts/default.ctp",
-		"/C/wamp/www/saia/app/View/Index/admin_edit.ctp"
+		"/C/Documents and Settings/Administrateur/Bureau/Project Wieckert_20111024_1214/CPU1/html/script.js"
 	],
 	"find":
 	{
@@ -404,6 +436,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"skills",
+			"skill",
+			"pagina",
+			"post",
 			"thumbnail",
 			"adb",
 			"p + h2,\n    ul + h2,\n    ol + h2 {\n        margin-top: -2px;\ndarkGrey",
@@ -527,11 +563,7 @@
 			"MX2",
 			"REGIME",
 			"ALARME",
-			"MX1",
-			".0",
-			"BOOL",
-			".0",
-			"MX"
+			"MX1"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -646,53 +678,58 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "_posts/works/2012-09-01-development-of-a-web-app-monitoring-a-saia-automate.md",
+					"file": "sass/style.scss",
 					"settings":
 					{
-						"buffer_size": 1803,
+						"buffer_size": 11344,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1654,
-								1654
+								6582,
+								6582
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 4512.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "_posts/works/2012-06-01-development-of-a-java-server-and-a-iphone-client-to-automate-a-home-automated-building.md",
+					"file": "_layouts/work.html",
 					"settings":
 					{
-						"buffer_size": 1544,
+						"buffer_size": 2435,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								482,
-								482
+								542,
+								542
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -702,23 +739,77 @@
 				},
 				{
 					"buffer": 2,
-					"file": "_posts/blog/2012-11-12-cakephp-media-plugin-v1-1.md",
+					"file": "_config.yml",
 					"settings":
 					{
-						"buffer_size": 2585,
+						"buffer_size": 295,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								200,
-								200
+								226,
+								226
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/YAML/YAML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "404.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "blog/index.html",
+					"settings":
+					{
+						"buffer_size": 1164,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								183,
+								183
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -774,6 +865,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"st",
+				"sass/style.scss"
+			],
 			[
 				"style.",
 				"app/webroot/css/style.css"
@@ -896,7 +991,7 @@
 		[
 			[
 				"",
-				"/C/wamp/www/saia/documentation/documentation.sublime-project"
+				"/Users/pierrebaron/Sites/tuto_jekyll/tuto_jekyll.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -905,6 +1000,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 212.0,
+	"side_bar_width": 181.0,
 	"status_bar_visible": true
 }
