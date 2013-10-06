@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"border-",
+				"border-radius"
+			],
+			[
 				"mar",
 				"margin-bottom"
 			],
@@ -175,7 +179,7 @@
 			"file": "sass/style.scss",
 			"settings":
 			{
-				"buffer_size": 11344,
+				"buffer_size": 11347,
 				"line_ending": "Unix"
 			}
 		},
@@ -199,15 +203,7 @@
 			"file": "404.html",
 			"settings":
 			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "blog/index.html",
-			"settings":
-			{
-				"buffer_size": 1164,
+				"buffer_size": 2878,
 				"line_ending": "Unix"
 			}
 		}
@@ -288,12 +284,13 @@
 	},
 	"file_history":
 	[
+		"/Users/pierrebaron/Sites/prbaron.github.com/_includes/header.html",
+		"/Users/pierrebaron/Sites/prbaron.github.com/blog/index.html",
 		"/Users/pierrebaron/Sites/prbaron.github.com/index.md",
 		"/Users/pierrebaron/Sites/prbaron.github.com/index.html",
 		"/Users/pierrebaron/Sites/prbaron.github.com/_layouts/post.html",
 		"/Users/pierrebaron/Sites/prbaron.github.com/_site/blog/index.html",
 		"/Users/pierrebaron/Sites/prbaron.github.com/works/development-of-a-java-server-and-a-iphone-client-to-automate-a-home-automated-building/index.md",
-		"/Users/pierrebaron/Sites/prbaron.github.com/blog/index.html",
 		"/Users/pierrebaron/Sites/prbaron.github.com/_config.yml",
 		"/Users/pierrebaron/Sites/prbaron.github.com/works/development-of-a-web-app-monitoring-a-saia-automate/index.md",
 		"/Users/pierrebaron/Sites/prbaron.github.com/works/pbckcode/index.md",
@@ -414,8 +411,7 @@
 		"/C/wamp/www/saia/app/webroot/css/themes/TwitterBootstrap/style.css",
 		"/C/wamp/www/saia/app/Plugin/Install/Config/data/HeatData.php",
 		"/D/Mes Documents/Downloads/heats.php",
-		"/C/Documents and Settings/Administrateur/Bureau/Project Wieckert_20111024_1214/CPU1/html/style.css",
-		"/C/Documents and Settings/Administrateur/Bureau/Project Wieckert_20111024_1214/CPU1/html/script.js"
+		"/C/Documents and Settings/Administrateur/Bureau/Project Wieckert_20111024_1214/CPU1/html/style.css"
 	],
 	"find":
 	{
@@ -686,15 +682,15 @@
 					"file": "sass/style.scss",
 					"settings":
 					{
-						"buffer_size": 11344,
+						"buffer_size": 11347,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6582,
-								6582
+								2228,
+								2228
 							]
 						],
 						"settings":
@@ -704,7 +700,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4512.0,
+						"translation.y": 1538.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -768,41 +764,15 @@
 					"file": "404.html",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 2878,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "blog/index.html",
-					"settings":
-					{
-						"buffer_size": 1164,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								183,
-								183
+								1563,
+								1563
 							]
 						],
 						"settings":
@@ -812,7 +782,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 71.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

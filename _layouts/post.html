@@ -41,6 +41,11 @@
                     <li class="prev"><a href=" {{ page.previous.url }}">{{ page.previous.tagline }} &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i></a></li>
                 {% endif %}
             </ul>
+
+
+            {% if page.comments %}
+                {% include disqus.html %}
+            {% %}
         </div>
     </div>
     

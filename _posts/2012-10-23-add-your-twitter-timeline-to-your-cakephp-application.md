@@ -4,6 +4,7 @@ category : tutoriel
 tagline  : Add your Twitter timeline to your CakePHP application
 note     : I made a gist of the plugin, <a href="https://gist.github.com/prbaron/4725934">https://gist.github.com/prbaron/4725934</a>
 keywords : cakephp, cakephp twitter timeline
+comments : true
 ---
 
 Twitter just changed its API so I decided to write my own library to display my Twitter feeds on my website.

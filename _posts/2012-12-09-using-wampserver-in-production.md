@@ -3,6 +3,7 @@ layout   : post
 category : tutoriel
 tagline  : Using WampServer in production
 keywords : wampserver, production, online
+comments : true
 ---
 
 WampServer is an awesome tool and famous in web development world. For those who do not know it, WampServer is a software installing Apache, PHP and MySQL. It is really useful to locally work on your websites. The problem is that it is for development and not for production because it is not secured.
