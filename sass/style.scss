@@ -39,11 +39,11 @@ body {
     margin: 0;
     padding: 0;
 
-    /*
-    background-size: 1.5em 1.5em;
-    background-position: 0 -8px;
-    background-image: -webkit-linear-gradient(top, #ffffff, #ffffff 98%, #FF0000 100%);
-    */
+    
+    // background-size: 1.5em 1.5em;
+    // background-position: 0 -8px;
+    // background-image: -webkit-linear-gradient(top, #ffffff, #ffffff 98%, #FF0000 100%);
+    
 
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -310,16 +310,15 @@ section {
 .skills {
     @include row();
     padding-left: 0;
-    margin: 0; 
+    margin: 0 !important; 
     
     .skill {
         @include span-columns(6);
         @include omega(2n);
-        margin-bottom: 52px;
 
-        .skill:nth-child(3),
-        .skill:nth-child(4) {
-            margin-bottom: 0;
+        &:nth-child(1),
+        &:nth-child(2) {
+            margin-bottom: 52px;
         }
 
         @include media(max-width $smartphone) {
@@ -538,6 +537,36 @@ footer {
             display: block;
             margin-bottom: 20px;
             text-align: left;
+        }
+    }
+}
+
+.paginator {
+    @include row();
+
+    margin: 48px 0 0 0 !important;
+    padding-left: 0;
+
+    li {
+        float: left;
+        list-style: none;
+        margin-right: 4px;
+    }
+   
+    .active,
+    .btn {
+        padding: 4px 8px;
+    }
+    .active {
+        display: inline-block;
+    }
+    .btn {
+        a {
+            color: white;
+
+            &:hover {
+                border-bottom: none;
+            }
         }
     }
 }

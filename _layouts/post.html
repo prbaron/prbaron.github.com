@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="post">
+<body>
     {% include header.html %}
 
     <div class="container body">
@@ -33,29 +33,12 @@
             {{ content }}
             
             <ul class="pagination">
-                {% for post in site.categories.blog %}
-                    {% if post.url == page.url %}
-                        {% assign post_index0 = forloop.index0 %}
-                        {% assign post_index1 = forloop.index %}
-                    {% endif %}
-                {% endfor %}
-                {% for post in site.categories.blog %}
-                    {% if post_index0 == forloop.index %}
-                        {% assign next_post = post %}
-                    {% endif %}
-                    {% if post_index1 == forloop.index0 %}
-                        {% assign prev_post = post %}
-                    {% endif %}
-                {% endfor %}
-  
-
-
-                {% if next_post %}
-                    <li class="next"><a href=" {{ next_post.url }}"><i class="icon-chevron-sign-left"></i> &nbsp;&nbsp; {{ next_post.tagline }}</a></li>
+                {% if page.next %}
+                    <li class="next"><a href=" {{ page.next.url }}"><i class="icon-chevron-sign-left"></i> &nbsp;&nbsp; {{ page.next.tagline }}</a></li>
                 {% endif %} 
                 
-                {% if prev_post %}
-                    <li class="prev"><a href=" {{ prev_post.url }}">{{ prev_post.tagline }} &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i></a></li>
+                {% if page.previous %}
+                    <li class="prev"><a href=" {{ page.previous.url }}">{{ page.previous.tagline }} &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i></a></li>
                 {% endif %}
             </ul>
         </div>

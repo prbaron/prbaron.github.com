@@ -1,6 +1,5 @@
 ---
 layout   : work
-category : works
 tagline  : "PBCKCode.js"
 client   : Ø
 duration : Ø

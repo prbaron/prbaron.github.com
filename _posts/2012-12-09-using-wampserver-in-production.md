@@ -1,6 +1,6 @@
 ---
 layout   : post
-category : blog
+category : tutoriel
 tagline  : Using WampServer in production
 keywords : wampserver, production, online
 ---

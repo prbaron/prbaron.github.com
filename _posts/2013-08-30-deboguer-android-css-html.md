@@ -1,6 +1,6 @@
 ---
 layout   : post
-category : blog
+category : tutoriel
 tagline  : Déboguer efficacement vos pages web sur Android
 keywords : débogage, débuggage, android, web, mobile
 ---

@@ -1,9 +1,6 @@
-name: Pierre Baron
-pygments: true
-permalink: /:categories/:title
-google_analytics_id: UA-21369110-4
 exclude : ['sass']
-markdown: rdiscount
+google_analytics_id: UA-21369110-4
+name: Pierre Baron
 navigation:
 - text: HOME
   url: /
@@ -13,3 +10,8 @@ navigation:
 - text: BLOG
   url: /blog/
   layout: post
+markdown: rdiscount
+paginate: 5
+paginate_path: /blog/page:num
+permalink: /blog/:title
+pygments: true

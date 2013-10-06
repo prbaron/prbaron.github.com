@@ -1,6 +1,6 @@
 ---
 layout   : post
-category : blog
+category : tutoriel
 tagline  : Add your Twitter timeline to your CakePHP application
 note     : I made a gist of the plugin, <a href="https://gist.github.com/prbaron/4725934">https://gist.github.com/prbaron/4725934</a>
 keywords : cakephp, cakephp twitter timeline

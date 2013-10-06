@@ -5,7 +5,7 @@ tagline  : Blog
 keywords : Pierre Baron, Web developer, Mobile Developer, Java, PHP, jQuery, CakePHP, jQuery
 ---
 
-{% for post in site.categories.blog %}
+{% for post in paginator.posts %}
     <div class="blog">
         <h2>
             {{ post.tagline }}
@@ -21,3 +21,23 @@ keywords : Pierre Baron, Web developer, Mobile Developer, Java, PHP, jQuery, Cak
         </div>
     </div>
 {% endfor %}
+
+<ul class="paginator">
+    <li>
+        {% if paginator.page == 1 %}
+          <span class="active">1</span>
+        {% else %}
+          <a href="/blog/" class="btn">1</a>
+        {% endif %}
+      </li>
+
+    {% for count in (2..paginator.total_pages) %}
+        <li>
+            {% if count == paginator.page %}
+               <span class="active">{{ count }}</span>
+            {% else %}
+                <a href="/blog/page{{ count }}" class="btn">{{ count }}</a>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

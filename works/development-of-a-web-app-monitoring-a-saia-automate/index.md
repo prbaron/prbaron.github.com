@@ -1,6 +1,5 @@
 ---
 layout   : work
-category : works
 tagline  : "Application web contrôlant un automate SAIA"
 client   : ISEA
 duration : 6 mois

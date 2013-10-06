@@ -1,6 +1,5 @@
 ---
 layout   : work
-category : works
 tagline  : "Serveur Java et client iPhone pour domotiser un bâtiment"
 client   : ESIR
 duration : 4 mois

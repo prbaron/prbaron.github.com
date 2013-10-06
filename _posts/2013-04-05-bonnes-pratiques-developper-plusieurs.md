@@ -1,6 +1,6 @@
 ---
 layout   : post
-category : blog
+category : article
 tagline  : Les bonnes pratiques pour développer un projet à plusieurs
 keywords : bonnes pratique, développement plusieurs, projet web, projet mobile
 ---

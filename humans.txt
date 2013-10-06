@@ -1,0 +1,12 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Pierre Baron -- Développeur -- prbaron22@gmail.com -- @prbaron
+
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, PHP, CakePHP
+    jQuery, Google Code Prettify

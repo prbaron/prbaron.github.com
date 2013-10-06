@@ -1,22 +1,41 @@
 ---
 layout   : default
-title    : Your New Jekyll Site
+title    : Projets
 tagline  : Projets
 keywords : Pierre Baron, Web developer, Mobile Developer, Java, PHP, jQuery, CakePHP, jQuery
 ---
 
 <ul class="projects">
-{% for post in site.categories.works %}
     <li class="project">
-        <h2>{{ post.tagline }}</h2>
+        <h2>PBCKCode</h2>
         <div class="entry">
-           {{ post.excerpt }}
-            <p>
-                <a href="{{ post.url }}" class="btn">
-                    Voir le projet &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i>
-                </a>
-            </p>
+            <p>PBCKCode est un plugin pour CKEditor permettant d'ajouter du code dans votre contenu. Il va automatiquement créer les balises code/pre et instancier les classes par rapport aux syntax highlighter que vous lui avez défini.</p>
+
+            <a href="{{site.url}}/works/pbckcode/" class="btn">
+                 Voir le projet &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i>
+             </a>
         </div>
     </li>
-{% endfor %}
+
+    <li class="project">
+        <h2>Application web contrôlant un automate SAIA</h2>
+        <div class="entry">
+            <p>Le but de ce projet est d'automatiser un bâtiment utilisant la technologie KNX et pilotée par un automate SAIA. Nous voulons un accès à distance et envoyer les commandes peut importe où nous nous trouvons. C'est la raison pour laquelle nous avons créé une application web utilisant PHP et jQuery.</p>
+
+            <a href="{{site.url}}/works/development-of-a-web-app-monitoring-a-saia-automate/" class="btn">
+                 Voir le projet &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i>
+             </a>
+        </div>
+    </li>
+
+     <li class="project">
+        <h2>Serveur Java et client iPhone pour domotiser un bâtiment</h2>
+        <div class="entry">
+            <p>Le but de ce projet est de domotiser le laboratoire domotique de notre école.</p>
+
+            <a href="{{site.url}}/works/development-of-a-java-server-and-a-iphone-client-to-automate-a-home-automated-building/" class="btn">
+                 Voir le projet &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i>
+             </a>
+        </div>
+    </li>
 </ul>
