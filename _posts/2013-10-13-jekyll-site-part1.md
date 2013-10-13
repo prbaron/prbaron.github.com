@@ -5,7 +5,6 @@ tagline  : Créer un site avec Jekyll. Partie 1 - Introduction & Installation
 keywords : jekyll, tutoriel, jekyll french,
 comments : true
 demo     : http://pierrebaron.fr/tuto_jekyll/
-download : http://pierrebaron.fr/tuto_jekyll/
 ---
 
 Lorsque l'on souhaite écrire un blog nous avons plusieurs solutions. Le CMS tel que WordPress, la plate-forme hébergée comme Blogger ou bien créer un site personnel avec un framework. On oublie bien souvent les générateurs de blogs statiques. Dans cette série de tutoriels, nous allons voir comment créer un site avec Jekyll et l'héberger sur GitHub.
@@ -41,7 +40,7 @@ Nous allons voir comment utiliser GitHub pour héberger notre propre blog. Il es
 ** Inconvénients **
  
   * Obscur : Comme GitHub se charge de l'administration serveur, nous n'avonss pas la maîtrise de la machine.
-  * Pas de plugins : les plugins permettent d'ajouter des fonctionnnalités à Jekyll (comme la recherche d'articles par exemple), seulement GitHub lance Jekyll en mode safe, les plugins sont donc désactivés. Nous verrons qu'il existe un moyen de contourner cela. Les autres hébergements ne sont pas touchés par cet incovénient.
+  * Pas de plugins : les plugins permettent d'ajouter des fonctionnnalités à Jekyll (comme la recherche d'articles par exemple), seulement GitHub lance Jekyll en mode safe, les plugins sont donc désactivés. Nous verrons qu'il existe un moyen de contourner cela. Les autres hébergements ne sont pas touchés par cet inconvénient.
 
 ## Installation
 
@@ -56,7 +55,7 @@ Pour MacOS X, vous avez une version de ruby (1.8.7), ce n'est pas la dernière m
 	$ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 	$ brew install ruby
 
-Pour Windows, le plus simple est d'utiliser l'installeur. Vous pouvez le télécharger à cette adresse : http://rubyinstaller.org/downloads/.
+Pour Windows, le plus simple est d'utiliser l'installeur. Vous pouvez le télécharger à cette adresse : [http://rubyinstaller.org/downloads/](http://rubyinstaller.org/downloads/).
 
 ### Jekyll
 
@@ -66,4 +65,4 @@ Une fois Ruby installé, il vous suffit de lancer la commande suivante dans un t
 
 
 ## Conclusion
-Cette première partie nous a permis de voir les avantages et inconvénients de Jekyll et de préparer l'installation afin de pouvoir l'utiliser. Nous verrons dans le chapitre suivant, comment créer nos propres pages.
+Cette première partie nous a permis de voir les avantages et inconvénients de Jekyll et de préparer l'installation afin de pouvoir travailler. Nous verrons dans le chapitre suivant, comment créer nos propres pages.
