@@ -10,6 +10,14 @@ download : https://github.com/prbaron/tuto_jekyll/releases/tag/chapitre2
 
 Nous allons voir dans ce deuxième chapitre le fonctionnement de Jekyll et nous allons commencer à développer en créant nos premières pages statiques.
 
+  1. [Partie 1 - Introduction & Installation](% post_url 2013-10-13-jekyll-site-part1 %})
+  2. [Partie 2 - Création des pages](% post_url 2013-10-13-jekyll-site-part2 %})
+  3. Partie 3 - Création du blog
+  4. Partie 4 - Gestion des catégories
+  5. Partie 5 - Finitions
+  6. Partie 6 - Déploiement
+
+
 ## Création d'un nouveau projet
 
 Dans un premier temps, veuillez vous placer dans le dossier parent où vous souhaitez créer votre projet, et lancez la commande suivante : 
