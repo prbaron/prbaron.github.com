@@ -497,6 +497,36 @@ footer {
     padding-left: 0;
 }
 
+.callout {
+    margin: 24px 0;
+    border-left: 5px solid white;
+    padding: 12px 24px;
+}
+
+.callout-info {
+    border-left-color: rgba($darkBlue, 0.3);
+    background: rgba($blue, 0.15);
+    color: $darkBlue;
+} 
+
+.callout-warning {
+    border-left-color: rgba(#c09853, 0.3);
+    background: #fcf8e3;
+    color: #c09853;
+}
+
+.callout-success {
+    border-left-color: rgba($darkGreen, 0.3);
+    background: rgba($green, 0.15);
+    color: $darkGreen;
+} 
+
+.callout-error {
+    border-left-color: rgba($darkRed, 0.3);
+    background: rgba($red, 0.15);
+    color: $darkRed;
+} 
+
 .btn {
     border-radius: 2px;
     background: $blue;
@@ -531,8 +561,7 @@ footer {
         &:hover {
             border-bottom: none;
         }
-    }
-    
+    }   
 }
 
 .pagination {
