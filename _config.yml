@@ -10,6 +10,8 @@ navigation:
 - text: BLOG
   url: /blog/
   layout: post
+- text: CONTACT
+  url: /contact/
 markdown: rdiscount
 paginate: 5
 paginate_path: /blog/page:num
