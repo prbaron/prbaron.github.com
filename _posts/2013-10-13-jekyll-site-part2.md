@@ -5,7 +5,7 @@ tagline  : Créer un site avec Jekyll. Partie 2 - Création des pages
 keywords : jekyll, tutoriel, jekyll french
 comments : true
 demo     : http://pierrebaron.fr/tuto_jekyll/
-download : http://pierrebaron.fr/tuto_jekyll/
+download : https://github.com/prbaron/tuto_jekyll/releases/tag/chapitre2
 ---
 
 Nous allons voir dans ce deuxième chapitre le fonctionnement de Jekyll et nous allons commencer à développer en créant nos premières pages statiques.
@@ -16,7 +16,7 @@ Dans un premier temps, veuillez vous placer dans le dossier parent où vous souh
 	
 	jekyll new {pseudo_github}.github.com // exemple jekyll new prbaron.github.com
 
-Cela va vous créer un dossier avec le votre pseudo GitHub suivi de l'adresse du service. Cela permettra de créer le repository github plus facilement lors de la mise en ligne de notre blog.
+Cela va vous créer un dossier avec le votre pseudo GitHub suivi de l'adresse du service. Cela permettra de gérer le repository github plus facilement lors de la mise en ligne de notre site.
 
 ## Structure du projet
 ### Analyse de la structure
@@ -29,9 +29,9 @@ Une fois votre projet jekyll créé, vous allez vous retrouver avec la structure
   * <i class="icon icon-folder-close-alt"></i> **css** // dossier dans lequel nous allons ajouter nos fichiers css
   * <i class="icon icon-file-alt"></i> **index.html**
   
-  Pour voir le résultat, vous pouvez lancer la commande `jekyll serve`. Elle va se charger de générer votre site à partir des templates et des articles markdown pour créer toutes les pages en HTML. Vous retrouverez le site dans le dossier **_site** qui vient de se créer à la racine du projet. Vous pouvez ensuite visionner votre site à l'adresse http://localhost:4000
+  Pour voir le résultat, vous pouvez lancer la commande `jekyll serve`. Elle va se charger de générer votre site à partir des templates et des articles markdown pour créer toutes les pages en HTML. Vous retrouverez le site dans le dossier **_site** qui vient de se créer à la racine du projet. Vous pouvez ensuite visionner votre site à l'adresse _[http://localhost:4000/](http://localhost:4000/)_.
  
- <div class="callout callout-info">
+<div class="callout callout-info">
 les fichiers et dossiers précédés d'un underscore sont considérés comme privés et non accessibles par l'url. Ils servent lors de la génération du site. Avant sa mise en ligne donc.
 </div>
 
@@ -51,17 +51,19 @@ Nous allons maintenant créer nos deux pages de notre site, à savoir la page d'
 
 Vous avez deux possibilités pour créer des pages :
 
-  1. Créer toutes les pages à la racine et les nommer par le nom de page (ex : index.html, about.html, …), cela donnera une url comme _http://monsite.fr/about.html_.
-  2. Créer un dossier comportant le nom de la page et y ajouter un fichier index.html. Cela donnera une url sous la forme _http://monsite.fr/about/_.
+  1. Créer toutes les pages à la racine et les nommer par le nom de page (ex : index.html, about.html, …), cela donnera une url comme _http://localhost:4000/about.html_.
+  2. Créer un dossier comportant le nom de la page et y ajouter un fichier index.html. Cela donnera une url sous la forme _http://localhost:4000/about/_.
   
-Dans notre cas, nous allons choisir la deuxième solution. Sachez que les deux solutions produisent le même résultat en termes de fonctionnalités. La seule différence revient dans l'url à entrer.
+Dans notre cas, nous allons choisir la deuxième solution. Il nous faut donc créer le dossier **about** et y ajouter le fichier **index.html**.
 
-Il nous faut donc créer le dossier **about** et y ajouter le fichier **index.html**.
+<div class="callout callout-info">
+Sachez que les deux solutions produisent le même résultat en terme de fonctionnalités. La seule différence revient dans l'url à entrer.
+</div>
 
 
 ## Création des pages
 ### Le template
-Les personnes ayant travaillé avec des frameworks serveurs comme CakePHP ou autres, connaissent bien le principe des templates. Pour les autres, un template est un conteneur, une base commune à toutes les pages. Ce template va nous permettre de créer un fichier avec les éléments communt comme `<head>`, `<body>`, … . Nous allons ensuite y ajouter une instruction pour expliquer à Jekyll où ajouter le contenu des pages lors de sa génération.
+Les personnes ayant travaillé avec des frameworks serveurs comme CakePHP ou autres, connaissent bien le principe des templates. Pour les autres, un template est un conteneur, une base commune à toutes les pages. Ce template va nous permettre de créer un fichier contenant les éléments communs comme `<head>`, `<body>`, … . Nous allons ensuite y ajouter une instruction pour expliquer à Jekyll où placer le contenu des pages lors de sa génération.
 
 Ouvrez le fichier **_layouts/default.html**, videz le et ajouter le code suivant :
 
