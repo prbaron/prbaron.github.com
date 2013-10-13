@@ -2,7 +2,8 @@
 	"folders":
 	[
 		{
-			"path": "/Users/pierrebaron/Sites/prbaron.github.com"
+			"path": "/Users/pierrebaron/Sites/prbaron.github.com",
+            "folder_exclude_patterns" : ["_site", "css", "font"]
 		}
 	]
 }

@@ -24,6 +24,17 @@
                 <li><i class="icon-user"></i> {% if page.author%} {{ page.author}} {% else %} Pierre Baron {% endif %}</li>
             </ul>
             
+            {% if page.demo || page.download %}
+                <ul class="unstyled demo-download">
+                    {% if page.demo %}
+                        <li><a href="{{page.demo}}" class="btn">Démonstration</a></li>
+                    {% endif %}
+                    {% if page.download %}
+                        <li><a href="{{page.download}}" class="btn">Sources</a></li>
+                    {% endif %}
+                </ul>
+            {% endif %}
+
             {% if page.note %}
                 <div class="alert">
                     {{page.note}}
