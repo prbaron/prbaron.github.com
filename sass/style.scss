@@ -510,7 +510,8 @@ input:not([type="submit"]), textarea {
     @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
     @include transition(border-color 0.2s linear, box-shadow linear 0.2s);
 
-    &:hover {
+    &:hover,
+    &:focus {
         border-color: $blue;
     }
 
