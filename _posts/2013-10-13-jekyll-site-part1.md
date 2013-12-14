@@ -18,7 +18,7 @@ Lorsque l'on souhaite écrire un blog nous avons plusieurs solutions. Le CMS tel
 
 ## Présentation
 
-[Jekyll](http://jekyllrb.com/) est un générateur de blog statique, cela signifie que vous aller écrire vos templates d'un côté et le contenu d'un autre côté. Jekyll se chargera ensuite de générer les pages HTML que vous pourrez ensuite uploader sur votre serveur.  Le template se code en HTML/CSS et JavaScript, quand au contenu, on le rédige en Markdown.
+[Jekyll](http://jekyllrb.com/) est un générateur de blog statique, cela signifie que vous aller écrire vos templates d'un côté et le contenu d'un autre côté. Jekyll se chargera ensuite de générer les pages HTML que vous pourrez uploader sur votre serveur.  Le template se code en HTML/CSS et JavaScript, quand au contenu, on le rédige en Markdown.
 
 ** Avantages de Jekyll **
   
@@ -46,7 +46,7 @@ Nous allons voir comment utiliser GitHub pour héberger notre propre blog. Il es
 
 ** Inconvénients **
  
-  * Obscur : Comme GitHub se charge de l'administration serveur, nous n'avonss pas la maîtrise de la machine.
+  * Obscur : Comme GitHub se charge de l'administration serveur, nous n'avons pas la maîtrise de la machine.
   * Pas de plugins : les plugins permettent d'ajouter des fonctionnnalités à Jekyll (comme la recherche d'articles par exemple), seulement GitHub lance Jekyll en mode safe, les plugins sont donc désactivés. Nous verrons qu'il existe un moyen de contourner cela. Les autres hébergements ne sont pas touchés par cet inconvénient.
 
 ## Installation
@@ -68,7 +68,7 @@ Pour Windows, le plus simple est d'utiliser l'installeur. Vous pouvez le téléc
 
 Une fois Ruby installé, il vous suffit de lancer la commande suivante dans un terminal pour installer Jekyll : 
 	
-	$ gem install jekyll
+	$ gem install jekyllrb
 
 
 ## Conclusion

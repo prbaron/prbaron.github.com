@@ -24,7 +24,7 @@ Dans un premier temps, veuillez vous placer dans le dossier parent où vous souh
 	
 	jekyll new {pseudo_github}.github.com // exemple jekyll new prbaron.github.com
 
-Cela va vous créer un dossier avec le votre pseudo GitHub suivi de l'adresse du service. Cela permettra de gérer le repository github plus facilement lors de la mise en ligne de notre site.
+Cela va vous créer un dossier avec le votre pseudo GitHub suivi de l'adresse du service. Il permettra de gérer le repository github plus facilement lors de la mise en ligne de notre site.
 
 ## Structure du projet
 ### Analyse de la structure
@@ -40,14 +40,14 @@ Une fois votre projet jekyll créé, vous allez vous retrouver avec la structure
   Pour voir le résultat, vous pouvez lancer la commande `jekyll serve`. Elle va se charger de générer votre site à partir des templates et des articles markdown pour créer toutes les pages en HTML. Vous retrouverez le site dans le dossier **_site** qui vient de se créer à la racine du projet. Vous pouvez ensuite visionner votre site à l'adresse _[http://localhost:4000/](http://localhost:4000/)_.
  
 <div class="callout callout-info">
-les fichiers et dossiers précédés d'un underscore sont considérés comme privés et non accessibles par l'url. Ils servent lors de la génération du site. Avant sa mise en ligne donc.
+les fichiers et dossiers précédés d'un underscore (_) sont considérés comme privés et non accessibles par l'url. Ils servent lors de la génération du site. Avant sa mise en ligne donc.
 </div>
 
 Vous pouvez créer autant de dossiers que souhaités, comme par exemple un dossier images, musiques, ….
 
 ### Préparation de la structure complète
 
-Il est possible de rajouter divers dossiers pour compléter le fonctionnement de Jekyll, nous allons donc rajouter les dossiers suivants : 
+Il est possible de rajouter divers dossiers pour compléter le fonctionnement de Jekyll, nous allons rajouter les dossiers suivants : 
  
  * <i class="icon icon-folder-close-alt"></i> **_includes** // dossier contenant des éléments de code réutilisables sur plusieurs pages et/ou templates
  * <i class="icon icon-folder-close-alt"></i> **fonts** // dossier comportant nos polices personnalisées, ce dossier est public
@@ -73,9 +73,9 @@ Sachez que les deux solutions produisent le même résultat en terme de fonction
 ### Le template
 Les personnes ayant travaillé avec des frameworks serveurs comme CakePHP ou autres, connaissent bien le principe des templates. Pour les autres, un template est un conteneur, une base commune à toutes les pages. Ce template va nous permettre de créer un fichier contenant les éléments communs comme `<head>`, `<body>`, … . Nous allons ensuite y ajouter une instruction pour expliquer à Jekyll où placer le contenu des pages lors de sa génération.
 
-Ouvrez le fichier **_layouts/default.html**, videz le et ajouter le code suivant :
+Ouvrez le fichier **_layouts/default.html**, videz le et ajoutez le code suivant :
 
-{% raw  %}
+{% raw %}
     <!DOCTYPE html>
     <html>
     <head>
@@ -102,7 +102,7 @@ Ouvrez le fichier **_layouts/default.html**, videz le et ajouter le code suivant
     </html>
 {% endraw %}
 
-Les éléments HTML vous sont familiers donc je ne m'attarderai pas dessus. En revanche vous remarquez plusieurs instructions inconnues {% raw %}(`{{page.title}}`,  `{{content}}`,  `{% include menu.html %}`) {% endraw %}. Ce sont des variables [Liquid](http://wiki.shopify.com/Liquid). Les personnes familiers avec des moteurs de template comme Twig connaissent très bien le principe. Pour les autres, ces variables permettent à un designer de coder très facilement un template ou un layout, tout en gardant un code clair, efficace et sécurisé. Le moteur de template se chargeant le plus souvent de réaliser des actions comme le nettoyage de variables avant inclusion.
+Les éléments HTML vous sont familiers donc je ne m'attarderai pas dessus. En revanche vous remarquerez plusieurs instructions inconnues {% raw %}(`{{page.title}}`,  `{{content}}`,  `{% include menu.html %}`) {% endraw %}. Ce sont des variables [Liquid](http://wiki.shopify.com/Liquid). Les personnes familières avec des moteurs de template comme Twig connaissent très bien le principe. Pour les autres, ces variables permettent à un designer de coder très facilement un template ou un layout, tout en gardant un code clair, efficace et sécurisé. Le moteur de template se chargeant le plus souvent de réaliser des actions comme le nettoyage de variables avant inclusion.
 
 Les éléments possédant deux parenthèses (ex : {% raw  %}  `{{page.title}}` {% endraw  %}) correspondent à des variables que nous allons incorporer dans notre fichier de page ou d'articles. Nous verrons plus en détail comment créer ces informations lors de la création d'articles. Sachez qu'il existe plusieurs variables principales :
 
@@ -113,7 +113,7 @@ Les éléments possédant deux parenthèses (ex : {% raw  %}  `{{page.title}}` {
   
 Ces variables seront remplacées par leurs valeurs respectives lors de la génération. La variable `content` est celle utilisée pour remplir le contenu du template avec la page ou l'article.
 
-Les éléments possédant une parenthèse et un pourcentage (ex : {% raw  %} `{% include footer.html %}` {% endraw  %}) sont l'équivalent du `include` en PHP. Dans notre cas, nous avons créer un include pour le menu et un autre pour le footer. Vous pouvez créer tous les includes que vous le souhaitez.
+Les éléments possédant une parenthèse et un pourcentage (ex : {% raw  %} `{% include footer.html %}` {% endraw  %}) sont l'équivalent du `include` en PHP. Dans notre cas, nous avons créé un include pour le menu et un autre pour le footer. Vous pouvez créer tous les includes que vous le souhaitez.
 
 ## Les includes
 
@@ -160,7 +160,7 @@ Les filtres sont un élément important du fonctionnement de jekyll, vous pourre
 ## La page index.html
 ### le front 
 
-Chaque page et chaque article commence par un front matter. Il s'agit d'un bloc yawl permettant d'y insérer des informations nécessaires à la génération du site.
+Chaque page et chaque article commence par un front matter. Il s'agit d'un bloc yaml permettant d'y insérer des informations nécessaires à la génération du site.
 Il débute et finit par `---`. Les variables sont définies sous la forme clé:valeur.
 
 	---
@@ -247,7 +247,7 @@ La page **about/index.html** suit exactement le même format que la page précé
 
 ## Résultat
 
-Pour afficher le résultat en lançant la commande `jekyll serve` pour prendre en compte les modifications effectuées. Pour simplifier le développement, nous allons maintenant utiliser la commande `jekyll serve --watch` qui se charge de regarder si des changements ont été effectuer et de régénérer le site si c'est le cas.
+Pour afficher le résultat, lancez la commande `jekyll serve` pour prendre en compte les modifications effectuées. Pour simplifier le développement, nous allons maintenant utiliser la commande `jekyll serve --watch` qui se charge de regarder si des changements ont été effectués et de régénérer le site le cas échéant.
 
 ## Conclusion
 
