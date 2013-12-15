@@ -12,7 +12,7 @@ Maintenant que nous avons nos pages statiques, nous allons créer la base de not
 
   1. [Partie 1 - Introduction & Installation]({% post_url 2013-10-13-jekyll-site-part1 %})
   2. [Partie 2 - Création des pages]({% post_url 2013-10-13-jekyll-site-part2 %})
-  3. [Partie 3 - Création du blog]({% post_url 2013-10-13-jekyll-site-part3 %})
+  3. [Partie 3 - Création du blog]({% post_url 2013-12-14-jekyll-site-part3 %})
   4. Partie 4 - Gestion des catégories
   5. Partie 5 - Finitions
   6. Partie 6 - Déploiement
