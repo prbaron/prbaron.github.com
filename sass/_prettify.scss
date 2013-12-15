@@ -16,7 +16,11 @@
     font-size: 0.9em;
     overflow: auto;
     padding: 8px;
-  
+    
+    code {
+        white-space: pre-wrap;
+    }
+    
     &.linenums {
       -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
          -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;

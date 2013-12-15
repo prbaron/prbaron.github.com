@@ -11,27 +11,27 @@
 
 $white      : #fefefe;
 
-$lightGrey  : darken(#b4bbc5, 5%);
-$darkGrey   : #232d31;
+$lightGrey  : #ccd1d9;
+$darkGrey   : #434a54;
 
 $blue       : #4fc1e9;
 $darkBlue   : #3bafda;
 
-$red        : #fc6e51;
-$darkRed    : #e9573f;
+$red        : #ed5565;
+$darkRed    : #da4453;
 
 $violet     : #ac92ec;
 $darkViolet : #967adc;
 
-$green      : #a0d468;
-$darkGreen  : #8cc152;
+$green      : #48cfad;
+$darkGreen  : #37bc9b;
 
 $smartphone : 480px;
 $tablet     : 768px;  
 
 body {
     background: $white;
-    color: $lightGrey;
+    color: darken($lightGrey, 20%);
     font-family: Lato, 'PT Sans', sans-serif;
     font-weight: 300;
     font-size: 16px;
