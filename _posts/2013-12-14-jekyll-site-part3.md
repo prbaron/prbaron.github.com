@@ -137,7 +137,7 @@ Nous allons maintenant voir le code nécessaire à la visualisation d'un article
 ### Le template
 Le layout **default.html** est un peu vide pour la présentation d'un article, pas d'affichage du titre, de la date, .... . Nous allons donc créer notre nouveau template. Veuillez ajouter le fichier **post.html** dans le dossier **_layouts**.
 
-{% highlight html lineos%}
+{% raw %}
 
     <!DOCTYPE html>
     <html>
@@ -176,7 +176,7 @@ Le layout **default.html** est un peu vide pour la présentation d'un article, p
     </body>
     </html>
 
-{% endhighlight %}
+{% endraw %}
 
 La ligne 18 permet d'afficher les informations relatives à l'article, pour l'instant nous n'affichons que la date. Nous pourrions y rajouter d'autres informations telles que l'auteur, la catégorie, .... Toutes les informations comprises dans le front matter sont accessibles via l'objet page. Je vous rappelle que vous pouvez y ajouter n'importe quel champ dans votre front matter.
 
@@ -196,12 +196,12 @@ Intéressons nous maintenant au plus important de ce tutoriel, le fichier markdo
  
  Le code minimum pour le front matter est le suivant. Dans les prochains tutoriels nous y rajouterons d'autres propriétés, comme la catégorie par exemple.
  
- {% highlight text %}
- ---
-layout: post
-title:  "Post un"
----
- {% endhighlight %}
+{% raw %}
+    ---
+    layout: post
+    title:  "Post un"
+    ---
+{% endraw %}
  
  Votre contenu est tout simplement du code markdown. Pour ce tutoriel, j'ai choisi d'utiliser [RDiscount](http://dafoster.net/projects/rdiscount/), car il permet une représentation fidèle du Markdown d'origine et ajoute des éléments essentiels.
  
