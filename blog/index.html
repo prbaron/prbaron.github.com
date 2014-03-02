@@ -14,7 +14,7 @@ keywords : Pierre Baron, Web developer, Mobile Developer, Java, PHP, jQuery, Cak
         <div class="blog-entry">
             <p>{{ post.excerpt }}</p>
             <p>
-                <a href="{{ post.url }}" class="btn">
+                <a href="{{ post.url }}" class="btn btn-primary">
                     Lire l'article &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i>
                 </a>
             </p>
@@ -25,18 +25,18 @@ keywords : Pierre Baron, Web developer, Mobile Developer, Java, PHP, jQuery, Cak
 <ul class="paginator">
     <li>
         {% if paginator.page == 1 %}
-          <span class="active">1</span>
+          <span class="btn btn-primary">1</span>
         {% else %}
-          <a href="/blog/" class="btn">1</a>
+          <a href="/blog/" class="btn btn-default">1</a>
         {% endif %}
       </li>
 
     {% for count in (2..paginator.total_pages) %}
         <li>
             {% if count == paginator.page %}
-               <span class="active">{{ count }}</span>
+               <span class="btn btn-primary">{{ count }}</span>
             {% else %}
-                <a href="/blog/page{{ count }}" class="btn">{{ count }}</a>
+                <a href="/blog/page{{ count }}" class="btn btn-default">{{ count }}</a>
             {% endif %}
         </li>
     {% endfor %}

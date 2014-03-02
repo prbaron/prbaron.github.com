@@ -2,11 +2,11 @@
 @import "font-awesome.min", "prettify";
 
 @include font-face(Mir-Medium, '/font/mir-medium_regular', normal);
-@include font-face(Lato, '/font/lato_regular', 200);
-@include font-face(Kreon, '/font/kreon_bold', bold);
-@include font-face(Droid Serif, '/font/DroidSerif-Italic-webfont', bold);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700|Kreon:700|Droid+Serif:700italic);
 
 $white : #fefefe;
+
+$lighterGrey : #f3f4f6;
 
 $lightGrey : #ccd1d9;
 $darkGrey : #434a54;
@@ -101,6 +101,9 @@ section {
 }
 
 header {
+    .grid12:first-of-type {
+        border-bottom : 1px solid #e1e1e1;
+    }
     .logo {
         background    : url(/img/logo.png) center left no-repeat;
         border-bottom : none;
@@ -137,103 +140,100 @@ header {
             position      : absolute;
             width         : 64px;
             z-index       : -1;
-            @include transition (background 0.3s ease-in-out);
-        }
-    }
-
-    .socials {
-        float      : right;
-        margin-top : 34px;
-
-        @include media(max-width 520px) {
-            @include row("table");
-            float        : none;
-            margin       : 0 0 20px 0;
-            padding-left : 0;
-        }
-
-        li {
-            float        : left;
-            list-style   : none;
-            margin-right : 1em;
-            text-align   : center;
-        }
-        a {
-            border        : 3px solid $lightGrey;
-            border-radius : 25em;
-            color         : $lightGrey;
-            display       : block;
-            height        : 40px;
-            line-height   : 18px;
-            padding       : 0.5em;
-            position      : relative;
-            width         : 40px;
-            @include transition(background 0.2s);
-
-            &:hover {
-                background : $lightGrey;
-                color      : $white;
-            }
-        }
-    }
-
-    nav {
-        @include row("block");
-        border-top : 1px solid #e1e1e1;
-
-        clear      : both;
-
-        ul {
-            @include row("table");
-            padding-left : 0;
-            margin-top   : 10px;
-        }
-        li {
-            float      : left;
-            list-style : none;
-
-            a {
-                border-bottom   : none;
-                color           : $lightGrey;
-                font-family     : Lato, sans-serif;
-                padding         : 10px 16px;
-                text-decoration : none;
-
-                &:hover, &:active {
-                    background    : $blue;
-                    border-top    : 3px solid darken($blue, 20%);
-                    border-bottom : none;
-                    color         : #fff;
-                }
-
-                @include media(max-width $smartphone - 1) {
-                    font-size : 0.8em;
-                    padding   : 14px 10px;
-                }
-            }
-
-            &.active a {
-                color : $blue;
-
-                &:hover {
-                    color : darken($blue, 20%);
-                }
-            }
-        }
-        li:last-of-type {
-            margin-right : 0;
+            @include transition(background 0.3s ease-in-out);
         }
     }
 }
 
-.demo-download {
+.nav {
+    @include clearfix;
+
+    ul {
+        @include clearfix;
+        margin: 0;
+        padding-left : 0;
+    }
+
+    li {
+        float      : left;
+        list-style : none;
+
+        a {
+            border-bottom   : none;
+            color           : $lightGrey;
+            display         : block;
+            padding         : 10px 16px;
+
+            &:hover, &:active {
+                color : $blue;
+            }
+        }
+
+        &.active a {
+            color       : $blue;
+
+            &:hover {
+                color : darken($blue, 20%);
+            }
+        }
+    }
+}
+
+.nav-menu {
+    float : right;
+
+    @include media(max-width $tablet) {
+        @include row("table");
+        float        : none;
+        padding-left : 0;
+    }
+
+    ul {
+        @include clearfix;
+        margin-top : 20px;
+
+        @include media(max-width $tablet) {
+            margin : 0;
+        }
+    }
+
+    li a {
+        height          : 64px;
+        line-height     : 64px;
+
+        @include media(max-width $smartphone - 1) {
+            font-size : 0.8em;
+            padding   : 14px 10px;
+        }
+    }
+
+    li.active a {
+        font-weight : bold;
+    }
+}
+
+.nav-submenu {
+    @include row("table");
+
+    li a {
+        border-top   : 3px solid transparent;
+    }
+
+    li.active a {
+        border-color  : $blue;
+    }
+}
+
+.actions {
     margin     : 0;
     padding    : 0;
 
     @include row("table");
 
     text-align : center;
-
+    ul {
+        @extend .unstyled;
+    }
     li {
         display : inline-block;
     }
@@ -320,15 +320,19 @@ section {
     }
 }
 
-.skills {
+.list {
     @include row();
     padding-left : 0;
     margin       : 0 !important;
 
-    .skill {
+    .list-item {
         @include span-columns(6);
         @include omega(2n);
+    }
+}
 
+.list-skills {
+    .list-item {
         &:nth-child(1),
         &:nth-child(2) {
             margin-bottom : 52px;
@@ -366,15 +370,8 @@ section {
 
 }
 
-.projects {
-    @include row();
-    padding-left : 0;
-    margin       : 0;
-
-    .project {
-        @include span-columns(6);
-        @include omega(2n);
-
+.list-projects {
+    .list-item {
         img {
             @include fill-parent;
             margin-bottom : 18px;
@@ -414,10 +411,8 @@ section {
 
 .subtitle {
     color       : #768291;
-    font-family : Lato, sans-serif;
     font-size   : 0.8em;
     margin-top  : 0;
-    font-weight : normal;
 
     li {
         border-right : 1px solid #e1e1e1;
@@ -449,16 +444,32 @@ footer {
     p:first-of-type {
         float : left;
     }
-    p:last-of-type {
 
-        float : right;
+    .socials {
+        float  : right;
+        margin : 55px 0 0 0;
 
+        li {
+            float        : left;
+            list-style   : none;
+            margin-right : 1em;
+            text-align   : center;
+        }
         a {
-            border-bottom : none;
+            border        : 3px solid #e8e8e8;
+            border-radius : 25em;
             color         : #e8e8e8;
+            display       : block;
+            height        : 40px;
+            line-height   : 18px;
+            padding       : 0.5em;
+            position      : relative;
+            width         : 40px;
+            @include transition(background 0.2s ease-in-out);
 
             &:hover {
-                border-bottom : 1px solid #e8e8e8;
+                background : #e8e8e8;
+                color      : #31302e;
             }
         }
     }
@@ -592,19 +603,19 @@ input[type="submit"] {
 
 .btn {
     border-radius   : 2px;
-    background      : $blue;
-    border          : 1px solid darken($blue, 5%);
+    background      : #fff;
+    border          : 1px solid transparent;
     @include box-shadow(0em -0.185rem 0em rgba(0, 0, 0, 0.1) inset);
     color           : #fff;
     display         : inline-block;
     padding         : 10px 20px;
 
     text-decoration : none;
-    @include transition(opacity 0.25s ease, background-color 0.25s ease, color 0.25s ease, background 0.25s ease, text-shadow 0.25s ease, box-shadow 0.25s ease);
+    @include transition(background-color 0.25s ease, color 0.25s ease, text-shadow 0.25s ease, box-shadow 0.25s ease);
 
     &:hover {
-        border     : 1px solid darken($blue, 20%);
-        background : darken($blue, 15%);
+        background-color : #fff;
+        border     : 1px solid transparent;
         color      : #fff;
 
     }
@@ -612,12 +623,42 @@ input[type="submit"] {
         @include box-shadow(0px 1px 0.2em 0px rgba(0, 0, 0, 0.3) inset);
         color : #fff;
     }
-    a {
-        color : white;
+    a, a:visited {
+        color : #fff;
 
         &:hover {
             border-bottom : none;
         }
+    }
+}
+
+.btn-default {
+    background-color: $lighterGrey;
+    border-color: darken($lighterGrey, 8%);
+    color           : $darkGrey;
+
+    &:hover {
+        background-color : darken($lighterGrey, 10%);
+        border-color  : darken($lighterGrey, 15%);
+        color      : $darkGrey;
+    }
+    &:active {
+        color : $darkGrey;
+    }
+    a {
+        color : $lightGrey;
+    }
+}
+
+.btn-primary {
+    background-color: $blue;
+    border-color: darken($blue, 5%);
+    color           : #fff;
+
+    &:hover {
+        background-color : darken($blue, 15%);
+        border-color  : darken($blue, 20%);
+        color      : #fff;
     }
 }
 
@@ -628,7 +669,7 @@ input[type="submit"] {
     margin          : 60px 0 0 0;
 
     .prev a {
-        @extend .btn;
+        @extend .btn, .btn-primary;
         float : right;
 
         @include media(max-width $tablet - 1) {
@@ -639,7 +680,7 @@ input[type="submit"] {
     }
 
     .next a {
-        @extend .btn;
+        @extend .btn, .btn-primary;
         float : left;
         @include media(max-width $tablet - 1) {
             float         : none;
