@@ -9,12 +9,7 @@
         position              : relative;
         width                 : 41px;
 
-        -webkit-touch-callout : none;
-        -webkit-user-select   : none;
-        -khtml-user-select    : none;
-        -moz-user-select      : none;
-        -ms-user-select       : none;
-        user-select           : none;
+        @include user-select(none);
 
         &:before {
             background            : #fafbfc;
@@ -31,12 +26,8 @@
             text-align            : right;
             width                 : 30px;
 
-            -webkit-touch-callout : none;
-            -webkit-user-select   : none;
-            -khtml-user-select    : none;
-            -moz-user-select      : none;
-            -ms-user-select       : none;
-            user-select           : none;
+            @include user-select(none);
+
         }
 
         &:first-child:before {
@@ -184,7 +175,7 @@
     .mi,
     .mo,
     .il {
-        color : $yellow-hover;
+        color : $jeans;
     }
 
     /* Literal.String */
@@ -203,23 +194,29 @@
     }
 
     .bp {
-        color : #007020
+        color : $grass-hover
     }
 
     /* Name.Builtin.Pseudo */
     .vc {
-        color : #306090
+        color : $jeans-hover
     }
 
     /* Name.Variable.Class */
     .vg {
-        color       : #d07000;
+        color       : $yellow-hover;
         font-weight : bold
     }
 
     /* Name.Variable.Global */
     .vi {
-        color : #3030b0
+        color : $violet-hover
+    }
+}
+
+.highlight .bash {
+    .nv {
+        @include user-select(none);
     }
 }
 
@@ -237,6 +234,16 @@
     }
 }
 
+
+
+
+
+.highlight .php {
+    .cp {
+        color : $red;
+    }
+}
+
 .highlight .yaml {
     .nn {
         color: $darkGray-hover;
@@ -244,5 +251,9 @@
 
     .p-Indicator + .l-Scalar-Plain {
         color : $jeans;
+    }
+
+    .nv {
+        color : $darkGray-hover
     }
 }
