@@ -55,7 +55,7 @@ Nous allons voir comment utiliser GitHub pour héberger notre propre blog. Il es
 
 Jekyll est développé en Ruby, il faut donc vous assurer que ce dernier est présent sur votre machine. Pour linux, un simple `apt-get install` devrait suffire
 
-{% highlight console linenos %}
+{% highlight bash linenos %}
 {% raw %}
 
 $ sudo apt-get install ruby1.9.1
@@ -65,11 +65,11 @@ $ sudo apt-get install ruby1.9.1
 
 Pour MacOS X, vous avez une version de ruby (1.8.7), ce n'est pas la dernière mais elle est suffisante pour nos besoins. Si néanmoins vous souhaitez avoir la dernière version, le mieux est de faire la mise à jour avec Homebrew.
 
-{% highlight console linenos %}
+{% highlight bash linenos %}
 {% raw %}
 
-	$ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-	$ brew install ruby
+$ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+$ brew install ruby
 
 {% endraw %}
 {% endhighlight %}
@@ -80,10 +80,10 @@ Pour Windows, le plus simple est d'utiliser l'installeur. Vous pouvez le téléc
 
 Une fois Ruby installé, il vous suffit de lancer la commande suivante dans un terminal pour installer Jekyll :
 
-{% highlight console linenos %}
+{% highlight bash linenos %}
 {% raw %}
 
-	$ gem install jekyll
+$ gem install jekyll
 
 {% endraw %}
 {% endhighlight %}

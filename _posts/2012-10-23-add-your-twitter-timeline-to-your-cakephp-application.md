@@ -62,10 +62,17 @@ Twitter controller (app/Controller/TwitterController.php) :
 class TwitterController extends AppController{
 
     public function index(){
-        App::import('Lib', 'PBTwitter'); // import the PBTwitter class from the Lib folder
-        $Twitter = new PBTwitter(); // create a new instance of the class
-            $d['tweets'] = $Twitter->find('prbaron', array('count' => 3)); // find the last 3 tweets
-                $this->set($d); // set the tweets to my view
+        // import the PBTwitter class from the Lib folder
+        App::import('Lib', 'PBTwitter');
+
+        // create a new instance of the class
+        $Twitter = new PBTwitter();
+
+        // find the last 3 tweets
+        $d['tweets'] = $Twitter->find('prbaron', array('count' => 3));
+
+        // set the tweets to my view
+        $this->set($d);
     }
 }
 
