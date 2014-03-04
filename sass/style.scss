@@ -438,7 +438,7 @@ footer {
             @include row("table");
             float        : none;
             padding-left : 0;
-            margin : 55px 0;
+            margin       : 55px 0;
         }
 
         li {
@@ -760,4 +760,13 @@ blockquote {
             margin-right : 4px;
         }
     }
+}
+
+kbd {
+    background-color : $darkGray-hover;
+    border-radius    : 2px;
+    box-shadow       : inset 0 -1px 0 rgba(0, 0, 0, .25);
+    color            : $lightGray;
+    font-size        : 0.9em;
+    padding          : 4px;
 }

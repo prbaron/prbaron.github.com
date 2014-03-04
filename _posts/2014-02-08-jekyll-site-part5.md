@@ -32,68 +32,78 @@ Vous pouvez modifier les préférences du site dans disque, notamment la langue 
 
 Allez sur le profil de votre site dans Disqus et naviguez dans **Settings** puis **Install** et enfin **Universal code**. Copiez le code dans le fichier **_includes/disqus.html**. Pour rendre notre application jekyll plus modulable, nous allons ajouter le profil dans le fichier de configuration :
 
+{% highlight js linenos %}
 {% raw %}
 
-     <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = '{{ site.disqus }}'; // required: replace example with your forum shortname
-            
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = '{{ site.disqus }}'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 {% endraw %}
+{% endhighlight %}
 
 Maintenant, allez dans votre fichier **_config.yml** et ajoutez la ligne suivante :
 
+{% highlight yaml linenos %}
 {% raw %}
 
-    disqus : 'prbaron' # remplacez par votre shortName disqus 
+disqus : 'prbaron' # remplacez par votre shortName disqus
 
 {% endraw %}
+{% endhighlight %}
 
 Il nous reste à intégrer cet élément aux articles. Si vous avez suivi les premiers chapitres, vous aurez compris qu'il faut éditer le fichier **_layouts/post.html**.
 
 Comme toujours, pour appeler le fichier disqus, il s'agit de la commande include.
 
+{% highlight html linenos %}
 {% raw %}
 
-    {% include disqus.html %}
+{% include disqus.html %}
 
 {% endraw %}
+{% endhighlight %}
 
 Et voila ! A partir de maintenant, vous allez pouvoir gérer vos commentaires depuis l'administration de Disqus, c'est très simple et très pratique. Un gain de temps assez important.
 
 ### Bonus : Activer/Désactiver les commentaires pour un article
 
-IL est très simple de gérer l'activation/désactivation des commentaires pour un article précis. Il vous suffit d'ajouter une condition avant d'afficher 
+IL est très simple de gérer l'activation/désactivation des commentaires pour un article précis. Il vous suffit d'ajouter une condition avant d'afficher
 
+{% highlight html linenos %}
 {% raw %}
-    
-    {% if page.comments %}
-        &nbsp;
-        {% include disqus.html %}
-    {% endif %}
+
+{% if page.comments %}
+    &nbsp;
+    {% include disqus.html %}
+{% endif %}
 
 {% endraw %}
+{% endhighlight %}
 
-A partir de maintenant, vous gérer vos commentaires dans le front matter de chaque article avec 
+A partir de maintenant, vous gérer vos commentaires dans le front matter de chaque article avec
 
+{% highlight yaml linenos %}
 {% raw %}
-    
-    ---
-    comments : true
-    ---
+
+---
+comments : true
+---
 
 {% endraw %}
-
+{% endhighlight %}
 
 ## Le formulaire de contact
 Pour proposer à vos utilisateurs d'entre en contact avec vous, vous pouvez ajouter votre adresse email ou bien vos identifiants de réseaux sociaux. Cependant, cela peut vous déranger d'avoir une adresse mail en clair.
@@ -104,6 +114,6 @@ Une fois votre profil créé, il vous faut ajouter un formulaire avec leur form 
 
 Personnellement je préfère la version HTML/CSS code car elle me permet de gérer moi même le style de mon formulaire.
 
- 
+
 ## Conclusion
 Notre site est maintenant prêt ! Nous allons voir dans le dernier chapitre comment le mettre en ligne sur GitHub et ainsi disposer d'un hébergement geek et gratuit.

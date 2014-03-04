@@ -16,22 +16,34 @@ Ok, you want your website to be online so the first important thing to do is to 
 
 Look at these lines :
 
-    <Directory "c:/wamp/apps/phpmyadmin3.4.10.1/">
-        Options Indexes FollowSymLinks MultiViews
-        AllowOverride all
-        Order Deny,Allow
-    	Deny from all
-    	Allow from 127.0.0.1
-    </Directory>
+{% highlight apache linenos %}
+{% raw %}
+
+<Directory "c:/wamp/apps/phpmyadmin3.4.10.1/">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride all
+    Order Deny,Allow
+    Deny from all
+    Allow from 127.0.0.1
+</Directory>
+
+{% endraw %}
+{% endhighlight %}
 
 and replace it by these :
 
-    <Directory "c:/wamp/apps/phpmyadmin3.4.10.1/">
-        Options Indexes FollowSymLinks MultiViews
-        AllowOverride all
-        Order Allow,Deny
-    	Allow from 192
-    </Directory>
+{% highlight apache linenos %}
+{% raw %}
+
+<Directory "c:/wamp/apps/phpmyadmin3.4.10.1/">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride all
+    Order Allow,Deny
+    Allow from 192
+</Directory>
+
+{% endraw %}
+{% endhighlight %}
 
 Ok, now your computer can be accessed to every other on your local network. The problem is that your server can still just be call by local computers. We will open it to the world at the end of the tutorial.
 
@@ -47,25 +59,31 @@ Ok, it's well, we did some good and important things but it is not over, we have
 
 ## PhpMyAdmin
 ### Delete root account
-Access to PhpMyAdmin by typing http://localhost/phpmyadmin. You have to secure the root user because it has no password. You have two solutions : 
+Access to PhpMyAdmin by typing http://localhost/phpmyadmin. You have to secure the root user because it has no password. You have two solutions :
 
   * Edit each root account by creating a password
   * Create new user for the three clients (localhost, 127.0.0.1, ::1).
-  
+
 Once you did it, you have to delete your three old root accounts.
 
 ### Set a user and a password
 Well, this step is not to secure your PhpMyAdmin panel but to help you to connect to it. You can set a username and a password (but I do not recommand it) by default on the login screen. To do it, check the config.inc.php file in _/{WampDirectory}/apps/phpmyadmin{version}/_ and check these lines :
 
-    $cfg['Servers'][$i]['user']		        = 'root';
-    $cfg['Servers'][$i]['password']		    = '';
-    $cfg['Servers'][$i]['allowNoPassword']	= true;
+{% highlight php linenos %}
+{% raw %}
+
+$cfg['Servers'][$i]['user']		        = 'root';
+$cfg['Servers'][$i]['password']		    = '';
+$cfg['Servers'][$i]['allowNoPassword']	= true;
+
+{% endraw %}
+{% endhighlight %}
 
 You can set your default username and password (also I do not recommand it again!).
- 
+
 ## Questions
 ### What can I do next ?
-Ok, now WampServer is totally secured and will be launched on each start of Windows. You will be able to host your website on your local computer. But it is not over, I suggest you to install and configure FileZilla Server to have a FTP server. 
+Ok, now WampServer is totally secured and will be launched on each start of Windows. You will be able to host your website on your local computer. But it is not over, I suggest you to install and configure FileZilla Server to have a FTP server.
 
 ### I still cannot see my website from the Internet
 We allowed the local computers to check the website, but we have to open the server to the world. The problem here is that your server does not have a public IP to be accessible by everybody. You have to choose between two solutions :
