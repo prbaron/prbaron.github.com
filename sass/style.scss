@@ -1,34 +1,13 @@
+@import "variables";
 @import "bourbon/bourbon", "neat/neat";
 @import "font-awesome.min", "prettify";
 
 @include font-face(Mir-Medium, '/font/mir-medium_regular', normal);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700|Kreon:700|Droid+Serif:700italic);
 
-$white : #fefefe;
-
-$lighterGrey : #f3f4f6;
-
-$lightGrey : #ccd1d9;
-$darkGrey : #434a54;
-
-$blue : #4fc1e9;
-$darkBlue : #3bafda;
-
-$red : #ed5565;
-$darkRed : #da4453;
-
-$violet : #ac92ec;
-$darkViolet : #967adc;
-
-$green : #48cfad;
-$darkGreen : #37bc9b;
-
-$smartphone : 480px;
-$tablet : 768px;
-
 body {
     background                  : $white;
-    color                       : darken($lightGrey, 20%);
+    color                       : $body;
     font-family                 : Lato, 'PT Sans', sans-serif;
     font-weight                 : 300;
     font-size                   : 16px;
@@ -52,7 +31,7 @@ a {
     word-wrap       : break-word;
     &:hover,
     &:active {
-        border-bottom-color : $darkBlue;
+        border-bottom-color : $blue-hover;
         color               : darken($blue, 20%);
     }
 }
@@ -79,6 +58,10 @@ section {
     @include span-columns(3);
 }
 
+.grid4 {
+    @include span-columns(4);
+}
+
 .grid6 {
     @include span-columns(6);
 }
@@ -92,6 +75,7 @@ section {
 }
 
 .grid3,
+.grid4,
 .grid6,
 .grid9,
 .grid12 {
@@ -102,12 +86,13 @@ section {
 
 header {
     .grid12:first-of-type {
-        border-bottom : 1px solid #e1e1e1;
+        border-bottom : 1px solid $mediumGray;
     }
     .logo {
+        //noinspection CssUnknownTarget
         background    : url(/img/logo.png) center left no-repeat;
         border-bottom : none;
-        color         : $darkGrey;
+        color         : $darkGray-hover;
         display       : block;
         float         : left;
         font-size     : 1.5em;
@@ -132,7 +117,7 @@ header {
             float : none;
         }
         &:before {
-            background    : $darkGrey;
+            background    : $darkGray-hover;
             border-radius : 25em;
             content       : "";
             height        : 64px;
@@ -150,7 +135,7 @@ header {
 
     ul {
         @include clearfix;
-        margin: 0;
+        margin       : 0;
         padding-left : 0;
     }
 
@@ -159,10 +144,10 @@ header {
         list-style : none;
 
         a {
-            border-bottom   : none;
-            color           : $lightGrey;
-            display         : block;
-            padding         : 10px 16px;
+            border-bottom : none;
+            color         : $body;
+            display       : block;
+            padding       : 10px 16px;
 
             &:hover, &:active {
                 color : $blue;
@@ -170,7 +155,7 @@ header {
         }
 
         &.active a {
-            color       : $blue;
+            color : $blue;
 
             &:hover {
                 color : darken($blue, 20%);
@@ -198,8 +183,8 @@ header {
     }
 
     li a {
-        height          : 64px;
-        line-height     : 64px;
+        height      : 64px;
+        line-height : 64px;
 
         @include media(max-width $smartphone - 1) {
             font-size : 0.8em;
@@ -208,7 +193,7 @@ header {
     }
 
     li.active a {
-        font-weight : bold;
+        font-weight : 400;
     }
 }
 
@@ -216,11 +201,11 @@ header {
     @include row("table");
 
     li a {
-        border-top   : 3px solid transparent;
+        border-top : 3px solid transparent;
     }
 
     li.active a {
-        border-color  : $blue;
+        border-color : $blue;
     }
 }
 
@@ -267,11 +252,11 @@ header {
         margin-bottom : 26px;
 
         a {
-            color : darken($lightGrey, 70%);
+            color : $darkGray;
         }
 
         small {
-            color       : darken($lightGrey, 25%);
+            color       : $mediumGray-hover;
             font-family : Lato, sans-serif;
             font-size   : 0.6em;
             font-weight : normal;
@@ -410,9 +395,9 @@ section {
 }
 
 .subtitle {
-    color       : #768291;
-    font-size   : 0.8em;
-    margin-top  : 0;
+    color      : #768291;
+    font-size  : 0.8em;
+    margin-top : 0;
 
     li {
         border-right : 1px solid #e1e1e1;
@@ -431,9 +416,9 @@ section {
 
 footer {
     @include row("table");
-    border-top : 4px solid #d8d8d8;
-    background : #31302e;
-    color      : #e8e8e8;
+    border-top : 4px solid $mediumGray;
+    background : $darkGray-hover;
+    color      : $lightGray;
     height     : 60px;
     margin-top : 48px;
 
@@ -456,9 +441,9 @@ footer {
             text-align   : center;
         }
         a {
-            border        : 3px solid #e8e8e8;
+            border        : 3px solid $lightGray;
             border-radius : 25em;
-            color         : #e8e8e8;
+            color         : $lightGray;
             display       : block;
             height        : 40px;
             line-height   : 18px;
@@ -468,8 +453,8 @@ footer {
             @include transition(background 0.2s ease-in-out);
 
             &:hover {
-                background : #e8e8e8;
-                color      : #31302e;
+                background : $lightGray;
+                color      : $darkGray-hover;
             }
         }
     }
@@ -510,7 +495,7 @@ input, textarea {
 input:not([type="submit"]), textarea {
     border        : 1px solid #e6e9ed;
     border-radius : 4px;
-    color         : $lightGrey;
+    color         : $lightGray;
     height        : 40px;
     padding       : 0 12px;
     max-width     : 450px;
@@ -578,9 +563,9 @@ input[type="submit"] {
 }
 
 .callout-info {
-    border-left-color : rgba($darkBlue, 0.3);
+    border-left-color : rgba($blue-hover, 0.3);
     background        : rgba($blue, 0.15);
-    color             : $darkBlue;
+    color             : $blue-hover;
 }
 
 .callout-warning {
@@ -590,15 +575,15 @@ input[type="submit"] {
 }
 
 .callout-success {
-    border-left-color : rgba($darkGreen, 0.3);
+    border-left-color : rgba($green-hover, 0.3);
     background        : rgba($green, 0.15);
-    color             : $darkGreen;
+    color             : $green-hover;
 }
 
 .callout-error {
-    border-left-color : rgba($darkRed, 0.3);
+    border-left-color : rgba($red-hover, 0.3);
     background        : rgba($red, 0.15);
-    color             : $darkRed;
+    color             : $red-hover;
 }
 
 .btn {
@@ -615,8 +600,8 @@ input[type="submit"] {
 
     &:hover {
         background-color : #fff;
-        border     : 1px solid transparent;
-        color      : #fff;
+        border           : 1px solid transparent;
+        color            : #fff;
 
     }
     &:active {
@@ -633,32 +618,32 @@ input[type="submit"] {
 }
 
 .btn-default {
-    background-color: $lighterGrey;
-    border-color: darken($lighterGrey, 8%);
-    color           : $darkGrey;
+    background-color : $lightGray;
+    border-color     : darken($lightGray, 8%);
+    color            : $darkGray;
 
     &:hover {
-        background-color : darken($lighterGrey, 10%);
-        border-color  : darken($lighterGrey, 15%);
-        color      : $darkGrey;
+        background-color : $lightGray-hover;
+        border-color     : darken($lightGray-hover, 15%);
+        color            : $darkGray;
     }
     &:active {
-        color : $darkGrey;
+        color : $darkGray;
     }
     a {
-        color : $lightGrey;
+        color : $darkGray;
     }
 }
 
 .btn-primary {
-    background-color: $blue;
-    border-color: darken($blue, 5%);
-    color           : #fff;
+    background-color : $blue;
+    border-color     : darken($blue, 5%);
+    color            : #fff;
 
     &:hover {
         background-color : darken($blue, 15%);
-        border-color  : darken($blue, 20%);
-        color      : #fff;
+        border-color     : darken($blue, 20%);
+        color            : #fff;
     }
 }
 
@@ -712,6 +697,28 @@ input[type="submit"] {
     }
 }
 
+pre {
+    background-color : #f5f5f5;
+    border           : 1px solid rgba(0, 0, 0, 0.15);
+    border-radius    : 4px;
+    display          : block;
+    font-size        : 13px;
+    line-height      : 20px;
+    margin           : 0 0 10px;
+    padding          : 9.5px;
+    white-space      : pre-wrap;
+    word-break       : break-all;
+    word-wrap        : break-word;
+}
+
+pre code {
+    background-color : transparent;
+    border           : none;
+    color            : inherit;
+    padding          : 0;
+    white-space      : pre-wrap;
+}
+
 code {
     background-color : #f7f7f9;
     border           : 1px solid #e1e1e8;
@@ -723,19 +730,14 @@ code {
     white-space      : nowrap;
 }
 
-pre code {
-    background : none;
-    border     : none;
-}
-
 blockquote {
     border-left  : 3px solid $blue;
-    color        : darken($lightGrey, 30%);
+    color        : $mediumGray-hover;
     padding-left : 10px;
     margin       : 0;
 
     em {
-        color       : darken($lightGrey, 10%);
+        color       : darken($mediumGray, 10%);
         font-size   : 0.8em;
         font-family : 'Droid Serif', serif;
 
