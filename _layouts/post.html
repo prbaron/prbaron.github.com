@@ -20,10 +20,10 @@
         <div class="grid12">
             <h1 class="title">{{ page.tagline }}</h1>
             <ul class="unstyled subtitle">
-                <li><i class="icon-calendar"></i> {{ page.date | date: '%d/%m/%Y'}}</li> 
+                <li><i class="icon-calendar"></i> {{ page.date | date: '%d/%m/%Y'}}</li>
                 <li><i class="icon-user"></i> {% if page.author%} {{ page.author}} {% else %} Pierre Baron {% endif %}</li>
             </ul>
-            
+
             {% if page.demo || page.download %}
             <div class="actions">
                 <ul>
@@ -43,9 +43,9 @@
                     {{page.note}}
                 </div>
             {% endif %}
-            
+
             {{ content }}
-            
+
             <!--<ul class="pagination">-->
                 <!--{% if page.next %}-->
                     <!--<li class="next"><a href=" {{ page.next.url }}"><i class="icon-chevron-sign-left"></i> &nbsp;&nbsp; {{ page.next.tagline }}</a></li>-->
@@ -62,13 +62,11 @@
             {% endif %}
         </div>
     </div>
-    
-        
+
+
     {% include footer.html %}
-    
+
     {% include analytics.html %}
-    
-    <script src="/js/google-code-prettify/prettify.js"></script>       
-    <script src="/js/app.js"></script> 
+
 </body>
 </html>

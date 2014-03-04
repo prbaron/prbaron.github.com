@@ -24,9 +24,9 @@
                 <li><i class="icon-time"></i> {{ page.duration }}</li>
                 <li><i class="icon-bolt"></i> {{ page.skills }}</li>
             </ul>
-                     
+
             {{ content }}
-            
+
             <ul class="pagination">
                 {% for post in site.categories.works %}
                     {% if post.url == page.url %}
@@ -42,7 +42,7 @@
                         {% assign prev_post = post %}
                     {% endif %}
                 {% endfor %}
-                
+
                 {% if next_post %}
                     <li class="next"><a href=" {{ next_post.url }}"><i class="icon-chevron-sign-left"></i> &nbsp;&nbsp; {{ next_post.tagline }}</a></li>
                 {% endif %}
@@ -53,13 +53,11 @@
             </ul>
         </div>
     </div>
-    
-        
+
+
     {% include footer.html %}
-    
+
     {% include analytics.html %}
-    
-    <script src="/js/google-code-prettify/prettify.js"></script>
-    <script src="/js/app.js"></script>
+
 </body>
 </html>

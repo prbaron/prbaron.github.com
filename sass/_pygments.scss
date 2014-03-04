@@ -1,0 +1,248 @@
+.highlight pre {
+    counter-reset : line-numbering;
+}
+
+.highlight > pre > code {
+    .lineno {
+        color                 : transparent;
+        display               : inline-block;
+        position              : relative;
+        width                 : 41px;
+
+        -webkit-touch-callout : none;
+        -webkit-user-select   : none;
+        -khtml-user-select    : none;
+        -moz-user-select      : none;
+        -ms-user-select       : none;
+        user-select           : none;
+
+        &:before {
+            background            : #fafbfc;
+            border-right          : 1px solid darken($lightGray, 3%);
+            content               : counter(line-numbering);
+            counter-increment     : line-numbering;
+            color                 : $mediumGray-hover;
+            padding               : 1px 0;
+            padding-right         : 10px;
+            position              : absolute;
+            top                   : 0;
+            bottom                : -9px;
+            left                  : -8px;
+            text-align            : right;
+            width                 : 30px;
+
+            -webkit-touch-callout : none;
+            -webkit-user-select   : none;
+            -khtml-user-select    : none;
+            -moz-user-select      : none;
+            -ms-user-select       : none;
+            user-select           : none;
+        }
+
+        &:first-child:before {
+            top         : -9px;
+            padding-top : 9px;
+        }
+    }
+}
+
+// Default style for Pygments
+.highlight {
+    .hll {
+        background-color : #ffc
+    }
+    /* Comment */
+    .c,
+    .cm,
+    .cp,
+    .c1,
+    .cs {
+        color : $mediumGray-hover
+    }
+
+    /* Error */
+    //    .err {
+    //        color            : $white;
+    //        background-color : $red-hover
+    //    }
+    .err {
+        color : $darkGray-hover;
+    }
+
+    /* Operator */
+    .o,
+    .p {
+        color : $darkGray !important;
+    }
+
+    /* Generic */
+    .gd,
+    .ge,
+    .gr,
+    .gh,
+    .gi,
+    .go,
+    .gp,
+    .gs,
+    .gu,
+    .gt {
+        color : #a00000
+    }
+
+    /* Keyword */
+    .k,
+    .kc,
+    .kd,
+    .kn,
+    .kp,
+    .kr,
+    .kt {
+        color : $violet;
+    }
+
+    /* Literal.Number */
+
+    .m {
+        color       : #6000e0;
+        font-weight : bold
+    }
+
+    /* Name.Attribute */
+    .na,
+    .nb,
+    .no {
+        color : $jeans-hover;
+    }
+
+    /* Name.Class */
+
+    .nc {
+        color       : $jeans;
+        font-weight : bold
+    }
+
+    /* Name.Decorator */
+    .nd,
+    .nl,
+    .nv {
+        color : $yellow-hover;
+    }
+
+    /* Name.Entity */
+    .ni,
+    .ne {
+        color       : $red-hover;
+        font-weight : bold
+    }
+
+    /* Name.Function */
+
+    .nf,
+    .nf + .o,
+    .k + .n,
+    .k + .n + .o + :not(.n) {
+        color       : $jeans-hover;
+        font-weight : bold;
+    }
+
+    /* Name.Label */
+    .nl {
+        font-weight : bold
+    }
+
+    /* Name.Namespace */
+    .nn {
+        color       : $blue;
+        font-weight : bold
+    }
+
+    /* Name.Tag */
+    .nt {
+        color : $red;
+    }
+
+    /* Name.Variable */
+    .nx {
+        color : $darkGray-hover;
+    }
+
+    /* Operator.Word */
+    .ow {
+        color       : $darkGray-hover;
+        font-weight : bold
+    }
+
+    /* Text.Whitespace */
+    .w,
+    .sb {
+        color : transparent;
+    }
+
+    .m,
+    .mf,
+    .mh,
+    .mi,
+    .mo,
+    .il {
+        color : $yellow-hover;
+    }
+
+    /* Literal.String */
+    .s,
+    .sc,
+    .sd,
+    .s2,
+    .se,
+    .sh,
+    .si,
+    .sx,
+    .sr,
+    .s1,
+    .ss {
+        color : $green;
+    }
+
+    .bp {
+        color : #007020
+    }
+
+    /* Name.Builtin.Pseudo */
+    .vc {
+        color : #306090
+    }
+
+    /* Name.Variable.Class */
+    .vg {
+        color       : #d07000;
+        font-weight : bold
+    }
+
+    /* Name.Variable.Global */
+    .vi {
+        color : #3030b0
+    }
+}
+
+.highlight .css {
+    .n,
+    .n + .o + .k {
+        color : $green;
+    }
+    .nt + .nd {
+        color : $red;
+    }
+
+    .p + .k {
+        color : $jeans;
+    }
+}
+
+.highlight .yaml {
+    .nn {
+        color: $darkGray-hover;
+    }
+
+    .p-Indicator + .l-Scalar-Plain {
+        color : $jeans;
+    }
+}
