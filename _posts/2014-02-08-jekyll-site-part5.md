@@ -13,8 +13,8 @@ Notre site est presque prêt, nous allons maintenant ajouter les dernières fonc
   1. [Partie 1 - Introduction & Installation]({% post_url 2013-10-13-jekyll-site-part1 %})
   2. [Partie 2 - Création des pages]({% post_url 2013-10-13-jekyll-site-part2 %})
   3. [Partie 3 - Création du blog]({% post_url 2013-12-14-jekyll-site-part3 %})
-  4. [Partie 4 - Gestion des catégories]({% post_url 2013-12-14-jekyll-site-part4 %})
-  5. [Partie 5 - Finitions]({% post_url 2013-12-14-jekyll-site-part5 %})
+  4. [Partie 4 - Gestion des catégories]({% post_url 2014-02-08-jekyll-site-part4 %})
+  5. [Partie 5 - Finitions]({% post_url 2014-02-08-jekyll-site-part5 %})
   6. Partie 6 - Déploiement
 
 ## classe active sur menu
@@ -93,7 +93,7 @@ IL est très simple de gérer l'activation/désactivation des commentaires pour 
 {% endraw %}
 {% endhighlight %}
 
-A partir de maintenant, vous gérer vos commentaires dans le front matter de chaque article avec
+A partir de maintenant, vous pouvez gérer vos commentaires dans le front matter de chaque article avec
 
 {% highlight yaml linenos %}
 {% raw %}
@@ -106,7 +106,7 @@ comments : true
 {% endhighlight %}
 
 ## Le formulaire de contact
-Pour proposer à vos utilisateurs d'entre en contact avec vous, vous pouvez ajouter votre adresse email ou bien vos identifiants de réseaux sociaux. Cependant, cela peut vous déranger d'avoir une adresse mail en clair.
+Pour proposer à vos utilisateurs d'entrer en contact avec vous, vous pouvez ajouter votre adresse email ou bien vos identifiants de réseaux sociaux. Cependant, cela peut vous déranger d'avoir une adresse mail en clair.
 
 Nous allons aussi utiliser un service pour ajouter un formulaire de contact. [http://www.wufoo.com/](http://www.wufoo.com/) possède une formule gratuite qui nous suffit amplement.
 

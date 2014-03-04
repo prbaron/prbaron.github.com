@@ -13,7 +13,7 @@ Nous avons pu voir, dans le chapitre 3, comment créer notre blog avec Jekyll. C
   1. [Partie 1 - Introduction & Installation]({% post_url 2013-10-13-jekyll-site-part1 %})
   2. [Partie 2 - Création des pages]({% post_url 2013-10-13-jekyll-site-part2 %})
   3. [Partie 3 - Création du blog]({% post_url 2013-12-14-jekyll-site-part3 %})
-  4. [Partie 4 - Gestion des catégories]({% post_url 2013-12-14-jekyll-site-part4 %})
+  4. [Partie 4 - Gestion des catégories]({% post_url 2014-02-08-jekyll-site-part4 %})
   5. Partie 5 - Finitions
   6. Partie 6 - Déploiement
 
