@@ -22,7 +22,7 @@ Nous avons prévu de réaliser ce site Jekyll pour GitHub. En effet, Jekyll est 
 ### Pourquoi Github ?
 Pourquoi utiliser Github comme plate-forme d’hébergement ? Tout simplement car c’est gratuit, rapide, vous pouvez utiliser votre propre nom de domaine, vous n’avez pas à vous soucier de l’administration système et réseaux, c’est directement versionné et vous n’avez pas à générer votre site avant de l’uploader. En effet, il n’est pas nécessaire d’envoyer le fameux dossier **_site**. Vous pouvez donc le supprimer du versionning en ajoutant la ligne suivante dans votre fichier **.gitignore**.
 
-{% highlight bash linenos=table %}
+{% highlight bash linenos %}
 {% raw %}
 
 _site/
@@ -40,7 +40,7 @@ Pour savoir si vous pouvez utiliser le déploiement automatique de GitHub, vous 
 
 Pour ce faire, ouvrez un terminal et naviguez jusque votre site jekyll et entrez la commande suivante :
 
-{% highlight bash linenos=table %}
+{% highlight bash linenos %}
 {% raw %}
 
 gem install github-pages
