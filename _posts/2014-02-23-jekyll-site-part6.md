@@ -14,7 +14,7 @@ Notre site est terminé, nous allons maintenant le rendre accessible au monde en
   3. [Partie 3 - Création du site]({% post_url 2013-12-14-jekyll-site-part3 %})
   4. [Partie 4 - Gestion des catégories]({% post_url 2014-02-08-jekyll-site-part4 %})
   5. [Partie 5 - Finitions]({% post_url 2014-02-08-jekyll-site-part5 %})
-  6. [Partie 6 - Déploiement]({% post_url 2014–03-23-jekyll-site-part6 %})
+  6. [Partie 6 - Déploiement]({% post_url 2014-02-23-jekyll-site-part6 %})
 
 ## GitHub
 Nous avons prévu de réaliser ce site Jekyll pour GitHub. En effet, Jekyll est très adapté pour GitHub, il a même été réalisé pour cet usage à la base, afin de permettre aux développeurs de proposer rapidement et facilement une démonstration de leur code.

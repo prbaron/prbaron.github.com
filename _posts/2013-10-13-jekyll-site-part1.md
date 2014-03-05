@@ -14,7 +14,7 @@ Lorsque l'on souhaite écrire un blog nous avons plusieurs solutions. Le CMS tel
   3. [Partie 3 - Création du blog]({% post_url 2013-12-14-jekyll-site-part3 %})
   4. [Partie 4 - Gestion des catégories]({% post_url 2014-02-08-jekyll-site-part4 %})
   5. [Partie 5 - Finitions]({% post_url 2014-02-08-jekyll-site-part5 %})
-  6. [Partie 6 - Déploiement]({% post_url 2014–03-23-jekyll-site-part6 %})
+  6. [Partie 6 - Déploiement]({% post_url 2014-02-23-jekyll-site-part6 %})
 
 ## Présentation
 
