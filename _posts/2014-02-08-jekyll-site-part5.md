@@ -15,11 +15,56 @@ Notre site est presque prêt, nous allons maintenant ajouter les dernières fonc
   3. [Partie 3 - Création du blog]({% post_url 2013-12-14-jekyll-site-part3 %})
   4. [Partie 4 - Gestion des catégories]({% post_url 2014-02-08-jekyll-site-part4 %})
   5. [Partie 5 - Finitions]({% post_url 2014-02-08-jekyll-site-part5 %})
-  6. Partie 6 - Déploiement
+  6. [Partie 6 - Déploiement]({% post_url 2014–03-23-jekyll-site-part6 %})
 
 ## classe active sur menu
+Pour une meilleur usabilité, il est recommandé d’avoir le lien actif dans une autre couleur. Nous allons voir qu’il est totalement possible de réaliser cet effet sans l’aide de JavaScript mais avec les balises Liquid.
 
+Le principe va être de ne plus écrire les liens dans le markup HTML, mais dans le fichier **_config.yml**.
 
+### Le markup HTML
+Allez dans le fichier **_includes/menu.html** et éditez le markup de la navigation. Supprimez tous les liens HTML créés précédemment et remplacez le par le code suivant.
+
+{% highlight html linenos=table %}
+{% raw %}
+
+<ul class="nav navbar-nav">
+    {% for link in site.navigation %}
+        {% assign current = nil %}
+        {% assign currentPage = page.url | remove: 'index.html' %}
+        {% if currentPage == link.url or page.layout == link.layout %}
+            {% assign current = 'active' %} // changer le nom de la classe
+        {% endif %}
+        <li class="{{current}}"><a href="{{site.url}}{{ link.url }}">{{ link.text }}</a></li>
+    {% endfor %}
+    <li><a href="mailto:exemple@exemple.com">Contact</a></li>
+</ul>
+
+{% endraw %}
+{% endhighlight %}
+
+Ce code se charge d’analyser l’url de votre page lors de la génération pour lui appliquer la classe ``.active`` sur le bon lien.
+
+### Le fichier de configuration
+
+Ouvrez le fichier **_config.yml** et ajoutez les lignes suivantes
+
+{% highlight yaml linenos=table %}
+{% raw %}
+
+navigation:
+    - text: Index       // nom affiché dans le lien
+      url: /            // url affiché dans la barre de recherche
+    - text: A propos
+      url: /about/
+    - text: Blog
+      url: /blog/
+      layout: post      // vous pouvez définir le type de layout à utiliser
+
+{% endraw %}
+{% endhighlight %}
+
+Les urls sont celles générées par Jekyll suivant le format que vous avez choisi d’utiliser. Par exemple, si vous avez préféré utiliser about.html, il vous faudra mettre ``/about.hml`` au lieu de ``/about/``. Vous pouvez rajouter autant d’adresses que vous le souhaitez, et y définir le layout à utiliser.
 ## Les commentaires
 ### Créer votre profil et site sur Disqus
 Jekyll n'utilise pas de langage dynamique, nous ne pouvons donc utiliser de base de données ou de validation. Nous pouvons cependant utiliser un service tel que Disqus (gratuit).
@@ -114,6 +159,14 @@ Une fois votre profil créé, il vous faut ajouter un formulaire avec leur form 
 
 Personnellement je préfère la version HTML/CSS code car elle me permet de gérer moi même le style de mon formulaire.
 
+
+## La page 404
+La page 404 est différente des autres pages car elle suit plusieurs règles :
+
+  1. elle ne peut pas utiliser de tag liquid et doit donc être entièrement en HTML (pas de possibilité d'utiliser les fichiers créés dans **_includes**)
+  2. le fichier **404.html** doit être à la racine de votre site.
+
+Faites bien attention à suivre ces règles. Un dernier point à retenir, faites en sorte de faire évoluer le markup de cette page suivant l'évolution de votre site si vous souhaitez garder une cohérence.
 
 ## Conclusion
 Notre site est maintenant prêt ! Nous allons voir dans le dernier chapitre comment le mettre en ligne sur GitHub et ainsi disposer d'un hébergement geek et gratuit.

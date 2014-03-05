@@ -13,9 +13,9 @@ Nous allons voir dans ce deuxième chapitre le fonctionnement de Jekyll et nous 
   1. [Partie 1 - Introduction & Installation]({% post_url 2013-10-13-jekyll-site-part1 %})
   2. [Partie 2 - Création des pages]({% post_url 2013-10-13-jekyll-site-part2 %})
   3. [Partie 3 - Création du blog]({% post_url 2013-12-14-jekyll-site-part3 %})
-  4. Partie 4 - Gestion des catégories
-  5. Partie 5 - Finitions
-  6. Partie 6 - Déploiement
+  4. [Partie 4 - Gestion des catégories]({% post_url 2014-02-08-jekyll-site-part4 %})
+  5. [Partie 5 - Finitions]({% post_url 2014-02-08-jekyll-site-part5 %})
+  6. [Partie 6 - Déploiement]({% post_url 2014–03-23-jekyll-site-part6 %})
 
 
 ## Création d'un nouveau projet
