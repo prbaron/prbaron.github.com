@@ -4,8 +4,8 @@ category : tutoriel
 tagline  : Créer un site avec Jekyll. Partie 4 - Les catégories
 keywords : jekyll, tutoriel, jekyll french, tuto jekyll fr
 comments : true
-demo     : http://pierrebaron.fr/tuto_jekyll/
-download : https://github.com/prbaron/tuto_jekyll/releases/tag/chapitre4
+demo     : http://pierrebaron.fr/tuto_blog_jekyll/
+download : https://github.com/prbaron/tuto_blog_jekyll/tree/chapitre4
 ---
 
 Nous avons pu voir, dans le chapitre 3, comment créer notre blog avec Jekyll. Cependant, celui ci est encore basique car il ne possède pas de catégorie ou de système de commentaires (nous règlerons ceci dans le chapitre 5).

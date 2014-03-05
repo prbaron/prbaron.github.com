@@ -4,8 +4,8 @@ category : tutoriel
 tagline  : Créer un site avec Jekyll. Partie 5 - Finitions
 keywords : jekyll, tutoriel, jekyll french, tuto jekyll fr
 comments : true
-demo     : http://pierrebaron.fr/tuto_jekyll/
-download : https://github.com/prbaron/tuto_jekyll/releases/tag/chapitre5
+demo     : http://pierrebaron.fr/tuto_blog_jekyll/
+download : https://github.com/prbaron/tuto_blog_jekyll/tree/chapitre5
 ---
 
 Notre site est presque prêt, nous allons maintenant ajouter les dernières fonctionnalités pour qu'il soit complet.

@@ -4,7 +4,7 @@ category : tutoriel
 tagline  : Créer un site avec Jekyll. Partie 6 - Déploiement
 keywords : jekyll, tutoriel, jekyll french, tuto jekyll fr
 comments : true
-demo     : http://pierrebaron.fr/tuto_jekyll/
+demo     : http://pierrebaron.fr/tuto_blog_jekyll/
 ---
 
 Notre site est terminé, nous allons maintenant le rendre accessible au monde entier.

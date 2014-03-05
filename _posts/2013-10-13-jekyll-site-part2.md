@@ -4,8 +4,8 @@ category : tutoriel
 tagline  : Créer un site avec Jekyll. Partie 2 - Création des pages
 keywords : jekyll, tutoriel, jekyll french
 comments : true
-demo     : http://pierrebaron.fr/tuto_jekyll/
-download : https://github.com/prbaron/tuto_jekyll/releases/tag/chapitre2
+demo     : http://pierrebaron.fr/tuto_blog_jekyll/
+download : https://github.com/prbaron/tuto_blog_jekyll/tree/chapitre2
 ---
 
 Nous allons voir dans ce deuxième chapitre le fonctionnement de Jekyll et nous allons commencer à développer en créant nos premières pages statiques.

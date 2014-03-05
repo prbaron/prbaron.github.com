@@ -4,7 +4,7 @@ category : tutoriel
 tagline  : Créer un site avec Jekyll. Partie 1 - Introduction & Installation
 keywords : jekyll, tutoriel, jekyll french,
 comments : true
-demo     : http://pierrebaron.fr/tuto_jekyll/
+demo     : http://pierrebaron.fr/tuto_blog_jekyll/
 ---
 
 Lorsque l'on souhaite écrire un blog nous avons plusieurs solutions. Le CMS tel que WordPress, la plate-forme hébergée comme Blogger ou bien créer un site personnel avec un framework. On oublie bien souvent les générateurs de blogs statiques. Dans cette série de tutoriels, nous allons voir comment créer un site avec Jekyll et l'héberger sur GitHub.
