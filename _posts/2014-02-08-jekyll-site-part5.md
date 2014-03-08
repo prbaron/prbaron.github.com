@@ -25,7 +25,7 @@ Le principe va être de ne plus écrire les liens dans le markup HTML, mais dans
 ### Le markup HTML
 Allez dans le fichier **_includes/menu.html** et éditez le markup de la navigation. Supprimez tous les liens HTML créés précédemment et remplacez le par le code suivant.
 
-{% highlight html linenos=table %}
+{% highlight html linenos %}
 {% raw %}
 
 <ul class="nav navbar-nav">
@@ -49,7 +49,7 @@ Ce code se charge d’analyser l’url de votre page lors de la génération pou
 
 Ouvrez le fichier **_config.yml** et ajoutez les lignes suivantes
 
-{% highlight yaml linenos=table %}
+{% highlight yaml linenos %}
 {% raw %}
 
 navigation:

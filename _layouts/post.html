@@ -46,17 +46,6 @@
 
             {{ content }}
 
-            <!--<ul class="pagination">-->
-                <!--{% if page.next %}-->
-                    <!--<li class="next"><a href=" {{ page.next.url }}"><i class="icon-chevron-sign-left"></i> &nbsp;&nbsp; {{ page.next.tagline }}</a></li>-->
-                <!--{% endif %} -->
-                <!---->
-                <!--{% if page.previous %}-->
-                    <!--<li class="prev"><a href=" {{ page.previous.url }}">{{ page.previous.tagline }} &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i></a></li>-->
-                <!--{% endif %}-->
-            <!--</ul>-->
-
-
             {% if page.comments %}
                 {% include disqus.html %}
             {% endif %}
@@ -68,5 +57,12 @@
 
     {% include analytics.html %}
 
+    <script>
+        // removes line numbers from Highlight tag in Jekyll;
+        var lines = document.getElementsByClassName('lineno');
+        for(var i=0; i<lines.length; i++) {
+            lines[i].innerHTML = "&nbsp;";
+        }
+    </script>
 </body>
 </html>
