@@ -4,27 +4,28 @@
 
 .highlight > pre > code {
     .lineno {
-        color                 : transparent;
-        display               : inline-block;
-        position              : relative;
-        width                 : 41px;
+        color    : transparent;
+        display  : inline-block;
+        height   : 20px;
+        position : relative;
+        width    : 41px;
 
         @include user-select(none);
 
         &:before {
-            background            : #fafbfc;
-            border-right          : 1px solid darken($lightGray, 3%);
-            content               : counter(line-numbering);
-            counter-increment     : line-numbering;
-            color                 : $mediumGray-hover;
-            padding               : 1px 0;
-            padding-right         : 10px;
-            position              : absolute;
-            top                   : 0;
-            bottom                : -9px;
-            left                  : -8px;
-            text-align            : right;
-            width                 : 30px;
+            background        : #fafbfc;
+            border-right      : 1px solid darken($lightGray, 3%);
+            content           : counter(line-numbering);
+            counter-increment : line-numbering;
+            color             : $mediumGray-hover;
+            padding           : 1px 0;
+            padding-right     : 10px;
+            position          : absolute;
+            top               : 0;
+            bottom            : -9px;
+            left              : -8px;
+            text-align        : right;
+            width             : 30px;
 
             @include user-select(none);
 
@@ -234,10 +235,6 @@
     }
 }
 
-
-
-
-
 .highlight .php {
     .cp {
         color : $red;
@@ -246,7 +243,7 @@
 
 .highlight .yaml {
     .nn {
-        color: $darkGray-hover;
+        color : $darkGray-hover;
     }
 
     .p-Indicator + .l-Scalar-Plain {
