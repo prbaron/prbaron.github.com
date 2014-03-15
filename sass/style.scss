@@ -489,45 +489,47 @@ label {
     margin-bottom : 7px;
 }
 
-input, textarea {
-    font-family : Lato, 'PT Sans', sans-serif;
-    font-weight : 300;
-    font-size   : 1em;
+.form {
+    input, textarea {
+        font-family : Lato, 'PT Sans', sans-serif;
+        font-weight : 300;
+        font-size   : 1em;
 
-    &:focus {
-        outline : 0;
-    }
-}
-
-input:not([type="submit"]), textarea {
-    border        : 1px solid #e6e9ed;
-    border-radius : 4px;
-    color         : $lightGray;
-    height        : 40px;
-    padding       : 0 12px;
-    max-width     : 450px;
-    width         : 100%;
-    @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
-    @include transition(border-color 0.2s linear, box-shadow linear 0.2s);
-
-    &:hover,
-    &:focus {
-        border-color : $blue;
+        &:focus {
+            outline : 0;
+        }
     }
 
-    &:focus {
-        box-shadow : inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba($blue, 0.6);
+    input:not([type="submit"]), textarea {
+        border        : 1px solid #e6e9ed;
+        border-radius : 4px;
+        color         : $lightGray;
+        height        : 40px;
+        padding       : 0 12px;
+        max-width     : 450px;
+        width         : 100%;
+        @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+        @include transition(border-color 0.2s linear, box-shadow linear 0.2s);
+
+        &:hover,
+        &:focus {
+            border-color : $blue;
+        }
+
+        &:focus {
+            box-shadow : inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba($blue, 0.6);
+        }
     }
-}
 
-textarea {
-    height    : 192px;
-    padding   : 12px;
-    max-width : 768px;
-}
+    textarea {
+        height    : 192px;
+        padding   : 12px;
+        max-width : 768px;
+    }
 
-input[type="submit"] {
-    width : auto;
+    input[type="submit"] {
+        width : auto;
+    }
 }
 
 .hide {
