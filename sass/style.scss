@@ -503,7 +503,7 @@ label {
     input:not([type="submit"]), textarea {
         border        : 1px solid #e6e9ed;
         border-radius : 4px;
-        color         : $lightGray;
+        color         : $mediumGray-hover;
         height        : 40px;
         padding       : 0 12px;
         max-width     : 450px;
