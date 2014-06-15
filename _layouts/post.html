@@ -1,68 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>PB | {{ page.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Pierre Baron">
-    <meta name="keyword" content="Pierre Baron, Web developer, Mobile Developer, Java, PHP, jQuery, CakePHP, jQuery, {{page.keywords}}">
+{% include head.html %}
 
-    <link rel="shortcut icon" href="/img/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="/img/favicon.png">
-
-    <link rel="stylesheet" href="/css/style.css">
-</head>
 <body>
-    {% include header.html %}
+{% include header.html %}
 
-    <div class="container body">
-        <div class="grid12">
-            <h1 class="title">{{ page.tagline }}</h1>
-            <ul class="unstyled subtitle">
-                <li><i class="icon-calendar"></i> {{ page.date | date: '%d/%m/%Y'}}</li>
-                <li><i class="icon-user"></i> {% if page.author%} {{ page.author}} {% else %} Pierre Baron {% endif %}</li>
+<div class="container body">
+    <div class="grid12">
+        <h1 class="title">{{ page.tagline }}</h1>
+        <ul class="unstyled subtitle">
+            <li><i class="icon-calendar"></i> {{ page.date | date: '%d/%m/%Y'}}</li>
+            <li><i class="icon-user"></i> {% if page.author%} {{ page.author}} {% else %} Pierre Baron {% endif %}</li>
+        </ul>
+
+        {% if page.demo || page.download %}
+        <div class="actions">
+            <ul>
+                {% if page.demo %}
+                <li><a href="{{page.demo}}" class="btn btn-primary">Démonstration</a></li>
+                {% endif %}
+                {% if page.download %}
+                <li><a href="{{page.download}}" class="btn btn-default">Sources</a></li>
+                {% endif %}
             </ul>
-
-            {% if page.demo || page.download %}
-            <div class="actions">
-                <ul>
-                    {% if page.demo %}
-                        <li><a href="{{page.demo}}" class="btn btn-primary">Démonstration</a></li>
-                    {% endif %}
-                    {% if page.download %}
-                        <li><a href="{{page.download}}" class="btn btn-default">Sources</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-
-            {% endif %}
-
-            {% if page.note %}
-                <div class="callout callout-warning">
-                    {{page.note}}
-                </div>
-            {% endif %}
-
-            {{ content }}
-
-            {% if page.comments %}
-                {% include disqus.html %}
-            {% endif %}
         </div>
+
+        {% endif %}
+
+        {% if page.note %}
+        <div class="callout callout-warning">
+            {{page.note}}
+        </div>
+        {% endif %}
+
+        {{ content }}
+
+        {% if page.comments %}
+            {% include disqus.html %}
+        {% endif %}
     </div>
+</div>
 
 
-    {% include footer.html %}
+{% include footer.html %}
 
-    {% include analytics.html %}
+{% include analytics.html %}
 
-    <script>
-        // removes line numbers from Highlight tag in Jekyll;
-        var lines = document.getElementsByClassName('lineno');
-        for(var i=0; i<lines.length; i++) {
-            lines[i].innerHTML = "";
-        }
-    </script>
+<script>
+    // removes line numbers from Highlight tag in Jekyll;
+    var lines = document.getElementsByClassName('lineno');
+    for (var i = 0; i < lines.length; i++) {
+        lines[i].innerHTML = "";
+    }
+</script>
 </body>
 </html>

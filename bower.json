@@ -1,0 +1,25 @@
+{
+    "name"            : "prbaron.github.com",
+    "version"         : "1.0.0",
+    "private"         : true,
+    "ignore"          : [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies"    : {
+        "bootstrap" : "*"
+    },
+    "exportsOverride" : {
+        "jquery"    : {
+            "js/vendor" : "dist/*.js"
+        },
+        "bootstrap" : {
+            "js/vendor"    : "dist/js/*.js",
+            "_less" : "less/*.less",
+            "fonts" : "dist/fonts/*.*"
+        }
+    }
+}

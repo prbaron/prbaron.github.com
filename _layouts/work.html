@@ -1,63 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>PB | {{ page.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Pierre Baron">
-    <meta name="keyword" content="{{page.keywords}}">
-
-    <link rel="shortcut icon" href="/img/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="/img/favicon.png">
-
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+{% include head.html %}
 <body>
-    {% include header.html %}
+{% include header.html %}
 
-    <div class="container body">
-        <div class="grid12">
-            <h1 class="title">{{ page.tagline }}</h1>
-            <ul class="unstyled subtitle">
-                <li><i class="icon-building"></i> {{ page.client }}</li>
-                <li><i class="icon-time"></i> {{ page.duration }}</li>
-                <li><i class="icon-bolt"></i> {{ page.skills }}</li>
-            </ul>
+<div class="container body">
+    <div class="grid12">
+        <h1 class="title">{{ tagline }}</h1>
+        <ul class="unstyled subtitle">
+            <li><i class="icon-building"></i> {{ client }}</li>
+            <li><i class="icon-time"></i> {{ duration }}</li>
+            <li><i class="icon-bolt"></i> {{ skills }}</li>
+        </ul>
 
-            {{ content }}
-
-            <ul class="pagination">
-                {% for post in site.categories.works %}
-                    {% if post.url == page.url %}
-                        {% assign post_index0 = forloop.index0 %}
-                        {% assign post_index1 = forloop.index %}
-                    {% endif %}
-                {% endfor %}
-                {% for post in site.categories.works %}
-                    {% if post_index0 == forloop.index %}
-                        {% assign next_post = post %}
-                    {% endif %}
-                    {% if post_index1 == forloop.index0 %}
-                        {% assign prev_post = post %}
-                    {% endif %}
-                {% endfor %}
-
-                {% if next_post %}
-                    <li class="next"><a href=" {{ next_post.url }}"><i class="icon-chevron-sign-left"></i> &nbsp;&nbsp; {{ next_post.tagline }}</a></li>
-                {% endif %}
-
-                {% if prev_post %}
-                    <li class="prev"><a href=" {{ prev_post.url }}">{{ prev_post.tagline }} &nbsp;&nbsp;<i class="icon-chevron-sign-right"></i></a></li>
-                {% endif %}
-            </ul>
-        </div>
+        {{ content }}
     </div>
+</div>
 
 
-    {% include footer.html %}
+{% include footer.html %}
 
-    {% include analytics.html %}
+{% include analytics.html %}
 
 </body>
 </html>
