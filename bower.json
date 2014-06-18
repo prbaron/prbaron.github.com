@@ -10,16 +10,21 @@
         "tests"
     ],
     "dependencies"    : {
-        "bootstrap" : "*"
+        "bootstrap"   : "*",
+        "font-awesome" : "*"
     },
     "exportsOverride" : {
-        "jquery"    : {
-            "js/vendor" : "dist/*.js"
+        "jquery"      : {
+            "_vendor" : "dist/*.js"
         },
-        "bootstrap" : {
-            "js/vendor"    : "dist/js/*.js",
-            "_less" : "less/*.less",
-            "fonts" : "dist/fonts/*.*"
+        "bootstrap"   : {
+            "_vendor" : "dist/js/*.js",
+            "_less"   : "less/*.less",
+            "fonts"   : "dist/fonts/*.*"
+        },
+        "font-awesome" : {
+            "fonts" : "fonts/*",
+            "_less" : "less/*"
         }
     }
 }
