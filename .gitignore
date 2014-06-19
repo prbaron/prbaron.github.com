@@ -1,6 +1,8 @@
 _site
 .DS_Store
 .sass-cache
+
+.idea
 *.sublime-workspace
 
 _posts/.DS_Store

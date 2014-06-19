@@ -1,0 +1,36 @@
+.footer {
+    // too precise
+    i {
+        font-size     : 30px;
+        padding-right : 25px;
+    }
+}
+
+.footer-information {
+    padding-top    : 60px;
+    padding-bottom : 30px;
+}
+
+.footer-copyright {
+    padding-bottom : 30px;
+}
+
+.footer-inverse {
+    background : #384452;
+    p {
+        color : #bfc9d3;
+    }
+    h4 {
+        color          : white;
+        border-bottom  : 2px solid #fff;
+        margin-bottom  : 25px;
+        padding-bottom : 10px;
+    }
+    i {
+        color : #bfc9d3;
+
+        &:hover {
+            color : #00b3fe;
+        }
+    }
+}
