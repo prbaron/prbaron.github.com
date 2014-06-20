@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
-
 <body>
-{% include header.html %}
 
-<div class="container body">
-    <div class="grid12">
-        <h1 class="title">{{ page.tagline }}</h1>
-        <ul class="unstyled subtitle">
-            <li><i class="icon-calendar"></i> {{ page.date | date: '%d/%m/%Y'}}</li>
-            <li><i class="icon-user"></i> {% if page.author%} {{ page.author}} {% else %} Pierre Baron {% endif %}</li>
-        </ul>
+{% include header.html %}
+{% include tagline.html %}
+
+<div class="container">
+    <div class="col-sm-8">
+        <p><img class="img-responsive" src=""></p>
+        <a href="{{ page.url }}"><h3 class="ctitle">{{ page.tagline }}</h3></a>
+
+        <p>{{ page.date | date: '%d/%m/%Y' }}</p>
+        <p>{% if page.author%} {{ page.author}} {% else %} Pierre Baron {% endif %}</p>
 
         {% if page.demo || page.download %}
         <div class="actions">
@@ -28,9 +29,9 @@
         {% endif %}
 
         {% if page.note %}
-        <div class="callout callout-warning">
-            {{page.note}}
-        </div>
+            <div class="callout callout-warning">
+                {{page.note}}
+            </div>
         {% endif %}
 
         {{ content }}
@@ -39,13 +40,16 @@
             {% include disqus.html %}
         {% endif %}
     </div>
-</div>
+    <div class="col-sm-4">
 
+    </div>
+</div>
 
 {% include footer.html %}
 
 {% include analytics.html %}
 
+<script src="/js/vendor.all.js"></script>
 <script>
     // removes line numbers from Highlight tag in Jekyll;
     var lines = document.getElementsByClassName('lineno');
@@ -53,5 +57,6 @@
         lines[i].innerHTML = "";
     }
 </script>
+
 </body>
 </html>
