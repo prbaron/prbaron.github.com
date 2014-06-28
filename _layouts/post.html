@@ -7,12 +7,12 @@
 {% include tagline.html %}
 
 <div class="container">
-    <div class="col-sm-8">
+    <div class="col-md-8">
         <p><img class="img-responsive" src=""></p>
-        <a href="{{ page.url }}"><h3 class="ctitle">{{ page.tagline }}</h3></a>
 
-        <p>{{ page.date | date: '%d/%m/%Y' }}</p>
-        <p>{% if page.author%} {{ page.author}} {% else %} Pierre Baron {% endif %}</p>
+        <p><i class="fa fa-clock-o"></i> {{ page.date | date: '%d/%m/%Y' }}</p>
+
+        <p><i class="fa fa-user"></i> {% if page.author%} {{ page.author}} {% else %} Pierre Baron {% endif %}</p>
 
         {% if page.demo || page.download %}
         <div class="actions">
@@ -29,19 +29,38 @@
         {% endif %}
 
         {% if page.note %}
-            <div class="callout callout-warning">
-                {{page.note}}
-            </div>
+        <div class="callout callout-warning">
+            {{page.note}}
+        </div>
         {% endif %}
 
         {{ content }}
 
         {% if page.comments %}
-            {% include disqus.html %}
+        {% include disqus.html %}
         {% endif %}
     </div>
-    <div class="col-sm-4">
+    <div class="col-md-4">
+        <h4>Categories</h4>
 
+        <div class="hline"></div>
+        <p><a href="#"><i class="fa fa-angle-right"></i> Wordpress</a> <span
+                class="badge badge-theme pull-right">9</span></p>
+
+        <p><a href="#"><i class="fa fa-angle-right"></i> Photoshop</a> <span
+                class="badge badge-theme pull-right">3</span></p>
+
+        <p><a href="#"><i class="fa fa-angle-right"></i> Web Design</a> <span
+                class="badge badge-theme pull-right">11</span></p>
+
+        <p><a href="#"><i class="fa fa-angle-right"></i> Development</a> <span
+                class="badge badge-theme pull-right">5</span></p>
+
+        <p><a href="#"><i class="fa fa-angle-right"></i> Tips & Tricks</a> <span
+                class="badge badge-theme pull-right">7</span></p>
+
+        <p><a href="#"><i class="fa fa-angle-right"></i> Code Snippets</a> <span
+                class="badge badge-theme pull-right">12</span></p>
     </div>
 </div>
 

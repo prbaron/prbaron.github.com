@@ -1,3 +1,100 @@
 .navbar {
-    border-radius: 0;
+    border-bottom : none;
 }
+
+.navbar-nav {
+    li > a {
+        border-bottom : 5px solid transparent;
+    }
+    .active > a {
+        border-bottom-color : $navbar-default-link-hover-color;
+    }
+}
+
+.navbar-toggle {
+    position : relative;
+    height   : 34px;
+    width    : 44px;
+
+    .icon-bar {
+        position     : absolute;
+        top          : 50%;
+        left         : 0;
+        right        : 0;
+        bottom       : 0;
+        width        : 22px;
+        margin-top   : -1px;
+        text-align   : center;
+        margin-left  : auto;
+        margin-right : auto;
+    }
+    .icon-bar {
+        @include transition(all 0.3s linear);
+    }
+    .icon-bar:first-child {
+        @include transform(rotate(45deg));
+    }
+    .icon-bar:nth-child(2) {
+        -webkit-transition : -webkit-transform 0.15s, opacity 0.15s;
+        -moz-transition    : -moz-transform 0.15s, opacity 0.15s;
+        transition         : transform 0.15s, opacity 0.15s;
+        opacity            : 0;
+        @include transform(translateX(10px));
+    }
+    .icon-bar:last-child {
+        @include transform(rotate(-45deg));
+    }
+
+    &.collapsed {
+        .icon-bar {
+            @include transition(all 0.3s linear);
+        }
+        .icon-bar:first-child {
+            @include transform(translateY(-6px) rotate(0deg));
+        }
+        .icon-bar:nth-child(2) {
+             -webkit-transition : -webkit-transform 0.15s, opacity 0.15s;
+        -moz-transition    : -moz-transform 0.15s, opacity 0.15s;
+        transition         : transform 0.15s, opacity 0.15s;
+            opacity : 1;
+            @include transform(translateX(0px));
+        }
+        .icon-bar:last-child {
+            @include transform(translateY(6px) rotate(0deg));
+        }
+    }
+}
+
+.navbar-toggle .icon-bar + .icon-bar {
+    margin-top : -1px;
+}
+
+//.navbar-toggle {
+//    .icon-bar {
+//        @include transition(all 0.3s linear);
+//    }
+//
+//    .icon-bar:nth-child(2) {
+//        @include transform(rotate(35deg));
+//        @include transform-origin(top left);
+//    }
+//    .icon-bar:nth-child(3) {
+//        @include transition(all 0.15s linear);
+//        opacity : 0;
+//    }
+//    .icon-bar:last-child {
+//        @include transform(rotate(-35deg));
+//                @include transform-origin(bottom left);
+//
+//    }
+//
+//    &.collapsed {
+//        .icon-bar:nth-child(2),
+//        .icon-bar:last-child {
+//            @include transform(rotate(0deg));
+//        }
+//        .icon-bar:nth-child(3) {
+//           // opacity : 1;
+//        }
+//    }
+//}

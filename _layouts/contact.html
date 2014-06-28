@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
-
 <body>
+
 {% include header.html %}
+{% include tagline.html %}
 
-<div class="container body">
-    <div class="grid12">
-        <h1 class="title">{{ page.tagline }}</h1>
-
+<div class="container">
+    <div class="col-sm-12">
         {{ content }}
     </div>
 </div>
@@ -17,6 +16,7 @@
 
 {% include analytics.html %}
 
-<script src="/js/wufoo.js"></script>
+<script src="/js/vendor.all.js"></script>
+<script src="/js/wufoo.min.js"></script>
 </body>
 </html>

@@ -71,6 +71,39 @@ keywords : Pierre Baron, Web developer, Mobile Developer, Java, PHP, jQuery, Cak
                 </p>
             </div>
         </section>
+        <section>
+            <h2 class="section-title">Projets</h2>
+
+            {% for work in site.works %}
+            <div class="row">
+                <div class="col-sm-8">
+                    <h4>{{work.tagline}}</h4>
+                    {{ work.output }}
+                </div>
+                <div class="col-sm-4">
+                    <h4>Détails du projet</h4>
+
+                    <div class="hline"></div>
+
+                    <p><strong>Client:</strong> {% if work.client%}{{ work.client}} {% else %} Pierre Baron {% endif %}
+                    </p>
+                    {% if work.duration %}
+                    <p><strong>Date : </strong> {{ work.duration }}</p>
+                    {% endif %}
+
+                    <p><strong>Compétences:</strong> {{ work.skills }}</p>
+
+                    {% if work.demo %}
+                    <p><a href="{{work.demo}}" class="btn btn-primary">Voir les exemples</a></p>
+                    {% endif %}
+                    {% if work.github %}
+                    <p><a href="{{work.github}}" class="btn btn-default">Forker le projet</a></p>
+                    {% endif %}
+                </div>
+            </div>
+
+            {% endfor %}
+        </section>
     </div>
 </div>
 <! --/service -->

@@ -3,14 +3,17 @@
     padding-top    : 25px;
     padding-bottom : 25px;
 
-    &.tagline-primary {
-        background : $brand-primary;
+    .tagline-title {
+        font-family : "Mir-Medium", Kreon, sans-serif;
+        font-weight: 500;
+        font-size: 2em;
     }
 
-    .tagline-title {
-        color       : white;
-        font-family : "Mir-Medium", Lato, sans-serif;
-        margin-left : 15px;
+    &.tagline-primary {
+        background : $brand-primary;
 
+        .tagline-title {
+            color : white;
+        }
     }
 }

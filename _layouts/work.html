@@ -2,25 +2,48 @@
 <html lang="en">
 {% include head.html %}
 <body>
+
 {% include header.html %}
+{% include tagline.html %}
 
-<div class="container body">
-    <div class="grid12">
-        <h1 class="title">{{ tagline }}</h1>
-        <ul class="unstyled subtitle">
-            <li><i class="icon-building"></i> {{ client }}</li>
-            <li><i class="icon-time"></i> {{ duration }}</li>
-            <li><i class="icon-bolt"></i> {{ skills }}</li>
-        </ul>
-
+<div class="container">
+    <div class="col-lg-6">
         {{ content }}
     </div>
-</div>
+    <div class="col-lg-6">
+        <h4>Détails du projet</h4>
 
+        <div class="hline"></div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <p><b>Client:</b> {% if page.client%}{{ page.client}} {% else %} Pierre Baron {% endif %}</p>
+                {% if page.duration %}
+                <p><b>Date : </b> {{ page.duration }}</p>
+                {% endif %}
+
+                <p><b>Compétences:</b> {{ page.skills }}</p>
+            </div>
+            <div class="col-sm-6">
+                {% if page.demo %}
+                <p><a href="{{page.demo}}" class="btn btn-primary">Voir les exemples</a></p>
+                {% endif %}
+                {% if page.github %}
+                <p><a href="{{page.github}}" class="btn btn-default">Forker le projet</a></p>
+                {% endif %}
+            </div>
+        </div>
+
+
+    </div>
+</div>
 
 {% include footer.html %}
 
 {% include analytics.html %}
 
+<script src="/js/vendor.all.js"></script>
+
 </body>
 </html>
+
