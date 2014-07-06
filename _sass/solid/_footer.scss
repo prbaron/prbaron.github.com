@@ -17,21 +17,15 @@
 }
 
 .footer-inverse {
-    background : #384452;
-    p {
-        color : #bfc9d3;
-    }
-    h4 {
-        color          : white;
-        border-bottom  : 2px solid #fff;
-        margin-bottom  : 25px;
-        padding-bottom : 10px;
-    }
-    i {
-        color : #bfc9d3;
+    background : $gray-darker;
+    color      : $footer-color;
+
+
+    a > i {
+        color : $footer-color;
 
         &:hover {
-            color : #00b3fe;
+            color : $link-hover-color;
         }
     }
 }

@@ -4,94 +4,94 @@ title    : Ingénieur web & mobile
 tagline  : Pierre Baron, Ingénieur web & mobile.
 keywords : Pierre Baron, Web developer, Mobile Developer, Java, PHP, jQuery, CakePHP, jQuery
 ---
+
 <div class="row">
     <div class="col-xs-12">
         <section class="section">
             <h2 class="section-title">A propos de moi</h2>
 
-            <p>Bonjour, je m'appelle Pierre Baron et je suis ingénieur informaticien spécialisé en domotique et services
-                à l'habitat. Je travaille actuellement en tant que développeur web pour <a
-                        href="http://www.alyacom.fr/">AlyaCom</a>.
+            <p>Bonjour, je m'appelle Pierre Baron et je suis ingénieur informaticien spécialisé en domotique et services à l'habitat. Je travaille actuellement en tant que développeur web pour
+                <a href="http://www.alyacom.fr/">AlyaCom</a>.
             </p>
 
-            <p>Après avoir réalisé un IUT en Génie Electrique et Informatique Industrielle, j'ai décidé de m'orienter
-                vers une école d'ingénieur spécialisée en informatique, l'<a
-                        href="https://esir.univ-rennes1.fr/">ESIR</a>. J'ai choisi l'option domotique et services à
-                l'habitat car elle me permettrait de travailler sur divers
-                systèmes
-                et met en oeuvre un panel de compétences plutôt large, allant de la programmation objet, l'automatisme,
-                les
-                réseaux ou la sécurité.</p>
+            <p>Après avoir réalisé un IUT en Génie Electrique et Informatique Industrielle, j'ai décidé de m'orienter vers une école d'ingénieur spécialisée en informatique, l'<a
+                    href="https://esir.univ-rennes1.fr/">ESIR</a>. J'ai choisi l'option domotique et services à l'habitat car elle me permettrait de travailler sur divers systèmes et met en oeuvre un panel de compétences plutôt large, allant de la programmation objet, l'automatisme, les réseaux ou la sécurité.
+            </p>
         </section>
         <section class="section text-center">
             <h2 class="section-title">Compétences</h2>
 
-            <div class="col-md-4 skill">
-                <i class="fa fa-gears skill-icon"></i>
-                <h4 class="skill-title">Développement back end</h4>
+            <div class="row">
+                <div class="col-md-4 skill">
+                    <i class="fa fa-gears skill-icon"></i>
+                    <h4 class="skill-title">Développement back end</h4>
 
-                <p>Une bonne application se doit d'être mûrement réfléchie et de posséder une base solide. Cela lui
-                    permettra de devenir évolutive et de s'adapter aux besoins de vos clients.</p>
+                    <p>Une bonne application se doit d'être mûrement réfléchie et de posséder une base solide. Cela lui permettra de devenir évolutive et de s'adapter aux besoins de vos clients.</p>
 
-                <p class="skill-list">
-                    <strong>Outils maîtrisés : </strong>
-                    PHP, Java, MySQL, MongoDB.
-                </p>
-            </div>
-            <div class="col-md-4 skill">
-                <i class="fa fa-desktop skill-icon"></i>
-                <i class="fa fa-mobile skill-icon"></i>
+                    <p class="skill-list">
+                        <strong>Outils maîtrisés : </strong>
+                        PHP, Java, MySQL, MongoDB.
+                    </p>
+                </div>
+                <div class="col-md-4 skill">
+                    <i class="fa fa-desktop skill-icon"></i>
+                    <i class="fa fa-mobile skill-icon"></i>
 
-                <h4 class="skill-title">Développement front end / mobile</h4>
+                    <h4 class="skill-title">Développement front end / mobile</h4>
 
-                <p>A mon sens, il est aussi important d'avoir une application fonctionelle que belle et ergonomique.
-                    L'interface et les interactions homme-machine, sont les éléments qui permettront à vos clients de
-                    juger
-                    et d'apprécier votre application.</p>
+                    <p>A mon sens, il est aussi important d'avoir une application fonctionelle que belle et ergonomique. L'interface et les interactions homme-machine, sont les éléments qui permettront à vos clients de juger et d'apprécier votre application.</p>
 
-                <p class="skill-list">
-                    <strong>Outils maîtrisés : </strong>
-                    HTML5, CSS3, JavaScript,Objective-C,
-                    Android.
-                </p>
-            </div>
-            <div class="col-md-4 skill">
-                <i class="fa fa-dashboard skill-icon"></i>
-                <h4 class="skill-title">Gestion de projet</h4>
+                    <p class="skill-list">
+                        <strong>Outils maîtrisés : </strong>
+                        HTML5, CSS3, JavaScript,Objective-C,
+                        Android.
+                    </p>
+                </div>
+                <div class="col-md-4 skill">
+                    <i class="fa fa-dashboard skill-icon"></i>
+                    <h4 class="skill-title">Gestion de projet</h4>
 
-                <p>Pour qu'un projet soit réussi, il doit être le plus ordonné possible. Il est donc important pour un
-                    bon
-                    ingénieur de maîtriser les techniques et les outils permettant d'attribuer au mieux les tâches tout
-                    au
-                    long du projet et de pouvoir le suivre du début à la fin.</p>
+                    <p>Pour qu'un projet soit réussi, il doit être le plus ordonné possible. Il est donc important pour un bon ingénieur de maîtriser les techniques et les outils permettant d'attribuer au mieux les tâches tout au long du projet et de pouvoir le suivre du début à la fin.</p>
 
-                <p class="skill-list">
-                    <strong>Outils maîtrisés : </strong>
-                    Git, Mercurial, SCRUM, Kanban, Gantt, pair coding.
-                </p>
+                    <p class="skill-list">
+                        <strong>Outils maîtrisés : </strong>
+                        Git, Mercurial, SCRUM, Kanban, Gantt, pair coding.
+                    </p>
+                </div>
             </div>
         </section>
-        <section>
+        <section class="section">
             <h2 class="section-title">Projets</h2>
 
             {% for work in site.works %}
-            <div class="row">
+            <div class="row work">
                 <div class="col-sm-8">
-                    <h4>{{work.tagline}}</h4>
-                    {{ work.output }}
+                    <div class="work-heading">
+                        <h4 class="work-title">{{work.tagline}}</h4>
+                    </div>
+                    <div class="work-body">
+                        {{ work.output }}
+                    </div>
                 </div>
                 <div class="col-sm-4">
-                    <h4>Détails du projet</h4>
+                    <h4 class="title-underline title-inverse">Détails du projet</h4>
 
-                    <div class="hline"></div>
-
-                    <p><strong>Client:</strong> {% if work.client%}{{ work.client}} {% else %} Pierre Baron {% endif %}
+                    <p>
+                        <strong>Clients : </strong>
+                        {% if work.client%}{{ work.client}} {% else %} Pierre Baron {% endif %}
                     </p>
+
                     {% if work.duration %}
-                    <p><strong>Date : </strong> {{ work.duration }}</p>
+                    <p>
+                        <strong>Durée : </strong>
+                        {{ work.duration }}
+                    </p>
                     {% endif %}
 
-                    <p><strong>Compétences:</strong> {{ work.skills }}</p>
+                    <p>
+                        <strong>Compétences : </strong>
+                        {{ work.skills }}
+                    </p>
 
                     {% if work.demo %}
                     <p><a href="{{work.demo}}" class="btn btn-primary">Voir les exemples</a></p>

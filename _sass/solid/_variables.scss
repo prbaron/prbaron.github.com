@@ -1,9 +1,9 @@
 //
 // Variables
 // --------------------------------------------------
-@include font-face("Mir-Medium", font-files("/fonts/mir-medium/mir-medium_regular.eot", "/fonts/mir-medium/mir-medium_regular.ttf", "/fonts/mir-medium/mir-medium_regular.woff"));
-
-@import url(http://fonts.googleapis.com/css?family=Kreon:700|Droid+Serif:700italic|Open+Sans:100);
+//@include font-face("Mir-Medium", font-files("/fonts/mir-medium/mir-medium_regular.eot", "/fonts/mir-medium/mir-medium_regular.ttf", "/fonts/mir-medium/mir-medium_regular.woff"));
+//
+//@import url(http://fonts.googleapis.com/css?family=Kreon:700|Droid+Serif:700italic|Open+Sans:100);
 
 $fa-font-path:        "/fonts/font-awesome-4.1.0";
 
@@ -24,6 +24,8 @@ $brand-warning:         #ffce54;
 $brand-danger:          #ed5565;
 $brand-info:            #5d9cec;
 
+
+$footer-color : transparentize(adjust-color($gray-light, $red : -15, $blue: 15), 0.3);
 
 //== Scaffolding
 //

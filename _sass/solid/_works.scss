@@ -1,0 +1,13 @@
+.work {
+    margin-bottom : 60px;
+    border-bottom: 1px solid $gray-light;
+    &:last-child {
+        margint-bottom : 0;
+    }
+}
+
+.work-body {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: $font-size-base;
+    }
+}
