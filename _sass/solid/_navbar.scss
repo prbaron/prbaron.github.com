@@ -1,13 +1,13 @@
 .navbar {
-    border-bottom : none;
+    border : none;
 }
 
 .navbar-nav {
     li > a {
-        border-bottom : 5px solid transparent;
+        border-top : 5px solid transparent;
     }
     .active > a {
-        border-bottom-color : $navbar-default-link-hover-color;
+        border-top-color : $navbar-default-link-hover-color;
     }
 }
 

@@ -4,47 +4,57 @@ title    : Blog
 tagline  : Blog
 keywords : Pierre Baron, Web developer, Mobile Developer, Java, PHP, jQuery, CakePHP, jQuery
 ---
-<div class="row">
-    <div class="col-lg-8">
-        {% for post in paginator.posts %}
-        <div class="post">
-            <div class="post-heading">
-                <h3 class="post-title">{{ post.tagline }}</h3>
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {% for post in paginator.posts %}
+                <div class="post">
+                    <div class="post-heading">
+                        <h3 class="post-title">{{ post.tagline }}</h3>
 
-                <p class="post-subtitle">
-                    <i class="fa fa-clock-o"></i> {{ post.date | date: '%d/%m/%Y' }} |
-                    <i class="fa fa-user"></i>{% if page.author%}
-                    {{ page.author}}
-                    {% else %}
-                    Pierre Baron
-                    {% endif %}
-                </p>
-            </div>
-            <div class="post-body">
-                <p>{{ post.excerpt }}</p>
+                        <p class="post-subtitle">
+                            <i class="fa fa-clock-o"></i> {{ post.date | date: '%d/%m/%Y' }} |
+                            <i class="fa fa-user"></i>{% if page.author%}
+                            {{ page.author}}
+                            {% else %}
+                            Pierre Baron
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div class="post-body">
+                        <p>{{ post.excerpt }}</p>
 
-                <p>
-                    <a href="{{ post.url }}" class="btn btn-primary">
-                        Lire l'article <i class="fa fa-chevron-circle-right"></i>
-                    </a>
-                </p>
+                        <p class="post-readmore">
+                            <a href="{{ post.url }}" class="btn btn-ghost btn-primary">
+                                Lire l'article <i class="fa fa-chevron-circle-right"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <ul class="pagination">
+                    <li
+                    {% if paginator.page == 1 %}class="active" {% endif %}>
+                    <a href="/blog/">1</a>
+                    </li>
+
+                    {% for count in (2..paginator.total_pages) %}
+                    <li
+                    {% if count == paginator.page %}class="active"{% endif %}>
+                    <a href="/blog/page{{ count }}">{{ count }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
+            <!-- .col -->
+            <div class="col-md-4">
+                {% include categories.html %}
+            </div>
+            <!-- .col -->
         </div>
-
-        {% endfor %}
-
-        <ul class="pagination">
-            <li
-            {% if paginator.page == 1 %}class="active" {% endif %}>
-            <a href="/blog/">1</a>
-            </li>
-
-            {% for count in (2..paginator.total_pages) %}
-            <li
-            {% if count == paginator.page %}class="active"{% endif %}>
-            <a href="/blog/page{{ count }}">{{ count }}</a>
-            </li>
-            {% endfor %}
-        </ul>
+        <!-- .row -->
     </div>
-</div>
+    <!-- .container -->
+</section>

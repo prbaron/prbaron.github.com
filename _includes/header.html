@@ -9,16 +9,7 @@
             <a class="navbar-brand" href="{{'/' | prepend : site.baseurl }}">pierrebaron</a>
         </div>
         <div class="navbar-collapse collapse navbar-right">
-            <ul class="nav navbar-nav">
-                {% for link in site.navigation %}
-                {% assign current = nil %}
-                {% assign currentPage = page.url | remove: 'index.html' %}
-                {% if currentPage == link.url or page.layout == link.layout %}
-                {% assign current = 'active' %}
-                {% endif %}
-                <li class="{{current}}"><a href="{{ link.url }}">{{ link.text }}</a></li>
-                {% endfor %}
-            </ul>
+            {% include menu.html %}
         </div>
         <!--/.nav-collapse -->
     </div>

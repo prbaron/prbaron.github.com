@@ -1,0 +1,28 @@
+.post {
+    padding-top    : 30px;
+    padding-bottom : 30px;
+    border-bottom  : 1px solid $gray-lighter;
+
+    &:first-of-type {
+        padding-top : 0;
+    }
+
+    &:last-of-type {
+        padding-bottom : 0;
+        border-bottom  : none;
+    }
+
+    .post-subtitle {
+        color     : transparentize($gray-dark, 0.7);
+        font-size : 0.75em;
+    }
+
+    .post-readmore {
+        margin-top : 30px;
+        text-align : center;
+    }
+}
+
+.disqus {
+    margin-top : 30px;
+}

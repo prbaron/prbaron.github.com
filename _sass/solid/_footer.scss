@@ -1,9 +1,10 @@
 .footer {
-    margin-top : 60px;
-    // too precise
-    i {
-        font-size     : 30px;
+    a {
         padding-right : 25px;
+    }
+
+    i {
+        font-size : 30px;
     }
 }
 
@@ -13,19 +14,26 @@
 }
 
 .footer-copyright {
-    padding-bottom : 30px;
+    padding : $line-height-base*1em 0;
+    p {
+        margin-bottom : 0;
+    }
 }
 
 .footer-inverse {
     background : $gray-darker;
     color      : $footer-color;
 
+    .footer-information {
+        background : $gray-dark;
+    }
 
-    a > i {
+    a {
         color : $footer-color;
 
         &:hover {
-            color : $link-hover-color;
+            color           : $link-hover-color;
+            text-decoration : none;
         }
     }
 }

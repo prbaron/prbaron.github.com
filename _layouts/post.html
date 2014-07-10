@@ -6,55 +6,51 @@
 {% include header.html %}
 {% include tagline.html %}
 
-<div class="container">
-    <div class="col-md-8">
-        <p><img class="img-responsive" src=""></p>
+<section class="section">
+    <div class="container">
+        <div class="col-md-8">
+            <p><img class="img-responsive" src=""></p>
 
-        <p><i class="fa fa-clock-o"></i> {{ page.date | date: '%d/%m/%Y' }}</p>
+            <p><i class="fa fa-clock-o"></i> {{ page.date | date: '%d/%m/%Y' }}</p>
 
-        <p><i class="fa fa-user"></i> {% if page.author%} {{ page.author}} {% else %} Pierre Baron {% endif %}</p>
-
-        {% if page.demo || page.download %}
-        <div class="actions">
-            <ul>
-                {% if page.demo %}
-                <li><a href="{{page.demo}}" class="btn btn-primary">Démonstration</a></li>
-                {% endif %}
-                {% if page.download %}
-                <li><a href="{{page.download}}" class="btn btn-default">Sources</a></li>
-                {% endif %}
-            </ul>
-        </div>
-
-        {% endif %}
-
-        {% if page.note %}
-        <div class="callout callout-warning">
-            {{page.note}}
-        </div>
-        {% endif %}
-
-        {{ content }}
-
-        {% if page.comments %}
-        {% include disqus.html %}
-        {% endif %}
-    </div>
-    <div class="col-md-4">
-        <h4>Categories</h4>
-            {% assign sorted_array = site.categories | sort %}
-            {% for category in sorted_array %}
-            <p>
-                <span class="badge pull-right">{{ category| first | size}}</span>
-
-                <a href="{{site.url}}/categories/{{ category| first }}.html">
-                    <i class="fa fa-angle-right"></i> {{ category| first }}
-                </a>
+            <p><i class="fa fa-user"></i>
+                {% if page.author%} {{ page.author}}
+                {% else %} Pierre Baron {% endif %}
             </p>
-            {% endfor %}
-        </ul>
+
+            {% if page.demo || page.download %}
+            <div class="actions">
+                <ul>
+                    {% if page.demo %}
+                    <li><a href="{{page.demo}}" class="btn btn-primary">Démonstration</a></li>
+                    {% endif %}
+                    {% if page.download %}
+                    <li><a href="{{page.download}}" class="btn btn-default">Sources</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+
+            {% endif %}
+
+            {% if page.note %}
+            <div class="callout callout-warning">
+                {{page.note}}
+            </div>
+            {% endif %}
+
+            {{ content }}
+
+            {% if page.comments %}
+            <div class="disqus">
+                {% include disqus.html %}
+            </div>
+            {% endif %}
+        </div>
+        <div class="col-md-4">
+            {% include categories.html %}
+        </div>
     </div>
-</div>
+</section>
 
 {% include footer.html %}
 

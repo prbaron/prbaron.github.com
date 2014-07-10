@@ -1,12 +1,12 @@
 .tagline {
-    margin-bottom  : 60px;
-    padding-top    : 25px;
-    padding-bottom : 25px;
+    padding-top    : 60px;
+    padding-bottom : 60px;
 
     .tagline-title {
         font-family : "Mir-Medium", Kreon, sans-serif;
-        font-weight: 500;
-        font-size: 2em;
+        font-weight : 500;
+        font-size   : 3em;
+        text-align  : center;
     }
 
     &.tagline-primary {
