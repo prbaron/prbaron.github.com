@@ -1,16 +1,25 @@
-<div class="navbar navbar-default" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{'/' | prepend : site.baseurl }}">pierrebaron</a>
+<header>
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{'/' | prepend : site.baseurl }}">
+                    <img src="/img/logo.png" alt="logo"/> pierrebaron
+                </a>
+            </div>
+            <div class="navbar-collapse collapse navbar-right">
+                {% include menu.html %}
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        <div class="navbar-collapse collapse navbar-right">
-            {% include menu.html %}
-        </div>
-        <!--/.nav-collapse -->
+        <!-- .container -->
     </div>
-</div>
+    <!-- .navbar -->
+
+    {% include tagline.html %}
+</header>

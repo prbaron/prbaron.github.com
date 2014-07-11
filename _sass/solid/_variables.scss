@@ -72,7 +72,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
 $headings-font-family:    Lato, $font-family-sans-serif;
 $headings-font-weight:    700;
 $headings-line-height:    1.1;
-$headings-color:          $gray-darker;
+$headings-color:          $gray-dark;
 
 
 //== Iconography
@@ -148,9 +148,9 @@ $table-border-color:            #ddd;
 
 $btn-font-weight:                normal;
 
-$btn-default-color:              #333;
-$btn-default-bg:                 #fff;
-$btn-default-border:             #ccc;
+$btn-default-color:              #fff;
+$btn-default-bg:                 $gray-dark;
+$btn-default-border:             $gray-dark;
 
 $btn-primary-color:              #fff;
 $btn-primary-bg:                 $brand-primary;
@@ -350,7 +350,7 @@ $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2
 $navbar-collapse-max-height:       340px;
 
 $navbar-default-color:             #fff;
-$navbar-default-bg:                $brand-primary;
+$navbar-default-bg:                transparentize($brand-primary, 0.5);
 $navbar-default-border:            transparent;
 
 // Navbar links
@@ -364,7 +364,7 @@ $navbar-default-link-disabled-bg:          transparent;
 
 // Navbar brand label
 $navbar-default-brand-color:               $navbar-default-link-color;
-$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%);
+$navbar-default-brand-hover-color:         $gray-dark;
 $navbar-default-brand-hover-bg:            transparent;
 
 // Navbar toggle
