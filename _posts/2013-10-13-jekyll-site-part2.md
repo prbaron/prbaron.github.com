@@ -172,7 +172,7 @@ Allez dans le dossier **_includes** et créez les deux fichiers cités plus haut
 {% endraw %}
 {% endhighlight %}
 
-Vous remarquez que vous pouvez utiliser les variables Liquid aussi bien dans les templates que dans les includes. Vous remarquez une deuxème chose, l'utilisation d'un pipe (|) permettant l'ajout d'un filtre. Ce filtre va nous permettre d'afficher la date dans le format désiré, ici l'année.
+Vous remarquez que vous pouvez utiliser les variables Liquid aussi bien dans les templates que dans les includes. Vous remarquez une deuxème chose, l'utilisation d'un pipe (\|) permettant l'ajout d'un filtre. Ce filtre va nous permettre d'afficher la date dans le format désiré, ici l'année.
 
 Les filtres sont un élément important du fonctionnement de jekyll, vous pourrez ainsi choisir de n'afficher que certains articles en rapport avec une catégorie souhaitée, limiter le nombre d'articles à afficher, ….
 
