@@ -13,7 +13,7 @@ Il existe des sites permettant de tester votre site sous différentes résolutio
 Google a répondu à ce problème par un plugin pour Chrome appelé [ADB](https://chrome.google.com/webstore/detail/adb/dpngiggdglpdnjdoaefidgiigpemgage) pour Android Device Bridge. Les personnes travaillant dans le développement Android le connaissent bien car c'est un des composants installés avec le SDK Android.
 Ce plugin va nous permettre de détecter un appareil Android connecté via USB sur votre ordinateur et ainsi d'utiliser la console de débogage de Google Chrome desktop sur une page affichée depuis Google Chrome Android.
 
-<div class="alert">Attention, il vous faut au minimum la version 28 pour Chrome Desktop et la version 24 pour Chrome Android.</div>
+<div class="alert alert-info">Attention, il vous faut au minimum la version 28 pour Chrome Desktop et la version 24 pour Chrome Android.</div>
 
 ## Installer le plugin ADB pour Google Chrome 28
 

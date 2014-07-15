@@ -3,12 +3,11 @@
 @import "bootstrap-3.1.1/bootstrap";
 @import "font-awesome-4.1.0/font-awesome";
 //@import "solid/theme";
-
 @import "solid/mixins";
+@import "solid/alerts";
 @import "solid/buttons";
-@import "solid/prettify";
+@import "solid/highlighter";
 @import "solid/pagination";
-
 @import "solid/header";
 @import "solid/type";
 @import "solid/navbar";

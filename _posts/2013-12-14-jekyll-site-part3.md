@@ -21,7 +21,7 @@ Maintenant que nous avons nos pages statiques, nous allons créer la base de not
 
 Dans un premier temps, Il nous faut modifier le menu pour ajouter une possibilité d'action vers le blog. Je vous rappelle que le fichier se trouve dans __includes/menu.html_.
 
-{% highlight html linenos %}
+{% highlight html linenos=table %}
 {% raw %}
 
 <li><a href="{{site.url}}/blog/">Blog</a></li>
@@ -33,7 +33,7 @@ Dans un premier temps, Il nous faut modifier le menu pour ajouter une possibilit
 
 Créer un nouveau fichier **blog/index.html** et copiez y le code suivant. Nous verrons la création d'articles un peu plus tard, pour l'instant contentez vous de copiez celui présent par défaut dans le dossier **_posts_** pour obtenir votre liste.
 
-{% highlight html linenos %}
+{% highlight html linenos=table %}
 {% raw %}
 
 ---
@@ -73,15 +73,16 @@ Nous allons utiliser le deuxième moyen, qui sera plus pérenne sur le long term
 
 La ligne 9 représente une boucle foreach() dans les langages Objet, elle est ici au format Liquid. Elle signifie en français "prends tous les articles (paginator.posts), et pour chacun, affiche le code suivant : (code contenu entre le tag for et endfor)". Chaque nouvel article sera placé dans la variable post et cela nous permettra de récupérer les informations contenu dans son front matter.
 
-<div class="callout callout-info">
+<div class="alert alert-info">
 Certaines propriétés, comme date ou url, sont directement récupérées par Jekyll depuis le nom ou le chemin du fichier, il n'est donc pas nécessaire de les ajouter dans le front matter.
 </div>
 
 ## La pagination
+
 ### Activer la pagination
 Veuillez ouvrir le fichier **_config.yml** et y ajouter le code suivant :
 
-{% highlight yaml linenos %}
+{% highlight yaml linenos=table %}
 {% raw %}
 
 url: http://localhost:4000    # l'url finale de votre site. Elle est utilisée dans la variable site.url
@@ -98,7 +99,7 @@ permalink: /blog/:title       # l'url générée pour la visualisation d'un arti
 
 Vous trouverez dans la [documentation jekyll](http://jekyllrb.com/docs/pagination/) deux implémentations de la pagination, la première est l'implémentation basique, la deuxième l'implémentation avancée. Nous allons utiliser la dernière car elle gère mieux le retour à la première page du listing d'articles. La syntaxe est un peu plus complexe par contre.
 
-{% highlight html linenos %}
+{% highlight html linenos=table %}
 {% raw %}
 
 <ul class="pagination">
@@ -148,7 +149,7 @@ Nous allons maintenant voir le code nécessaire à la visualisation d'un article
 ### Le template
 Le layout **default.html** est un peu vide pour la présentation d'un article, pas d'affichage du titre, de la date, .... . Nous allons donc créer notre nouveau template. Veuillez ajouter le fichier **post.html** dans le dossier **_layouts**.
 
-{% highlight html linenos %}
+{% highlight html linenos=table %}
 {% raw %}
 
 <!DOCTYPE html>
@@ -209,7 +210,7 @@ Intéressons nous maintenant au plus important de ce tutoriel, le fichier markdo
 
  Le code minimum pour le front matter est le suivant. Dans les prochains tutoriels nous y rajouterons d'autres propriétés, comme la catégorie par exemple.
 
-{% highlight yaml linenos %}
+{% highlight yaml linenos=table %}
 {% raw %}
 
 ---

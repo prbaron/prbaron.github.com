@@ -6,6 +6,15 @@
     i {
         font-size : 30px;
     }
+
+    [class*="col-"]:not(:last-child) {
+        margin-bottom : 30px;
+
+        @media (min-width : $screen-md-min) {
+            margin-bottom : 0px;
+        }
+    }
+
 }
 
 .footer-information {

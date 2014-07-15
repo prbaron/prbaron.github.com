@@ -9,9 +9,9 @@ keywords : Pierre Baron, prbaron, prbaron22, Web developer, Mobile Developer, Ja
 <section class="section">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
-                <h2 class="section-title">A propos de moi</h2>
+            <h2 class="section-title">A propos de moi</h2>
 
+            <div class="col-xs-12">
                 <p>Bonjour, je m'appelle Pierre Baron et je suis ingénieur informaticien spécialisé en domotique et services à l'habitat. Je travaille actuellement en tant que développeur web pour
                     <a href="http://www.alyacom.fr/">AlyaCom</a>.
                 </p>
@@ -23,97 +23,105 @@ keywords : Pierre Baron, prbaron, prbaron22, Web developer, Mobile Developer, Ja
         </div>
     </div>
 </section>
-<section class="section text-center" style="background : #f0f0f0;">
+<section class="section section-skills text-center">
     <div class="container">
         <div class="row">
             <h2 class="section-title">Compétences</h2>
 
-            <div class="row">
-                <div class="col-md-4 skill">
-                    <i class="fa fa-gears skill-icon"></i>
-                    <h4 class="skill-title">Développement back end</h4>
+            <div class="col-md-6 skill">
+                <i class="fa fa-gears skill-icon"></i>
+                <h4 class="skill-title">Développement back end</h4>
 
-                    <p>Une bonne application se doit d'être mûrement réfléchie et de posséder une base solide. Cela lui permettra de devenir évolutive et de s'adapter aux besoins de vos clients.</p>
+                <p>Une bonne application se doit d'être mûrement réfléchie et de posséder une base solide. Cela lui permettra de devenir évolutive et de s'adapter aux besoins de vos clients.</p>
 
-                    <p class="skill-list">
-                        <strong>Outils maîtrisés : </strong>
-                        PHP, Java, MySQL, MongoDB.
-                    </p>
-                </div>
-                <div class="col-md-4 skill">
-                    <i class="fa fa-desktop skill-icon"></i>
-                    <i class="fa fa-mobile skill-icon"></i>
+                <p class="skill-list">
+                    <strong>Outils maîtrisés : </strong>
+                    Java, PHP, MongoDB, MySQL.
+                </p>
+            </div>
+            <div class="col-md-6 skill">
+                <i class="fa fa-desktop skill-icon"></i>
+                <h4 class="skill-title">Développement front end</h4>
 
-                    <h4 class="skill-title">Développement front end / mobile</h4>
+                <p>A mon sens, il est aussi important d'avoir une application fonctionelle que belle et ergonomique. L'interface et les interactions homme-machine, sont les éléments qui permettront à vos clients de juger et d'apprécier votre application.</p>
 
-                    <p>A mon sens, il est aussi important d'avoir une application fonctionelle que belle et ergonomique. L'interface et les interactions homme-machine, sont les éléments qui permettront à vos clients de juger et d'apprécier votre application.</p>
-
-                    <p class="skill-list">
-                        <strong>Outils maîtrisés : </strong>
-                        HTML5, CSS3, JavaScript,Objective-C,
-                        Android.
-                    </p>
-                </div>
-                <div class="col-md-4 skill">
-                    <i class="fa fa-dashboard skill-icon"></i>
-                    <h4 class="skill-title">Gestion de projet</h4>
-
-                    <p>Pour qu'un projet soit réussi, il doit être le plus ordonné possible. Il est donc important pour un bon ingénieur de maîtriser les techniques et les outils permettant d'attribuer au mieux les tâches tout au long du projet et de pouvoir le suivre du début à la fin.</p>
-
-                    <p class="skill-list">
-                        <strong>Outils maîtrisés : </strong>
-                        Git, Mercurial, SCRUM, Kanban, Gantt, pair coding.
-                    </p>
-                </div>
+                <p class="skill-list">
+                    <strong>Outils maîtrisés : </strong>
+                    HTML5, CSS3, Sass, Less, JavaScript.
+                </p>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-6 skill">
+                <i class="fa fa-mobile skill-icon"></i>
+                <h4 class="skill-title">Développement mobile</h4>
+
+                <p>Les applications mobiles webs ou natives sont une part intégrante du web actuel. Il est ainsi nécessaire de pouvoir proposer à vos clients une application intuitive et adaptée aux plus grand nombre d'appareils.</p>
+
+                <p class="skill-list">
+                    <strong>Outils maîtrisés : </strong>
+                    HTML5, CSS3, Objective-C, Android.
+                </p>
+            </div>
+            <div class="col-md-6 skill">
+                <i class="fa fa-dashboard skill-icon"></i>
+                <h4 class="skill-title">Gestion de projet</h4>
+
+                <p>Pour qu'un projet soit réussi, il doit être le plus ordonné possible. Il est donc important pour un bon ingénieur de maîtriser les techniques et les outils permettant d'attribuer au mieux les tâches tout au long du projet et de pouvoir le suivre du début à la fin.</p>
+
+                <p class="skill-list">
+                    <strong>Outils maîtrisés : </strong>
+                    Git, Mercurial, SCRUM, Kanban, Gantt, pair coding.
+                </p>
+            </div>
+
+        </div>
+    </div>
     </div>
 </section>
 <section class="section">
     <div class="container">
-        <div class="row">
-            <h2 class="section-title">Projets</h2>
+        <h2 class="section-title">Projets</h2>
 
-            {% for work in site.works %}
-            <div class="row work">
-                <div class="col-sm-8">
-                    <div class="work-heading">
-                        <h4 class="work-title title-underline title-inverse">{{work.tagline}}</h4>
-                    </div>
-                    <div class="work-body">
-                        {{ work.output }}
-                    </div>
+        {% for work in site.works %}
+        <div class="row work">
+            <div class="col-sm-8">
+                <div class="work-heading">
+                    <h4 class="work-title title-underline title-inverse">{{work.tagline}}</h4>
                 </div>
-                <div class="col-sm-4">
-                    <h4 class="title-underline title-inverse">Détails du projet</h4>
-
-                    <p>
-                        <strong>Clients : </strong>
-                        {% if work.client%}{{ work.client}} {% else %} Pierre Baron {% endif %}
-                    </p>
-
-                    {% if work.duration %}
-                    <p>
-                        <strong>Durée : </strong>
-                        {{ work.duration }}
-                    </p>
-                    {% endif %}
-
-                    <p>
-                        <strong>Compétences : </strong>
-                        {{ work.skills }}
-                    </p>
-
-                    {% if work.demo %}
-                    <p><a href="{{work.demo}}" class="btn btn-primary">Voir les exemples</a></p>
-                    {% endif %}
-                    {% if work.github %}
-                    <p><a href="{{work.github}}" class="btn btn-ghost btn-default">Forker le projet</a></p>
-                    {% endif %}
+                <div class="work-body">
+                    {{ work.output }}
                 </div>
             </div>
+            <div class="col-sm-4 work-detail">
+                <h4 class="title-underline title-inverse">Détails du projet</h4>
 
-            {% endfor %}
+                <p>
+                    <strong>Clients : </strong>
+                    {% if work.client%}{{ work.client}} {% else %} Pierre Baron {% endif %}
+                </p>
+
+                {% if work.duration %}
+                <p>
+                    <strong>Durée : </strong>
+                    {{ work.duration }}
+                </p>
+                {% endif %}
+
+                <p>
+                    <strong>Compétences : </strong>
+                    {{ work.skills }}
+                </p>
+
+                {% if work.demo %}
+                <p><a href="{{work.demo}}" class="btn btn-primary">Voir les exemples</a></p>
+                {% endif %}
+                {% if work.github %}
+                <p><a href="{{work.github}}" class="btn btn-ghost btn-default">Forker le projet</a></p>
+                {% endif %}
+            </div>
         </div>
+
+        {% endfor %}
     </div>
 </section>

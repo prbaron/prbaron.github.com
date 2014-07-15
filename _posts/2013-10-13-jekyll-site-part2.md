@@ -21,7 +21,7 @@ Nous allons voir dans ce deuxième chapitre le fonctionnement de Jekyll et nous 
 
 Dans un premier temps, veuillez vous placer dans le dossier parent où vous souhaitez créer votre projet, et lancez la commande suivante :
 
-{% highlight console linenos %}
+{% highlight console linenos=table %}
 {% raw %}
 
 jekyll new {pseudo_github}.github.com // exemple jekyll new prbaron.github.com
@@ -32,6 +32,7 @@ jekyll new {pseudo_github}.github.com // exemple jekyll new prbaron.github.com
 Cela va vous créer un dossier avec le votre pseudo GitHub suivi de l'adresse du service. Il permettra de gérer le repository github plus facilement lors de la mise en ligne de notre site.
 
 ## Structure du projet
+
 ### Analyse de la structure
 
 Une fois votre projet jekyll créé, vous allez vous retrouver avec la structure suivante :
@@ -42,9 +43,9 @@ Une fois votre projet jekyll créé, vous allez vous retrouver avec la structure
   * <i class="icon icon-folder-close-alt"></i> **css** // dossier dans lequel nous allons ajouter nos fichiers css
   * <i class="icon icon-file-alt"></i> **index.html**
 
-  Pour voir le résultat, vous pouvez lancer la commande `jekyll serve`. Elle va se charger de générer votre site à partir des templates et des articles markdown pour créer toutes les pages en HTML. Vous retrouverez le site dans le dossier **_site** qui vient de se créer à la racine du projet. Vous pouvez ensuite visionner votre site à l'adresse _[http://localhost:4000/](http://localhost:4000/)_.
+  Pour voir le résultat, vous pouvez lancer la commande `jekyll serve`. Elle va se charger de générer votre site à partir des templates et des articles markdown pour créer toutes les pages en HTML. Vous retrouverez le site dans le dossier ___site__ qui vient de se créer à la racine du projet. Vous pouvez ensuite visionner votre site à l'adresse *[http://localhost:4000/](http://localhost:4000/)*.
 
-<div class="callout callout-info">
+<div class="alert alert-info">
 les fichiers et dossiers précédés d'un underscore (_) sont considérés comme privés et non accessibles par l'url. Ils servent lors de la génération du site. Avant sa mise en ligne donc.
 </div>
 
@@ -69,18 +70,19 @@ Vous avez deux possibilités pour créer des pages :
 
 Dans notre cas, nous allons choisir la deuxième solution. Il nous faut donc créer le dossier **about** et y ajouter le fichier **index.html**.
 
-<div class="callout callout-info">
+<div class="alert alert-info">
 Sachez que les deux solutions produisent le même résultat en terme de fonctionnalités. La seule différence revient dans l'url à entrer.
 </div>
 
 
 ## Création des pages
+
 ### Le template
 Les personnes ayant travaillé avec des frameworks serveurs comme CakePHP ou autres, connaissent bien le principe des templates. Pour les autres, un template est un conteneur, une base commune à toutes les pages. Ce template va nous permettre de créer un fichier contenant les éléments communs comme `<head>`, `<body>`, … . Nous allons ensuite y ajouter une instruction pour expliquer à Jekyll où placer le contenu des pages lors de sa génération.
 
 Ouvrez le fichier **_layouts/default.html**, videz le et ajoutez le code suivant :
 
-{% highlight html linenos %}
+{% highlight html linenos=table %}
 {% raw %}
 
 <!DOCTYPE html>
@@ -130,7 +132,7 @@ Allez dans le dossier **_includes** et créez les deux fichiers cités plus haut
 
 **menu.html**
 
-{% highlight html linenos %}
+{% highlight html linenos=table %}
 {% raw %}
 
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
@@ -159,7 +161,7 @@ Allez dans le dossier **_includes** et créez les deux fichiers cités plus haut
 
 **footer.html**
 
-{% highlight html linenos %}
+{% highlight html linenos=table %}
 {% raw %}
 
 <footer style="margin-bottom: 20px;">
@@ -175,13 +177,14 @@ Vous remarquez que vous pouvez utiliser les variables Liquid aussi bien dans les
 Les filtres sont un élément important du fonctionnement de jekyll, vous pourrez ainsi choisir de n'afficher que certains articles en rapport avec une catégorie souhaitée, limiter le nombre d'articles à afficher, ….
 
 ## La page index.html
+
 ### le front
 
 Chaque page et chaque article commence par un front matter. Il s'agit d'un bloc yaml permettant d'y insérer des informations nécessaires à la génération du site.
 Il débute et finit par `---`. Les variables sont définies sous la forme clé:valeur.
 
 
-{% highlight html linenos %}
+{% highlight html linenos=table %}
 {% raw %}
 
 ---
@@ -200,7 +203,7 @@ La variable title va être cette utilisée dans {% raw  %}`{{page.title}}` {% en
 
 Le contenu est une simple page web écrite en HTML classique. J'ai choisi d'utiliser Bootstrap pour simplifier le tutoriel et ne pas m'embêter avec le design. Vous pouvez créer la structure de votre choix.
 
-{% highlight html linenos %}
+{% highlight html linenos=table %}
 {% raw %}
 
 <div class="jumbotron">
@@ -226,7 +229,7 @@ Le contenu est une simple page web écrite en HTML classique. J'ai choisi d'util
 
 La page **about/index.html** suit exactement le même format que la page précédente, à savoir un front matter et un contenu.
 
-{% highlight html linenos %}
+{% highlight html linenos=table %}
 {% raw %}
 
 ---

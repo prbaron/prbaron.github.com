@@ -21,7 +21,7 @@ Nous avons pu voir, dans le chapitre 3, comment créer notre blog avec Jekyll. C
 
 Nous avons déjà les informations minimales à ajouter au front matter d'un article markdown pour qu'il soit correctement compris comme faisant parti du blog. Nous allons maintenant y ajouter une propriété indiquant le nom de la catégorie.
 
-{% highlight yaml linenos %}
+{% highlight yaml linenos=table %}
 {% raw %}
 
 ---
@@ -42,7 +42,7 @@ Le principe va être d'afficher la liste de toutes les catégories du site et d'
 
 Créez un nouveau fichier **_includes/categories.html** et copiez y le code suivant.
 
-{% highlight html linenos %}
+{% highlight html linenos=table %}
 {% raw %}
 
 <h2>Catégories</h2>
@@ -57,7 +57,7 @@ Ce bout de code permet de créer une liste de liens affichant toutes les catégo
 
 Il va donc falloir créer un dossier **categories** à la racine de votre projet Jekyll. Vous allez devoir créer manuellement un fichier par catégorie que vous décidez d'ajouter à vos articles. Le nom du fichier doit être le nom de la catégorie (exemple : one.html). Le seul élément à modifier est le title contenu dans le front matter.
 
-{% highlight yaml linenos %}
+{% highlight yaml linenos=table %}
 {% raw %}
 
 ---
@@ -74,7 +74,7 @@ title: one
 ## Lister les articles par catégorie
 Dans la section précédente, nous faisons un appel à un élément contenu dans le dossier **_includes** mais nous n'avons pas créé ce dernier. Créez le fichier **_includes/category.html**, et copiez y le code suivant :
 
-{% highlight html linenos %}
+{% highlight html linenos=table %}
 {% raw %}
 
 {% for post in site.categories[page.title]  %}
@@ -97,7 +97,7 @@ Ce bout de code permet de lister tous les articles relatif à la catégorie choi
 Nous avons la liste des catégories, la liste des articles par catégories, maintenant, il nous faut relier le tout et afficher l
 Maintenant, il faut ajouter cet élément dans le layout relatif aux articles. Editez le fichier **_layout/post.html**.
 
-{% highlight html linenos %}
+{% highlight html linenos=table %}
 {% raw %}
 
 <!DOCTYPE html>

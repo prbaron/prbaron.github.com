@@ -25,7 +25,7 @@ Le principe va être de ne plus écrire les liens dans le markup HTML, mais dans
 ### Le markup HTML
 Allez dans le fichier **_includes/menu.html** et éditez le markup de la navigation. Supprimez tous les liens HTML créés précédemment et remplacez le par le code suivant.
 
-{% highlight html linenos %}
+{% highlight html linenos=table %}
 {% raw %}
 
 <ul class="nav navbar-nav">
@@ -49,7 +49,7 @@ Ce code se charge d’analyser l’url de votre page lors de la génération pou
 
 Ouvrez le fichier **_config.yml** et ajoutez les lignes suivantes
 
-{% highlight yaml linenos %}
+{% highlight yaml linenos=table %}
 {% raw %}
 
 navigation:
@@ -65,7 +65,9 @@ navigation:
 {% endhighlight %}
 
 Les urls sont celles générées par Jekyll suivant le format que vous avez choisi d’utiliser. Par exemple, si vous avez préféré utiliser about.html, il vous faudra mettre ``/about.hml`` au lieu de ``/about/``. Vous pouvez rajouter autant d’adresses que vous le souhaitez, et y définir le layout à utiliser.
+
 ## Les commentaires
+
 ### Créer votre profil et site sur Disqus
 Jekyll n'utilise pas de langage dynamique, nous ne pouvons donc utiliser de base de données ou de validation. Nous pouvons cependant utiliser un service tel que Disqus (gratuit).
 
@@ -77,7 +79,7 @@ Vous pouvez modifier les préférences du site dans disque, notamment la langue 
 
 Allez sur le profil de votre site dans Disqus et naviguez dans **Settings** puis **Install** et enfin **Universal code**. Copiez le code dans le fichier **_includes/disqus.html**. Pour rendre notre application jekyll plus modulable, nous allons ajouter le profil dans le fichier de configuration :
 
-{% highlight js linenos %}
+{% highlight js linenos=table %}
 {% raw %}
 
 <div id="disqus_thread"></div>
@@ -101,7 +103,7 @@ Allez sur le profil de votre site dans Disqus et naviguez dans **Settings** puis
 
 Maintenant, allez dans votre fichier **_config.yml** et ajoutez la ligne suivante :
 
-{% highlight yaml linenos %}
+{% highlight yaml linenos=table %}
 {% raw %}
 
 disqus : 'prbaron' # remplacez par votre shortName disqus
@@ -113,7 +115,7 @@ Il nous reste à intégrer cet élément aux articles. Si vous avez suivi les pr
 
 Comme toujours, pour appeler le fichier disqus, il s'agit de la commande include.
 
-{% highlight html linenos %}
+{% highlight html linenos=table %}
 {% raw %}
 
 {% include disqus.html %}
@@ -127,7 +129,7 @@ Et voila ! A partir de maintenant, vous allez pouvoir gérer vos commentaires de
 
 IL est très simple de gérer l'activation/désactivation des commentaires pour un article précis. Il vous suffit d'ajouter une condition avant d'afficher
 
-{% highlight html linenos %}
+{% highlight html linenos=table %}
 {% raw %}
 
 {% if page.comments %}
@@ -140,7 +142,7 @@ IL est très simple de gérer l'activation/désactivation des commentaires pour 
 
 A partir de maintenant, vous pouvez gérer vos commentaires dans le front matter de chaque article avec
 
-{% highlight yaml linenos %}
+{% highlight yaml linenos=table %}
 {% raw %}
 
 ---

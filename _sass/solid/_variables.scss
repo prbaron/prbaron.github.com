@@ -16,7 +16,7 @@ $gray-darker:            #333;
 $gray-dark:              #404040;
 $gray:                   #ccd1d9;
 $gray-light:             #e6e9ed;
-$gray-lighter:           #f0f0f0;
+$gray-lighter:           #f5f6f7;
 
 $brand-primary:         #4fc1e9;
 $brand-success:         #a0d468;
@@ -351,7 +351,7 @@ $navbar-collapse-max-height:       340px;
 
 $navbar-default-color:             #fff;
 $navbar-default-bg:                transparentize($brand-primary, 0.5);
-$navbar-default-border:            transparent;
+$navbar-default-border:            rgba(0,0,0,.1);
 
 // Navbar links
 $navbar-default-link-color:                #fff;

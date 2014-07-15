@@ -28,7 +28,7 @@ If you upload images, the behaviour of the plugin does not change. If you upload
 
 The upload file limit is limited to 50mb. It can not be enough for video files. If you want to increase this limit, you have to change the value of
 
-{% highlight php  linenos %}
+{% highlight php  linenos=table %}
 {% raw %}
 
 max_file_size : '50mb',
@@ -47,7 +47,7 @@ in _app/Plugin/Media/View/Medias/admin_index.ctp. You can also have to change it
 
 Grafikart created a Helper to add a Tinymce editor. If you follow the tutorial, you have to add this line :
 
-{% highlight php  linenos %}
+{% highlight php  linenos=table %}
 {% raw %}
 
 <?php echo $this->Uploader->tinymce('content'); ?>
@@ -57,16 +57,10 @@ Grafikart created a Helper to add a Tinymce editor. If you follow the tutorial, 
 
 I created a helper for CKEditor and you can call it like this :
 
-{% highlight php  linenos %}
+{% highlight php  linenos=table %}
 {% raw %}
 
 <?php echo $this->Uploader->ckeditor('content'); ?>
 
 {% endraw %}
 {% endhighlight %}
-
-and this is what you will have !
-
-![image](/img/2012/11/Capture_d_ecran_2012_11_12_a_14_13_07.png)
-![image](/img/2012/11/Capture_d_ecran_2012_11_12_a_14_30_53.png)
-![image](/img/2012/11/Capture_d_ecran_2012_11_12_a_14_30_24.png)

@@ -36,6 +36,7 @@ Voici quelques exemples de guidelines venants de gros projets ou de librairies d
 * [http://contribute.jquery.org/style-guide/js/](http://contribute.jquery.org/style-guide/js/)
 
 ## Documentez
+
 ### Commentez
 > "Code Tells You How, Comments Tell You Why"
 > <em>Jeff Atwood</em>
@@ -50,7 +51,7 @@ Vous avez deux types de commentaires :
 Attention cependant, n'en faites pas trop non plus, si votre code est explicite ce n'est pas la peine d'alourdir la compréhension en rajoutant des commentaires triviaux. L'exemple qui suit est un exemple de ce qu'il ne faut pas réaliser.
 
 
-{% highlight php linenos %}
+{% highlight php linenos=table %}
 {% raw %}
 
 // this function tells me if the value is pair or not
@@ -88,6 +89,7 @@ Cela permet à chaque membre du groupe d'avoir une vision quotidienne des élém
 Le pair programming est une méthode de travail dans lequel deux développeurs vont développer ensemble. Cela va ainsi générer un échange de compétences. Le deuxième avantage de cette méthode est que le code produit est plus propre, la solution étant souvent plus facile à comprendre et plus robuste que si le code n'avait été écrit par une seule personne. Il est donc recommandé de réaliser quelques sessions de pair programming tout au long du projet.
 
 ## Utilisez les bons outils
+
 ### Gestionnaire de versions
 Lorsque vous travaillez à plusieurs sur le même projet et surtout sur les mêmes fichiers, il devient indispensable de mettre en place un gestionnaire de versions. Vous avez surement déjà entendu parler de Git, mais il en existe d'autres comme Mercurial ou SVN par exemple. Ces gestionnaires vous permettent d'avoir une branche principale qui sera la branche de production. A chaque fois qu'un développeur doit travailler sur un point du projet, il va créer une nouvelle branche, parallèle à la branche principale, dans laquelle il pourrait faire ce qu'il souhaite sans s'inquiéter de modifier le code de ses collègues. Lorsque tout a été codé et testé, il ne restera plus qu'a faire une fusion avec la branche principale. Chaque sauvegarde est envoyée sur le serveur, vous pouvez donc retrouver des anciennes versions de votre code si vous avez besoin de faire un retour en arrière.
 

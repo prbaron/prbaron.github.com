@@ -1,7 +1,7 @@
 .post {
     padding-top    : 30px;
     padding-bottom : 30px;
-    border-bottom  : 1px solid $gray-lighter;
+    word-warp      : break-all;
 
     &:first-of-type {
         padding-top : 0;

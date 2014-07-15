@@ -3,6 +3,7 @@ name: Pierre Baron
 encoding : UTF-8
 gems:
 - jekyll-compass
+
 navigation:
 - text: HOME
   url: /

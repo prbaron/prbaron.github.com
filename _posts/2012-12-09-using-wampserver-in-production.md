@@ -11,12 +11,13 @@ WampServer is an awesome tool and famous in web development world. For those who
 Some months ago, I had to deploy WampServer on Windows 7 for my company (they developed softwares on Windows and I could not switch on Linux) so I decided to secure it the most I could. I will not explain how to install it because it is very easy but the steps begin just after the installation. Here what I did.
 
 ## Apache
+
 ### Allowing PHP and MySQL from the Internet
 Ok, you want your website to be online so the first important thing to do is to enable access to your computer from the Internet.  Do a left click on the WampServer icon and navigate to Apache > new alias > http://localhost/phpmyadmin/ and choose **edit alias**.
 
 Look at these lines :
 
-{% highlight apache linenos %}
+{% highlight apache linenos=table %}
 {% raw %}
 
 <Directory "c:/wamp/apps/phpmyadmin3.4.10.1/">
@@ -32,7 +33,7 @@ Look at these lines :
 
 and replace it by these :
 
-{% highlight apache linenos %}
+{% highlight apache linenos=table %}
 {% raw %}
 
 <Directory "c:/wamp/apps/phpmyadmin3.4.10.1/">
@@ -58,6 +59,7 @@ Windows can cause some problems on Apache services so we will allowed them. Clic
 Ok, it's well, we did some good and important things but it is not over, we have to secure PhpMyAdmin now, you do not want that anybody can edit your database do you?
 
 ## PhpMyAdmin
+
 ### Delete root account
 Access to PhpMyAdmin by typing http://localhost/phpmyadmin. You have to secure the root user because it has no password. You have two solutions :
 
@@ -69,7 +71,7 @@ Once you did it, you have to delete your three old root accounts.
 ### Set a user and a password
 Well, this step is not to secure your PhpMyAdmin panel but to help you to connect to it. You can set a username and a password (but I do not recommand it) by default on the login screen. To do it, check the config.inc.php file in _/{WampDirectory}/apps/phpmyadmin{version}/_ and check these lines :
 
-{% highlight php linenos %}
+{% highlight php linenos=table %}
 {% raw %}
 
 $cfg['Servers'][$i]['user']		        = 'root';
@@ -82,6 +84,7 @@ $cfg['Servers'][$i]['allowNoPassword']	= true;
 You can set your default username and password (also I do not recommand it again!).
 
 ## Questions
+
 ### What can I do next ?
 Ok, now WampServer is totally secured and will be launched on each start of Windows. You will be able to host your website on your local computer. But it is not over, I suggest you to install and configure FileZilla Server to have a FTP server.
 
