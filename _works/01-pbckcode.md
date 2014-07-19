@@ -3,7 +3,7 @@ tagline  : "pbckcode.js"
 skills   : JavaScript
 keywords : pbckcode, CKEditor, CKEditor plugin, code plugin
 demo     : http://prbaron.github.io/pbckcode/
-github : https://github.com/prbaron/pbckcode/
+github   : https://github.com/prbaron/pbckcode/
 ---
 
 PBCKCode est un plugin pour CKEditor permettant d'ajouter du code dans votre contenu. Il va automatiquement créer les balises code/pre et instancier les classes par rapport aux syntax highlighter que vous lui avez défini.

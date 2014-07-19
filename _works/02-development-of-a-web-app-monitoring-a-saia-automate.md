@@ -1,6 +1,7 @@
 ---
 tagline  : "Application web contrôlant un automate SAIA"
 client   : ISEA
+date     : avril 2012 – septembre 2012
 duration : 6 mois
 skills   : PHP, jQuery, HTML5/ CSS3, Saia
 keywords : ISEA, CakePHP application, application domotique, application SAIA

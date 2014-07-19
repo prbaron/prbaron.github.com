@@ -1,10 +1,16 @@
 .skill {
+    &:not(:last-child) {
+        margin-bottom : $grid-gutter-width;
+    }
+    @media (min-width: $screen-md-min) {
+        margin-bottom: 0;
+    }
 }
 
 .skill-icon {
     color     : #00b3fe;
     font-size : 3em;
-    padding   : 15px;
+    padding   : $grid-gutter-width / 2;
 }
 
 .skill-title {

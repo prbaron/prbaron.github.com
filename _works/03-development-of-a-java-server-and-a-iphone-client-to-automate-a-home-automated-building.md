@@ -1,7 +1,8 @@
 ---
 tagline  : "Serveur Java et client iPhone pour domotiser un bâtiment"
 client   : ESIR
-duration : 4 mois
+date     : octobre 2011 – février 2012
+duration : 5 mois
 skills   : Objective-C, Java
 keywords : ESIR, application mobile, REST, client, serveur
 ---

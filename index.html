@@ -101,6 +101,13 @@ keywords : Pierre Baron, prbaron, prbaron22, Web developer, Mobile Developer, Ja
                     {% if work.client%}{{ work.client}} {% else %} Pierre Baron {% endif %}
                 </p>
 
+                {% if work.date %}
+                <p>
+                    <strong>Date : </strong>
+                    {{ work.date }}
+                </p>
+                {% endif %}
+
                 {% if work.duration %}
                 <p>
                     <strong>Durée : </strong>

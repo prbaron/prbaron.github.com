@@ -3,7 +3,7 @@
 }
 
 .navbar-brand {
-    padding            : 8.5px 15px;
+    padding            : 8.5px $grid-gutter-width / 2;
 
     img {
         background         : rgba(0, 0, 0, .1);
@@ -119,33 +119,3 @@
 .navbar-toggle .icon-bar + .icon-bar {
     margin-top : -1px;
 }
-
-//.navbar-toggle {
-//    .icon-bar {
-//        @include transition(all 0.3s linear);
-//    }
-//
-//    .icon-bar:nth-child(2) {
-//        @include transform(rotate(35deg));
-//        @include transform-origin(top left);
-//    }
-//    .icon-bar:nth-child(3) {
-//        @include transition(all 0.15s linear);
-//        opacity : 0;
-//    }
-//    .icon-bar:last-child {
-//        @include transform(rotate(-35deg));
-//                @include transform-origin(bottom left);
-//
-//    }
-//
-//    &.collapsed {
-//        .icon-bar:nth-child(2),
-//        .icon-bar:last-child {
-//            @include transform(rotate(0deg));
-//        }
-//        .icon-bar:nth-child(3) {
-//           // opacity : 1;
-//        }
-//    }
-//}

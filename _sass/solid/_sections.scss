@@ -1,9 +1,9 @@
 .section {
-    padding-bottom : 120px;
-    padding-top    : 120px;
+    padding-bottom : $grid-gutter-width * 4;
+    padding-top    : $grid-gutter-width * 4;
 
     .section-title {
-        margin-bottom : 30px;
+        margin-bottom : $grid-gutter-width;
         text-align    : center;
 
     }
@@ -11,8 +11,4 @@
 
 .section-skills {
     background : $gray-lighter;
-
-//    [class*="col-"]:not(:last-child) {
-//        margin-bottom : 60px;
-//    }
 }
