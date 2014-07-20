@@ -82,8 +82,8 @@ keywords : Pierre Baron, prbaron, prbaron22, Web developer, Mobile Developer, Ja
 <section class="section">
     <div class="container">
         <h2 class="section-title">Projets</h2>
-
-        {% for work in site.works %}
+        {% assign w = site.works | sort:'order' %}
+        {% for work in w reversed %}
         <div class="row work">
             <div class="col-sm-8">
                 <div class="work-heading">

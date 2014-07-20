@@ -5,6 +5,7 @@ date     : octobre 2011 – février 2012
 duration : 5 mois
 skills   : Objective-C, Java
 keywords : ESIR, application mobile, REST, client, serveur
+order    : 1
 ---
 
 Le but de ce projet est de domotiser le laboratoire domotique de notre école. Nous avons coupé le projet en trois parties :
