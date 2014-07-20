@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PB | Jekyll Site Part3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pierre Baron">
+    <meta name="keyword" content="jekyll, tutoriel, jekyll french">
+
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/favicon.png">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<script>
+
+</script>
+<body>
+
+<header>
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img src="/img/logo.png" alt="logo"/> pierrebaron
+                </a>
+            </div>
+            <div class="navbar-collapse collapse navbar-right">
+                <ul class="nav navbar-nav">
+    
+    
+    
+    <li class=""><a href="/">HOME</a></li>
+    
+    
+    
+    
+    
+    <li class="active"><a href="/blog/">BLOG</a></li>
+    
+    
+    
+    <li class=""><a href="/contact/">CONTACT</a></li>
+    
+</ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!-- .container -->
+    </div>
+    <!-- .navbar -->
+
+    <div class="tagline tagline-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="tagline-title">Créer un site avec Jekyll. Partie 3 - Création du blog</div>
+            </div>
+        </div>
+        <!-- .row -->
+    </div>
+    <!-- .container -->
+</div>
+<!-- .tagline -->
+</header>
+
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="post">
+                    <p class="post-subtitle">
+                        <i class="fa fa-clock-o"></i> 14/12/2013 |
+                        <i class="fa fa-user"></i>
+                        Pierre Baron
+                        
+                    </p>
+                    
+                    <div class="post-actions">
+                        <ul>
+                            
+                            <li><a href="http://pierrebaron.fr/tuto_blog_jekyll/" class="btn btn-primary">Démonstration</a></li>
+                            
+                            
+                            <li><a href="https://github.com/prbaron/tuto_blog_jekyll/tree/chapitre3" class="btn btn-ghost btn-default">Sources</a></li>
+                            
+                        </ul>
+                    </div>
+
+                    
+
+                    
+
+                    <p>Maintenant que nous avons nos pages statiques, nous allons créer la base de notre blog, à savoir les pages de listing d’articles, ainsi que les pages permettant de lire l’article au complet.</p>
+
+<ol>
+  <li><a href="/blog/jekyll-site-part1">Partie 1 - Introduction &amp; Installation</a></li>
+  <li><a href="/blog/jekyll-site-part2">Partie 2 - Création des pages</a></li>
+  <li><a href="/blog/jekyll-site-part3">Partie 3 - Création du blog</a></li>
+  <li><a href="/blog/jekyll-site-part4">Partie 4 - Gestion des catégories</a></li>
+  <li><a href="/blog/jekyll-site-part5">Partie 5 - Finitions</a></li>
+  <li><a href="/blog/jekyll-site-part6">Partie 6 - Déploiement</a></li>
+</ol>
+
+<h2 id="ajout-du-lien-dans-le-menu">Ajout du lien dans le menu</h2>
+
+<p>Dans un premier temps, Il nous faut modifier le menu pour ajouter une possibilité d’action vers le blog. Je vous rappelle que le fichier se trouve dans <em>_includes/menu.html</em>.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-html" data-lang="html">1</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{site.url}}/blog/&quot;</span><span class="nt">&gt;</span>Blog<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="lister-les-articles">Lister les articles</h2>
+
+<p>Créer un nouveau fichier <strong>blog/index.html</strong> et copiez y le code suivant. Nous verrons la création d’articles un peu plus tard, pour l’instant contentez vous de copiez celui présent par défaut dans le dossier <strong><em>posts</em></strong> pour obtenir votre liste.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-html" data-lang="html"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</code></pre></div></td><td class="code"><div class="highlight"><pre>---
+layout: default
+title: Mon blog
+---
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-12&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h1&gt;</span>Mon blog<span class="nt">&lt;/h1&gt;</span>
+        {% for post in paginator.posts %}
+            <span class="nt">&lt;div&gt;</span>
+                <span class="nt">&lt;h3&gt;</span>{{ post.title }} <span class="nt">&lt;small&gt;</span>{{post.date | date_to_string }}<span class="nt">&lt;/small&gt;&lt;/h3&gt;</span>
+                <span class="nt">&lt;p&gt;</span>{{post.excerpt}}<span class="nt">&lt;/p&gt;</span>
+                <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{site.url}}{{post.url}}&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span><span class="nt">&gt;</span>Lire plus<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;hr&gt;</span>
+        {% endfor %}
+
+        {% include pagination.html %}
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<p>On retrouve toujours le front matter, définit entre les tirets. Notre page est un sous layout de défaut.</p>
+
+<p>Une page de liste d’articles correspond tout simplement à une boucle récupérant tous les articles contenus dans notre dossier _posts et se contentant d’afficher les diverses informations.</p>
+
+<p>Nous avons deux moyens de lister les articles :</p>
+
+<ol>
+  <li><strong>site.posts</strong> // liste tous les articles sur une seule page</li>
+  <li><strong>paginator.posts</strong> // liste un nombre fixe d’articles sur une page, une pagination est créée si le nombre d’articles dans le dossier _posts est supérieur au nombre d’articles à afficher par page.</li>
+</ol>
+
+<p>Nous allons utiliser le deuxième moyen, qui sera plus pérenne sur le long terme.</p>
+
+<p>La ligne 9 représente une boucle foreach() dans les langages Objet, elle est ici au format Liquid. Elle signifie en français “prends tous les articles (paginator.posts), et pour chacun, affiche le code suivant : (code contenu entre le tag for et endfor)”. Chaque nouvel article sera placé dans la variable post et cela nous permettra de récupérer les informations contenu dans son front matter.</p>
+
+<div class="alert alert-info">
+Certaines propriétés, comme date ou url, sont directement récupérées par Jekyll depuis le nom ou le chemin du fichier, il n'est donc pas nécessaire de les ajouter dans le front matter.
+</div>
+
+<h2 id="la-pagination">La pagination</h2>
+
+<h3 id="activer-la-pagination">Activer la pagination</h3>
+<p>Veuillez ouvrir le fichier <strong>_config.yml</strong> et y ajouter le code suivant :</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-yaml" data-lang="yaml">1
+2
+3
+4
+5
+6</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="l-Scalar-Plain">url</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">http://localhost:4000</span>    <span class="c1"># l&#39;url finale de votre site. Elle est utilisée dans la variable site.url</span>
+<span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Your New Jekyll Site</span>    <span class="c1"># le nom de votre site</span>
+<span class="l-Scalar-Plain">markdown</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">rdiscount</span>           <span class="c1"># le parseur de Markdown à utiliser pour parser vos fichiers. La syntaxe Markdown peut changer suivant le parseur utilisé</span>
+<span class="l-Scalar-Plain">paginate</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>                   <span class="c1"># le nombre d&#39;articles à afficher par page</span>
+<span class="l-Scalar-Plain">paginate_path</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/blog/page:num</span> <span class="c1"># l&#39;url générée pour la pagination</span>
+<span class="l-Scalar-Plain">permalink</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/blog/:title</span>       <span class="c1"># l&#39;url générée pour la visualisation d&#39;un article complet</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="crer-le-markup-html">Créer le markup HTML</h4>
+
+<p>Vous trouverez dans la <a href="http://jekyllrb.com/docs/pagination/">documentation jekyll</a> deux implémentations de la pagination, la première est l’implémentation basique, la deuxième l’implémentation avancée. Nous allons utiliser la dernière car elle gère mieux le retour à la première page du listing d’articles. La syntaxe est un peu plus complexe par contre.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-html" data-lang="html"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;pagination&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="err">{%</span> <span class="na">if</span> <span class="na">paginator</span><span class="err">.</span><span class="na">previous_page</span> <span class="err">%}</span> <span class="err">{%</span> <span class="na">else</span> <span class="err">%}</span> <span class="na">class=</span><span class="s">&quot;disabled&quot;</span> <span class="err">{%</span> <span class="na">endif</span> <span class="err">%}</span><span class="nt">&gt;</span>
+        {% if paginator.previous_page %}
+            {% if paginator.previous_page == 1 %}
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{site.url}}/blog/&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;laquo;</span><span class="nt">&lt;/a&gt;</span>
+            {% else %}
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{site.url}}/blog/page{{ paginator.previous_page }}&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;laquo;</span><span class="nt">&lt;/a&gt;</span>
+            {% endif %}
+        {% else %}
+            <span class="nt">&lt;span&gt;</span><span class="ni">&amp;laquo;</span><span class="nt">&lt;/span&gt;</span>
+        {% endif %}
+    <span class="nt">&lt;/li&gt;</span>
+
+     <span class="nt">&lt;li</span> <span class="err">{%</span> <span class="na">if</span> <span class="na">paginator</span><span class="err">.</span><span class="na">page =</span><span class="s">=</span> <span class="na">1</span> <span class="err">%}</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span> <span class="err">{%</span> <span class="na">endif</span> <span class="err">%}</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{site.url}}/blog/&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+
+    {% for count in (2..paginator.total_pages) %}
+        <span class="nt">&lt;li</span> <span class="err">{%</span> <span class="na">if</span> <span class="na">count =</span><span class="s">=</span> <span class="na">paginator</span><span class="err">.</span><span class="na">page</span> <span class="err">%}</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span> <span class="err">{%</span> <span class="na">endif</span> <span class="err">%}</span> <span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{site.url}}/blog/page{{ count }}&quot;</span><span class="nt">&gt;</span>{{ count }}<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+    {% endfor %}
+
+    <span class="nt">&lt;li</span> <span class="err">{%</span> <span class="na">if</span> <span class="na">paginator</span><span class="err">.</span><span class="na">next_page</span> <span class="err">%}</span> <span class="err">{%</span> <span class="na">else</span> <span class="err">%}</span> <span class="na">class=</span><span class="s">&quot;disabled&quot;</span> <span class="err">{%</span> <span class="na">endif</span> <span class="err">%}</span><span class="nt">&gt;</span>
+        {% if paginator.next_page %}
+            {% if paginator.next_page == 1 %}
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{site.url}}/blog/&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;raquo;</span><span class="nt">&lt;/a&gt;</span>
+            {% else %}
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{site.url}}/blog/page{{ paginator.next_page }}&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;raquo;</span><span class="nt">&lt;/a&gt;</span>
+            {% endif %}
+        {% else %}
+            <span class="nt">&lt;span&gt;</span><span class="ni">&amp;raquo;</span><span class="nt">&lt;/span&gt;</span>
+        {% endif %}
+    <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<p>Le code est long mais il n’est pas très complexe, il s’agit simplement d’une suite de boucles et de conditions. Le markup HTML est celui de Bootstrap, si vous utilisez un code personnalisé, il vous suffit de modifier les classes.</p>
+
+<h2 id="larticle">L’article</h2>
+<p>Nous allons maintenant voir le code nécessaire à la visualisation d’un article de manière complète.</p>
+
+<h3 id="le-template">Le template</h3>
+<p>Le layout <strong>default.html</strong> est un peu vide pour la présentation d’un article, pas d’affichage du titre, de la date, …. . Nous allons donc créer notre nouveau template. Veuillez ajouter le fichier <strong>post.html</strong> dans le dossier <strong>_layouts</strong>.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-html" data-lang="html"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=edge,chrome=1&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;title&gt;</span>{{ page.title }}<span class="nt">&lt;/title&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width&quot;</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;{{site.url}}/css/bootstrap.min.css&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        {% include menu.html %}
+
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-12&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;h1&gt;</span>{{ page.title }} <span class="nt">&lt;small&gt;</span>{{ page.date | date_to_string }}<span class="nt">&lt;/small&gt;&lt;/h1&gt;</span>
+                    {{ content }}
+
+                    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;pager&quot;</span><span class="nt">&gt;</span>
+                        {% if page.previous %}
+                            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;previous&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{site.url}}{{ page.previous.url }}&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;larr;</span> {{ page.previous.title }} <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        {% endif %}
+                        {% if page.next %}
+                            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;next&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{site.url}}{{ page.next.url }}&quot;</span><span class="nt">&gt;</span>{{ page.next.title }} <span class="ni">&amp;rarr;</span><span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        {% endif %}
+                    <span class="nt">&lt;/ul&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            {% include footer.html %}
+        <span class="nt">&lt;/div&gt;</span> <span class="c">&lt;!-- /container --&gt;</span>
+
+        <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;{{site.url}}/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<p>La ligne 18 permet d’afficher les informations relatives à l’article, pour l’instant nous n’affichons que la date. Nous pourrions y rajouter d’autres informations telles que l’auteur, la catégorie, …. Toutes les informations comprises dans le front matter sont accessibles via l’objet page. Je vous rappelle que vous pouvez y ajouter n’importe quel champ dans votre front matter.</p>
+
+<p>Vous pouvez aussi remarquer qu’à partir de la ligne 21, nous proposons un moyen de passer rapidement à l’article suivant ou précédent.</p>
+
+<h3 id="larticle-1">L’article</h3>
+<p>Intéressons nous maintenant au plus important de ce tutoriel, le fichier markdown dans lequel nous allons écrire le contenu de notre article. Quelques règles établies par Jekyll pour que la page soit bien reconnue :</p>
+
+<ol>
+  <li>L’article doit être dans le dossier <strong>_posts</strong></li>
+  <li>Le nom de l’article doit être comme suit {année}-{mois}-{jour}-{nom}.{extension} (exemple : 2013-12-14-jekyll.md)</li>
+  <li>L’extension doit être une extension Markdown, (.md, .mdown, .markdown)</li>
+</ol>
+
+<p>Un article est composé de deux parties :</p>
+
+<ol>
+  <li>Le front matter qui va permettre de définir les informations relatives à l’article (l’auteur, la catégorie, ….)</li>
+  <li>Le contenu de l’article</li>
+</ol>
+
+<p>Le code minimum pour le front matter est le suivant. Dans les prochains tutoriels nous y rajouterons d’autres propriétés, comme la catégorie par exemple.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-yaml" data-lang="yaml">1
+2
+3
+4</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nn">---</span>
+<span class="l-Scalar-Plain">layout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">post</span>
+<span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span>  <span class="s">&quot;Post</span><span class="nv"> </span><span class="s">un&quot;</span>
+<span class="nn">---</span>
+</pre></div>
+</td></tr></table>
+
+<p>Votre contenu est tout simplement du code markdown. Pour ce tutoriel, j’ai choisi d’utiliser <a href="http://dafoster.net/projects/rdiscount/">RDiscount</a>, car il permet une représentation fidèle du Markdown d’origine et ajoute des éléments essentiels.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Cette partie nous a permis de voir la pagination, la création d’un nouveau layout et l’écriture de notre premier article.</p>
+
+<p>Dans le prochain chapitre, nous verrons comment ajouter les catégories pour pouvoir proposer des filtres à vos internautes.</p>
+
+
+                    
+                    <div class="disqus">
+                        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pierrebaron'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>    
+                    </div>
+                    
+                </div>
+                <!-- .post -->
+            </div>
+            <!-- .col -->
+            <div class="col-md-4">
+                <div class="widget-categories">
+    <h4 class="title-underline title-inverse">Categories</h4>
+
+    
+    
+    <p>
+        <span class="badge pull-right">7</span>
+
+        <a href="/categories/article.html">
+            <i class="fa fa-angle-right"></i> article
+        </a>
+    </p>
+    
+    <p>
+        <span class="badge pull-right">4</span>
+
+        <a href="/categories/blog.html">
+            <i class="fa fa-angle-right"></i> blog
+        </a>
+    </p>
+    
+    <p>
+        <span class="badge pull-right">6</span>
+
+        <a href="/categories/plugin.html">
+            <i class="fa fa-angle-right"></i> plugin
+        </a>
+    </p>
+    
+    <p>
+        <span class="badge pull-right">8</span>
+
+        <a href="/categories/tutoriel.html">
+            <i class="fa fa-angle-right"></i> tutoriel
+        </a>
+    </p>
+    
+    </ul>
+</div>
+            </div>
+            <!-- .col -->
+        </div>
+        <!-- .row -->
+    </div>
+    <!-- .container -->
+</section>
+
+<footer class="footer footer-inverse">
+    <section class="footer-information">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="title-underline title-default">A propos</h4>
+
+                    <p>Pierre Baron est ingénieur informaticien spécialisé en domotique et services à l'habitat.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="title-underline title-default">Socialisons nous</h4>
+
+                    <p>
+                        <a href="mailto:prbaron22@gmail.com"><i class="fa fa-envelope-o"></i></a>
+                        <a href="skype:prbaron"><i class="fa fa-skype"></i></a>
+                        <a href="https://twitter.com/prbaron"><i class="fa fa-twitter"></i></a>
+                        <a href="https://github.com/prbaron"><i class="fa fa-github-alt"></i></a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="title-underline title-default">Menu</h4>
+
+                    <p>
+                        
+                            <a href="/">HOME</a>
+                        
+                            <a href="/blog/">BLOG</a>
+                        
+                            <a href="/contact/">CONTACT</a>
+                        
+                    </p>
+                </div>
+            </div>
+            <!--.row -->
+        </div>
+        <!--.container -->
+    </section>
+    <section class="footer-copyright">
+        <div class="container ">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <p>2012 - 2014 &copy; Pierre Baron</p>
+                </div>
+            </div>
+            <!--.row -->
+        </div>
+        <!--.container -->
+    </section>
+</footer>
+<!-- .footer -->
+
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21369110-4']);
+        _gaq.push(['_setDomainName', '']); // Multiple sub-domains
+        _gaq.push(['_setAllowLinker', true]); // Multiple TLDs
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+
+<script src="/js/vendor.all.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

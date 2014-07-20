@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PB | Add Your Twitter Timeline To Your Cakephp Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pierre Baron">
+    <meta name="keyword" content="cakephp, cakephp twitter timeline">
+
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/favicon.png">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<script>
+
+</script>
+<body>
+
+<header>
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img src="/img/logo.png" alt="logo"/> pierrebaron
+                </a>
+            </div>
+            <div class="navbar-collapse collapse navbar-right">
+                <ul class="nav navbar-nav">
+    
+    
+    
+    <li class=""><a href="/">HOME</a></li>
+    
+    
+    
+    
+    
+    <li class="active"><a href="/blog/">BLOG</a></li>
+    
+    
+    
+    <li class=""><a href="/contact/">CONTACT</a></li>
+    
+</ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!-- .container -->
+    </div>
+    <!-- .navbar -->
+
+    <div class="tagline tagline-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="tagline-title">Add your Twitter timeline to your CakePHP application</div>
+            </div>
+        </div>
+        <!-- .row -->
+    </div>
+    <!-- .container -->
+</div>
+<!-- .tagline -->
+</header>
+
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="post">
+                    <p class="post-subtitle">
+                        <i class="fa fa-clock-o"></i> 23/10/2012 |
+                        <i class="fa fa-user"></i>
+                        Pierre Baron
+                        
+                    </p>
+                    
+
+                    
+                    <div class="alert alert-warning">
+                        I made a gist of the plugin, <a href="https://gist.github.com/prbaron/4725934">https://gist.github.com/prbaron/4725934</a>
+                    </div>
+                    
+
+                    <p>Twitter just changed its API so I decided to write my own library to display my Twitter feeds on my website.</p>
+
+<p>Today, I will share it to you and I will teach you how to use it in your CakePHP website. The first thing you have to do is to <a href="https://gist.github.com/prbaron/4725934">download the class</a> and to place it in you Lib folder.</p>
+
+<p>Below is the single public method to find your tweets with all the default options.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-php" data-lang="php"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span>
+    <span class="s2">&quot;prbaron&quot;</span><span class="p">,</span> <span class="c1">// Twitter account name</span>
+    <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;count&#39;</span>            <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span> <span class="c1">// number of tweets returned</span>
+        <span class="s1">&#39;exclude_replies&#39;</span>  <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span> <span class="c1">// do not show replies tweets</span>
+        <span class="s1">&#39;include_entities&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span> <span class="c1">// do not show</span>
+        <span class="s1">&#39;include_rts&#39;</span>      <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span> <span class="c1">// show retweets</span>
+        <span class="s1">&#39;trim_user&#39;</span>        <span class="o">=&gt;</span> <span class="k">true</span> <span class="c1">// only show the status author numerical id</span>
+    <span class="p">),</span>
+    <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;cache_duration&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;+30mins&#39;</span><span class="p">,</span> <span class="c1">// time of the cache</span>
+        <span class="s1">&#39;hashtag_class&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;pbtwitter-hashtag&#39;</span><span class="p">,</span> <span class="c1">// class of hashtag links</span>
+        <span class="s1">&#39;url_class&#39;</span>      <span class="o">=&gt;</span> <span class="s1">&#39;pbtwitter-url&#39;</span><span class="p">,</span> <span class="c1">// class of url links</span>
+        <span class="s1">&#39;user_class&#39;</span>     <span class="o">=&gt;</span> <span class="s1">&#39;pbtwitter-user&#39;</span> <span class="c1">// class of user links</span>
+    <span class="p">)</span>
+<span class="p">);</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</td></tr></table>
+
+<p>Now we can create our Twitter MVC, so go ahead and create your Twitter model (app/Model/Twitter.php) :</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-php" data-lang="php">1
+2
+3
+4
+5</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+ <span class="k">class</span> <span class="nc">Twitter</span> <span class="k">extends</span> <span class="nx">AppModel</span><span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$useTable</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span> <span class="c1">// we do not need a table in our Database</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Twitter controller (app/Controller/TwitterController.php) :</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-php" data-lang="php"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">TwitterController</span> <span class="k">extends</span> <span class="nx">AppController</span><span class="p">{</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(){</span>
+        <span class="c1">// import the PBTwitter class from the Lib folder</span>
+        <span class="nx">App</span><span class="o">::</span><span class="na">import</span><span class="p">(</span><span class="s1">&#39;Lib&#39;</span><span class="p">,</span> <span class="s1">&#39;PBTwitter&#39;</span><span class="p">);</span>
+
+        <span class="c1">// create a new instance of the class</span>
+        <span class="nv">$Twitter</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PBTwitter</span><span class="p">();</span>
+
+        <span class="c1">// find the last 3 tweets</span>
+        <span class="nv">$d</span><span class="p">[</span><span class="s1">&#39;tweets&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$Twitter</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">&#39;prbaron&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;count&#39;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">));</span>
+
+        <span class="c1">// set the tweets to my view</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="nv">$d</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Twitter view (app/Views/Twitter/index.ctp) :</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-php" data-lang="php">1
+2
+3
+4
+5
+6</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="x">&lt;ul&gt;</span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">foreach</span><span class="p">(</span><span class="nv">$tweets</span> <span class="k">as</span> <span class="nv">$k</span> <span class="o">=&gt;</span> <span class="nv">$v</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">        </span><span class="cp">&lt;?php</span> <span class="nx">debug</span><span class="p">(</span><span class="nv">$v</span><span class="p">);</span> <span class="c1">// show the array of the tweet ?&gt;</span>
+        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$v</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">endforeach</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;/ul&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<p>And that’s all, now you can display your timeline to all your visitors.</p>
+
+
+
+                    
+                    <div class="disqus">
+                        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pierrebaron'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>    
+                    </div>
+                    
+                </div>
+                <!-- .post -->
+            </div>
+            <!-- .col -->
+            <div class="col-md-4">
+                <div class="widget-categories">
+    <h4 class="title-underline title-inverse">Categories</h4>
+
+    
+    
+    <p>
+        <span class="badge pull-right">7</span>
+
+        <a href="/categories/article.html">
+            <i class="fa fa-angle-right"></i> article
+        </a>
+    </p>
+    
+    <p>
+        <span class="badge pull-right">4</span>
+
+        <a href="/categories/blog.html">
+            <i class="fa fa-angle-right"></i> blog
+        </a>
+    </p>
+    
+    <p>
+        <span class="badge pull-right">6</span>
+
+        <a href="/categories/plugin.html">
+            <i class="fa fa-angle-right"></i> plugin
+        </a>
+    </p>
+    
+    <p>
+        <span class="badge pull-right">8</span>
+
+        <a href="/categories/tutoriel.html">
+            <i class="fa fa-angle-right"></i> tutoriel
+        </a>
+    </p>
+    
+    </ul>
+</div>
+            </div>
+            <!-- .col -->
+        </div>
+        <!-- .row -->
+    </div>
+    <!-- .container -->
+</section>
+
+<footer class="footer footer-inverse">
+    <section class="footer-information">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="title-underline title-default">A propos</h4>
+
+                    <p>Pierre Baron est ingénieur informaticien spécialisé en domotique et services à l'habitat.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="title-underline title-default">Socialisons nous</h4>
+
+                    <p>
+                        <a href="mailto:prbaron22@gmail.com"><i class="fa fa-envelope-o"></i></a>
+                        <a href="skype:prbaron"><i class="fa fa-skype"></i></a>
+                        <a href="https://twitter.com/prbaron"><i class="fa fa-twitter"></i></a>
+                        <a href="https://github.com/prbaron"><i class="fa fa-github-alt"></i></a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="title-underline title-default">Menu</h4>
+
+                    <p>
+                        
+                            <a href="/">HOME</a>
+                        
+                            <a href="/blog/">BLOG</a>
+                        
+                            <a href="/contact/">CONTACT</a>
+                        
+                    </p>
+                </div>
+            </div>
+            <!--.row -->
+        </div>
+        <!--.container -->
+    </section>
+    <section class="footer-copyright">
+        <div class="container ">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <p>2012 - 2014 &copy; Pierre Baron</p>
+                </div>
+            </div>
+            <!--.row -->
+        </div>
+        <!--.container -->
+    </section>
+</footer>
+<!-- .footer -->
+
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21369110-4']);
+        _gaq.push(['_setDomainName', '']); // Multiple sub-domains
+        _gaq.push(['_setAllowLinker', true]); // Multiple TLDs
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+
+<script src="/js/vendor.all.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

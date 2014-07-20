@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PB | Bonnes Pratiques Developper Plusieurs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pierre Baron">
+    <meta name="keyword" content="bonnes pratique, développement plusieurs, projet web, projet mobile">
+
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/favicon.png">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<script>
+
+</script>
+<body>
+
+<header>
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img src="/img/logo.png" alt="logo"/> pierrebaron
+                </a>
+            </div>
+            <div class="navbar-collapse collapse navbar-right">
+                <ul class="nav navbar-nav">
+    
+    
+    
+    <li class=""><a href="/">HOME</a></li>
+    
+    
+    
+    
+    
+    <li class="active"><a href="/blog/">BLOG</a></li>
+    
+    
+    
+    <li class=""><a href="/contact/">CONTACT</a></li>
+    
+</ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!-- .container -->
+    </div>
+    <!-- .navbar -->
+
+    <div class="tagline tagline-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="tagline-title">Les bonnes pratiques pour développer un projet à plusieurs</div>
+            </div>
+        </div>
+        <!-- .row -->
+    </div>
+    <!-- .container -->
+</div>
+<!-- .tagline -->
+</header>
+
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="post">
+                    <p class="post-subtitle">
+                        <i class="fa fa-clock-o"></i> 05/04/2013 |
+                        <i class="fa fa-user"></i>
+                        Pierre Baron
+                        
+                    </p>
+                    
+
+                    
+
+                    <p>Vous souhaitez réaliser un projet complet et ne savez pas comment vous y prendre ? Vous trouvez qu’il manque un petit quelque chose pour que votre projet devienne incontournable ? Nous allons ici lister les bonnes pratiques, utilisées en entreprise, afin de mener efficacement un projet à son terme.</p>
+
+<h2 id="analysez">Analysez</h2>
+<p>Bien qu’elle ne soit pas la plus stimulante, la phase de définition du projet est une phase très importante de votre projet. Plus votre projet sera correctement défini, plus le développement sera aisé. Dans cette phase, vous devez être capable de répondre à ces questions :</p>
+
+<ul>
+  <li>Quelles sont les fonctionnalités de mon projet ?</li>
+  <li>Quels sont les problèmes potentiels ?</li>
+  <li>Comment les résoudre ?</li>
+  <li>Quels sont les éléments matériels dont nous avons besoin ?</li>
+</ul>
+
+<p>Résoudre chacune de ces questions le plus finement possible vous permettra d’éviter tout un tas de changements en milieu de projet ou d’avoir des frais annexes non souhaités.</p>
+
+<h2 id="dfinissez-des-standards">Définissez des standards</h2>
+<blockquote>
+  <p>“Your code has to look like only one person wrote it”
+<em>Mark Otto (Fondateur de Twitter Bootstrap)</em></p>
+</blockquote>
+
+<p>Avant de développer, il vous faut définir des standards de codage. Ceci vous permettra d’avoir un code unifié entre les différents développeurs. Les anciens développeurs pourront ainsi reprendre du code réalisé par d’autres plus facilement et les nouveaux développeurs pourront rentrer dans un projet déjà entamé en douceur.
+Il vous faut définir des standards pour chaque langage utilisé dans votre projet. Il doit être le plus complet possible.</p>
+
+<p>Alors que certains langages comme Java, possèdent un guide de codage complet (voir <a href="http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html">http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html</a>), la plupart des langages du web ne proposent que des guides de bonnes pratiques. Il existe donc plusieurs manières d’écrire votre code, et il est donc nécessaire de l’unifier.</p>
+
+<p>Vous n’êtes pas livré à vous mêmes cependant. La plupart des développeurs PHP suivent la convention PSR0-1-2 (voir <a href="https://github.com/php-fig/fig-standards/tree/master/accepted">https://github.com/php-fig/fig-standards/tree/master/accepted</a>), par exemple. Pour les autres langages (JS, CSS, …), le guide de codage est souvent proposé par la librairie utilisée.</p>
+
+<p>Voici quelques exemples de guidelines venants de gros projets ou de librairies diverses.</p>
+
+<ul>
+  <li><a href="http://codex.wordpress.org/WordPress_Coding_Standards">http://codex.wordpress.org/WordPress_Coding_Standards</a></li>
+  <li><a href="http://make.wordpress.org/core/handbook/coding-standards/css/">http://make.wordpress.org/core/handbook/coding-standards/css/</a></li>
+  <li><a href="http://contribute.jquery.org/style-guide/js/">http://contribute.jquery.org/style-guide/js/</a></li>
+</ul>
+
+<h2 id="documentez">Documentez</h2>
+
+<h3 id="commentez">Commentez</h3>
+<blockquote>
+  <p>“Code Tells You How, Comments Tell You Why”
+<em>Jeff Atwood</em></p>
+</blockquote>
+
+<p>Derrière cette maxime vous devez comprendre que votre code ne suffit pas pour comprendre le projet dans sa totalité. Les commentaires vous permettent d’assimiler du code écrit plusieurs mois avant ou bien écrit par un autre développeur.
+Vous avez deux types de commentaires :</p>
+
+<ol>
+  <li>
+    <p>Code blocks : ces commentaires se placent avant la définition de la méthode. Ils expliquent le fonctionnement de cette dernière et des paramètres à remplir pour l’appeler. Remplis correctement, ces code blocks permettent de générer automatiquement une documentation complète du projet.</p>
+  </li>
+  <li>
+    <p>Inlines : les commentaires inlines se placent dans une méthode et expliquent les différentes instructions de celle ci.</p>
+  </li>
+</ol>
+
+<p>Attention cependant, n’en faites pas trop non plus, si votre code est explicite ce n’est pas la peine d’alourdir la compréhension en rajoutant des commentaires triviaux. L’exemple qui suit est un exemple de ce qu’il ne faut pas réaliser.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-php" data-lang="php">1
+2
+3
+4</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="x">// this function tells me if the value is pair or not</span>
+<span class="x">function isPair($value){</span>
+<span class="x">    return $value % 2 == 0;</span>
+<span class="x">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Les commentaire de blocs sont très importants car ils peuvent vous permettre de générer très rapidement une documentation globale de votre projet. Ceci est très pratique si vous avez créé votre API et que vous souhaitez la diffuser sur Internet. Voici un exemple de commenter les écrire : <a href="http://manual.phpdoc.org/HTMLframesConverter/default/">http://manual.phpdoc.org/HTMLframesConverter/default/</a>. On peut remarquer que cette syntaxe est similaire à la syntaxe pour la Javadoc.</p>
+
+<p>Voici quelques exemple de générateurs de documentation :</p>
+
+<ul>
+  <li><a href="http://www.phpdoc.org/">http://www.phpdoc.org/</a></li>
+  <li><a href="https://github.com/fabpot/Sami">https://github.com/fabpot/Sami</a></li>
+  <li><a href="http://www.stack.nl/~dimitri/doxygen/">http://www.stack.nl/~dimitri/doxygen/</a></li>
+</ul>
+
+<h3 id="documentez-1">Documentez</h3>
+<p>Les commentaires donnent une vision micro du projet, et permettent de comprendre le fonctionnement des classes. Mais cela est insuffisant pour comprendre un projet dans toute sa structure. Une documentation complète doit  aussi expliquer les modèles de données, la base de données ainsi que tous les éléments relatif au code (le serveur, l’hébergement, …).</p>
+
+<h2 id="dialoguez">Dialoguez</h2>
+<p>A partir de maintenant, vous avez un projet bien défini, correctement commenté et documenté, alors pourquoi encore des réunions ? Tout simplement car il est dangereux de n’avoir qu’une seule personne à connaitre une partie du code. Si cette personne quitte le projet, vous risquez de perdre du temps à le remplacer. Les astuces suivantes vous permettront d’éviter ce soucis.</p>
+
+<h3 id="daily-meeting">Daily Meeting</h3>
+<p>Le daily meeting est une courte réunion que l’on effectue chaque jour dans laquelle toute l’équipe de développement est présente. Chaque membre doit répondre à ces trois questions :</p>
+
+<ol>
+  <li>Qu’ai-je fait hier ?</li>
+  <li>Quels ont été mes problèmes ?</li>
+  <li>Que vais je faire aujourd’hui ?</li>
+</ol>
+
+<p>Cela permet à chaque membre du groupe d’avoir une vision quotidienne des éléments sur lesquels travaillent vos collègues.</p>
+
+<h3 id="pair-programming">Pair programming</h3>
+<p>Le pair programming est une méthode de travail dans lequel deux développeurs vont développer ensemble. Cela va ainsi générer un échange de compétences. Le deuxième avantage de cette méthode est que le code produit est plus propre, la solution étant souvent plus facile à comprendre et plus robuste que si le code n’avait été écrit par une seule personne. Il est donc recommandé de réaliser quelques sessions de pair programming tout au long du projet.</p>
+
+<h2 id="utilisez-les-bons-outils">Utilisez les bons outils</h2>
+
+<h3 id="gestionnaire-de-versions">Gestionnaire de versions</h3>
+<p>Lorsque vous travaillez à plusieurs sur le même projet et surtout sur les mêmes fichiers, il devient indispensable de mettre en place un gestionnaire de versions. Vous avez surement déjà entendu parler de Git, mais il en existe d’autres comme Mercurial ou SVN par exemple. Ces gestionnaires vous permettent d’avoir une branche principale qui sera la branche de production. A chaque fois qu’un développeur doit travailler sur un point du projet, il va créer une nouvelle branche, parallèle à la branche principale, dans laquelle il pourrait faire ce qu’il souhaite sans s’inquiéter de modifier le code de ses collègues. Lorsque tout a été codé et testé, il ne restera plus qu’a faire une fusion avec la branche principale. Chaque sauvegarde est envoyée sur le serveur, vous pouvez donc retrouver des anciennes versions de votre code si vous avez besoin de faire un retour en arrière.</p>
+
+<h3 id="workflow">Workflow</h3>
+<ul>
+  <li><a href="http://leankit.com/">http://leankit.com/</a></li>
+  <li><a href="https://trello.com/">https://trello.com/</a></li>
+</ul>
+
+<p>Kanban est une méthodologie de développement basée sur les tableaux blancs et les post-it. Chaque feature, improvement, defect, note est représenté par un post it de couleur, assigné à un ou plusieurs développeurs. Votre tableau est découpé en colonnes (Todo, In progress, Done, In test, …). Chaque membre du groupe devra déplacer les post-it dans la bonne colonne suivant où ils en sont sur l’élément à développer. Cela vous donne une vision micro et macro de votre projet. Micro car vous savez à tout moment où en est le développement, macro car vous voyez ce qu’il reste à faire sur le long terme.</p>
+
+<h3 id="tests">Tests</h3>
+<blockquote>
+  <p>“Les tests, c’est pour ceux qui ne savent pas coder”
+<em><a href="http://lesjoiesducode.tumblr.com/post/31452862688/quand-le-stagiaire-me-dit-que-les-tests-cest-pour">Les joies du code</a></em></p>
+</blockquote>
+
+<p>Faux, faux et re faux ! Les tests sont très importants afin d’être sûr de ne rien casser quand vous faites des modifications. Vous pouvez être sûr à 100% de votre code, mais quid de celui de vos collègues ? Les tests unitaires vont assurer que la méthode réagit toujours comme vous le souhaitez même après une modification de celle ci.</p>
+
+<p>Pour les éléments de front end, vous avez aussi des outils de tests mais, à mon sens, la meilleure façon de tester ces fonctionnalités reste de faire tester par un autre développeur qui n’a pas eu le code entre les mains. Il est important que le testeur n’ai pas été impliqué dans le développement afin de garantir le fait d’avoir un regard neuf sur la fonctionnalité et son implémentation.</p>
+
+<h2 id="soyez-curieux">Soyez curieux</h2>
+<p>Ce n’est pas parce que vous avez défini vos technologies dans la phase de déploiement que vous ne pouvez pas en changer. Vous allez acquérir de plus en plus d’expérience au fil du projet et vous allez vous rendre compte que certains choix, qui vous paraissaient acceptables au début, ne sont finalement pas les plus judicieux. Dans ces cas là, il ne faut pas hésiter à modifier vos projets si vous jugez que cela en vaut le coup. Avant de faire un changement, il vous faut poser ces questions :
+1. Quels sont les coûts de changement
+2. Quels sont les gains ?
+3. Quels sont les pertes si la technologie s’avère inefficace ?</p>
+
+<h2 id="promotez">Promotez</h2>
+<p>Beaucoup de développeurs n’ont pas compris pourquoi leurs applications ne se vendent pas alors qu’elles répondent à un besoin. La réponse est simple : ils n’ont pas fait parler de leur application pendant le développement mais seulement une fois qu’elle a été réalisée. Les premiers jours sont cruciaux pour la vente d’une application. Il vous faut donc vous assurer d’avoir un maximum d’utilisateurs potentiels à la sortie. Prenons l’exemple de Clear ou .Mail, des millions de personnes ont attendu ou attendent encore la sortie de ces applications.</p>
+
+<p>Pour réussir ce projet, il vous faut un site web sur lequel vous allez promouvoir votre projet. Évitez cependant les longs paragraphes, les utilisateurs n’ont pas besoin de comprendre le fonctionnement complet. Une phrase d’accroche, une liste de fonctionnalités et beaucoup d’images suffisent. Un blog relatant les étapes de développement peut être un plus. Si vous prévoyez un achat ou un abonnement, ceux ci doivent être facilement identifiables. Une fois que le projet est en ligne, ce site doit être un tremplin vers l’assistance ou la faq.</p>
+
+<h2 id="exprimentez">Expérimentez</h2>
+<p>J’ai fais en sorte de rester évasif sur les méthodes à utiliser car je souhaite que vous en expérimentiez plusieurs afin de trouver celle qui vous convient le mieux. Souvenez vous que chaque méthode n’est jamais qu’un moyen de travailler et qu’il est toujours possible de l’adapter avec d’autres méthodes.</p>
+
+
+                    
+                    <div class="disqus">
+                        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pierrebaron'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>    
+                    </div>
+                    
+                </div>
+                <!-- .post -->
+            </div>
+            <!-- .col -->
+            <div class="col-md-4">
+                <div class="widget-categories">
+    <h4 class="title-underline title-inverse">Categories</h4>
+
+    
+    
+    <p>
+        <span class="badge pull-right">7</span>
+
+        <a href="/categories/article.html">
+            <i class="fa fa-angle-right"></i> article
+        </a>
+    </p>
+    
+    <p>
+        <span class="badge pull-right">4</span>
+
+        <a href="/categories/blog.html">
+            <i class="fa fa-angle-right"></i> blog
+        </a>
+    </p>
+    
+    <p>
+        <span class="badge pull-right">6</span>
+
+        <a href="/categories/plugin.html">
+            <i class="fa fa-angle-right"></i> plugin
+        </a>
+    </p>
+    
+    <p>
+        <span class="badge pull-right">8</span>
+
+        <a href="/categories/tutoriel.html">
+            <i class="fa fa-angle-right"></i> tutoriel
+        </a>
+    </p>
+    
+    </ul>
+</div>
+            </div>
+            <!-- .col -->
+        </div>
+        <!-- .row -->
+    </div>
+    <!-- .container -->
+</section>
+
+<footer class="footer footer-inverse">
+    <section class="footer-information">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="title-underline title-default">A propos</h4>
+
+                    <p>Pierre Baron est ingénieur informaticien spécialisé en domotique et services à l'habitat.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="title-underline title-default">Socialisons nous</h4>
+
+                    <p>
+                        <a href="mailto:prbaron22@gmail.com"><i class="fa fa-envelope-o"></i></a>
+                        <a href="skype:prbaron"><i class="fa fa-skype"></i></a>
+                        <a href="https://twitter.com/prbaron"><i class="fa fa-twitter"></i></a>
+                        <a href="https://github.com/prbaron"><i class="fa fa-github-alt"></i></a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="title-underline title-default">Menu</h4>
+
+                    <p>
+                        
+                            <a href="/">HOME</a>
+                        
+                            <a href="/blog/">BLOG</a>
+                        
+                            <a href="/contact/">CONTACT</a>
+                        
+                    </p>
+                </div>
+            </div>
+            <!--.row -->
+        </div>
+        <!--.container -->
+    </section>
+    <section class="footer-copyright">
+        <div class="container ">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <p>2012 - 2014 &copy; Pierre Baron</p>
+                </div>
+            </div>
+            <!--.row -->
+        </div>
+        <!--.container -->
+    </section>
+</footer>
+<!-- .footer -->
+
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21369110-4']);
+        _gaq.push(['_setDomainName', '']); // Multiple sub-domains
+        _gaq.push(['_setAllowLinker', true]); // Multiple TLDs
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+
+<script src="/js/vendor.all.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

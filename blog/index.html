@@ -1,35 +1,260 @@
----
-layout   : default
-title    : Blog
-tagline  : Blog
-menu     : BLOG
-keywords : Pierre Baron, Web developer, Mobile Developer, Java, PHP, jQuery, CakePHP, jQuery
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PB | Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pierre Baron">
+    <meta name="keyword" content="Pierre Baron, Web developer, Mobile Developer, Java, PHP, jQuery, CakePHP, jQuery">
+
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/favicon.png">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img src="/img/logo.png" alt="logo"/> pierrebaron
+                </a>
+            </div>
+            <div class="navbar-collapse collapse navbar-right">
+                <ul class="nav navbar-nav">
+    
+    
+    
+    <li class=""><a href="/">HOME</a></li>
+    
+    
+    
+    
+    
+    <li class="active"><a href="/blog/">BLOG</a></li>
+    
+    
+    
+    <li class=""><a href="/contact/">CONTACT</a></li>
+    
+</ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!-- .container -->
+    </div>
+    <!-- .navbar -->
+
+    <div class="tagline tagline-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="tagline-title">Blog</div>
+            </div>
+        </div>
+        <!-- .row -->
+    </div>
+    <!-- .container -->
+</div>
+<!-- .tagline -->
+</header>
+
+
 <section class="section">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                {% for post in paginator.posts %}
-                {% include post.html %}
-                {% endfor %}
+                
+                <div class="post">
+    <div class="post-heading">
+        <h3 class="post-title">Créer un site avec Jekyll. Partie 6 - Déploiement</h3>
+
+        <p class="post-subtitle">
+            <i class="fa fa-clock-o"></i> 23/02/2014 |
+            <i class="fa fa-user"></i>
+                Pierre Baron
+            
+        </p>
+    </div>
+    <div class="post-body">
+        <p><p>Notre site est terminé, nous allons maintenant le rendre accessible au monde entier.</p>
+
+</p>
+
+        <p class="post-readmore">
+            <a href="/blog/jekyll-site-part6" class="btn btn-primary">
+                Lire l'article <i class="fa fa-chevron-circle-right"></i>
+            </a>
+        </p>
+    </div>
+</div>
+                
+                <div class="post">
+    <div class="post-heading">
+        <h3 class="post-title">Créer un site avec Jekyll. Partie 5 - Finitions</h3>
+
+        <p class="post-subtitle">
+            <i class="fa fa-clock-o"></i> 08/02/2014 |
+            <i class="fa fa-user"></i>
+                Pierre Baron
+            
+        </p>
+    </div>
+    <div class="post-body">
+        <p><p>Notre site est presque prêt, nous allons maintenant ajouter les dernières fonctionnalités pour qu’il soit complet.</p>
+
+</p>
+
+        <p class="post-readmore">
+            <a href="/blog/jekyll-site-part5" class="btn btn-primary">
+                Lire l'article <i class="fa fa-chevron-circle-right"></i>
+            </a>
+        </p>
+    </div>
+</div>
+                
+                <div class="post">
+    <div class="post-heading">
+        <h3 class="post-title">Créer un site avec Jekyll. Partie 4 - Les catégories</h3>
+
+        <p class="post-subtitle">
+            <i class="fa fa-clock-o"></i> 08/02/2014 |
+            <i class="fa fa-user"></i>
+                Pierre Baron
+            
+        </p>
+    </div>
+    <div class="post-body">
+        <p><p>Nous avons pu voir, dans le chapitre 3, comment créer notre blog avec Jekyll. Cependant, celui ci est encore basique car il ne possède pas de catégorie ou de système de commentaires (nous règlerons ceci dans le chapitre 5).</p>
+
+</p>
+
+        <p class="post-readmore">
+            <a href="/blog/jekyll-site-part4" class="btn btn-primary">
+                Lire l'article <i class="fa fa-chevron-circle-right"></i>
+            </a>
+        </p>
+    </div>
+</div>
+                
+                <div class="post">
+    <div class="post-heading">
+        <h3 class="post-title">Créer un site avec Jekyll. Partie 3 - Création du blog</h3>
+
+        <p class="post-subtitle">
+            <i class="fa fa-clock-o"></i> 14/12/2013 |
+            <i class="fa fa-user"></i>
+                Pierre Baron
+            
+        </p>
+    </div>
+    <div class="post-body">
+        <p><p>Maintenant que nous avons nos pages statiques, nous allons créer la base de notre blog, à savoir les pages de listing d’articles, ainsi que les pages permettant de lire l’article au complet.</p>
+
+</p>
+
+        <p class="post-readmore">
+            <a href="/blog/jekyll-site-part3" class="btn btn-primary">
+                Lire l'article <i class="fa fa-chevron-circle-right"></i>
+            </a>
+        </p>
+    </div>
+</div>
+                
+                <div class="post">
+    <div class="post-heading">
+        <h3 class="post-title">Créer un site avec Jekyll. Partie 2 - Création des pages</h3>
+
+        <p class="post-subtitle">
+            <i class="fa fa-clock-o"></i> 13/10/2013 |
+            <i class="fa fa-user"></i>
+                Pierre Baron
+            
+        </p>
+    </div>
+    <div class="post-body">
+        <p><p>Nous allons voir dans ce deuxième chapitre le fonctionnement de Jekyll et nous allons commencer à développer en créant nos premières pages statiques.</p>
+
+</p>
+
+        <p class="post-readmore">
+            <a href="/blog/jekyll-site-part2" class="btn btn-primary">
+                Lire l'article <i class="fa fa-chevron-circle-right"></i>
+            </a>
+        </p>
+    </div>
+</div>
+                
 
                 <ul class="pagination">
                     <li
-                    {% if paginator.page == 1 %}class="active" {% endif %}>
+                    class="active" >
                     <a href="/blog/">1</a>
                     </li>
 
-                    {% for count in (2..paginator.total_pages) %}
+                    
                     <li
-                    {% if count == paginator.page %}class="active"{% endif %}>
-                    <a href="/blog/page{{ count }}">{{ count }}</a>
+                    >
+                    <a href="/blog/page2">2</a>
                     </li>
-                    {% endfor %}
+                    
+                    <li
+                    >
+                    <a href="/blog/page3">3</a>
+                    </li>
+                    
                 </ul>
             </div>
             <!-- .col -->
             <div class="col-md-4">
-                {% include categories.html %}
+                <div class="widget-categories">
+    <h4 class="title-underline title-inverse">Categories</h4>
+
+    
+    
+    <p>
+        <span class="badge pull-right">7</span>
+
+        <a href="/categories/article.html">
+            <i class="fa fa-angle-right"></i> article
+        </a>
+    </p>
+    
+    <p>
+        <span class="badge pull-right">4</span>
+
+        <a href="/categories/blog.html">
+            <i class="fa fa-angle-right"></i> blog
+        </a>
+    </p>
+    
+    <p>
+        <span class="badge pull-right">6</span>
+
+        <a href="/categories/plugin.html">
+            <i class="fa fa-angle-right"></i> plugin
+        </a>
+    </p>
+    
+    <p>
+        <span class="badge pull-right">8</span>
+
+        <a href="/categories/tutoriel.html">
+            <i class="fa fa-angle-right"></i> tutoriel
+        </a>
+    </p>
+    
+    </ul>
+</div>
             </div>
             <!-- .col -->
         </div>
@@ -37,3 +262,75 @@ keywords : Pierre Baron, Web developer, Mobile Developer, Java, PHP, jQuery, Cak
     </div>
     <!-- .container -->
 </section>
+
+
+<footer class="footer footer-inverse">
+    <section class="footer-information">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="title-underline title-default">A propos</h4>
+
+                    <p>Pierre Baron est ingénieur informaticien spécialisé en domotique et services à l'habitat.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="title-underline title-default">Socialisons nous</h4>
+
+                    <p>
+                        <a href="mailto:prbaron22@gmail.com"><i class="fa fa-envelope-o"></i></a>
+                        <a href="skype:prbaron"><i class="fa fa-skype"></i></a>
+                        <a href="https://twitter.com/prbaron"><i class="fa fa-twitter"></i></a>
+                        <a href="https://github.com/prbaron"><i class="fa fa-github-alt"></i></a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="title-underline title-default">Menu</h4>
+
+                    <p>
+                        
+                            <a href="/">HOME</a>
+                        
+                            <a href="/blog/">BLOG</a>
+                        
+                            <a href="/contact/">CONTACT</a>
+                        
+                    </p>
+                </div>
+            </div>
+            <!--.row -->
+        </div>
+        <!--.container -->
+    </section>
+    <section class="footer-copyright">
+        <div class="container ">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <p>2012 - 2014 &copy; Pierre Baron</p>
+                </div>
+            </div>
+            <!--.row -->
+        </div>
+        <!--.container -->
+    </section>
+</footer>
+<!-- .footer -->
+
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21369110-4']);
+        _gaq.push(['_setDomainName', '']); // Multiple sub-domains
+        _gaq.push(['_setAllowLinker', true]); // Multiple TLDs
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+
+<script src="/js/vendor.all.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
