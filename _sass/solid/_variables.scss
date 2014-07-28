@@ -1,9 +1,9 @@
 //
 // Variables
 // --------------------------------------------------
-//@include font-face("Mir-Medium", font-files("/fonts/mir-medium/mir-medium_regular.eot", "/fonts/mir-medium/mir-medium_regular.ttf", "/fonts/mir-medium/mir-medium_regular.woff"));
+@include font-face("Mir-Medium", font-files("/fonts/mir-medium/mir-medium_regular.eot", "/fonts/mir-medium/mir-medium_regular.ttf", "/fonts/mir-medium/mir-medium_regular.woff"));
 //
-//@import url(http://fonts.googleapis.com/css?family=Kreon:700|Droid+Serif:700italic|Open+Sans:100);
+@import url(http://fonts.googleapis.com/css?family=Kreon:700|Droid+Serif:700italic|Open+Sans:100);
 
 $fa-font-path:        "/fonts/font-awesome-4.1.0";
 
@@ -69,7 +69,7 @@ $line-height-base:        1.428571429; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:    Lato, $font-family-sans-serif;
+$headings-font-family:    Kreon, Lato, $font-family-sans-serif;
 $headings-font-weight:    700;
 $headings-line-height:    1.1;
 $headings-color:          $gray-dark;
