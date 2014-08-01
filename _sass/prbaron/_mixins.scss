@@ -16,7 +16,7 @@
 // the implementations are identical except for the property
 // prefix.
 @mixin transform($value) {
-  -webkit-transform : $value
+  -webkit-transform : $value;
    -khtml-transform : $value;
      -moz-transform : $value;
       -ms-transform : $value;
