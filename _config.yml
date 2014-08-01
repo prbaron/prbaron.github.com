@@ -1,8 +1,6 @@
 google_analytics_id: UA-21369110-4
 name: Pierre Baron
 encoding : UTF-8
-gems:
-- jekyll-compass
 
 navigation:
 - text: HOME
@@ -17,6 +15,7 @@ collections :
 paginate: 5
 paginate_path: /blog/page:num
 permalink: /blog/:title
+
 sass:
     sass_dir: _sass
     style: :compressed

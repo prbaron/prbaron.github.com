@@ -1,7 +1,7 @@
 //
 // Variables
 // --------------------------------------------------
-@include font-face("Mir-Medium", font-files("/fonts/mir-medium/mir-medium_regular.eot", "/fonts/mir-medium/mir-medium_regular.ttf", "/fonts/mir-medium/mir-medium_regular.woff"));
+@include font-face("Mir-Medium", "/fonts/mir-medium/mir-medium_regular");
 //
 @import url(http://fonts.googleapis.com/css?family=Kreon:700|Droid+Serif:700italic|Open+Sans:100);
 

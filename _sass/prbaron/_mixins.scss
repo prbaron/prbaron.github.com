@@ -11,6 +11,20 @@
     }
 }
 
+// This mixin provides basic support for CSS3 properties and
+// their corresponding experimental CSS2 properties when
+// the implementations are identical except for the property
+// prefix.
+@mixin transform($value) {
+  -webkit-transform : $value
+   -khtml-transform : $value;
+     -moz-transform : $value;
+      -ms-transform : $value;
+       -o-transform : $value;
+          transform : $value;
+}
+
+
 // Button variants
 //
 // Easily pump out default styles, as well as :hover, :focus, :active,
