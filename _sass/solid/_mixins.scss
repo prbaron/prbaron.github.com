@@ -1,0 +1,56 @@
+@mixin font-face($family, $src, $weight : normal, $style : normal) {
+    @font-face {
+        font-family : $family;
+        src         : url('#{$src}.eot'); // IE9 compat
+        src         : url('#{$src}.eot?#iefix') format('embedded-opentype'),
+        url('#{$src}.woff') format('woff'),
+        url('#{$src}.ttf') format('truetype'),
+        url('#{$src}.svg##{$family}') format('svg');
+        font-style  : $style;
+        font-weight : $weight;
+    }
+}
+
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-variant-ghost($color, $background, $border) {
+    color            : $border;
+    background-color : transparent;
+    border           : 2px solid $border;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        color            : $color;
+        background-color : $border;
+        border-color     : $border;
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        background-color : darken($border, 12%);
+        border-color     : darken($border, 12%);
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            background-color : $background;
+            border-color     : $border;
+        }
+    }
+
+    .badge {
+        color            : $background;
+        background-color : $color;
+    }
+}

@@ -1,0 +1,121 @@
+.navbar {
+    border : none;
+}
+
+.navbar-brand {
+    padding            : 8.5px $grid-gutter-width / 2;
+
+    img {
+        background         : rgba(0, 0, 0, .1);
+        border-radius      : 25em;
+        vertical-align     : middle;
+        height             : 48px;
+        margin-right       : 4px;
+        -webkit-transition : background 0.3s ease-in-out;
+        -moz-transition    : background 0.3s ease-in-out;
+        transition         : background 0.3s ease-in-out;
+    }
+    -webkit-transition : color 0.3s ease-in-out;
+    -moz-transition    : color 0.3s ease-in-out;
+    transition         : color 0.3s ease-in-out;
+
+    &:hover {
+        color              : rgba(0, 0, 0, .5);
+        img {
+            background         : rgba(0, 0, 0, .5);
+            -webkit-transition : background 0.3s ease-in-out;
+            -moz-transition    : background 0.3s ease-in-out;
+            transition         : background 0.3s ease-in-out;
+        }
+        -webkit-transition : color 0.3s ease-in-out;
+        -moz-transition    : color 0.3s ease-in-out;
+        transition         : color 0.3s ease-in-out;
+    }
+}
+
+.navbar-nav {
+    li > a {
+        border-bottom      : 5px solid transparent;
+        border-top         : none;
+        -webkit-transition : color 0.3s ease-in-out;
+        -moz-transition    : color 0.3s ease-in-out;
+        transition         : color 0.3s ease-in-out;
+
+        &:hover {
+            -webkit-transition : color 0.3s ease-in-out;
+            -moz-transition    : color 0.3s ease-in-out;
+            transition         : color 0.3s ease-in-out;
+        }
+
+        @media (min-width : $grid-float-breakpoint) {
+            border-top    : 5px solid transparent;
+            border-bottom : none;
+        }
+    }
+    .active > a {
+        border-bottom-color : $navbar-default-link-hover-color;
+        font-weight         : bold;
+
+        @media (min-width    : $grid-float-breakpoint) {
+            border-top-color : $navbar-default-link-hover-color;
+        }
+    }
+}
+
+.navbar-toggle {
+    position : relative;
+    height   : 34px;
+    width    : 44px;
+
+    .icon-bar {
+        position     : absolute;
+        top          : 50%;
+        left         : 0;
+        right        : 0;
+        bottom       : 0;
+        width        : 22px;
+        margin-top   : -1px;
+        text-align   : center;
+        margin-left  : auto;
+        margin-right : auto;
+    }
+    .icon-bar {
+        @include transition(all 0.3s linear);
+    }
+    .icon-bar:first-child {
+        @include transform(rotate(45deg));
+    }
+    .icon-bar:nth-child(2) {
+        -webkit-transition : -webkit-transform 0.15s, opacity 0.15s;
+        -moz-transition    : -moz-transform 0.15s, opacity 0.15s;
+        transition         : transform 0.15s, opacity 0.15s;
+        opacity            : 0;
+        @include transform(translateX(10px));
+    }
+    .icon-bar:last-child {
+        @include transform(rotate(-45deg));
+    }
+
+    &.collapsed {
+        .icon-bar {
+            @include transition(all 0.3s linear);
+        }
+        .icon-bar:first-child {
+            @include transform(translateY(-6px) rotate(0deg));
+        }
+        .icon-bar:nth-child(2) {
+            -webkit-transition : -webkit-transform 0.15s, opacity 0.15s;
+            -moz-transition    : -moz-transform 0.15s, opacity 0.15s;
+            transition         : transform 0.15s, opacity 0.15s;
+            opacity            : 1;
+            @include transform(translateX(0px));
+        }
+        .icon-bar:last-child {
+            @include transform(translateY(6px) rotate(0deg));
+        }
+    }
+}
+
+.navbar-toggle .icon-bar + .icon-bar {
+    margin-top : -1px;
+}

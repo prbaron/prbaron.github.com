@@ -1,0 +1,18 @@
+body {
+    font-weight : 300;
+}
+
+.title-underline {
+    border-bottom  : 2px solid transparent;
+    padding-bottom : 10px;
+}
+
+.title-default {
+    color               : $gray-lighter;
+    border-bottom-color : $gray-lighter;
+}
+
+.title-inverse {
+    color               : $gray-dark;
+    border-bottom-color : $gray-dark;
+}

@@ -1,0 +1,20 @@
+.tagline {
+    padding-top    : $grid-gutter-width * 2;
+    padding-bottom : $grid-gutter-width * 2;
+
+    .tagline-title {
+        font-family : "Mir-Medium", Kreon, sans-serif;
+        font-weight : 500;
+        font-size   : 3em;
+        text-align  : center;
+        text-shadow : 0 1px 0 rgba(0, 0, 0, .3), 0 2px 0 rgba(0, 0, 0, .1);
+    }
+
+    &.tagline-primary {
+        background : transparentize($brand-primary, 0.5);
+
+        .tagline-title {
+            color : white;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.work {
+    margin-bottom : $grid-gutter-width * 2;
+
+    &:last-child {
+        margint-bottom : 0;
+    }
+}
+
+.work-body {
+    h1, h2, h3, h4, h5, h6 {
+        font-size : $font-size-base;
+    }
+}
+
+.work-detail {
+    margin-top : $grid-gutter-width;
+
+    @media (min-width : $screen-sm-min) {
+        margin-top    : 0px;
+    }
+}

@@ -1,73 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>PB | Ingénieur web & mobile</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Pierre Baron">
-    <meta name="keyword" content="Pierre Baron, prbaron, prbaron22, Web developer, Mobile Developer, Java, PHP, jQuery, CakePHP, jQuery">
-
-    <link rel="shortcut icon" href="/img/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="/img/favicon.png">
-
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-
-<header>
-    <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">
-                    <img src="/img/logo.png" alt="logo"/> pierrebaron
-                </a>
-            </div>
-            <div class="navbar-collapse collapse navbar-right">
-                <ul class="nav navbar-nav">
-    
-    
-    
-    
-    
-    <li class="active"><a href="/">HOME</a></li>
-    
-    
-    
-    <li class=""><a href="/blog/">BLOG</a></li>
-    
-    
-    
-    <li class=""><a href="/contact/">CONTACT</a></li>
-    
-</ul>
-            </div>
-            <!--/.nav-collapse -->
-        </div>
-        <!-- .container -->
-    </div>
-    <!-- .navbar -->
-
-    <div class="tagline tagline-primary">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="tagline-title">Pierre Baron, Ingénieur web & mobile.</div>
-            </div>
-        </div>
-        <!-- .row -->
-    </div>
-    <!-- .container -->
-</div>
-<!-- .tagline -->
-</header>
-
+---
+layout   : default
+title    : Ingénieur web & mobile
+tagline  : Pierre Baron, Ingénieur web & mobile.
+menu     : HOME
+keywords : Pierre Baron, prbaron, prbaron22, Web developer, Mobile Developer, Java, PHP, jQuery, CakePHP, jQuery
+---
 
 <section class="section">
     <div class="container">
@@ -145,25 +82,15 @@
 <section class="section">
     <div class="container">
         <h2 class="section-title">Projets</h2>
-        
-        
+        {% assign w = site.works | sort:'order' %}
+        {% for work in w reversed %}
         <div class="row work">
             <div class="col-sm-8">
                 <div class="work-heading">
-                    <h4 class="work-title title-underline title-inverse">pbckcode.js</h4>
+                    <h4 class="work-title title-underline title-inverse">{{work.tagline}}</h4>
                 </div>
                 <div class="work-body">
-                    <p>PBCKCode est un plugin pour CKEditor permettant d’ajouter du code dans votre contenu. Il va automatiquement créer les balises code/pre et instancier les classes par rapport aux syntax highlighter que vous lui avez défini.</p>
-
-<p>PBCKCode est compatible avec les syntax highlighters suivants :</p>
-
-<ul>
-  <li><a href="https://code.google.com/p/google-code-prettify/">Google Code Prettify</a></li>
-  <li><a href="http://prismjs.com/">Prism.js</a></li>
-  <li><a href="http://softwaremaniacs.org/soft/highlight/en/">Highlight.js</a></li>
-  <li><a href="http://alexgorbatchev.com/SyntaxHighlighter/">Syntaxhighlighter</a></li>
-</ul>
-
+                    {{ work.output }}
                 </div>
             </div>
             <div class="col-sm-4 work-detail">
@@ -171,221 +98,37 @@
 
                 <p>
                     <strong>Clients : </strong>
-                     Pierre Baron 
+                    {% if work.client%}{{ work.client}} {% else %} Pierre Baron {% endif %}
                 </p>
 
-                
-
-                
-
-                <p>
-                    <strong>Compétences : </strong>
-                    JavaScript
-                </p>
-
-                
-                <p><a href="http://prbaron.github.io/pbckcode/" class="btn btn-primary">Voir les exemples</a></p>
-                
-                
-                <p><a href="https://github.com/prbaron/pbckcode/" class="btn btn-ghost btn-default">Forker le projet</a></p>
-                
-            </div>
-        </div>
-
-        
-        <div class="row work">
-            <div class="col-sm-8">
-                <div class="work-heading">
-                    <h4 class="work-title title-underline title-inverse">Application web contrôlant un automate SAIA</h4>
-                </div>
-                <div class="work-body">
-                    <p>Le but de ce projet est d’automatiser un bâtiment utilisant la technologie KNX et pilotée par un automate SAIA. Nous voulons un accès à distance et envoyer les commandes peut importe où nous nous trouvons. C’est la raison pour laquelle nous avons créé une application web utilisant PHP et jQuery.</p>
-
-<p>ISEA Ingénierie possédait déjà une application web adaptée pour l’iPhone et l’iPad, seulement les technologies utilisées ne nous permettaient pas d’ajouter de nouveaux composants. Mon rôle était d’améliorer cette application pour la rendre plus robuste, plus modulable, plus rapide et plus facile à configurer.</p>
-
-<h2 id="analyse-des-besoins">Analyse des besoins</h2>
-
-<p>J’ai analysé l’application précédente pour lister les points appréciés des clients et ceux à améliorer. Nous avons ainsi décidé d’ajouter des modules non présents dans la version précédente.</p>
-
-<h2 id="dveloppement-de-lapplication">Développement de l’application</h2>
-
-<p>J’ai décidé d’utiliser le framework <a href="http://cakephp.org/">CakePHP</a> car c’est un framework robuste et la communauté y est active. J’ai utilisé  <a href="http://twitter.github.io/bootstrap/">Twitter Bootstrap</a> pour le design front-end.</p>
-
-<h2 id="documentation-et-formation">Documentation et formation</h2>
-
-<p>Afin de permettre à ISEA de déployer facilement et rapidement cette nouvelle application, j’y ai intégré une documentation. Cela permet aux employés d’ISEA d’avoir accès à la document, même chez le client.</p>
-
-<p>Une documentation développeur a aussi été écrite permettant à ISEA de créer de nouveaux modules.</p>
-
-<p>Enfin, une formation complète a été effectuée avec toute l’équipe d’ISEA afin de leur apprendre à maîtriser cette application.</p>
-
-                </div>
-            </div>
-            <div class="col-sm-4 work-detail">
-                <h4 class="title-underline title-inverse">Détails du projet</h4>
-
-                <p>
-                    <strong>Clients : </strong>
-                    ISEA 
-                </p>
-
-                
+                {% if work.date %}
                 <p>
                     <strong>Date : </strong>
-                    avril 2012 – septembre 2012
+                    {{ work.date }}
                 </p>
-                
+                {% endif %}
 
-                
+                {% if work.duration %}
                 <p>
                     <strong>Durée : </strong>
-                    6 mois
+                    {{ work.duration }}
                 </p>
-                
+                {% endif %}
 
                 <p>
                     <strong>Compétences : </strong>
-                    PHP, jQuery, HTML5/ CSS3, Saia
+                    {{ work.skills }}
                 </p>
 
-                
-                
+                {% if work.demo %}
+                <p><a href="{{work.demo}}" class="btn btn-primary">Voir les exemples</a></p>
+                {% endif %}
+                {% if work.github %}
+                <p><a href="{{work.github}}" class="btn btn-ghost btn-default">Forker le projet</a></p>
+                {% endif %}
             </div>
         </div>
 
-        
-        <div class="row work">
-            <div class="col-sm-8">
-                <div class="work-heading">
-                    <h4 class="work-title title-underline title-inverse">Serveur Java et client iPhone pour domotiser un bâtiment</h4>
-                </div>
-                <div class="work-body">
-                    <p>Le but de ce projet est de domotiser le laboratoire domotique de notre école. Nous avons coupé le projet en trois parties :</p>
-
-<ol>
-  <li>Produits : les étudiants devaient créer les trames permettant aux divers produits domestiques de communiquer entre eux.</li>
-  <li>Algorithme : l’algorithme doit pouvoir choisir les meilleurs commandes à effectuer par rapport aux données reçues des clients mobiles et des produits physiques</li>
-  <li>Clients mobiles : les clients mobiles doivent pouvoir récupérer les états des produits physiques et envoyer les commandes à ces derniers.</li>
-</ol>
-
-<p>Mon rôle était de créer le serveur Java se connectant à l’algorithme et permettant de recevoir des informations depuis le client iPhone et Android, ainsi que l’application iPhone contrôlant le laboratoire.</p>
-
-<p>Nous avons décidé d’utiliser REST pour la communication client/serveur. J’ai choisis d’utiliser <a href="http://restlet.org/">Restlet</a> par rapport à sa communauté. The serveur peut envoyer des informations et recevoir des commandes depuis les appareils iPhone/Android.</p>
-
-<p>L’application iPhone possède 4 vues :</p>
-
-<ol>
-  <li>Informations générales (température intérieure/extérieure, présence dans le laboratoire, consommation électrique, …)</li>
-  <li>Informations détaillées (courbe de température par jour pour plusieurs mois, …)</li>
-  <li>Commandes</li>
-  <li>Réglages</li>
-</ol>
-
-                </div>
-            </div>
-            <div class="col-sm-4 work-detail">
-                <h4 class="title-underline title-inverse">Détails du projet</h4>
-
-                <p>
-                    <strong>Clients : </strong>
-                    ESIR 
-                </p>
-
-                
-                <p>
-                    <strong>Date : </strong>
-                    octobre 2011 – février 2012
-                </p>
-                
-
-                
-                <p>
-                    <strong>Durée : </strong>
-                    5 mois
-                </p>
-                
-
-                <p>
-                    <strong>Compétences : </strong>
-                    Objective-C, Java
-                </p>
-
-                
-                
-            </div>
-        </div>
-
-        
+        {% endfor %}
     </div>
 </section>
-
-<footer class="footer footer-inverse">
-    <section class="footer-information">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h4 class="title-underline title-default">A propos</h4>
-
-                    <p>Pierre Baron est ingénieur informaticien spécialisé en domotique et services à l'habitat.</p>
-                </div>
-                <div class="col-md-4">
-                    <h4 class="title-underline title-default">Socialisons nous</h4>
-
-                    <p>
-                        <a href="mailto:prbaron22@gmail.com"><i class="fa fa-envelope-o"></i></a>
-                        <a href="skype:prbaron"><i class="fa fa-skype"></i></a>
-                        <a href="https://twitter.com/prbaron"><i class="fa fa-twitter"></i></a>
-                        <a href="https://github.com/prbaron"><i class="fa fa-github-alt"></i></a>
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h4 class="title-underline title-default">Menu</h4>
-
-                    <p>
-                        
-                            <a href="/">HOME</a>
-                        
-                            <a href="/blog/">BLOG</a>
-                        
-                            <a href="/contact/">CONTACT</a>
-                        
-                    </p>
-                </div>
-            </div>
-            <!--.row -->
-        </div>
-        <!--.container -->
-    </section>
-    <section class="footer-copyright">
-        <div class="container ">
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <p>2012 - 2014 &copy; Pierre Baron</p>
-                </div>
-            </div>
-            <!--.row -->
-        </div>
-        <!--.container -->
-    </section>
-</footer>
-<!-- .footer -->
-
-
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-21369110-4']);
-        _gaq.push(['_setDomainName', '']); // Multiple sub-domains
-        _gaq.push(['_setAllowLinker', true]); // Multiple TLDs
-        _gaq.push(['_trackPageview']);
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-
-
-<script src="/js/vendor.all.js"></script>
-<script src="/js/app.js"></script>
-</body>
-</html>

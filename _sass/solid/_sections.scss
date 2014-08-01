@@ -1,0 +1,14 @@
+.section {
+    padding-bottom : $grid-gutter-width * 4;
+    padding-top    : $grid-gutter-width * 4;
+
+    .section-title {
+        margin-bottom : $grid-gutter-width;
+        text-align    : center;
+
+    }
+}
+
+.section-skills {
+    background : $gray-lighter;
+}

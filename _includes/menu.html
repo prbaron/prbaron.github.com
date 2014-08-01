@@ -1,0 +1,9 @@
+<ul class="nav navbar-nav">
+    {% for link in site.navigation %}
+    {% assign current = nil %}
+    {% if link.text == page.menu %}
+    {% assign current = 'active' %}
+    {% endif %}
+    <li class="{{current}}"><a href="{{ link.url }}">{{ link.text }}</a></li>
+    {% endfor %}
+</ul>

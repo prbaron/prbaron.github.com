@@ -1,0 +1,22 @@
+google_analytics_id: UA-21369110-4
+name: Pierre Baron
+encoding : UTF-8
+gems:
+- jekyll-compass
+
+navigation:
+- text: HOME
+  url: /
+- text: BLOG
+  url: /blog/
+  layout: post
+- text: CONTACT
+  url: /contact/
+collections :
+- works
+paginate: 5
+paginate_path: /blog/page:num
+permalink: /blog/:title
+sass:
+    sass_dir: _sass
+    style: :compressed
