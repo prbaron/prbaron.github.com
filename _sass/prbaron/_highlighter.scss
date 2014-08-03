@@ -15,11 +15,19 @@ pre {
     overflow         : auto;
     margin           : 0 0 ($line-height-computed / 2);
 
-    .linenos pre {
-        -webkit-box-shadow : inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-        -moz-box-shadow    : inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-        box-shadow         : inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-        width              : 41px;
+    .linenos {
+        pre {
+
+            -webkit-box-shadow : inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+            -moz-box-shadow    : inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+            box-shadow         : inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+            width              : 41px;
+        }
+        code[class*="language-"],
+        pre[class*="language-"] {
+            text-shadow : none;
+            color       : inherit;
+        }
     }
 }
 

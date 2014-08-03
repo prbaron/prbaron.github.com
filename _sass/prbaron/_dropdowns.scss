@@ -1,0 +1,10 @@
+.dropdown-menu {
+    min-width : 300px;
+
+    .label {
+        font-weight : normal;
+        line-height : $line-height-base;
+        font-size   : 50%;
+        margin-top  : 4px;
+    }
+}
