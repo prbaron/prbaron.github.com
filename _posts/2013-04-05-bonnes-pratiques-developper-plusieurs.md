@@ -20,7 +20,7 @@ Résoudre chacune de ces questions le plus finement possible vous permettra d'é
 
 ## Définissez des standards
 > "Your code has to look like only one person wrote it"
-> <em>Mark Otto (Fondateur de Twitter Bootstrap)</em>
+> <small>Mark Otto (Fondateur de Twitter Bootstrap)</small>
 
 Avant de développer, il vous faut définir des standards de codage. Ceci vous permettra d'avoir un code unifié entre les différents développeurs. Les anciens développeurs pourront ainsi reprendre du code réalisé par d'autres plus facilement et les nouveaux développeurs pourront rentrer dans un projet déjà entamé en douceur.
 Il vous faut définir des standards pour chaque langage utilisé dans votre projet. Il doit être le plus complet possible.
@@ -39,7 +39,7 @@ Voici quelques exemples de guidelines venants de gros projets ou de librairies d
 
 ### Commentez
 > "Code Tells You How, Comments Tell You Why"
-> <em>Jeff Atwood</em>
+> <small>Jeff Atwood</small>
 
 Derrière cette maxime vous devez comprendre que votre code ne suffit pas pour comprendre le projet dans sa totalité. Les commentaires vous permettent d'assimiler du code écrit plusieurs mois avant ou bien écrit par un autre développeur.
 Vous avez deux types de commentaires :
@@ -101,7 +101,7 @@ Kanban est une méthodologie de développement basée sur les tableaux blancs et
 
 ### Tests
 > "Les tests, c'est pour ceux qui ne savent pas coder"
-> <em>[Les joies du code](http://lesjoiesducode.tumblr.com/post/31452862688/quand-le-stagiaire-me-dit-que-les-tests-cest-pour)</em>
+> <small>[Les joies du code](http://lesjoiesducode.tumblr.com/post/31452862688/quand-le-stagiaire-me-dit-que-les-tests-cest-pour)</small>
 
 Faux, faux et re faux ! Les tests sont très importants afin d'être sûr de ne rien casser quand vous faites des modifications. Vous pouvez être sûr à 100% de votre code, mais quid de celui de vos collègues ? Les tests unitaires vont assurer que la méthode réagit toujours comme vous le souhaitez même après une modification de celle ci.
 
