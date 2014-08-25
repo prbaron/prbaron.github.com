@@ -3,8 +3,8 @@ layout   : post
 category : tutoriel
 tagline  : La programmation fonctionnelle
 keywords : functional programming, programmation fonctionnelle
+note     : "Je tiens à remercier M. Alexandre Delattre pour m'avoir formé à la programmation fonctionnelle, ainsi que pour la relecture et l'amélioration de cet article."
 comments : true
-note     : "Je tiens à remercier M.Alexandre Delattre pour m'avoir formé à la programmation fonctionnelle, ainsi que pour la relecture et l'amélioration de cet article."
 
 ---
 
