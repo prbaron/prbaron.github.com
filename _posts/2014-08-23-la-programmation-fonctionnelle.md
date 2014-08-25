@@ -7,7 +7,7 @@ comments : true
 
 ---
 
-La programmation fonctionnelle est un paradigme de programmation (au même titre que la programmation procédurale ou objet). Alors que la programmation objet est incompatible avec la programmation procédurale, la programmation fonctionnelle peut être utilisée en complément de ces deux paradigmes.
+La programmation fonctionnelle est un paradigme de programmation (au même titre que la programmation procédurale ou objet). De la même manière que la programmation fonctionnelle est une évolution de la programmation procédurale, la programmation fonctionnelle est une évolution de la programmation objet. Celle ci peut être utilisée en complément de ces deux paradigmes.
 
 # Les concepts et avantages
 La programmation fonctionnelle repose sur plusieurs principes :
@@ -61,13 +61,14 @@ Cette propriété permet de renvoyer une function au lieu d'une valeur. Voici un
 {% highlight javascript linenos=table %}
 {% raw %}
 
-function add(value, inc) {
-    return value + inc;
+function adder(value) {
+    return function(inc) {
+         return value + inc
+  }
+    
 }
-
-function increment(value) {
-    return add(value, 1);
-}
+var add10 = adder(10)
+add10(5) // returns 15
 
 {% endraw %}
 {% endhighlight %}
@@ -122,6 +123,8 @@ array.map(addOne);
 
 # Les inconvénients ?
 L'inconvénient majeur est la performance, comme vous pourrez le voir dans les exemples, nous allons créer plusieurs boucles, là où nous n'en utiliserions qu'une avec un autre paradigme. Après avoir utilisé la programmation fonctionnelle pendant plusieurs mois, je n'ai pas remarqué de lenteurs dans le traitement. Cela va se ressentir dans des cas extrêmes (quantité de données monstrueuse, faible puissance de calcul), dans ces cas là, il vaut mieux éviter la programmation fonctionnelle.
+
+Il est à noter que certains compilateurs sont capables de transformer des appels récursifs en boucles (notion de recusive terminale, tail recursion en anglais)
 
 # Quelques méthodes et exemples
 Voici la description des méthodes les plus utilisées. Cette liste n'est pas exhaustive, je vous invite à voir le site de Mozilla sur les [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) pour voir la liste complète.
@@ -193,7 +196,7 @@ var users = users.forEach(function(u) {
 {% endhighlight %}
 
 ## fold
-Cette méthode possède plusieurs noms suivant le langage de programmation. Cela peut être `reduce()`, `fold()`ou `foldLeft()`. Son rôle est d'incrémenter une variable par rapport à des valeurs dans un tableau.
+Cette méthode possède plusieurs noms suivant le langage de programmation. Cela peut être `reduce()`, `fold()`ou `foldLeft()`. Son rôle est de calculer une valeur finale en partant d'une valeur initiale et en traversant une collection (de gauche à droite).
 
 {% highlight javascript linenos=table %}
 {% raw %}
@@ -225,7 +228,7 @@ var hitPoints = players.reduce(addHitPoints, teamPoints);
 {% endraw %}
 {% endhighlight %}
 
-Il existe la méthode complémentaire,`reduceRight()` ou `foldRight()`, qui va décrémenter une valeur.
+Il existe la méthode complémentaire,`reduceRight()` ou `foldRight()`, qui traverser la collection de droite à gauche. Cela n'a aucune importante sur une opération associative (+ ou *) mais peut en avoir une sur une opération non associative (-, /).
 
 {% highlight javascript linenos=table %}
 {% raw %}
