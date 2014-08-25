@@ -307,7 +307,7 @@ Java est un langage avec une orientation objet très forte. A ce titre, beaucoup
 Android n'intégrant pas encore la version 8 de Java, la programmation fonctionnelle n'est pas encore pris en charge de manière officielle.
 
 ## Scala
-Scala répond au besoin des développeurs Java souhaitant avoir un langage fonctionnel.
+Scala répond au besoin des développeurs Java souhaitant avoir un langage fonctionnel. En ce sens, l'intégration de la programmation fonctionnelle est très poussée.
 
 ## Swift
 Swift est le nouveau langage de programmation d'Apple. Sa syntaxe étant pus légère qu'Objective-C, il intègre les composantes de programmation fonctionnelle contrairement à son ainé.
