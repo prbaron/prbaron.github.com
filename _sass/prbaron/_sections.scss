@@ -1,7 +1,7 @@
 .section {
     padding-bottom : $grid-gutter-width * 4;
     padding-top    : $grid-gutter-width * 4;
-
+    overflow-x     : hidden;
     .section-title {
         margin-bottom : $grid-gutter-width;
         text-align    : center;

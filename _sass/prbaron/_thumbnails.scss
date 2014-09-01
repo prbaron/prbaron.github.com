@@ -1,0 +1,10 @@
+$img-avatar-height : 130px;
+
+.img-avatar {
+    left        : 50%;
+    height      : $img-avatar-height;
+    position    : absolute;
+    margin-left : - ($img-avatar-height / 2);
+    margin-top  : - ($img-avatar-height / 3);
+    border      : none;
+}
