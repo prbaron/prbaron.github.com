@@ -226,7 +226,7 @@ grunt.registerTask('heroku:production', [
 
 Par défaut, Heroku ne va installer que les dépendances comprises dans 'dev' et non pas dans 'devDependencies'. Vous avez donc deux choix : 
 
-  1. Dupliquer les dépendences
+  1. Dupliquer les dépendances
   2. Autoriser l'installation des dépendances 'devDependencies'.
  
 Si vous choisissez la seconde solution, il vous faudra écrire ceci dans la console : 
