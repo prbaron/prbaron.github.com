@@ -3,12 +3,12 @@ name: Pierre Baron
 encoding : UTF-8
 
 navigation:
-- text: HOME
+- text: Home
   url: /
-- text: BLOG
+- text: Blog
   url: /blog/
   layout: post
-- text: CONTACT
+- text: Contact
   url: /contact/
 collections :
 - works

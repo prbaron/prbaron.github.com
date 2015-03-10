@@ -12,3 +12,12 @@
 .section-skills {
     background : $gray-lighter;
 }
+
+.resume {
+	margin-top : $grid-gutter-width * 2;
+	margin-bottom: 0;
+
+	a:first-child {
+		margin-right: $grid-gutter-width / 2;
+	}
+}
