@@ -1,11 +1,16 @@
 .section {
-    padding-bottom : $grid-gutter-width * 4;
-    padding-top    : $grid-gutter-width * 4;
+    padding-bottom : $grid-gutter-width * 2;
+    padding-top    : $grid-gutter-width * 2;
     overflow-x     : hidden;
+
+    @media (min-height : 700px) {
+        padding-bottom : $grid-gutter-width * 4;
+        padding-top    : $grid-gutter-width * 4;
+    }
+
     .section-title {
         margin-bottom : $grid-gutter-width;
         text-align    : center;
-
     }
 }
 
@@ -14,10 +19,10 @@
 }
 
 .resume {
-	margin-top : $grid-gutter-width * 2;
-	margin-bottom: 0;
+    margin-top    : $grid-gutter-width * 2;
+    margin-bottom : 0;
 
-	a:first-child {
-		margin-right: $grid-gutter-width / 2;
-	}
+    a:first-child {
+        margin-right : $grid-gutter-width / 2;
+    }
 }

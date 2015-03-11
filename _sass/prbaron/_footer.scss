@@ -31,12 +31,8 @@
 }
 
 .footer-inverse {
-    background : $gray-darker;
-    color      : $footer-color;
-
-    .footer-information {
-        background : $gray-dark;
-    }
+    color : $footer-color;
+    @include stripedBackground('/img/footer.svg', $gray-darker, $gray-dark);
 
     a {
         color : $footer-color;
