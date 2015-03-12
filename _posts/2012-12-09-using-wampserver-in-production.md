@@ -73,9 +73,9 @@ Well, this step is not to secure your PhpMyAdmin panel but to help you to connec
 
 {% highlight php linenos=table %}
 {% raw %}
-
-$cfg['Servers'][$i]['user']		        = 'root';
-$cfg['Servers'][$i]['password']		    = '';
+<?php
+$cfg['Servers'][$i]['user']             = 'root';
+$cfg['Servers'][$i]['password']         = '';
 $cfg['Servers'][$i]['allowNoPassword']	= true;
 
 {% endraw %}
