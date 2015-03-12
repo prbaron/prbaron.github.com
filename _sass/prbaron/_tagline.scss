@@ -28,11 +28,3 @@
         }
     }
 }
-
-.homepage .tagline {
-    padding-bottom : $grid-gutter-width * 2;
-
-    @media (min-height : 700px) {
-        padding-bottom : $grid-gutter-width * 4;
-    }
-}
