@@ -1,3 +1,11 @@
 header {
-    @include stripedBackground('/img/header.svg', #1790bb, $brand-primary)
+    @include stripedBackground('/img/header.svg', #1790bb, $brand-primary);
+
+    svg {
+        display : block;
+
+        path {
+            fill : $body-bg;
+        }
+    }
 }

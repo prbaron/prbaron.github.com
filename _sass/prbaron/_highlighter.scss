@@ -6,36 +6,19 @@ pre {
     margin        : 0;
     //padding       : ($line-height-computed - 1) (($line-height-computed - 1) / 2);
     word-break    : normal;
-
 }
 
 .highlighttable {
     background-color : $gray-lighter;
-    //border           : 1px solid $gray-light;
+    border           : 1px solid $gray-light;
     border-radius    : $border-radius-small;
     display          : block;
-    overflow         : auto;
-    max-width        : 780px;
     margin           : $line-height-computed (-$grid-gutter-width / 2) $line-height-computed;
-    padding-left     : ($grid-gutter-width / 2);
-    padding-right    : ($grid-gutter-width / 2);
-
-    @media (min-width : $screen-sm-min) {
-        margin-left   : -10000px;
-        margin-right  : -10000px;
-        padding-left  : 10000px;
-        padding-right : 10000px;
-        position      : relative;
-    }
 
     .linenos {
         pre {
             opacity : 0.35;
-            //
-            //            -webkit-box-shadow : inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-            //            -moz-box-shadow    : inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-            //            box-shadow         : inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-            //            width              : 41px;
+            padding : 21px 10.5px;
         }
         code[class*="language-"],
         pre[class*="language-"] {

@@ -1,4 +1,12 @@
 .footer {
+
+    svg {
+        display : block;
+        path {
+            fill : $body-bg;
+        }
+    }
+
     a {
         padding-right : 25px;
     }
@@ -36,6 +44,7 @@
 
     a {
         color : $footer-color;
+        @include transition(color .3s ease-in-out);
 
         &:hover {
             color           : $link-hover-color;
