@@ -8,5 +8,5 @@
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3, PHP, CakePHP
+    HTML5, CSS3, PHP, CakePHP, AngularJS, Laravel
     jQuery, Google Code Prettify
