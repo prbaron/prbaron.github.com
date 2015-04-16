@@ -15,12 +15,20 @@ menu : Blog
             <div class="col-sm-12">
                 <div class="post">
                     <p class="post-subtitle">
-                        <i class="fa fa-clock-o"></i> {{ page.date | date: '%d/%m/%Y' }} |
-                        <i class="fa fa-user"></i>{% if page.author%}
-                        {{ page.author}}
-                        {% else %}
-                        Pierre Baron
-                        {% endif %}
+                        <i class="fa fa-clock-o"></i>
+                        <span itemprop="datePublished" content="{{ page.date | date: '%d/%m/%Y' }}">
+                            {{ page.date | date: '%d/%m/%Y' }}
+                        </span> |
+                        <i class="fa fa-user"></i>
+                        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                            <span itemprop="name">
+                                {% if page.author%}
+                                    {{ page.author}}
+                                {% else %}
+                                    Pierre Baron
+                                {% endif %}
+                            </span>
+                        </span>
                     </p>
                     {% if page.demo || page.download %}
                     <div class="post-actions">
@@ -42,7 +50,9 @@ menu : Blog
                     </div>
                     {% endif %}
 
-                    {{ content }}
+                    <div itemprop="articleBody">
+                        {{ content }}
+                    </div>
 
                     {% if page.comments %}
                     <div class="disqus">
