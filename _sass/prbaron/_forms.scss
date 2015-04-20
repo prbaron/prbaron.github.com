@@ -1,0 +1,8 @@
+.form-control {
+	border-width: 2px;
+  @include transition(border-color ease-in-out .3s);
+
+	&:focus {
+		@include box-shadow(none);
+	}
+}
