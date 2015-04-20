@@ -464,7 +464,7 @@ Nous allons utiliser la librairie [https://github.com/Wisembly/elephant.io](http
 
 Ensuite, pour pouvoir téléchargez la libraire, il vous faut entrer :
 
-{% highlight json linenos=table %}
+{% highlight bash linenos=table %}
 {% raw %}
 
 composer install
