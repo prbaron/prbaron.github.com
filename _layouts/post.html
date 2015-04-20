@@ -37,7 +37,7 @@ menu : Blog
                             <li><a href="{{page.demo}}" class="btn btn-primary">Démonstration</a></li>
                             {% endif %}
                             {% if page.download %}
-                            <li><a href="{{page.download}}" class="btn btn-ghost btn-default">Sources</a></li>
+                            <li><a href="{{page.download}}" class="btn btn-default">Sources</a></li>
                             {% endif %}
                         </ul>
                     </div>
@@ -46,7 +46,9 @@ menu : Blog
 
                     {% if page.note %}
                     <div class="alert alert-warning">
-                        {{page.note}}
+                        <div class="container">
+                            {{page.note}}
+                        </div>
                     </div>
                     {% endif %}
 
