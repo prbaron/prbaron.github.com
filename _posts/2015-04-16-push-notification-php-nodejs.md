@@ -9,7 +9,7 @@ download : https://github.com/prbaron/tuto_push_notifications
 description : Apprenons à ajouter un système de notifications instantanées dans une application PHP existante avec socket.io
 ---
 
-Dans ce tutoriel, nous allons voir comment ajouter un système de notifications instantanées dans une application PHP avec socket.io. Notre application existante est consitutée d'un backend PHP (ici Lumen) et d'une application frontend (AngularJS).
+Dans ce tutoriel, nous allons voir comment ajouter un système de notifications instantanées dans une application PHP avec socket.io. Notre application existante est constituée d'un backend PHP (ici Lumen) et d'une application frontend (AngularJS).
 
 # Description de l'application
 
