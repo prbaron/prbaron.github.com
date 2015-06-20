@@ -9,7 +9,7 @@ download : https://github.com/prbaron/tuto_push_notifications
 description : Apprenons à ajouter un système de notifications instantanées dans une application PHP existante avec socket.io
 ---
 
-Dans ce tutoriel, nous allons voir comment ajouter un système de notifications instantanées dans une application PHP avec socket.io. Notre application existante est consitutée d'un backend PHP (ici Lumen) et d'une application frontend (AngularJS).
+Dans ce tutoriel, nous allons voir comment ajouter un système de notifications instantanées dans une application PHP avec socket.io. Notre application existante est constituée d'un backend PHP (ici Lumen) et d'une application frontend (AngularJS).
 
 # Description de l'application
 
@@ -462,9 +462,9 @@ Nous allons utiliser la librairie [https://github.com/Wisembly/elephant.io](http
 {% endraw %}
 {% endhighlight %}
 
-Ensuite, pour pouvoir téléchargez la libraire, il vous faut entrer :
+Ensuite, pour pouvoir télécharger la libraire, il vous faut entrer :
 
-{% highlight json linenos=table %}
+{% highlight bash linenos=table %}
 {% raw %}
 
 composer install
@@ -555,7 +555,9 @@ Nous allons dans un premier temps nous connecter au serveur push. Ensuite, nous 
 
 
 <div class="alert alert-info">
-    <p>La fonction lancée lors de la réception d'une notification instantanée n'étant pas liée à AngularJS, il nous est nécessaire d'utiliser le scope pour forcer la mise à jour du ViewModel. N'oubliez pas d'ajouter $scope à vos dépendances.</p>
+    <div class="container">
+        La fonction lancée lors de la réception d'une notification instantanée n'étant pas liée à AngularJS, il nous est nécessaire d'utiliser le scope pour forcer la mise à jour du ViewModel. N'oubliez pas d'ajouter $scope à vos dépendances.
+    </div>
 </div>
 
 {% highlight javascript linenos=table %}
