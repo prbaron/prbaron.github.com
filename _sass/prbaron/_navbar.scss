@@ -152,3 +152,10 @@
 .navbar-toggle .icon-bar + .icon-bar {
     margin-top : -1px;
 }
+
+
+.navbar-collapse {
+    -webkit-transition : height 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    -moz-transition    : height 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    transition         : height 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
