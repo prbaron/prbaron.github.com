@@ -31,16 +31,14 @@ menu : Blog
                         </span>
                     </p>
                     {% if page.demo || page.download %}
-                    <div class="post-actions">
-                        <ul>
-                            {% if page.demo %}
-                            <li><a href="{{page.demo}}" class="btn btn-primary">Démonstration</a></li>
-                            {% endif %}
-                            {% if page.download %}
-                            <li><a href="{{page.download}}" class="btn btn-default">Sources</a></li>
-                            {% endif %}
-                        </ul>
-                    </div>
+                    <p class="post-actions text-center">
+                        {% if page.demo %}
+                        <a href="{{page.demo}}" class="btn btn-primary btn-block-xs">Démonstration</a>
+                        {% endif %}
+                        {% if page.download %}
+                        <a href="{{page.download}}" class="btn btn-default btn-block-xs">Sources</a>
+                        {% endif %}
+                    </p>
 
                     {% endif %}
 
