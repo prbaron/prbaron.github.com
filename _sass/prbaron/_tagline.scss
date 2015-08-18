@@ -8,7 +8,7 @@
     }
 
     .tagline-title {
-        font-family : "Mir-Medium", Kreon, sans-serif;
+        font-family : Kreon, sans-serif;
         font-weight : 500;
         font-size   : 2em;
         text-align  : center;
@@ -25,6 +25,14 @@
     &.tagline-primary {
         .tagline-title {
             color : white;
+        }
+    }
+}
+
+.font-mir-medium-loaded {
+    .tagline {
+        .tagline-title {
+            font-family : "Mir-Medium", Kreon, sans-serif;
         }
     }
 }
