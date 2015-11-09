@@ -16,7 +16,4 @@ paginate: 5
 paginate_path: /blog/page:num
 permalink: /blog/:title
 url: http://www.pierrebaron.fr
-sass:
-    sass_dir: _sass
-    style: :compressed
 exclude: ['node_modules', 'gulpfile.js', 'package.json']
