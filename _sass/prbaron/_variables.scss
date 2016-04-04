@@ -6,27 +6,20 @@ $fa-font-path : "/fonts/font-awesome-4.1.0";
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
-/*
-$gray-darker:            #363b41;
-$gray-dark:              #464b53;
-$gray:                   #ccd1d9;
-$gray-light:             #e6e9ed;
-$gray-lighter:           #f5f6f7;
-*/
 
-$gray-darker : #2b3941;
-$gray-dark : #3a4954;
-$gray : #637680;
-$gray-light : #dde6ec;
-$gray-lighter : #f1f5f8;
+$gray-darker : #263238;
+$gray-dark : #37474F;
+$gray : #607D8B;
+$gray-light : #CFD8DC;
+$gray-lighter : #ECEFF1;
 
-$brand-primary : #009BF8;
+$brand-primary : #009bf8;
 $brand-success : #51c693;
-$brand-warning : #f7d574;
-$brand-danger : #ed595b;
-$brand-info : #20b5cb;
+$brand-warning : #FFEB3B;
+$brand-danger : #EF5350;
+$brand-info : #64B5F6;
 
-$footer-color : #9aa8b0;
+$footer-color : #90A4AE;
 
 //== Scaffolding
 //
@@ -430,11 +423,11 @@ $nav-pills-active-link-hover-color : $navbar-default-link-active-color;
 //
 //##
 
-$pagination-color : $link-color;
+$pagination-color : lighten($text-color, 15%);
 $pagination-bg : #fff;
 $pagination-border : #ddd;
 
-$pagination-hover-color : $link-hover-color;
+$pagination-hover-color : #fff;
 $pagination-hover-bg : $gray-lighter;
 $pagination-hover-border : #ddd;
 
