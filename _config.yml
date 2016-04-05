@@ -10,16 +10,19 @@ navigation:
   layout: post
 - text: Contact
   url: /contact/
+
 collections :
 - works
+
 paginate: 5
 paginate_path: /blog/page:num
 permalink: /blog/:title
 url: http://www.pierrebaron.fr
+
 sass:
     sass_dir: _sass
     style: :compressed
 
 gems:
-  - jekyll-paginate
-  - jekyll-sitemap
+- jekyll-paginate
+- jekyll-sitemap
