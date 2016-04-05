@@ -19,6 +19,8 @@ paginate_path: /blog/page:num
 permalink: /blog/:title
 url: http://www.pierrebaron.fr
 
+highlighter: rouge
+
 sass:
     sass_dir: _sass
     style: :compressed

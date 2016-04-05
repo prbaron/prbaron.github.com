@@ -17,7 +17,7 @@ Ok, you want your website to be online so the first important thing to do is to 
 
 Look at these lines :
 
-{% highlight apache linenos=table %}
+{% highlight bash linenos=table %}
 <Directory "c:/wamp/apps/phpmyadmin3.4.10.1/">
     Options Indexes FollowSymLinks MultiViews
     AllowOverride all
@@ -29,7 +29,7 @@ Look at these lines :
 
 and replace it by these :
 
-{% highlight apache linenos=table %}
+{% highlight bash linenos=table %}
 <Directory "c:/wamp/apps/phpmyadmin3.4.10.1/">
     Options Indexes FollowSymLinks MultiViews
     AllowOverride all
