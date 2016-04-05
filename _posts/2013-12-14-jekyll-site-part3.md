@@ -71,9 +71,7 @@ Nous allons utiliser le deuxième moyen, qui sera plus pérenne sur le long term
 La ligne 9 représente une boucle foreach() dans les langages Objet, elle est ici au format Liquid. Elle signifie en français "prends tous les articles (paginator.posts), et pour chacun, affiche le code suivant : (code contenu entre le tag for et endfor)". Chaque nouvel article sera placé dans la variable post et cela nous permettra de récupérer les informations contenu dans son front matter.
 
 <div class="alert alert-info">
-    <div class="container">
-        Certaines propriétés, comme date ou url, sont directement récupérées par Jekyll depuis le nom ou le chemin du fichier, il n'est donc pas nécessaire de les ajouter dans le front matter.
-    </div>
+    Certaines propriétés, comme date ou url, sont directement récupérées par Jekyll depuis le nom ou le chemin du fichier, il n'est donc pas nécessaire de les ajouter dans le front matter.
 </div>
 
 ## La pagination

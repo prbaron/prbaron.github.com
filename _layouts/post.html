@@ -6,7 +6,7 @@
 {% include header.html %}
 
 <section class="section">
-    <div class="container container-full">
+    <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <div class="post">
@@ -40,9 +40,7 @@
 
                     {% if page.note %}
                     <div class="alert alert-warning">
-                        <div class="container">
-                            {{page.note}}
-                        </div>
+                        {{page.note}}
                     </div>
                     {% endif %}
 

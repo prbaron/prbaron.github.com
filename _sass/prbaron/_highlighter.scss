@@ -1,7 +1,6 @@
 pre {
     background    : none;
-    border        : none;
-    border-radius : 0;
+    border        : 0;
     color         : $gray-lighter;
     font-size     : 14px;
     margin        : 0;
@@ -11,9 +10,9 @@ pre {
 
 .highlight {
     background-color : $gray-dark;
-    border-radius    : $border-radius-small;
+    border-radius    : $border-radius-large;
     display          : block;
-    margin           : $line-height-computed (-$grid-gutter-width / 2) $line-height-computed;
+    margin           : $line-height-computed 0;
 
     .lineno {
       opacity : 0.35;

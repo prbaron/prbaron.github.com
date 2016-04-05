@@ -17,10 +17,8 @@ Dans ce tutoriel, nous allons voir comment ajouter un système de notifications 
 Nous allons ici réaliser un système de chat avec plusieurs intervenants. Lorsque l'un des utilisateurs écrit un message, tous les autres utilisateurs présents doivent voir le nouveau message de manière instantanée. De plus, les messages seront enregistrés en base afin de permettre d'obtenir un historique.
 
 <div class="alert alert-danger">
-	<div class="container">
-	    <strong class="alert-title">Ne pas utiliser le serveur tel quel en production !</strong>
-	    Ce tutoriel a pour but d'expliquer le fonctionnement du push. En aucun cas le code fourni peut être utilisé en production. Pour des raisons de simplification, j'ai volontairement omis la partie sécurisation et validation des données. Il sera de votre responsabilité de l'implémenter.
-    </div>
+  <strong class="alert-title">Ne pas utiliser le serveur tel quel en production !</strong>
+	Ce tutoriel a pour but d'expliquer le fonctionnement du push. En aucun cas le code fourni peut être utilisé en production. Pour des raisons de simplification, j'ai volontairement omis la partie sécurisation et validation des données. Il sera de votre responsabilité de l'implémenter.
 </div>
 
 # Fonctionnement
@@ -379,9 +377,7 @@ La partie importante ici est celle contenue dans `io.on('connection')`. Lorsque 
 socket.on() est une méthode dite listener, elle va écouter un channel (exemple : 'php.message.created') et va éxécuter une fonction avec, en paramètre, les données passées par ce channel.
 
 <div class="alert alert-info">
-    <div class="container">
-        Afin de bien vous faire comprendre le fonctionnement, j'ai nommé différement les événements. Le serveur push attend un message de la part du serveur PHP sous la forme de channel avec le préfixe 'php.x.x', et il envoie le message aux client js sous la forme de channel sans préfixe.
-    </div>
+    Afin de bien vous faire comprendre le fonctionnement, j'ai nommé différement les événements. Le serveur push attend un message de la part du serveur PHP sous la forme de channel avec le préfixe 'php.x.x', et il envoie le message aux client js sous la forme de channel sans préfixe.
 </div>
 Pour lancer le serveur, il vous faut entrer les commandes suivantes :
 
@@ -408,9 +404,7 @@ composer install
 Nous allons maintenant modifier le code de **app/Http/Controllers/MessagesController.php** afin d'ajouter la prise en charge du push. La première chose à faire est d'ajouter un constructeur qui va se charger d'initialiser la connexion au serveur push. Nous allons ensuite définir une méthode `emit()` qui va nous permettre d'envoyer le message au serveur push très simplement.
 
 <div class="alert alert-info">
-    <div class="container">
-    	J'utilise Homestead comme box Vagrant afin d'obtenir une machine virtuelle simple. Hors l'ip de la machine virtuelle permettant de dialoguer avec 127.0.0.1 est 10.10.2.2. Voici la raison de cette ip. Si vous utilisez PhpMyAdmin ou votre propre serveur, il vous faudra remplacer par votre ip.
-    </div>
+    J'utilise Homestead comme box Vagrant afin d'obtenir une machine virtuelle simple. Hors l'ip de la machine virtuelle permettant de dialoguer avec 127.0.0.1 est 10.10.2.2. Voici la raison de cette ip. Si vous utilisez PhpMyAdmin ou votre propre serveur, il vous faudra remplacer par votre ip.
 </div>
 
 {% highlight php linenos=table %}
@@ -476,9 +470,7 @@ Nous allons dans un premier temps nous connecter au serveur push. Ensuite, nous 
 
 
 <div class="alert alert-info">
-    <div class="container">
-        La fonction lancée lors de la réception d'une notification instantanée n'étant pas liée à AngularJS, il nous est nécessaire d'utiliser le scope pour forcer la mise à jour du ViewModel. N'oubliez pas d'ajouter $scope à vos dépendances.
-    </div>
+    La fonction lancée lors de la réception d'une notification instantanée n'étant pas liée à AngularJS, il nous est nécessaire d'utiliser le scope pour forcer la mise à jour du ViewModel. N'oubliez pas d'ajouter $scope à vos dépendances.
 </div>
 
 {% highlight javascript linenos=table %}
