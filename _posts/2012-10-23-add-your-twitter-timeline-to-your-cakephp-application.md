@@ -14,7 +14,6 @@ Today, I will share it to you and I will teach you how to use it in your CakePHP
 Below is the single public method to find your tweets with all the default options.
 
 {% highlight php linenos=table %}
-{% raw %}
 
 <?php
 $this->find(
@@ -35,14 +34,12 @@ $this->find(
 );
 ?>
 
-{% endraw %}
 {% endhighlight %}
 
 
 Now we can create our Twitter MVC, so go ahead and create your Twitter model (app/Model/Twitter.php) :
 
 {% highlight php linenos=table %}
-{% raw %}
 
 <?php
 
@@ -50,13 +47,11 @@ Now we can create our Twitter MVC, so go ahead and create your Twitter model (ap
     public $useTable = false; // we do not need a table in our Database
 }
 
-{% endraw %}
 {% endhighlight %}
 
 Twitter controller (app/Controller/TwitterController.php) :
 
 {% highlight php linenos=table %}
-{% raw %}
 
 <?php
 class TwitterController extends AppController{
@@ -76,23 +71,19 @@ class TwitterController extends AppController{
     }
 }
 
-{% endraw %}
 {% endhighlight %}
 
 Twitter view (app/Views/Twitter/index.ctp) :
 
-{% highlight php linenos=table %}
-{% raw %}
 
+```php
 <ul>
     <?php foreach($tweets as $k => $v): ?>
         <?php debug($v); // show the array of the tweet ?>
         <li><?php echo $v['text']; ?></li>
     <?php endforeach; ?>
 </ul>
-
-{% endraw %}
-{% endhighlight %}
+```
 
 And that's all, now you can display your timeline to all your visitors.
 
