@@ -1,5 +1,6 @@
 ---
 layout   : post
+menu     : Blog
 category : tutoriel
 tagline  : Déployer une application Yeoman/AngularJS sur Heroku
 keywords : heroku, yeoman, angular, angularjs, deploy, déploiement

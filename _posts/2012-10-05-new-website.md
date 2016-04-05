@@ -1,5 +1,6 @@
 ---
 layout   : post
+menu     : Blog
 category : blog
 tagline  : new life, new website
 keywords : new blog

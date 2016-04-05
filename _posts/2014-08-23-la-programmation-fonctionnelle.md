@@ -1,5 +1,6 @@
 ---
 layout   : post
+menu     : Blog
 category : tutoriel
 tagline  : La programmation fonctionnelle
 keywords : functional programming, programmation fonctionnelle

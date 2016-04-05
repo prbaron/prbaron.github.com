@@ -1,5 +1,6 @@
 ---
 layout   : post
+menu     : Blog
 category : tutoriel
 tagline  : Créer un site avec Jekyll. Partie 5 - Finitions
 keywords : jekyll, tutoriel, jekyll french, tuto jekyll fr
