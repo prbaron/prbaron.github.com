@@ -17,7 +17,26 @@ Ok, you want your website to be online so the first important thing to do is to 
 
 Look at these lines :
 
+{% highlight apache linenos=table %}
+<Directory "c:/wamp/apps/phpmyadmin3.4.10.1/">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride all
+    Order Deny,Allow
+    Deny from all
+    Allow from 127.0.0.1
+</Directory>
+{% endhighlight %}
 
+and replace it by these :
+
+{% highlight apache linenos=table %}
+<Directory "c:/wamp/apps/phpmyadmin3.4.10.1/">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride all
+    Order Allow,Deny
+    Allow from 192
+</Directory>
+{% endhighlight %}
 
 Ok, now your computer can be accessed to every other on your local network. The problem is that your server can still just be call by local computers. We will open it to the world at the end of the tutorial.
 
