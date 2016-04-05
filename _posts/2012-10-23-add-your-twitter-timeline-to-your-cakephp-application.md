@@ -75,15 +75,16 @@ class TwitterController extends AppController{
 
 Twitter view (app/Views/Twitter/index.ctp) :
 
+{% highlight php linenos=table %}
 
-```php
 <ul>
     <?php foreach($tweets as $k => $v): ?>
         <?php debug($v); // show the array of the tweet ?>
         <li><?php echo $v['text']; ?></li>
     <?php endforeach; ?>
 </ul>
-```
+
+{% endhighlight %}
 
 And that's all, now you can display your timeline to all your visitors.
 
