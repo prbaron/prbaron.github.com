@@ -1,11 +1,34 @@
-header {
-    @include stripedBackground('/img/header.svg', darken($brand-primary, 10%), $brand-primary);
+.header {
+  background: $brand-primary;
+  position: relative;
 
-    svg {
-        display : block;
+  canvas {
+    display: block;
+    width: 100%;
+  }
 
-        path {
-            fill : $body-bg;
-        }
-    }
+  .hero {
+    color: $gray-dark;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: auto;
+    @include flexbox();
+    @include align-items(center);
+  }
+
+  .hero h1 {
+    color: white;
+    font-family: "Mir-Medium", Kreon, sans-serif;;
+    font-weight: 400;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 2px 0 rgba(0, 0, 0, 0.1);
+
+    font-size: 4em;
+  }
+  .hero h2 {
+    font-family: 'Tauri', sans-serif;
+  }
 }
