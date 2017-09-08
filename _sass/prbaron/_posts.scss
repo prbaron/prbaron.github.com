@@ -1,46 +1,46 @@
 .post {
-    padding-top    : $grid-gutter-width;
-    padding-bottom : $grid-gutter-width;
-    word-warp      : break-all;
+  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width;
+  word-warp: break-all;
 
-    &:first-of-type {
-        padding-top : 0;
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  &:last-of-type {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .post-title a {
+    color: inherit;
+    @include transition(color .3s ease-in-out);
+
+    &:hover {
+      color: $link-color;
+      text-decoration: none;
     }
+  }
 
-    &:last-of-type {
-        padding-bottom : 0;
-        border-bottom  : none;
+  .post-subtitle {
+    color: transparentize($gray-dark, 0.5);
+    font-size: 0.85em;
+  }
+
+  .post-actions {
+    margin: $grid-gutter-width 0;
+
+    a:first-child {
+      margin-right: $grid-gutter-width / 2;
     }
+  }
 
-    .post-title a {
-        color : inherit;
-        @include transition(color .3s ease-in-out);
-
-        &:hover {
-            color           : $link-color;
-            text-decoration : none;
-        }
-    }
-
-    .post-subtitle {
-        color     : transparentize($gray-dark, 0.5);
-        font-size : 0.85em;
-    }
-
-    .post-actions {
-         margin     : $grid-gutter-width 0;
-
-        a:first-child {
-            margin-right : $grid-gutter-width / 2;
-        }
-    }
-
-    .post-readmore {
-        margin-top : $grid-gutter-width;
-        text-align : center;
-    }
+  .post-readmore {
+    margin-top: $grid-gutter-width;
+    text-align: center;
+  }
 }
 
 .disqus {
-    margin-top : $grid-gutter-width * 2;
+  margin-top: $grid-gutter-width * 2;
 }

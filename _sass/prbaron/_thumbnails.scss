@@ -1,17 +1,17 @@
-$img-avatar-height : 134px;
+$img-avatar-height: 134px;
 
 .img-avatar {
-    border      : none;
-    height      : $img-avatar-height;
-    left        : 50%;
-    margin-left : - ($img-avatar-height / 2);
-    margin-top  : - ($img-avatar-height / 2);
-    padding     : 6px;
-    position    : absolute;
+  border: none;
+  height: $img-avatar-height;
+  left: 50%;
+  margin-left: - ($img-avatar-height / 2);
+  margin-top: - ($img-avatar-height / 2);
+  padding: 6px;
+  position: absolute;
 
-    @media (min-height : 700px) {
-        height      : $img-avatar-height * 1.5;
-        margin-left : - (($img-avatar-height / 2) * 1.5);
-        margin-top  : - (($img-avatar-height / 2) * 1.5);
-    }
+  @media (min-height: 700px) {
+    height: $img-avatar-height * 1.5;
+    margin-left: - (($img-avatar-height / 2) * 1.5);
+    margin-top: - (($img-avatar-height / 2) * 1.5);
+  }
 }

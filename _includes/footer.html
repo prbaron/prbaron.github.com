@@ -1,50 +1,47 @@
 <footer class="footer footer-inverse">
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="60"
-         viewBox="0 0 100 102" preserveAspectRatio="none">
-        <path d="M0 0 L50 100 L100 0 Z"></path>
-    </svg>
-    <section class="footer-information">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h4 class="title-underline title-default">A propos</h4>
-
-                    <p>Pierre Baron est ingénieur informaticien spécialisé en domotique et services à l'habitat.</p>
-                </div>
-                <div class="col-md-4">
-                    <h4 class="title-underline title-default">Socialisons nous</h4>
-
-                    <p>
-                        <a href="mailto:pierre.r.baron22@gmail.com"><i class="fa fa-envelope-o"></i></a>
-                        <a href="skype:prbaron22"><i class="fa fa-skype"></i></a>
-                        <a href="https://twitter.com/prbaron"><i class="fa fa-twitter"></i></a>
-                        <a href="https://github.com/prbaron"><i class="fa fa-github-alt"></i></a>
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h4 class="title-underline title-default">Menu</h4>
-
-                    <p>
-                        {% for link in site.navigation %}
-                        <a href="{{ link.url }}">{{ link.text }}</a>
-                        {% endfor %}
-                    </p>
-                </div>
-            </div>
-            <!--.row -->
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="60"
+      viewBox="0 0 100 102" preserveAspectRatio="none">
+    <path d="M0 0 L50 100 L100 0 Z"></path>
+  </svg>
+  <section class="footer-information">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4 class="title-underline title-default">A propos</h4>
+          <p>Pierre Baron est ingénieur informaticien spécialisé en domotique et services à l'habitat.</p>
         </div>
-        <!--.container -->
-    </section>
-    <section class="footer-copyright">
-        <div class="container ">
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <p>2012 - {{ site.time | date: '%Y' }} &copy; Pierre Baron</p>
-                </div>
-            </div>
-            <!--.row -->
+        <div class="col-md-4">
+          <h4 class="title-underline title-default">Socialisons nous</h4>
+          <p>
+            <a href="mailto:pierre.r.baron22@gmail.com"><i class="fa fa-envelope-o"></i></a>
+            <a href="skype:prbaron22"><i class="fa fa-skype"></i></a>
+            <a href="https://twitter.com/prbaron"><i class="fa fa-twitter"></i></a>
+            <a href="https://github.com/prbaron"><i class="fa fa-github-alt"></i></a>
+          </p>
         </div>
-        <!--.container -->
-    </section>
+        <div class="col-md-4">
+          <h4 class="title-underline title-default">Menu</h4>
+          <p>
+            {% for link in site.navigation %}
+            <a href="{{ link.url }}">{{ link.text }}</a>
+            {% endfor %}
+          </p>
+        </div>
+      </div>
+      <!--.row -->
+    </div>
+    <!--.container -->
+  </section>
+  <section class="footer-copyright">
+    <div class="container ">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <p>2012 - {{ site.time | date: '%Y' }} &copy; Pierre Baron</p>
+        </div>
+      </div>
+      <!--.row -->
+    </div>
+    <!--.container -->
+  </section>
 </footer>
 <!-- .footer -->

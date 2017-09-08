@@ -6,20 +6,20 @@ title   : article
 ---
 
 <section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                {% for post in site.categories[page.title] %}
-                    {% include post.html %}
-                {% endfor %}
-            </div>
-            <!-- .col -->
-            <div class="col-md-4">
-                {% include categories.html %}
-            </div>
-            <!-- .col -->
-        </div>
-        <!-- .row -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        {% for post in site.categories[page.title] %}
+        {% include post.html %}
+        {% endfor %}
+      </div>
+      <!-- .col -->
+      <div class="col-md-4">
+        {% include categories.html %}
+      </div>
+      <!-- .col -->
     </div>
-    <!-- .container -->
+    <!-- .row -->
+  </div>
+  <!-- .container -->
 </section>

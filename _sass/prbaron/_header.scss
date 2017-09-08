@@ -1,11 +1,11 @@
 header {
-    @include stripedBackground('/img/header.svg', darken($brand-primary, 10%), $brand-primary);
+  @include stripedBackground('/img/header.svg', darken($brand-primary, 10%), $brand-primary);
 
-    svg {
-        display : block;
+  svg {
+    display: block;
 
-        path {
-            fill : $body-bg;
-        }
+    path {
+      fill: $body-bg;
     }
+  }
 }

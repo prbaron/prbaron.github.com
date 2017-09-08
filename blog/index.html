@@ -6,34 +6,34 @@ menu     : Blog
 keywords : Pierre Baron, Web developer, Mobile Developer, Java, PHP, jQuery, CakePHP, jQuery
 ---
 <section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                {% for post in paginator.posts %}
-                {% include post.html %}
-                {% endfor %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        {% for post in paginator.posts %}
+        {% include post.html %}
+        {% endfor %}
 
-                <ul class="pagination">
-                    <li
-                    {% if paginator.page == 1 %}class="active" {% endif %}>
-                    <a href="/blog/">1</a>
-                    </li>
+        <ul class="pagination">
+          <li
+              {% if paginator.page== 1 %}class="active" {% endif %}>
+            <a href="/blog/">1</a>
+          </li>
 
-                    {% for count in (2..paginator.total_pages) %}
-                    <li
-                    {% if count == paginator.page %}class="active"{% endif %}>
-                    <a href="/blog/page{{ count }}">{{ count }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <!-- .col -->
-            <div class="col-md-4">
-                {% include categories.html %}
-            </div>
-            <!-- .col -->
-        </div>
-        <!-- .row -->
+          {% for count in (2..paginator.total_pages) %}
+          <li
+              {% if count== paginator.page %}class="active" {% endif %}>
+            <a href="/blog/page{{ count }}">{{ count }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <!-- .col -->
+      <div class="col-md-4">
+        {% include categories.html %}
+      </div>
+      <!-- .col -->
     </div>
-    <!-- .container -->
+    <!-- .row -->
+  </div>
+  <!-- .container -->
 </section>

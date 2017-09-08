@@ -6,61 +6,59 @@
 {% include header.html %}
 
 <section class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="post">
-                    <p class="post-subtitle">
-                        <i class="fa fa-clock-o"></i>
-                        <span itemprop="datePublished" content="{{ page.date | date: '%d/%m/%Y' }}">
-                            {{ page.date | date: '%d/%m/%Y' }}
-                        </span> |
-                        <i class="fa fa-user"></i>
-                        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                            <span itemprop="name">
-                                {% if page.author%}
-                                    {{ page.author}}
-                                {% else %}
-                                    Pierre Baron
-                                {% endif %}
-                            </span>
-                        </span>
-                    </p>
-                    {% if page.demo || page.download %}
-                    <p class="post-actions text-center">
-                        {% if page.demo %}
-                        <a href="{{page.demo}}" class="btn btn-primary btn-block-xs">Démonstration</a>
-                        {% endif %}
-                        {% if page.download %}
-                        <a href="{{page.download}}" class="btn btn-default btn-block-xs">Sources</a>
-                        {% endif %}
-                    </p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="post">
+          <p class="post-subtitle">
+            <i class="fa fa-clock-o"></i>
+            <span itemprop="datePublished" content="{{ page.date | date: '%d/%m/%Y' }}">{{ page.date | date: '%d/%m/%Y' }}</span> |
+            <i class="fa fa-user"></i>
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name">
+                {% if page.author %}
+                  {{ page.author}}
+                {% else %}
+                  Pierre Baron
+                {% endif %}
+              </span>
+            </span>
+          </p>
+          {% if page.demo or page.download %}
+          <p class="post-actions text-center">
+            {% if page.demo %}
+            <a href="{{page.demo}}" class="btn btn-primary btn-block-xs">Démonstration</a>
+            {% endif %}
+            {% if page.download %}
+            <a href="{{page.download}}" class="btn btn-default btn-block-xs">Sources</a>
+            {% endif %}
+          </p>
 
-                    {% endif %}
+          {% endif %}
 
-                    {% if page.note %}
-                    <div class="alert alert-warning">
-                        {{page.note}}
-                    </div>
-                    {% endif %}
+          {% if page.note %}
+          <div class="alert alert-warning">
+            {{page.note}}
+          </div>
+          {% endif %}
 
-                    <div itemprop="articleBody">
-                        {{ content }}
-                    </div>
+          <div itemprop="articleBody">
+            {{ content }}
+          </div>
 
-                    {% if page.comments %}
-                    <div class="disqus">
-                        {% include disqus.html %}
-                    </div>
-                    {% endif %}
-                </div>
-                <!-- .post -->
-            </div>
-            <!-- .col -->
+          {% if page.comments %}
+          <div class="disqus">
+            {% include disqus.html %}
+          </div>
+          {% endif %}
         </div>
-        <!-- .row -->
+        <!-- .post -->
+      </div>
+      <!-- .col -->
     </div>
-    <!-- .container -->
+    <!-- .row -->
+  </div>
+  <!-- .container -->
 </section>
 
 {% include footer.html %}

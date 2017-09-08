@@ -1,6 +1,14 @@
+title: Pierre Baron, web development engineer
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: prbaron
+github_username:  prbaron
+
 google_analytics_id: UA-21369110-4
-name: Pierre Baron
-encoding : UTF-8
 
 navigation:
 - text: Home
@@ -17,14 +25,25 @@ collections :
 paginate: 5
 paginate_path: /blog/page:num
 permalink: /blog/:title
-url: http://www.pierrebaron.fr
 
-highlighter: rouge
+author: Pierre Baron
+twitter:
+  username: prbaron
+
+logo: /img/logo.png
+
+social:
+  name: Pierre Barom
+  links:
+    - https://twitter.com/prbaron
+    - https://www.linkedin.com/in/pierre-baron-a154ba2a/
+    - https://github.com/prbaron
 
 sass:
     sass_dir: _sass
     style: :compressed
 
-gems:
+plugins:
     - jekyll-paginate
     - jekyll-sitemap
+    - jekyll-seo-tag
