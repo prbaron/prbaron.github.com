@@ -17,7 +17,6 @@
 // prefix.
 @mixin transform($value) {
   -webkit-transform: $value;
-  -khtml-transform: $value;
   -moz-transform: $value;
   -ms-transform: $value;
   -o-transform: $value;
@@ -78,29 +77,4 @@
   background-image: url('/img/overlay.png'), url($image), linear-gradient(120deg, $darkColor 15%, $lightColor 55%);
   background-size: 128px 128px, 100% 100%, auto;
   background-repeat: repeat, no-repeat, no-repeat;
-}
-
-// Button variants
-//
-// Easily pump out default styles, as well as :hover, :focus, :active,
-// and disabled options for all buttons
-
-@mixin button-variant-pbaron($background, $border) {
-  background-color: $background;
-  border-color: $border;
-
-  &:hover,
-  &:focus,
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-    background-color: lighten($background, 10%);
-    border-color: lighten($border, 8%);
-  }
-
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-    background-color: darken($background, 10%);
-    border-color: darken($border, 12%); }
 }

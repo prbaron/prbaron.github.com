@@ -1,20 +1,3 @@
-.navbar {
-  background: none;
-  border: none;
-}
-
-.navbar-brand {
-  padding: 8.5px $grid-gutter-width / 2;
-
-  img {
-    height: 48px;
-  }
-
-  &:hover {
-    border-bottom: none;
-  }
-}
-
 .navbar-nav {
   display: flex;
 

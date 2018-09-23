@@ -2,7 +2,6 @@
 // Dropdown menus
 // --------------------------------------------------
 
-
 // Dropdown arrow/caret
 .caret {
   display: inline-block;
@@ -10,10 +9,11 @@
   height: 0;
   margin-left: 2px;
   vertical-align: middle;
-  border-top:   $caret-width-base dashed;
-  border-top:   $caret-width-base solid \9; // IE8
+  border-top: $caret-width-base dashed;
+  border-top: $caret-width-base solid \9
+; // IE8
   border-right: $caret-width-base solid transparent;
-  border-left:  $caret-width-base solid transparent;
+  border-left: $caret-width-base solid transparent;
 }
 
 // The dropdown wrapper (div)
@@ -35,7 +35,7 @@
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   float: left;
-  min-width: 160px;
+  min-width: 300px;
   padding: 5px 0;
   margin: 2px 0 0; // override default ul
   list-style: none;
@@ -45,7 +45,7 @@
   border: 1px solid $dropdown-fallback-border; // IE8 fallback
   border: 1px solid $dropdown-border;
   border-radius: $border-radius-base;
-  @include box-shadow(0 6px 12px rgba(0,0,0,.175));
+  @include box-shadow(0 6px 12px rgba(0, 0, 0, .175));
   background-clip: padding-box;
 
   // Aligns the dropdown menu to right
@@ -70,6 +70,13 @@
     line-height: $line-height-base;
     color: $dropdown-link-color;
     white-space: nowrap; // prevent links from randomly breaking onto new lines
+  }
+
+  .label {
+    font-weight: normal;
+    line-height: $line-height-base;
+    font-size: 50%;
+    margin-top: 4px;
   }
 }
 
@@ -138,6 +145,7 @@
   left: auto; // Reset the default from `.dropdown-menu`
   right: 0;
 }
+
 // With v3, we enabled auto-flipping if you have a dropdown within a right
 // aligned nav component. To enable the undoing of that, we provide an override
 // to restore the default dropdown menu alignment.
@@ -186,7 +194,8 @@
   .caret {
     border-top: 0;
     border-bottom: $caret-width-base dashed;
-    border-bottom: $caret-width-base solid \9; // IE8
+    border-bottom: $caret-width-base solid \9
+  ; // IE8
     content: "";
   }
   // Different positioning for bottom up menu
@@ -196,7 +205,6 @@
     margin-bottom: 2px;
   }
 }
-
 
 // Component alignment
 //

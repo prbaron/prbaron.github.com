@@ -20,7 +20,6 @@
 }
 
 .section-resume {
-
   & + svg {
     background: $gray-lighter;
     path {
@@ -29,6 +28,7 @@
       stroke-width: 2;
     }
   }
+
   .resume {
     margin-top: $grid-gutter-width * 2;
     margin-bottom: 0;

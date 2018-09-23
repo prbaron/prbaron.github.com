@@ -2,7 +2,7 @@ title: Pierre Baron, web development engineer
 description: > # this means to ignore newlines until "baseurl:"
   Pierre Baron is a French web development software engineer specialised in AngularJs, Angular and SASS.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.pierrebaron.fr" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: prbaron
 github_username:  prbaron
 

@@ -1,4 +1,4 @@
-{% if site.google_analytics_id %}
+{% if jekyll.environment == "production" && site.google_analytics_id %}
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', '{{ site.google_analytics_id }}']);
