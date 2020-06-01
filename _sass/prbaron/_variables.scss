@@ -7,13 +7,24 @@ $fa-font-path: "/fonts/font-awesome-4.1.0";
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker: #263238;
-$gray-dark: #37474f;
-$gray: #607d8b;
-$gray-light: #cfd8dc;
-$gray-lighter: #eceff1;
+$gray-darker: #081420;
+$gray-dark: #243b53;
+$gray: #314758;
+$gray-light: #bcccdc;
+$gray-lighter: #d9e2ec;
 
-$brand-primary: #009bf8;
+$white:    #f0f4f8 !default;
+$gray-100: #d9e2ec !default;
+$gray-200: #bcccdc !default;
+$gray-300: #9fb3c8 !default;
+$gray-400: #829ab1 !default;
+$gray-500: #627d98 !default;
+$gray-600: #486581 !default;
+$gray-700: #334e68 !default;
+$gray-800: #243b53 !default;
+$gray-900: #102a43 !default;
+$black:    #081420 !default;
+$brand-primary: #006fed;
 $brand-success: #51c693;
 $brand-warning: #f7d574;
 $brand-danger: #ef5350;
@@ -26,7 +37,7 @@ $footer-color: #90a4ae;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg: #fefefe;
+$body-bg: #f0f4f8;
 //** Global text color on `<body>`.
 $text-color: $gray;
 
@@ -45,7 +56,7 @@ $font-family-serif: 'Droid Serif', Georgia, "Times New Roman", Times, serif;
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base: $font-family-sans-serif;
 
-$font-size-base: 16px;
+$font-size-base: 18px;
 $font-size-large: ceil(($font-size-base * 1.25));
 // ~18px
 $font-size-small: ceil(($font-size-base * 0.85));
@@ -64,14 +75,14 @@ $font-size-h6: ceil(($font-size-base * 0.85));
 // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
-$line-height-base: 1.428571429;
+$line-height-base: 1.5;
 // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 $line-height-computed: floor(($font-size-base * $line-height-base));
 // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family: "Fjalla One", $font-family-sans-serif;
+$headings-font-family: "iA Writer Duospace", $font-family-sans-serif;
 $headings-font-family-2: Kreon, $font-family-sans-serif;
 $headings-font-weight: 400;
 $headings-line-height: 1.1;
@@ -107,9 +118,9 @@ $padding-xs-horizontal: 5px;
 $line-height-large: 1.33;
 $line-height-small: 1.5;
 
-$border-radius-base: 2px;
-$border-radius-large: 4px;
-$border-radius-small: 1px;
+$border-radius-base: 4px;
+$border-radius-large: 6px;
+$border-radius-small: 3px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color: #ffffff;
