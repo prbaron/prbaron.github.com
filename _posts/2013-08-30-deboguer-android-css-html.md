@@ -4,7 +4,6 @@ menu     : Blog
 category : tutoriel
 tagline  : Déboguer efficacement vos pages web sur Android
 keywords : débogage, débuggage, android, web, mobile
-comments : true
 ---
 
 Comme vous le savez tous, le développement web mobile peut être un peu fastidieux, lorsqu'il s'agit de déboguer du code JavaScript exécuté uniquement sur un téléphone par exemple.

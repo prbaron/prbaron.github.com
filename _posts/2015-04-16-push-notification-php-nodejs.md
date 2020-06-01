@@ -4,7 +4,6 @@ menu     : Blog
 category : tutoriel
 tagline  : Ajouter un système de notifications Push dans une application PHP avec socket.io
 keywords : push, push notification, php, nodejs, socketio, angularjs, websockets
-comments : true
 demo     : https://tutopushnotifications.herokuapp.com
 download : https://github.com/prbaron/tuto_push_notifications
 description : Apprenons à ajouter un système de notifications instantanées dans une application PHP existante avec socket.io

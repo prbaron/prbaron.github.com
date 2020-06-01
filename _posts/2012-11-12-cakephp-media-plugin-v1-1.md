@@ -5,7 +5,6 @@ category : plugin
 tagline  : CakePHP Media plugin v1.1
 note     : Grafikart updated its own version to 2.0. Mine is no longer updated.
 keywords : cakephp, grafikart media plugin
-comments : true
 ---
 
 Today I want to share an awesome plugin created by [Grafikart](http://www.grafikart.fr/) called [CakePHP-Media](https://github.com/Grafikart/CakePHP-Media). You can download the v1.1 (improvements listed below) from my fork : [https://github.com/prbaron/CakePHP-Media](https://github.com/prbaron/CakePHP-Media)

@@ -4,7 +4,6 @@ menu     : Blog
 category : tutoriel
 tagline  : Créer un site avec Jekyll. Partie 3 - Création du blog
 keywords : jekyll, tutoriel, jekyll french
-comments : true
 demo     : http://pierrebaron.fr/tuto_blog_jekyll/
 download : https://github.com/prbaron/tuto_blog_jekyll/tree/chapitre3
 ---

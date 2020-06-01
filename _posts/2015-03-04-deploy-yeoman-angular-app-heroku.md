@@ -4,7 +4,6 @@ menu     : Blog
 category : tutoriel
 tagline  : Déployer une application Yeoman/AngularJS sur Heroku
 keywords : heroku, yeoman, angular, angularjs, deploy, déploiement
-comments : true
 demo     : https://deployangularjsheroku.herokuapp.com/#/
 download : https://github.com/prbaron/tuto_deploy_yeoman_angular_heroku
 ---
