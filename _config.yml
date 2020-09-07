@@ -6,8 +6,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: prbaron
 github_username:  prbaron
 
-google_analytics_id: UA-21369110-4
-
 navigation:
 - text: Home
   url: /
