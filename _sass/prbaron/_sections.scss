@@ -22,6 +22,7 @@
 .section-resume {
   & + svg {
     background: $gray-lighter;
+
     path {
       fill: $body-bg;
       stroke: $body-bg;

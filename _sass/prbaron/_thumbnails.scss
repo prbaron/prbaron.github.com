@@ -1,4 +1,4 @@
-$img-avatar-height: 134px;
+$img-avatar-height: 128px;
 
 .img-avatar {
   border: none;
@@ -8,6 +8,7 @@ $img-avatar-height: 134px;
   margin-top: - ($img-avatar-height / 2);
   padding: 6px;
   position: absolute;
+  box-sizing: content-box;
 
   @media (min-height: 700px) {
     height: $img-avatar-height * 1.5;

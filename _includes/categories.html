@@ -4,10 +4,10 @@
   {% assign sorted_array = site.categories | sort %}
   {% for category in sorted_array %}
   <p>
-    <span class="badge pull-right">{{ category[1] | size}}</span>
+    <span class="pull-right">{{ category[1] | size}}</span>
 
     <a href="{{site.url}}/categories/{{ category | first }}.html">
-      <i class="fa fa-angle-right"></i> {{ category| first }}
+      {{ category| first }}
     </a>
   </p>
   {% endfor %}

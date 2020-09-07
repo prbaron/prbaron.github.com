@@ -1,7 +1,7 @@
 .post {
   padding-top: $grid-gutter-width;
   padding-bottom: $grid-gutter-width;
-  word-warp: break-all;
+  word-break: break-all;
 
   &:first-of-type {
     padding-top: 0;
@@ -24,7 +24,12 @@
 
   .post-subtitle {
     color: transparentize($gray-dark, 0.5);
-    font-size: 0.85em;
+    font-size: .85em;
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 
   .post-actions {
