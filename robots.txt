@@ -1,4 +1,0 @@
-# robotstxt.org/
-
-User-agent: *
-Sitemap: https://www.pierrebaron.fr/sitemap.xml
